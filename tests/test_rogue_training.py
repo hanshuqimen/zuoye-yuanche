@@ -401,6 +401,8 @@ def legacy_columns(path):
         con.execute("PRAGMA foreign_keys=OFF")
         con.execute("DROP TABLE rlv2_bank_visits")
         con.execute("DROP TABLE rlv2_bank_wallets")
+        assert con.execute("SELECT count(*) FROM rlv2_battle_loot_plans").fetchone()[0] == 0
+        con.execute("DROP TABLE rlv2_battle_loot_plans")
         con.execute("CREATE TABLE rlv2_options_0028 (run_id VARCHAR(36) NOT NULL, ticket_ordinal INTEGER NOT NULL, "
             "ordinal INTEGER NOT NULL, source_operator_id INTEGER, kind VARCHAR(16) NOT NULL, "
             "hope_cost INTEGER NOT NULL, character JSON NOT NULL, PRIMARY KEY(run_id,ticket_ordinal,ordinal), "
@@ -442,7 +444,8 @@ def test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic(tr
     try:
         assert reopened.sync(token)["user"] == before_user
         after = rows(path)
-        assert len(before) == 74 and len(after) == 77
+        assert len(before) == 74 and len(after) == 78
+        assert after["rlv2_battle_loot_plans"] == []
         for name, values in before.items():
             if name == "alembic_version":
                 assert after[name] == [(migrations.REVISION,)]

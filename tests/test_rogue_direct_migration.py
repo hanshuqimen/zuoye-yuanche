@@ -35,7 +35,7 @@ def schema_0032(path):
         con.execute("DROP TABLE rlv2_run_closures")
         # These tables did not exist in0032. Never leave future tables in the
         # simulated legacy source or merely inflate the expected old count.
-        for name in ("rlv2_bank_visits", "rlv2_bank_wallets"):
+        for name in ("rlv2_bank_visits", "rlv2_bank_wallets", "rlv2_battle_loot_plans"):
             assert con.execute('SELECT count(*) FROM "' + name + '"').fetchone()[0] == 0
             con.execute('DROP TABLE "' + name + '"')
         con.execute("UPDATE alembic_version SET version_num=?", (migrations.ROGUE_ELITE_REVISION,))
@@ -69,8 +69,9 @@ def test_schema32_elite_offer_scope_and_all_old_columns_survive_atomic_migration
     try:
         assert reopened.sync(token)["user"] == expected
         after = rows(runtime.database.path)
-        assert len(before) == 74 and len(after) == 77
+        assert len(before) == 74 and len(after) == 78
         assert after["rlv2_bank_visits"] == after["rlv2_bank_wallets"] == []
+        assert after["rlv2_battle_loot_plans"] == []
         for name, values in before.items():
             if name == "alembic_version":
                 assert after[name] == [(migrations.REVISION,)]

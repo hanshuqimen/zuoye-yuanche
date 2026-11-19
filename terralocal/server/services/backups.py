@@ -62,10 +62,20 @@ def _sha256(path: Path) -> str:
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
+def _check_snapshot_journals(path: Path) -> None:
+    # The index authenticates the main file only. Never silently discard
+    # committed WAL frames or an unfinished rollback journal when copying it.
+    for suffix in ("-wal", "-journal"):
+        journal = path.with_name(path.name + suffix)
+        if journal.is_symlink() or (journal.exists() and journal.stat().st_size):
+            raise ValueError("备份存在未归档的 SQLite 日志，拒绝使用")
+
+
 def _read_snapshot(path: Path, *, require_canonical_name: bool = True) -> _Snapshot:
     metadata = path.with_suffix(".json")
     if (path.is_symlink() or metadata.is_symlink() or not path.is_file() or not metadata.is_file()):
         raise ValueError("备份数据库或索引缺失")
+    _check_snapshot_journals(path)
     info = json.loads(metadata.read_text("utf-8"))
     if (not isinstance(info, dict) or "gamedata_hash" not in info
             or type(info.get("created_at")) is not str
@@ -244,6 +254,7 @@ def _prepare_recovery(settings: Settings, source: Path, staged: Path) -> Startup
     # Rotation may remove the source while it is being copied. The copied
     # bytes still have to match the index before they reach SQLite.
     shutil.copyfile(source, staged)
+    _check_snapshot_journals(source)
     _check_copied_database(snapshot, staged)
     try:
         inputs = StartupInputs(settings, staged)
@@ -383,6 +394,7 @@ class BackupService:
                 snapshot = _read_snapshot(path, require_canonical_name=False)
                 _check_compatibility(self.runtime, snapshot.info)
                 shutil.copyfile(path, candidate_path)
+                _check_snapshot_journals(path)
             _check_copied_database(snapshot, candidate_path)
             candidate = Database(candidate_path)
             try:

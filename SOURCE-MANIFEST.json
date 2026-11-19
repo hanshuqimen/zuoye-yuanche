@@ -2886,8 +2886,10 @@
       "source_path": "terralocal/server/persistence/database.py",
       "original_git_blob": "0ee004295657164856cbcfbd4e3e824f4a2f96b0",
       "published_path": "terralocal/server/persistence/database.py",
-      "public_sha256": "f4229b54f5223812e725538f9ef46261925b60859d75027a5600a61f2a35cc1a",
-      "modified_for_publication": false
+      "public_sha256": "767e17b7b57bacbba4c28033fe4270b67333dc3cf507e9c86b0e383ac4f4a720",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "terralocal/server/persistence/migrations.py",
@@ -3159,8 +3161,10 @@
       "source_path": "terralocal/server/services/backups.py",
       "original_git_blob": "666a2c5cbe30857188f9a1364fae75ebf85d7e94",
       "published_path": "terralocal/server/services/backups.py",
-      "public_sha256": "b8f6b49f40fc4c7e5c758b3239eeec4d982c461e65f5f0130e4db5f7d23dc801",
-      "modified_for_publication": false
+      "public_sha256": "13ce872d33d5706f473ed182c773982c1b2213206875a562cfaea1a5743233ef",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "terralocal/server/services/bulletin_webview.py",
@@ -3265,8 +3269,10 @@
       "source_path": "tests/test_backup_recovery.py",
       "original_git_blob": "b251b3ccee061e467de948b6c09fd79c15a51c11",
       "published_path": "tests/test_backup_recovery.py",
-      "public_sha256": "15e8d15a4abc602e6a94bfe86831851b7d2100cb0b79fcedbc476eef1c4cd9f0",
-      "modified_for_publication": false
+      "public_sha256": "24c9335dad914b3d379afcc5595cad90b8496abd698e03a1abb3710769afdf71",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_backup_retention.py",
@@ -3905,8 +3911,10 @@
       "source_path": "tests/test_rogue_direct_migration.py",
       "original_git_blob": "064ae01dd536446c66f36062a8a236d38d927e8c",
       "published_path": "tests/test_rogue_direct_migration.py",
-      "public_sha256": "afbfa7a3c22ef7c74a94573f263f537be93230b61eeb88a803327fe47cb442e0",
-      "modified_for_publication": false
+      "public_sha256": "610b06796826ef4c09041b5f814badf0183a5f1d0083aab6172c481a2acd2395",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_rogue_elite.py",
@@ -3919,8 +3927,10 @@
       "source_path": "tests/test_rogue_elite_migration.py",
       "original_git_blob": "dceb94fc6fb6b997b3043ad3395ee030c5d486dc",
       "published_path": "tests/test_rogue_elite_migration.py",
-      "public_sha256": "097fe65c141d8ac93d0199eeb306640d5fe12ab9de579f4ce231cde14183e246",
-      "modified_for_publication": false
+      "public_sha256": "8e0567a1cb51420a4e3c3c5dbc3cc10766f913a30f5b916e47f7c0b2b7ae48d3",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_rogue_ending.py",
@@ -3975,8 +3985,10 @@
       "source_path": "tests/test_rogue_floor_drafts.py",
       "original_git_blob": "97a69a1c1695e9aa34e3c9368360bae12ca90d58",
       "published_path": "tests/test_rogue_floor_drafts.py",
-      "public_sha256": "351d621e389dba52ac64395a779ecf8b3bc3de7ac5c9395a6f40950f7d1b6e20",
-      "modified_for_publication": false
+      "public_sha256": "993f3aad20520113ff7d63434678e440fc1cb1117d3403bcf859ea2061ce0c7c",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_rogue_floor_progress.py",
@@ -4059,8 +4071,10 @@
       "source_path": "tests/test_rogue_paid_training_migration.py",
       "original_git_blob": "7a5a7184297116c218dd0284650a18bf0e2a0ddf",
       "published_path": "tests/test_rogue_paid_training_migration.py",
-      "public_sha256": "d9885f3a0ff1e0f2126ea2a04559cf4f3ce96dbcd3f4ec428bcdff8209792377",
-      "modified_for_publication": false
+      "public_sha256": "b03a4edb5b7c6c93c585a443b079750e5317a3ab7d3bafe34cc0a827df097846",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_rogue_placements.py",
@@ -4213,8 +4227,10 @@
       "source_path": "tests/test_rogue_temporary_migration.py",
       "original_git_blob": "987f3880b752cca807575868355d1220c941258d",
       "published_path": "tests/test_rogue_temporary_migration.py",
-      "public_sha256": "6ce85ea6357f04aa2876637964b267ff600c00b7dc38bbecf41a19adaeab834c",
-      "modified_for_publication": false
+      "public_sha256": "f1eab9f6511663533a0604b1cc18a5e8b6fd0ede2cba391b07e93bee97106550",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_rogue_ticket_events.py",
@@ -4255,8 +4271,10 @@
       "source_path": "tests/test_rogue_training.py",
       "original_git_blob": "9d24dc293ddc3e54575cbc37cdec99e867200a3e",
       "published_path": "tests/test_rogue_training.py",
-      "public_sha256": "1bf07da55d73860a4506c571f8cb86fdc563daaf56621def6b8016edbb1da39b",
-      "modified_for_publication": false
+      "public_sha256": "55c4b9360cab9a137375d581eaf71fe17e6c38e16a84db5cd7351e8c2c79f758",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_rogue_treasure_publication.py",
@@ -4283,8 +4301,10 @@
       "source_path": "tests/test_rogue_visits.py",
       "original_git_blob": "b8c322d0073330ab395983c14dbf374f51395b45",
       "published_path": "tests/test_rogue_visits.py",
-      "public_sha256": "abf1c87daa7003e589f98e2428021ae9ae4395b8b8940e4e72244e8a6c730efa",
-      "modified_for_publication": false
+      "public_sha256": "adb12e87bdba82584eab5bca02e78651cd2bee2838f90bb829fd9488519e7b42",
+      "modified_for_publication": false,
+      "modified_since_original_baseline": true,
+      "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f"
     },
     {
       "source_path": "tests/test_roguelike_battle_start.py",
@@ -4710,5 +4730,20 @@
   "historical_reports": 234,
   "git_history_subjects": 353,
   "all_original_files_have_public_paths": true,
-  "complete_history_bundle": "history/source-history-d40aee9.bundle"
+  "complete_history_bundle": "history/source-history-d40aee9.bundle",
+  "followup_source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f",
+  "followup_history": {
+    "path": "history/source-updates-9ea5f81.bundle",
+    "bytes": 26473,
+    "sha256": "bcc552d9123c1cb85b0869c0f10f666db17689aa56fdfe57f02c19a8a847318f",
+    "git_blob": "8b6cf08644653cbdd7926145e1fa94a55de8fe98",
+    "source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f",
+    "branch": "codex/development",
+    "source_files": 668,
+    "source_history_commits": 356,
+    "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
+    "base_bundle": "history/source-history-d40aee9.bundle",
+    "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83",
+    "base_complete_bundle": "history/source-history-d40aee9.bundle"
+  }
 }

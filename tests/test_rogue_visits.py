@@ -278,6 +278,8 @@ def test_0025_upgrade_and_failure_rollback_keep_old_rows(visits_runtime, monkeyp
         # present; their historical column migrations have separate tests.
         con.execute("DROP TABLE rlv2_bank_visits")
         con.execute("DROP TABLE rlv2_bank_wallets")
+        assert con.execute("SELECT count(*) FROM rlv2_battle_loot_plans").fetchone()[0] == 0
+        con.execute("DROP TABLE rlv2_battle_loot_plans")
         con.execute("DROP TABLE rlv2_floor_cursors")
         con.execute("DROP TABLE rlv2_shop_visits")
         con.execute("DROP TABLE rlv2_scene_visits")
@@ -302,7 +304,8 @@ def test_0025_upgrade_and_failure_rollback_keep_old_rows(visits_runtime, monkeyp
     reopened = Runtime(runtime.settings)
     try:
         changed = rows(reopened.database.path)
-        assert len(saved) == 71 and len(changed) == 77
+        assert len(saved) == 71 and len(changed) == 78
+        assert changed["rlv2_battle_loot_plans"] == []
         assert changed["alembic_version"] == [(REVISION,)]
         assert all(changed[k] == v for k, v in saved.items() if k != "alembic_version")
     finally:

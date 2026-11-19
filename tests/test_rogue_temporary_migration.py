@@ -32,7 +32,7 @@ def schema_0030(path):
         con.execute("DROP TABLE rlv2_recruit_options")
         con.execute("ALTER TABLE rlv2_options_0030 RENAME TO rlv2_recruit_options")
         con.execute("DROP TABLE rlv2_run_closures")
-        for name in ("rlv2_bank_visits", "rlv2_bank_wallets"):
+        for name in ("rlv2_bank_visits", "rlv2_bank_wallets", "rlv2_battle_loot_plans"):
             assert con.execute('SELECT count(*) FROM "' + name + '"').fetchone()[0] == 0
             con.execute('DROP TABLE "' + name + '"')
         con.execute("UPDATE alembic_version SET version_num=?", (migrations.ROGUE_PAID_REVISION,))
@@ -69,11 +69,13 @@ def test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback(train
     try:
         assert reopened.sync(token)["user"] == expected
         after = rows(runtime.database.path)
-        assert len(before) == 74 and len(after) == 77
+        assert len(before) == 74 and len(after) == 78
         assert after["rlv2_bank_visits"] == after["rlv2_bank_wallets"] == []
+        assert after["rlv2_battle_loot_plans"] == []
         assert after["rlv2_run_closures"] == []
         assert after["alembic_version"] == [(migrations.REVISION,)]
-        assert {k:v for k,v in before.items() if k not in ("alembic_version", "rlv2_run_closures", "rlv2_bank_visits", "rlv2_bank_wallets")} == {k:v for k,v in after.items() if k not in ("alembic_version", "rlv2_run_closures", "rlv2_bank_visits", "rlv2_bank_wallets")}
+        assert {name: after[name] for name in before if name != "alembic_version"} == {
+            name: values for name, values in before.items() if name != "alembic_version"}
     finally:
         reopened.database.close()
 

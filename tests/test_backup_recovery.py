@@ -41,6 +41,110 @@ def assert_preserved_and_writable(runtime, token, expected):
         restarted.database.close()
 
 
+def test_archived_database_is_standalone_and_does_not_change_live_wal(runtime, token):
+    service, saved, before = prepare_restore(runtime, token)
+    path = service.directory / saved["name"]
+    with closing(sqlite3.connect(path)) as connection:
+        assert connection.execute("PRAGMA journal_mode").fetchone() == ("delete",)
+        connection.execute("UPDATE currencies SET balance=666 WHERE item_id='4001'")
+        connection.commit()
+        # Inspect a copy while the editor is still open: all committed rows
+        # must be in the one archived file, with no WAL dependency.
+        copied = path.parent / "standalone.sqlite3"
+        copied.write_bytes(path.read_bytes())
+        with closing(sqlite3.connect(copied)) as reader:
+            assert reader.execute("SELECT balance FROM currencies WHERE item_id='4001'").fetchone() == (666,)
+    with closing(sqlite3.connect(runtime.database.path)) as live:
+        assert live.execute("PRAGMA journal_mode").fetchone() == ("wal",)
+    assert runtime.sync(token) == before
+
+
+@pytest.mark.parametrize("entry", ["online", "in-place", "output"])
+@pytest.mark.parametrize("journal", ["wal", "rollback"])
+def test_unarchived_sqlite_journal_never_reaches_restore(runtime, token, tmp_path, entry, journal):
+    service, saved, before = prepare_restore(runtime, token)
+    path = service.directory / saved["name"]
+    metadata = path.with_suffix(".json")
+    output = tmp_path / "restored.sqlite3"
+    with closing(sqlite3.connect(path)) as writer:
+        if journal == "wal":
+            assert writer.execute("PRAGMA journal_mode=WAL").fetchone() == ("wal",)
+        writer.execute("UPDATE currencies SET balance=666 WHERE item_id='4001'")
+        if journal == "wal":
+            writer.commit()
+        suffix = "-wal" if journal == "wal" else "-journal"
+        assert path.with_name(path.name + suffix).stat().st_size > 0
+        info = json.loads(metadata.read_text("utf8"))
+        info["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+        metadata.write_text(json.dumps(info), "utf8")
+        original = path.read_bytes(), metadata.read_bytes()
+        assert service.list() == []
+        with pytest.raises(ValueError, match="SQLite 日志"):
+            if entry == "online":
+                service.restore(saved["name"])
+            elif entry == "in-place":
+                restore_existing_save(runtime.settings, saved["name"])
+            else:
+                recover_backup(runtime.settings, saved["name"], output)
+        assert not output.exists()
+        assert not list(service.directory.glob("before-restore-*"))
+        assert original == (path.read_bytes(), metadata.read_bytes())
+        assert runtime.sync(token) == before
+        writer.rollback()
+
+
+def test_legacy_wal_archive_without_pending_frames_can_still_restore(runtime, token):
+    service, saved, _ = prepare_restore(runtime, token)
+    path = service.directory / saved["name"]
+    with closing(sqlite3.connect(path)) as connection:
+        assert connection.execute("PRAGMA journal_mode=WAL").fetchone() == ("wal",)
+    assert not path.with_name(path.name + "-wal").exists()
+    metadata = path.with_suffix(".json")
+    info = json.loads(metadata.read_text("utf8"))
+    info["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+    metadata.write_text(json.dumps(info), "utf8")
+    original = path.read_bytes()
+    service.restore(saved["name"])
+    assert runtime.sync(token)["user"]["status"]["gold"] == 1000
+    assert path.read_bytes() == original
+
+
+@pytest.mark.parametrize("entry", ["online", "in-place", "output"])
+def test_snapshot_journal_appearing_during_copy_never_activates(runtime, token, tmp_path, monkeypatch, entry):
+    service, saved, before = prepare_restore(runtime, token)
+    path = service.directory / saved["name"]
+    output = tmp_path / "restored.sqlite3"
+    original_copy = backups.shutil.copyfile
+    writer = None
+
+    def copy_then_commit(source, destination):
+        nonlocal writer
+        result = original_copy(source, destination)
+        if source == path:
+            writer = sqlite3.connect(path)
+            writer.execute("PRAGMA journal_mode=WAL")
+            writer.execute("UPDATE currencies SET balance=666 WHERE item_id='4001'")
+            writer.commit()
+        return result
+
+    monkeypatch.setattr(backups.shutil, "copyfile", copy_then_commit)
+    try:
+        with pytest.raises(ValueError, match="SQLite 日志"):
+            if entry == "online":
+                service.restore(saved["name"])
+            elif entry == "in-place":
+                restore_existing_save(runtime.settings, saved["name"])
+            else:
+                recover_backup(runtime.settings, saved["name"], output)
+        assert writer is not None
+        assert not output.exists()
+        assert not list(service.directory.glob("before-restore-*"))
+        assert runtime.sync(token) == before
+    finally:
+        if writer is not None:
+            writer.close()
+
+
 def test_candidate_migration_failure_never_replaces_active_save(runtime, token, monkeypatch):
     service, saved, before = prepare_restore(runtime, token)
     initialize = Database.initialize

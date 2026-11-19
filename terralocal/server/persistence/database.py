@@ -68,6 +68,11 @@ class Database:
             with (closing(sqlite3.connect(self.path.as_uri() + "?mode=ro", uri=True)) as source,
                   closing(sqlite3.connect(temporary)) as target):
                 source.backup(target)
+                # An archive is one file: a later reader or editor must not
+                # commit state to a WAL that raw snapshot copying would omit.
+                # This changes only the new archive, never the live database.
+                if target.execute("PRAGMA journal_mode=DELETE").fetchone() != ("delete",):
+                    raise ValueError("无法将备份保存为独立的 SQLite 文件")
                 result = target.execute("PRAGMA integrity_check").fetchone()[0]
                 if result != "ok":
                     raise ValueError("备份完整性校验失败")

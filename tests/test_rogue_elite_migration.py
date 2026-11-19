@@ -40,7 +40,7 @@ def schema_0031(path):
         con.execute("ALTER TABLE rlv2_tickets DROP COLUMN elite_pool")
         con.execute("ALTER TABLE rlv2_tickets DROP COLUMN direct_pool")
         con.execute("DROP TABLE rlv2_run_closures")
-        for name in ("rlv2_bank_visits", "rlv2_bank_wallets"):
+        for name in ("rlv2_bank_visits", "rlv2_bank_wallets", "rlv2_battle_loot_plans"):
             assert con.execute('SELECT count(*) FROM "' + name + '"').fetchone()[0] == 0
             con.execute('DROP TABLE "' + name + '"')
         con.execute("UPDATE alembic_version SET version_num=?", (migrations.ROGUE_FREE_REVISION,))
@@ -85,8 +85,9 @@ def test_free_training_history_and_all_old_columns_survive_0031_or_atomic_rollba
     try:
         assert reopened.sync(token)["user"] == expected
         after = rows(runtime.database.path)
-        assert len(before) == 74 and len(after) == 77
+        assert len(before) == 74 and len(after) == 78
         assert after["rlv2_bank_visits"] == after["rlv2_bank_wallets"] == []
+        assert after["rlv2_battle_loot_plans"] == []
         for name, old in before.items():
             if name == "alembic_version":
                 assert after[name] == [(migrations.REVISION,)]

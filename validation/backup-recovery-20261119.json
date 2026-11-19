@@ -1,0 +1,2662 @@
+{
+  "description": "Focused follow-up after the published 3203-case baseline; no claim of a new full run.",
+  "unique_test_count": 211,
+  "latest_counts": {
+    "passed": 211,
+    "failed": 0,
+    "skipped": 0
+  },
+  "runs": [
+    {
+      "name": "baseline.xml",
+      "counts": {
+        "passed": 0,
+        "failed": 4,
+        "skipped": 0
+      },
+      "results": [
+        {
+          "id": "tests.test_rogue_floor_drafts::test_corrupt_future_candidate_backup_leaves_live_database_intact",
+          "status": "failed",
+          "seconds": 0.843,
+          "run": "baseline.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_corrupt_cursor_backup_never_replaces_live_save",
+          "status": "failed",
+          "seconds": 0.968,
+          "run": "baseline.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_backup_and_missing_current_table_preserve_original",
+          "status": "failed",
+          "seconds": 0.874,
+          "run": "baseline.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_invalid_candidate_backup_is_rejected_before_touching_current_save",
+          "status": "failed",
+          "seconds": 0.558,
+          "run": "baseline.xml"
+        }
+      ]
+    },
+    {
+      "name": "verified.xml",
+      "counts": {
+        "passed": 137,
+        "failed": 1,
+        "skipped": 0
+      },
+      "results": [
+        {
+          "id": "tests.test_backup_recovery::test_archived_database_is_standalone_and_does_not_change_live_wal",
+          "status": "passed",
+          "seconds": 0.251,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[wal-online]",
+          "status": "passed",
+          "seconds": 0.196,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[wal-in-place]",
+          "status": "passed",
+          "seconds": 0.185,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[wal-output]",
+          "status": "passed",
+          "seconds": 0.218,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[rollback-online]",
+          "status": "passed",
+          "seconds": 0.171,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[rollback-in-place]",
+          "status": "passed",
+          "seconds": 0.175,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[rollback-output]",
+          "status": "passed",
+          "seconds": 0.174,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_legacy_wal_archive_without_pending_frames_can_still_restore",
+          "status": "passed",
+          "seconds": 0.337,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_candidate_migration_failure_never_replaces_active_save",
+          "status": "passed",
+          "seconds": 0.235,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_post_activation_initialize_failure_restores_previous_state",
+          "status": "passed",
+          "seconds": 0.433,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_copy_error_after_destination_commit_automatically_rolls_back",
+          "status": "passed",
+          "seconds": 0.345,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[table-\\u5fc5\\u8981\\u6570\\u636e\\u8868]",
+          "status": "passed",
+          "seconds": 0.302,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[column-\\u5fc5\\u8981\\u5b57\\u6bb5]",
+          "status": "passed",
+          "seconds": 0.294,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[foreign-key-\\u5b9e\\u4f53\\u5f15\\u7528]",
+          "status": "passed",
+          "seconds": 0.283,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[revision-\\u6570\\u636e\\u5e93\\u7248\\u672c]",
+          "status": "passed",
+          "seconds": 0.262,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_concurrent_write_waits_for_activation_or_rollback[False]",
+          "status": "passed",
+          "seconds": 0.295,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_concurrent_write_waits_for_activation_or_rollback[True]",
+          "status": "passed",
+          "seconds": 0.362,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_successful_restore_preserves_old_snapshot_and_survives_restart",
+          "status": "passed",
+          "seconds": 0.422,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_sqlite_copy_accepts_paths_containing_uri_characters",
+          "status": "passed",
+          "seconds": 0.053,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_cli_restore_preserves_the_legacy_save_until_activation[bad-checksum]",
+          "status": "passed",
+          "seconds": 1.398,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_cli_restore_preserves_the_legacy_save_until_activation[valid-backup]",
+          "status": "passed",
+          "seconds": 2.653,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_offline_activation_failure_rolls_back_the_legacy_save",
+          "status": "passed",
+          "seconds": 0.348,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_offline_restore_into_a_missing_save_does_not_create_a_previous_snapshot",
+          "status": "passed",
+          "seconds": 0.273,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_cli_recovers_old_backup_to_new_file_while_source_is_corrupt",
+          "status": "passed",
+          "seconds": 3.876,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[checksum-\\u5907\\u4efd\\u54c8\\u5e0c]",
+          "status": "passed",
+          "seconds": 0.16,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[configuration-\\u4e0d\\u540c\\u7684 GameData]",
+          "status": "passed",
+          "seconds": 0.172,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[target-\\u76ee\\u6807]",
+          "status": "passed",
+          "seconds": 0.145,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[journal-\\u9644\\u5c5e\\u6587\\u4ef6]",
+          "status": "passed",
+          "seconds": 0.154,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[invalid-json]",
+          "status": "passed",
+          "seconds": 0.284,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[missing-file]",
+          "status": "passed",
+          "seconds": 0.271,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[short-file]",
+          "status": "passed",
+          "seconds": 0.292,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[same-size-corruption]",
+          "status": "passed",
+          "seconds": 0.269,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_rotation_covers_seven_dates_and_four_iso_weeks",
+          "status": "passed",
+          "seconds": 1.233,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_rotation_after_data_version_change_restores_both_versions",
+          "status": "passed",
+          "seconds": 1.252,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_rotation_compares_optional_rules_and_reuses_legacy_empty_marker",
+          "status": "passed",
+          "seconds": 0.354,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_duplicate_period_and_orphan_do_not_displace_verified_dates",
+          "status": "passed",
+          "seconds": 0.489,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_rotation_can_remove_source_after_restore_has_staged_it",
+          "status": "passed",
+          "seconds": 0.589,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_restore_preserves_a_copy_of_a_damaged_active_database",
+          "status": "passed",
+          "seconds": 0.414,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_cli_restore_waits_for_service_shutdown_but_backup_still_works",
+          "status": "passed",
+          "seconds": 5.805,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_cli_backup_preserves_legacy_revision_and_committed_wal",
+          "status": "passed",
+          "seconds": 2.498,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_cli_backup_requires_an_existing_save",
+          "status": "passed",
+          "seconds": 2.03,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_cli_and_service_backups_can_publish_at_the_same_timestamp",
+          "status": "passed",
+          "seconds": 0.226,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_backup_worker_recovers_from_directory_unavailable",
+          "status": "passed",
+          "seconds": 0.185,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_automatic_checksum_does_not_block_sync_or_a_ledger_write",
+          "status": "passed",
+          "seconds": 0.238,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_backup_retention::test_online_backup_uses_only_committed_rows_while_a_write_is_in_progress",
+          "status": "passed",
+          "seconds": 0.203,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_all_floors_persist_without_unlocking_or_revealing_future_maps",
+          "status": "passed",
+          "seconds": 1.273,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_future_recipe_replacement_and_single_sequence_conversion_are_rejected",
+          "status": "passed",
+          "seconds": 0.579,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_two_processes_and_failed_transaction_do_not_reroll_or_partially_save",
+          "status": "passed",
+          "seconds": 0.543,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-weight]",
+          "status": "passed",
+          "seconds": 0.424,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-region]",
+          "status": "passed",
+          "seconds": 0.508,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-graph]",
+          "status": "passed",
+          "seconds": 0.49,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-key]",
+          "status": "passed",
+          "seconds": 0.517,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[truncated-graphs]",
+          "status": "passed",
+          "seconds": 0.388,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[graph-extra]",
+          "status": "passed",
+          "seconds": 0.447,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[graph-index]",
+          "status": "passed",
+          "seconds": 0.754,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[plan-extra]",
+          "status": "passed",
+          "seconds": 0.407,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[plan-hash]",
+          "status": "passed",
+          "seconds": 0.431,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[seed]",
+          "status": "passed",
+          "seconds": 0.477,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[too-many-floors]",
+          "status": "passed",
+          "seconds": 0.615,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[empty-floors]",
+          "status": "passed",
+          "seconds": 0.443,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_corrupt_future_candidate_backup_leaves_live_database_intact",
+          "status": "failed",
+          "seconds": 0.462,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_first_floor_seed_is_compatible_later_seed_and_recipe_are_independent",
+          "status": "passed",
+          "seconds": 0.621,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_old_single_floor_remains_readonly_and_cannot_be_extended_in_place",
+          "status": "passed",
+          "seconds": 0.437,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_drafts::test_sequence_first_floor_scene_shop_defeat_and_ending_still_compose",
+          "status": "passed",
+          "seconds": 1.408,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_same_coordinate_battles_scene_crossings_ending_restart_and_backup",
+          "status": "passed",
+          "seconds": 1.946,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_shop_pending_ticket_barrier_and_last_supplied_floor_does_not_invent_ending",
+          "status": "passed",
+          "seconds": 1.544,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_crossing_is_atomic_concurrent_and_clock_rewind_safe",
+          "status": "passed",
+          "seconds": 1.485,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[missing]",
+          "status": "passed",
+          "seconds": 0.757,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[hash]",
+          "status": "passed",
+          "seconds": 0.734,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[jump]",
+          "status": "passed",
+          "seconds": 1.014,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[wrong-node]",
+          "status": "passed",
+          "seconds": 0.821,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[pending]",
+          "status": "passed",
+          "seconds": 0.769,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[wrong-kind]",
+          "status": "passed",
+          "seconds": 1.152,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[wrong-id]",
+          "status": "passed",
+          "seconds": 0.75,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[time]",
+          "status": "passed",
+          "seconds": 1.164,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_27_migration_preserves_battle_children_and_adds_only_initial_cursor[False]",
+          "status": "passed",
+          "seconds": 0.843,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_27_migration_preserves_battle_children_and_adds_only_initial_cursor[True]",
+          "status": "passed",
+          "seconds": 1.303,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_floor_timestamp_bounds_abandon_after_clock_rewind",
+          "status": "passed",
+          "seconds": 0.814,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_rogue_floor_progress::test_corrupt_cursor_backup_never_replaces_live_save",
+          "status": "passed",
+          "seconds": 1.131,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_native_v12_request_shape_with_unvoiced_reserve",
+          "status": "passed",
+          "seconds": 0.57,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_start_delta_persistence_retry_and_no_permanent_rewards",
+          "status": "passed",
+          "seconds": 1.372,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_battle_kind_reuses_bound_node_and_data[BATTLE_NORMAL-ordinary-200]",
+          "status": "passed",
+          "seconds": 0.681,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_battle_kind_reuses_bound_node_and_data[BATTLE_ELITE-emergency-501]",
+          "status": "passed",
+          "seconds": 0.989,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_battle_kind_reuses_bound_node_and_data[BATTLE_BOSS-boss-501]",
+          "status": "passed",
+          "seconds": 0.644,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[target-409]",
+          "status": "passed",
+          "seconds": 0.601,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[stage-400]",
+          "status": "passed",
+          "seconds": 0.898,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[empty-400]",
+          "status": "passed",
+          "seconds": 0.688,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[duplicate-400]",
+          "status": "passed",
+          "seconds": 0.897,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[permanent-id-400]",
+          "status": "passed",
+          "seconds": 0.699,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[skill-locked-400]",
+          "status": "passed",
+          "seconds": 0.58,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[reserve-skill-400]",
+          "status": "passed",
+          "seconds": 1.033,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[reserve-zero-400]",
+          "status": "passed",
+          "seconds": 0.561,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[module-501]",
+          "status": "passed",
+          "seconds": 1.064,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[resume-501]",
+          "status": "passed",
+          "seconds": 0.611,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[bool-coordinate-422]",
+          "status": "passed",
+          "seconds": 0.69,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[extra-422]",
+          "status": "passed",
+          "seconds": 0.93,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[extra-slot-field-422]",
+          "status": "passed",
+          "seconds": 0.535,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[too-many-slots-422]",
+          "status": "passed",
+          "seconds": 0.637,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_nonbattle_node_owner_and_login_guards",
+          "status": "passed",
+          "seconds": 0.889,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_parallel_runtimes_and_outer_failure",
+          "status": "passed",
+          "seconds": 0.698,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_cross_mode_start_blocking_and_abandon_without_rewards",
+          "status": "passed",
+          "seconds": 1.051,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_new_login_preserves_old_battle_and_refuses_guessing_resume",
+          "status": "passed",
+          "seconds": 0.777,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_ordinary_battle_blocks_rogue_start_without_charging",
+          "status": "passed",
+          "seconds": 0.615,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_backup_and_missing_current_table_preserve_original",
+          "status": "passed",
+          "seconds": 1.186,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[stage]",
+          "status": "passed",
+          "seconds": 0.598,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[node]",
+          "status": "passed",
+          "seconds": 1.035,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[owner]",
+          "status": "passed",
+          "seconds": 0.664,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[policy]",
+          "status": "passed",
+          "seconds": 0.681,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[data]",
+          "status": "passed",
+          "seconds": 0.994,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[squad]",
+          "status": "passed",
+          "seconds": 0.689,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[session]",
+          "status": "passed",
+          "seconds": 0.676,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[seed]",
+          "status": "passed",
+          "seconds": 1.037,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[hash]",
+          "status": "passed",
+          "seconds": 0.715,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[time]",
+          "status": "passed",
+          "seconds": 0.69,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_battle_start::test_0022_upgrade_and_rollback_keep_every_existing_row",
+          "status": "passed",
+          "seconds": 1.14,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_saved_draft_survives_restart_backup_and_is_not_client_activation",
+          "status": "passed",
+          "seconds": 0.749,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_conflicting_plan_and_outer_rollback_never_replace_a_saved_map",
+          "status": "passed",
+          "seconds": 0.439,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_two_runtimes_serialize_same_plan_without_duplicate_or_reroll",
+          "status": "passed",
+          "seconds": 0.797,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_unresolved_ticket_blocks_preparation_without_writing",
+          "status": "passed",
+          "seconds": 0.455,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_abandoned_draft_is_retained_but_never_shared_with_a_new_run",
+          "status": "passed",
+          "seconds": 0.487,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[policy]",
+          "status": "passed",
+          "seconds": 0.42,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[data-hash]",
+          "status": "passed",
+          "seconds": 0.474,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[plan-hash]",
+          "status": "passed",
+          "seconds": 0.488,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[plan-pool]",
+          "status": "passed",
+          "seconds": 0.793,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[wrong-seed]",
+          "status": "passed",
+          "seconds": 0.442,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[graph-stage]",
+          "status": "passed",
+          "seconds": 0.475,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[future-json]",
+          "status": "passed",
+          "seconds": 0.445,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[timestamp]",
+          "status": "passed",
+          "seconds": 0.467,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[unresolved-ticket]",
+          "status": "passed",
+          "seconds": 0.482,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[orphan]",
+          "status": "passed",
+          "seconds": 0.863,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_0020_upgrade_keeps_every_old_row_and_migration_rollback",
+          "status": "passed",
+          "seconds": 0.522,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_new_schema_missing_draft_table_is_not_repaired_silently",
+          "status": "passed",
+          "seconds": 0.478,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_invalid_candidate_backup_is_rejected_before_touching_current_save",
+          "status": "passed",
+          "seconds": 0.563,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_legacy_100_key_draft_is_read_without_rewriting_or_rerolling",
+          "status": "passed",
+          "seconds": 0.444,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[missing-weight]",
+          "status": "passed",
+          "seconds": 0.414,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[boolean-width]",
+          "status": "passed",
+          "seconds": 0.84,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[unknown-plan-field]",
+          "status": "passed",
+          "seconds": 0.351,
+          "run": "verified.xml"
+        },
+        {
+          "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[oversize-pool]",
+          "status": "passed",
+          "seconds": 0.457,
+          "run": "verified.xml"
+        }
+      ]
+    },
+    {
+      "name": "fixed-envelope.xml",
+      "counts": {
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+      },
+      "results": [
+        {
+          "id": "tests.test_rogue_floor_drafts::test_corrupt_future_candidate_backup_leaves_live_database_intact",
+          "status": "passed",
+          "seconds": 0.665,
+          "run": "fixed-envelope.xml"
+        }
+      ]
+    },
+    {
+      "name": "migrations.xml",
+      "counts": {
+        "passed": 66,
+        "failed": 4,
+        "skipped": 0
+      },
+      "results": [
+        {
+          "id": "tests.test_rogue_direct_migration::test_schema32_elite_offer_scope_and_all_old_columns_survive_atomic_migration[False]",
+          "status": "passed",
+          "seconds": 0.926,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_direct_migration::test_schema32_elite_offer_scope_and_all_old_columns_survive_atomic_migration[True]",
+          "status": "passed",
+          "seconds": 0.928,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0033_rogue_direct_supply]",
+          "status": "passed",
+          "seconds": 0.542,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0034_rogue_run_closures]",
+          "status": "passed",
+          "seconds": 0.451,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0035_rogue_bank_journals]",
+          "status": "passed",
+          "seconds": 0.622,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0036_rogue_bank_awards]",
+          "status": "passed",
+          "seconds": 0.416,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0037_rogue_battle_loot_plans]",
+          "status": "passed",
+          "seconds": 0.541,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_free_training_history_and_all_old_columns_survive_0031_or_atomic_rollback[False]",
+          "status": "passed",
+          "seconds": 1.334,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_free_training_history_and_all_old_columns_survive_0031_or_atomic_rollback[True]",
+          "status": "passed",
+          "seconds": 1.316,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0033_rogue_direct_supply]",
+          "status": "passed",
+          "seconds": 0.671,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0034_rogue_run_closures]",
+          "status": "passed",
+          "seconds": 0.525,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0035_rogue_bank_journals]",
+          "status": "passed",
+          "seconds": 0.488,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0036_rogue_bank_awards]",
+          "status": "passed",
+          "seconds": 0.577,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0037_rogue_battle_loot_plans]",
+          "status": "passed",
+          "seconds": 0.509,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back[False]",
+          "status": "failed",
+          "seconds": 1.074,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back[True]",
+          "status": "failed",
+          "seconds": 1.349,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0033_rogue_direct_supply]",
+          "status": "passed",
+          "seconds": 0.518,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0034_rogue_run_closures]",
+          "status": "passed",
+          "seconds": 0.491,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0035_rogue_bank_journals]",
+          "status": "passed",
+          "seconds": 0.474,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0036_rogue_bank_awards]",
+          "status": "passed",
+          "seconds": 0.633,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0037_rogue_battle_loot_plans]",
+          "status": "passed",
+          "seconds": 0.507,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback[False-training_runtime0]",
+          "status": "failed",
+          "seconds": 0.899,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback[True-training_runtime0]",
+          "status": "failed",
+          "seconds": 1.229,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0033_rogue_direct_supply]",
+          "status": "passed",
+          "seconds": 0.446,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0034_rogue_run_closures]",
+          "status": "passed",
+          "seconds": 0.443,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0035_rogue_bank_journals]",
+          "status": "passed",
+          "seconds": 0.789,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0036_rogue_bank_awards]",
+          "status": "passed",
+          "seconds": 0.408,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0037_rogue_battle_loot_plans]",
+          "status": "passed",
+          "seconds": 0.429,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_rest_resources_one_choice_delta_retry_leave_and_no_account_leak[1-hp-5]",
+          "status": "passed",
+          "seconds": 0.831,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_rest_resources_one_choice_delta_retry_leave_and_no_account_leak[3-population-3]",
+          "status": "passed",
+          "seconds": 1.009,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_rest_resources_one_choice_delta_retry_leave_and_no_account_leak[4-capacity-1]",
+          "status": "passed",
+          "seconds": 0.814,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_rest_free_upgrade_preserves_offer_cost_roster_snapshot_restart_and_backup",
+          "status": "passed",
+          "seconds": 1.591,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_cancel_upgrade_keeps_character_and_reentry_can_get_a_new_ticket",
+          "status": "passed",
+          "seconds": 0.845,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[all-training_runtime0]",
+          "status": "passed",
+          "seconds": 0.806,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[5star-training_runtime1]",
+          "status": "passed",
+          "seconds": 1.054,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[pioneer-training_runtime2]",
+          "status": "passed",
+          "seconds": 0.809,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[sniper-training_runtime3]",
+          "status": "passed",
+          "seconds": 1.078,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[special-training_runtime4]",
+          "status": "passed",
+          "seconds": 0.797,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[tank-training_runtime5]",
+          "status": "passed",
+          "seconds": 1.211,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[caster-training_runtime6]",
+          "status": "passed",
+          "seconds": 0.664,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[warrior-training_runtime7]",
+          "status": "passed",
+          "seconds": 0.74,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[support-training_runtime8]",
+          "status": "passed",
+          "seconds": 1.017,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[medic-training_runtime9]",
+          "status": "passed",
+          "seconds": 0.725,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_upgrade_restores_owned_snapshot_without_rerolling_on_later_training",
+          "status": "passed",
+          "seconds": 1.032,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_not_yet_elite_owned_character_is_counted_and_never_granted_unowned_training",
+          "status": "passed",
+          "seconds": 0.744,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_old_battle_stays_at_original_roster_and_next_battle_binds_new_training",
+          "status": "passed",
+          "seconds": 1.202,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_upgrade_concurrent_retries_and_rollback_do_not_duplicate_effects",
+          "status": "passed",
+          "seconds": 0.744,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[hash]",
+          "status": "passed",
+          "seconds": 0.924,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[source]",
+          "status": "passed",
+          "seconds": 0.78,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[target]",
+          "status": "passed",
+          "seconds": 1.06,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[time]",
+          "status": "passed",
+          "seconds": 0.792,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[duplicate]",
+          "status": "passed",
+          "seconds": 0.777,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic[False]",
+          "status": "passed",
+          "seconds": 1.031,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic[True]",
+          "status": "passed",
+          "seconds": 0.681,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_current_revision_with_missing_training_column_rejected_before_writes",
+          "status": "passed",
+          "seconds": 0.49,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_training::test_all_saved_rest_variants_offer_exactly_three_choices_without_implicit_weights",
+          "status": "passed",
+          "seconds": 0.978,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_three_fixed_events_share_transactions_delta_retry_cursor_restart_restore",
+          "status": "passed",
+          "seconds": 1.85,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_hybrid_scene_clear_scene_defeat_keeps_path_effects_and_versioned_ending",
+          "status": "passed",
+          "seconds": 1.495,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_concurrent_new_sequence_selection_grants_once_and_transaction_failure_rolls_back",
+          "status": "passed",
+          "seconds": 1.139,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[before]",
+          "status": "passed",
+          "seconds": 0.785,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[choice]",
+          "status": "passed",
+          "seconds": 0.755,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[prefix]",
+          "status": "passed",
+          "seconds": 1.317,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[program]",
+          "status": "passed",
+          "seconds": 0.822,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[state]",
+          "status": "passed",
+          "seconds": 0.654,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[hp]",
+          "status": "passed",
+          "seconds": 1.061,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[owner]",
+          "status": "passed",
+          "seconds": 0.637,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[missing-table]",
+          "status": "passed",
+          "seconds": 1.012,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_no_client_program_selection_invalid_choice_and_unreachable_move_are_read_only",
+          "status": "passed",
+          "seconds": 0.594,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_abandon_keeps_accepted_effects_and_clock_boundary_without_faking_exit",
+          "status": "passed",
+          "seconds": 0.768,
+          "run": "migrations.xml"
+        },
+        {
+          "id": "tests.test_rogue_visits::test_0025_upgrade_and_failure_rollback_keep_old_rows",
+          "status": "passed",
+          "seconds": 0.927,
+          "run": "migrations.xml"
+        }
+      ]
+    },
+    {
+      "name": "fixed-migration-comparison.xml",
+      "counts": {
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0
+      },
+      "results": [
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back[False]",
+          "status": "passed",
+          "seconds": 0.984,
+          "run": "fixed-migration-comparison.xml"
+        },
+        {
+          "id": "tests.test_rogue_paid_training_migration::test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back[True]",
+          "status": "passed",
+          "seconds": 0.978,
+          "run": "fixed-migration-comparison.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback[False-training_runtime0]",
+          "status": "passed",
+          "seconds": 0.929,
+          "run": "fixed-migration-comparison.xml"
+        },
+        {
+          "id": "tests.test_rogue_temporary_migration::test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback[True-training_runtime0]",
+          "status": "passed",
+          "seconds": 1.033,
+          "run": "fixed-migration-comparison.xml"
+        }
+      ]
+    },
+    {
+      "name": "copy-race.xml",
+      "counts": {
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0
+      },
+      "results": [
+        {
+          "id": "tests.test_backup_recovery::test_snapshot_journal_appearing_during_copy_never_activates[online]",
+          "status": "passed",
+          "seconds": 0.32,
+          "run": "copy-race.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_snapshot_journal_appearing_during_copy_never_activates[in-place]",
+          "status": "passed",
+          "seconds": 0.209,
+          "run": "copy-race.xml"
+        },
+        {
+          "id": "tests.test_backup_recovery::test_snapshot_journal_appearing_during_copy_never_activates[output]",
+          "status": "passed",
+          "seconds": 0.233,
+          "run": "copy-race.xml"
+        }
+      ]
+    }
+  ],
+  "latest_results": [
+    {
+      "id": "tests.test_backup_recovery::test_archived_database_is_standalone_and_does_not_change_live_wal",
+      "status": "passed",
+      "seconds": 0.251,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_candidate_migration_failure_never_replaces_active_save",
+      "status": "passed",
+      "seconds": 0.235,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_cli_recovers_old_backup_to_new_file_while_source_is_corrupt",
+      "status": "passed",
+      "seconds": 3.876,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_cli_restore_preserves_the_legacy_save_until_activation[bad-checksum]",
+      "status": "passed",
+      "seconds": 1.398,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_cli_restore_preserves_the_legacy_save_until_activation[valid-backup]",
+      "status": "passed",
+      "seconds": 2.653,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_concurrent_write_waits_for_activation_or_rollback[False]",
+      "status": "passed",
+      "seconds": 0.295,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_concurrent_write_waits_for_activation_or_rollback[True]",
+      "status": "passed",
+      "seconds": 0.362,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_copy_error_after_destination_commit_automatically_rolls_back",
+      "status": "passed",
+      "seconds": 0.345,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[column-\\u5fc5\\u8981\\u5b57\\u6bb5]",
+      "status": "passed",
+      "seconds": 0.294,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[foreign-key-\\u5b9e\\u4f53\\u5f15\\u7528]",
+      "status": "passed",
+      "seconds": 0.283,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[revision-\\u6570\\u636e\\u5e93\\u7248\\u672c]",
+      "status": "passed",
+      "seconds": 0.262,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_invalid_migrated_candidate_never_activates[table-\\u5fc5\\u8981\\u6570\\u636e\\u8868]",
+      "status": "passed",
+      "seconds": 0.302,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_legacy_wal_archive_without_pending_frames_can_still_restore",
+      "status": "passed",
+      "seconds": 0.337,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_offline_activation_failure_rolls_back_the_legacy_save",
+      "status": "passed",
+      "seconds": 0.348,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[checksum-\\u5907\\u4efd\\u54c8\\u5e0c]",
+      "status": "passed",
+      "seconds": 0.16,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[configuration-\\u4e0d\\u540c\\u7684 GameData]",
+      "status": "passed",
+      "seconds": 0.172,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[journal-\\u9644\\u5c5e\\u6587\\u4ef6]",
+      "status": "passed",
+      "seconds": 0.154,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_offline_recovery_rejects_invalid_inputs_before_publishing[target-\\u76ee\\u6807]",
+      "status": "passed",
+      "seconds": 0.145,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_offline_restore_into_a_missing_save_does_not_create_a_previous_snapshot",
+      "status": "passed",
+      "seconds": 0.273,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_post_activation_initialize_failure_restores_previous_state",
+      "status": "passed",
+      "seconds": 0.433,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_snapshot_journal_appearing_during_copy_never_activates[in-place]",
+      "status": "passed",
+      "seconds": 0.209,
+      "run": "copy-race.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_snapshot_journal_appearing_during_copy_never_activates[online]",
+      "status": "passed",
+      "seconds": 0.32,
+      "run": "copy-race.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_snapshot_journal_appearing_during_copy_never_activates[output]",
+      "status": "passed",
+      "seconds": 0.233,
+      "run": "copy-race.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_sqlite_copy_accepts_paths_containing_uri_characters",
+      "status": "passed",
+      "seconds": 0.053,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_successful_restore_preserves_old_snapshot_and_survives_restart",
+      "status": "passed",
+      "seconds": 0.422,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[rollback-in-place]",
+      "status": "passed",
+      "seconds": 0.175,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[rollback-online]",
+      "status": "passed",
+      "seconds": 0.171,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[rollback-output]",
+      "status": "passed",
+      "seconds": 0.174,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[wal-in-place]",
+      "status": "passed",
+      "seconds": 0.185,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[wal-online]",
+      "status": "passed",
+      "seconds": 0.196,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_recovery::test_unarchived_sqlite_journal_never_reaches_restore[wal-output]",
+      "status": "passed",
+      "seconds": 0.218,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_automatic_checksum_does_not_block_sync_or_a_ledger_write",
+      "status": "passed",
+      "seconds": 0.238,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_backup_worker_recovers_from_directory_unavailable",
+      "status": "passed",
+      "seconds": 0.185,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[invalid-json]",
+      "status": "passed",
+      "seconds": 0.284,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[missing-file]",
+      "status": "passed",
+      "seconds": 0.271,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[same-size-corruption]",
+      "status": "passed",
+      "seconds": 0.269,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_broken_backup_does_not_suppress_both_schedules[short-file]",
+      "status": "passed",
+      "seconds": 0.292,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_cli_and_service_backups_can_publish_at_the_same_timestamp",
+      "status": "passed",
+      "seconds": 0.226,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_cli_backup_preserves_legacy_revision_and_committed_wal",
+      "status": "passed",
+      "seconds": 2.498,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_cli_backup_requires_an_existing_save",
+      "status": "passed",
+      "seconds": 2.03,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_cli_restore_waits_for_service_shutdown_but_backup_still_works",
+      "status": "passed",
+      "seconds": 5.805,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_duplicate_period_and_orphan_do_not_displace_verified_dates",
+      "status": "passed",
+      "seconds": 0.489,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_online_backup_uses_only_committed_rows_while_a_write_is_in_progress",
+      "status": "passed",
+      "seconds": 0.203,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_restore_preserves_a_copy_of_a_damaged_active_database",
+      "status": "passed",
+      "seconds": 0.414,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_rotation_after_data_version_change_restores_both_versions",
+      "status": "passed",
+      "seconds": 1.252,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_rotation_can_remove_source_after_restore_has_staged_it",
+      "status": "passed",
+      "seconds": 0.589,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_rotation_compares_optional_rules_and_reuses_legacy_empty_marker",
+      "status": "passed",
+      "seconds": 0.354,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_backup_retention::test_rotation_covers_seven_dates_and_four_iso_weeks",
+      "status": "passed",
+      "seconds": 1.233,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0033_rogue_direct_supply]",
+      "status": "passed",
+      "seconds": 0.542,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0034_rogue_run_closures]",
+      "status": "passed",
+      "seconds": 0.451,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0035_rogue_bank_journals]",
+      "status": "passed",
+      "seconds": 0.622,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0036_rogue_bank_awards]",
+      "status": "passed",
+      "seconds": 0.416,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_latest_stamp_with_schema32_is_rejected_before_writes[0037_rogue_battle_loot_plans]",
+      "status": "passed",
+      "seconds": 0.541,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_schema32_elite_offer_scope_and_all_old_columns_survive_atomic_migration[False]",
+      "status": "passed",
+      "seconds": 0.926,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_direct_migration::test_schema32_elite_offer_scope_and_all_old_columns_survive_atomic_migration[True]",
+      "status": "passed",
+      "seconds": 0.928,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0033_rogue_direct_supply]",
+      "status": "passed",
+      "seconds": 0.671,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0034_rogue_run_closures]",
+      "status": "passed",
+      "seconds": 0.525,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0035_rogue_bank_journals]",
+      "status": "passed",
+      "seconds": 0.488,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0036_rogue_bank_awards]",
+      "status": "passed",
+      "seconds": 0.577,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_current_stamp_with_0031_schema_is_rejected_before_writes[0037_rogue_battle_loot_plans]",
+      "status": "passed",
+      "seconds": 0.509,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_free_training_history_and_all_old_columns_survive_0031_or_atomic_rollback[False]",
+      "status": "passed",
+      "seconds": 1.334,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_elite_migration::test_free_training_history_and_all_old_columns_survive_0031_or_atomic_rollback[True]",
+      "status": "passed",
+      "seconds": 1.316,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_all_floors_persist_without_unlocking_or_revealing_future_maps",
+      "status": "passed",
+      "seconds": 1.273,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[empty-floors]",
+      "status": "passed",
+      "seconds": 0.443,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-graph]",
+      "status": "passed",
+      "seconds": 0.49,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-key]",
+      "status": "passed",
+      "seconds": 0.517,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-region]",
+      "status": "passed",
+      "seconds": 0.508,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[future-weight]",
+      "status": "passed",
+      "seconds": 0.424,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[graph-extra]",
+      "status": "passed",
+      "seconds": 0.447,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[graph-index]",
+      "status": "passed",
+      "seconds": 0.754,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[plan-extra]",
+      "status": "passed",
+      "seconds": 0.407,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[plan-hash]",
+      "status": "passed",
+      "seconds": 0.431,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[seed]",
+      "status": "passed",
+      "seconds": 0.477,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[too-many-floors]",
+      "status": "passed",
+      "seconds": 0.615,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_bad_future_floor_blocks_startup_readonly_before_any_repair[truncated-graphs]",
+      "status": "passed",
+      "seconds": 0.388,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_corrupt_future_candidate_backup_leaves_live_database_intact",
+      "status": "passed",
+      "seconds": 0.665,
+      "run": "fixed-envelope.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_first_floor_seed_is_compatible_later_seed_and_recipe_are_independent",
+      "status": "passed",
+      "seconds": 0.621,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_future_recipe_replacement_and_single_sequence_conversion_are_rejected",
+      "status": "passed",
+      "seconds": 0.579,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_old_single_floor_remains_readonly_and_cannot_be_extended_in_place",
+      "status": "passed",
+      "seconds": 0.437,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_sequence_first_floor_scene_shop_defeat_and_ending_still_compose",
+      "status": "passed",
+      "seconds": 1.408,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_drafts::test_two_processes_and_failed_transaction_do_not_reroll_or_partially_save",
+      "status": "passed",
+      "seconds": 0.543,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_27_migration_preserves_battle_children_and_adds_only_initial_cursor[False]",
+      "status": "passed",
+      "seconds": 0.843,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_27_migration_preserves_battle_children_and_adds_only_initial_cursor[True]",
+      "status": "passed",
+      "seconds": 1.303,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_corrupt_cursor_backup_never_replaces_live_save",
+      "status": "passed",
+      "seconds": 1.131,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_crossing_is_atomic_concurrent_and_clock_rewind_safe",
+      "status": "passed",
+      "seconds": 1.485,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[hash]",
+      "status": "passed",
+      "seconds": 0.734,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[jump]",
+      "status": "passed",
+      "seconds": 1.014,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[missing]",
+      "status": "passed",
+      "seconds": 0.757,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[pending]",
+      "status": "passed",
+      "seconds": 0.769,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[time]",
+      "status": "passed",
+      "seconds": 1.164,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[wrong-id]",
+      "status": "passed",
+      "seconds": 0.75,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[wrong-kind]",
+      "status": "passed",
+      "seconds": 1.152,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_cursor_tampering_refuses_startup_readonly_even_with_rehashed_journal[wrong-node]",
+      "status": "passed",
+      "seconds": 0.821,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_floor_timestamp_bounds_abandon_after_clock_rewind",
+      "status": "passed",
+      "seconds": 0.814,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_same_coordinate_battles_scene_crossings_ending_restart_and_backup",
+      "status": "passed",
+      "seconds": 1.946,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_floor_progress::test_shop_pending_ticket_barrier_and_last_supplied_floor_does_not_invent_ending",
+      "status": "passed",
+      "seconds": 1.544,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back[False]",
+      "status": "passed",
+      "seconds": 0.984,
+      "run": "fixed-migration-comparison.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back[True]",
+      "status": "passed",
+      "seconds": 0.978,
+      "run": "fixed-migration-comparison.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0033_rogue_direct_supply]",
+      "status": "passed",
+      "seconds": 0.518,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0034_rogue_run_closures]",
+      "status": "passed",
+      "seconds": 0.491,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0035_rogue_bank_journals]",
+      "status": "passed",
+      "seconds": 0.474,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0036_rogue_bank_awards]",
+      "status": "passed",
+      "seconds": 0.633,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_paid_training_migration::test_latest_revision_with_old_constraints_rejected_before_writes[0037_rogue_battle_loot_plans]",
+      "status": "passed",
+      "seconds": 0.507,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0033_rogue_direct_supply]",
+      "status": "passed",
+      "seconds": 0.446,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0034_rogue_run_closures]",
+      "status": "passed",
+      "seconds": 0.443,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0035_rogue_bank_journals]",
+      "status": "passed",
+      "seconds": 0.789,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0036_rogue_bank_awards]",
+      "status": "passed",
+      "seconds": 0.408,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_latest_stamp_with_0030_constraints_is_rejected_before_writes[0037_rogue_battle_loot_plans]",
+      "status": "passed",
+      "seconds": 0.429,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback[False-training_runtime0]",
+      "status": "passed",
+      "seconds": 0.929,
+      "run": "fixed-migration-comparison.xml"
+    },
+    {
+      "id": "tests.test_rogue_temporary_migration::test_paid_history_and_all_rows_survive_0030_upgrade_or_atomic_rollback[True-training_runtime0]",
+      "status": "passed",
+      "seconds": 1.033,
+      "run": "fixed-migration-comparison.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic[False]",
+      "status": "passed",
+      "seconds": 1.031,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic[True]",
+      "status": "passed",
+      "seconds": 0.681,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_saved_rest_variants_offer_exactly_three_choices_without_implicit_weights",
+      "status": "passed",
+      "seconds": 0.978,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[5star-training_runtime1]",
+      "status": "passed",
+      "seconds": 1.054,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[all-training_runtime0]",
+      "status": "passed",
+      "seconds": 0.806,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[caster-training_runtime6]",
+      "status": "passed",
+      "seconds": 0.664,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[medic-training_runtime9]",
+      "status": "passed",
+      "seconds": 0.725,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[pioneer-training_runtime2]",
+      "status": "passed",
+      "seconds": 0.809,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[sniper-training_runtime3]",
+      "status": "passed",
+      "seconds": 1.078,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[special-training_runtime4]",
+      "status": "passed",
+      "seconds": 0.797,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[support-training_runtime8]",
+      "status": "passed",
+      "seconds": 1.017,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[tank-training_runtime5]",
+      "status": "passed",
+      "seconds": 1.211,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_all_ten_ticket_families_have_complete_shop_to_upgrade_flow[warrior-training_runtime7]",
+      "status": "passed",
+      "seconds": 0.74,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_cancel_upgrade_keeps_character_and_reentry_can_get_a_new_ticket",
+      "status": "passed",
+      "seconds": 0.845,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[duplicate]",
+      "status": "passed",
+      "seconds": 0.777,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[hash]",
+      "status": "passed",
+      "seconds": 0.924,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[source]",
+      "status": "passed",
+      "seconds": 0.78,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[target]",
+      "status": "passed",
+      "seconds": 1.06,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_corrupt_training_rejected_before_startup_writes[time]",
+      "status": "passed",
+      "seconds": 0.792,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_current_revision_with_missing_training_column_rejected_before_writes",
+      "status": "passed",
+      "seconds": 0.49,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_not_yet_elite_owned_character_is_counted_and_never_granted_unowned_training",
+      "status": "passed",
+      "seconds": 0.744,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_old_battle_stays_at_original_roster_and_next_battle_binds_new_training",
+      "status": "passed",
+      "seconds": 1.202,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_rest_free_upgrade_preserves_offer_cost_roster_snapshot_restart_and_backup",
+      "status": "passed",
+      "seconds": 1.591,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_rest_resources_one_choice_delta_retry_leave_and_no_account_leak[1-hp-5]",
+      "status": "passed",
+      "seconds": 0.831,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_rest_resources_one_choice_delta_retry_leave_and_no_account_leak[3-population-3]",
+      "status": "passed",
+      "seconds": 1.009,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_rest_resources_one_choice_delta_retry_leave_and_no_account_leak[4-capacity-1]",
+      "status": "passed",
+      "seconds": 0.814,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_upgrade_concurrent_retries_and_rollback_do_not_duplicate_effects",
+      "status": "passed",
+      "seconds": 0.744,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_training::test_upgrade_restores_owned_snapshot_without_rerolling_on_later_training",
+      "status": "passed",
+      "seconds": 1.032,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_0025_upgrade_and_failure_rollback_keep_old_rows",
+      "status": "passed",
+      "seconds": 0.927,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_abandon_keeps_accepted_effects_and_clock_boundary_without_faking_exit",
+      "status": "passed",
+      "seconds": 0.768,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_concurrent_new_sequence_selection_grants_once_and_transaction_failure_rolls_back",
+      "status": "passed",
+      "seconds": 1.139,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_hybrid_scene_clear_scene_defeat_keeps_path_effects_and_versioned_ending",
+      "status": "passed",
+      "seconds": 1.495,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[before]",
+      "status": "passed",
+      "seconds": 0.785,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[choice]",
+      "status": "passed",
+      "seconds": 0.755,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[hp]",
+      "status": "passed",
+      "seconds": 1.061,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[missing-table]",
+      "status": "passed",
+      "seconds": 1.012,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[owner]",
+      "status": "passed",
+      "seconds": 0.637,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[prefix]",
+      "status": "passed",
+      "seconds": 1.317,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[program]",
+      "status": "passed",
+      "seconds": 0.822,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_invalid_scene_or_path_is_rejected_before_startup_writes[state]",
+      "status": "passed",
+      "seconds": 0.654,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_no_client_program_selection_invalid_choice_and_unreachable_move_are_read_only",
+      "status": "passed",
+      "seconds": 0.594,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_rogue_visits::test_three_fixed_events_share_transactions_delta_retry_cursor_restart_restore",
+      "status": "passed",
+      "seconds": 1.85,
+      "run": "migrations.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_0022_upgrade_and_rollback_keep_every_existing_row",
+      "status": "passed",
+      "seconds": 1.14,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[bool-coordinate-422]",
+      "status": "passed",
+      "seconds": 0.69,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[duplicate-400]",
+      "status": "passed",
+      "seconds": 0.897,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[empty-400]",
+      "status": "passed",
+      "seconds": 0.688,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[extra-422]",
+      "status": "passed",
+      "seconds": 0.93,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[extra-slot-field-422]",
+      "status": "passed",
+      "seconds": 0.535,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[module-501]",
+      "status": "passed",
+      "seconds": 1.064,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[permanent-id-400]",
+      "status": "passed",
+      "seconds": 0.699,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[reserve-skill-400]",
+      "status": "passed",
+      "seconds": 1.033,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[reserve-zero-400]",
+      "status": "passed",
+      "seconds": 0.561,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[resume-501]",
+      "status": "passed",
+      "seconds": 0.611,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[skill-locked-400]",
+      "status": "passed",
+      "seconds": 0.58,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[stage-400]",
+      "status": "passed",
+      "seconds": 0.898,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[target-409]",
+      "status": "passed",
+      "seconds": 0.601,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_bad_request_never_writes_battle_or_receipt[too-many-slots-422]",
+      "status": "passed",
+      "seconds": 0.637,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_battle_kind_reuses_bound_node_and_data[BATTLE_BOSS-boss-501]",
+      "status": "passed",
+      "seconds": 0.644,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_battle_kind_reuses_bound_node_and_data[BATTLE_ELITE-emergency-501]",
+      "status": "passed",
+      "seconds": 0.989,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_battle_kind_reuses_bound_node_and_data[BATTLE_NORMAL-ordinary-200]",
+      "status": "passed",
+      "seconds": 0.681,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_backup_and_missing_current_table_preserve_original",
+      "status": "passed",
+      "seconds": 1.186,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[data]",
+      "status": "passed",
+      "seconds": 0.994,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[hash]",
+      "status": "passed",
+      "seconds": 0.715,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[node]",
+      "status": "passed",
+      "seconds": 1.035,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[owner]",
+      "status": "passed",
+      "seconds": 0.664,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[policy]",
+      "status": "passed",
+      "seconds": 0.681,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[seed]",
+      "status": "passed",
+      "seconds": 1.037,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[session]",
+      "status": "passed",
+      "seconds": 0.676,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[squad]",
+      "status": "passed",
+      "seconds": 0.689,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[stage]",
+      "status": "passed",
+      "seconds": 0.598,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_corrupt_battle_rejected_before_startup_write[time]",
+      "status": "passed",
+      "seconds": 0.69,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_cross_mode_start_blocking_and_abandon_without_rewards",
+      "status": "passed",
+      "seconds": 1.051,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_native_v12_request_shape_with_unvoiced_reserve",
+      "status": "passed",
+      "seconds": 0.57,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_new_login_preserves_old_battle_and_refuses_guessing_resume",
+      "status": "passed",
+      "seconds": 0.777,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_nonbattle_node_owner_and_login_guards",
+      "status": "passed",
+      "seconds": 0.889,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_ordinary_battle_blocks_rogue_start_without_charging",
+      "status": "passed",
+      "seconds": 0.615,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_parallel_runtimes_and_outer_failure",
+      "status": "passed",
+      "seconds": 0.698,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_battle_start::test_start_delta_persistence_retry_and_no_permanent_rewards",
+      "status": "passed",
+      "seconds": 1.372,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_0020_upgrade_keeps_every_old_row_and_migration_rollback",
+      "status": "passed",
+      "seconds": 0.522,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_abandoned_draft_is_retained_but_never_shared_with_a_new_run",
+      "status": "passed",
+      "seconds": 0.487,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_conflicting_plan_and_outer_rollback_never_replace_a_saved_map",
+      "status": "passed",
+      "seconds": 0.439,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_invalid_candidate_backup_is_rejected_before_touching_current_save",
+      "status": "passed",
+      "seconds": 0.563,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_legacy_100_key_draft_is_read_without_rewriting_or_rerolling",
+      "status": "passed",
+      "seconds": 0.444,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_new_schema_missing_draft_table_is_not_repaired_silently",
+      "status": "passed",
+      "seconds": 0.478,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_saved_draft_survives_restart_backup_and_is_not_client_activation",
+      "status": "passed",
+      "seconds": 0.749,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[boolean-width]",
+      "status": "passed",
+      "seconds": 0.84,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[missing-weight]",
+      "status": "passed",
+      "seconds": 0.414,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[oversize-pool]",
+      "status": "passed",
+      "seconds": 0.457,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_saved_recipe_cannot_drop_unknown_rules_or_default_bad_values[unknown-plan-field]",
+      "status": "passed",
+      "seconds": 0.351,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[data-hash]",
+      "status": "passed",
+      "seconds": 0.474,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[future-json]",
+      "status": "passed",
+      "seconds": 0.445,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[graph-stage]",
+      "status": "passed",
+      "seconds": 0.475,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[orphan]",
+      "status": "passed",
+      "seconds": 0.863,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[plan-hash]",
+      "status": "passed",
+      "seconds": 0.488,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[plan-pool]",
+      "status": "passed",
+      "seconds": 0.793,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[policy]",
+      "status": "passed",
+      "seconds": 0.42,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[timestamp]",
+      "status": "passed",
+      "seconds": 0.467,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[unresolved-ticket]",
+      "status": "passed",
+      "seconds": 0.482,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_startup_refuses_corruption_before_writing_or_regenerating[wrong-seed]",
+      "status": "passed",
+      "seconds": 0.442,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_two_runtimes_serialize_same_plan_without_duplicate_or_reroll",
+      "status": "passed",
+      "seconds": 0.797,
+      "run": "verified.xml"
+    },
+    {
+      "id": "tests.test_roguelike_map_drafts::test_unresolved_ticket_blocks_preparation_without_writing",
+      "status": "passed",
+      "seconds": 0.455,
+      "run": "verified.xml"
+    }
+  ],
+  "source_commit": "9ea5f815abd2e6ef3b43e7a3476013914000ba7f",
+  "original_published_failures_rechecked": 15,
+  "full_suite_rerun": false
+}

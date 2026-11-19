@@ -197,6 +197,7 @@ def test_corrupt_future_candidate_backup_leaves_live_database_intact(floor_runti
     metadata = path.with_suffix(".json")
     value = json.loads(metadata.read_bytes())
     value["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+    value["bytes"] = path.stat().st_size
     metadata.write_text(json.dumps(value), "utf8")
     before = rows(runtime.database.path)
     with pytest.raises(ValueError, match="地图准备记录"):
