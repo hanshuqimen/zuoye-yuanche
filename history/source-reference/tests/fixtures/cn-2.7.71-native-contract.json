@@ -1,0 +1,20 @@
+{
+  "source": "selected types read from owned frozen client files",
+  "verification": "client-static; responses require separate UI verification",
+  "apk_sha256": "0b79b85383e21a6343283bc6bfd7a9d24eb4134abf901115f757da6a5d50f6db",
+  "elf_sha256": "3ece1e7b34165233fe8c3c919cf55dfcb4406b6bbc2725def2b1242b4c0a6259",
+  "metadata_sha256": "bf14421bbafe9c71d944ba4f97b31ecd666232640eac0829db3d84ac716ac8b8",
+  "types": {
+    "PlayerSyncStatusResponse": {"ts": "long", "result": "Dictionary<long, JObject>"},
+    "PlayerSyncGoodPurchaseResult": {"goodPurchaseState": "GetGoodPurchaseStateResponse"},
+    "GetGoodPurchaseStateResponse": {"result": "Dictionary<string, int>"},
+    "PlayerCheckForbiddenResult": {"gacha": "List<string>", "shop": "List<string>"}
+  },
+  "PlayerStageState": {"UNLOCKED": 0, "PLAYED": 1, "PASS": 2, "COMPLETE": 3},
+  "PlayerSyncModuleMask": {
+    "UNREAD_MAILS": 1, "FRIEND_REQ": 2, "ANNOUNCE_VER": 4, "REFRESH_USER_CARD": 8,
+    "GOOD_PURCHASE_STATE": 16, "CASH_PURCHASE_STATE": 32, "CLUE_STATE": 64, "SYNC_BUILDING": 128,
+    "SYNC_CRISIS": 256, "SYNC_ACTIVITY": 512, "SYNC_MEDAL": 1024, "CHECK_FORBIDDEN": 2048,
+    "SYNC_ACTIVITY_FIXED_INTERVAL": 4096
+  }
+}

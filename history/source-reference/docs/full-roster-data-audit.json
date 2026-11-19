@@ -1,0 +1,32 @@
+{
+  "kind": "static-game-data-audit",
+  "clientVerified": false,
+  "directory": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\data\\gamedata\\source\\excel",
+  "eligibleOperators": 429,
+  "activeSkills": 945,
+  "skillsWithThreeMasteryLevels": 928,
+  "skillsWithoutMastery": 17,
+  "operatorsWithoutPotentialRanks": [
+    "char_159_peacok",
+    "char_4067_lolxh",
+    "char_4019_ncdeer"
+  ],
+  "masteryUnlockConditions": {
+    "PHASE_2/level 1": 2784
+  },
+  "maxTrust": 25570,
+  "fullTrustFrame": {
+    "level": 25570,
+    "data": {
+      "favorPoint": 25570,
+      "percent": 200,
+      "battlePhase": 100
+    }
+  },
+  "hashes": {
+    "character": "68e3a3b5ee0d407ce234afaa5867c6fda6379a6843c7d5317a7bbda4779f8697",
+    "skill": "86f4aa64c785f39727edd06d6dd8a4f27f371c8e4ace5345ba0dc61dee1386ca",
+    "favor": "7c67710e5ecfb2abc6f2fcbf871de544e5c45717b427e4d8dd8232c91db76ea3"
+  },
+  "errors": []
+}

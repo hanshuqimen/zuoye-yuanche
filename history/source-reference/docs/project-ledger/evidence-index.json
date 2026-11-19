@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-19",
+  "business_commit": "054bd8c76dedbab318340fdf9e3a62ecf7b62559",
+  "entries": [
+    {
+      "path": ".cache/adb-isolation-targeted-20261019.txt",
+      "sha256": "26622ea35f5895ee83abce020609d7f6e6d5d09573652776bb242c9afc82b751",
+      "bytes": 588,
+      "scope": "连接/生命周期58专项，阶段结果"
+    },
+    {
+      "path": ".cache/adb-isolation-full-20261019.txt",
+      "sha256": "866910a93846623cafbc56cbf55263ece766551b6bc4ab49b93c48a423b19c09",
+      "bytes": 1897,
+      "scope": "054bd8c业务完整1168检查，223.34秒，一项既有警告"
+    },
+    {
+      "path": ".cache/adb-isolation-ruff-20261019.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "scope": "最终Ruff零诊断"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v17/transaction-audit.json",
+      "sha256": "5d2e2c4c51407e06ddaeed3389827e08796229207ad61751e3a8a0262f8379f2",
+      "bytes": 3867,
+      "scope": "3207修复跨周、客户端冷启及后端重开；100收入夹具"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v18/transaction-audit.json",
+      "sha256": "23c8eba73050837fbe620fb405b0b1096ba48a1e7c97191ad738a3ee4854806d",
+      "bytes": 3849,
+      "scope": "实际首档领取，100击杀资格夹具"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v19/transaction-audit.json",
+      "sha256": "f908467cbd75d392aab731a177128e4b380d3a31d3e47b19e3f810ac097538df",
+      "bytes": 3482,
+      "scope": "同一v18存档，源码服务/模拟器完整重启"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v20/connection-failure-audit.json",
+      "sha256": "f5f7018d6b5005e843740b879ee92d326a85137e0d53cccbf81ef1d816c160d0",
+      "bytes": 974,
+      "scope": "共享ADB不响应，未进入游戏；59表完全保持"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v21/transaction-audit.json",
+      "sha256": "dae474d334c020e30e239eef506438036bd05ca5b497f5af5354b713325923e3",
+      "bytes": 3467,
+      "scope": "新独立ADB登录/训练预览37请求全200，无开战/领取；正常停机/后端重开"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v21/native-adb-isolation-proof.json",
+      "sha256": "62e0277cb16d9dea085e050b56bc55f26720e18b69ba5cd187aea8efd8bd4743",
+      "bytes": 226,
+      "scope": "原生阶段使用所属loopback端口；共享后来恢复，不能称始终故障"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v21/audit-attempt-01.json",
+      "sha256": "3fbc72240959f26618848744c3483901afa5ccd7fa27f4ebee3b20d65a253fdf",
+      "bytes": 287,
+      "scope": "审计脚本继承夹具比较错误，修正前失败留档"
+    },
+    {
+      "path": ".cache/rea-20261019-training-mode/private-adb-02-probe.json",
+      "sha256": "e49476270f5dfc5a2c5b4d068b5661eb8af86d3cf1d8377615b3e5697598a60e",
+      "bytes": 201,
+      "scope": "独立服务读取相同硬件；非游戏验收"
+    },
+    {
+      "path": ".cache/rea-20261019-training-mode/production-loopback-proof.json",
+      "sha256": "a395f8fba064608bceb7cbb407329d1d668138099d84f28c5b106d4d69999945",
+      "bytes": 258,
+      "scope": "实际生产ADB监听仅本机及所属子进程退出"
+    },
+    {
+      "path": ".cache/rea-20261019-training-mode/ubuntu-rea-0x45e8a64.json",
+      "sha256": "83d00febcdc2c221c0d18ab647e03a8504f39816107dece2c7124fdb643e9496",
+      "bytes": 5171,
+      "scope": "REA M33916；费用读取/次数，保留控制流警告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-mode/ubuntu-rea-0x4435260.json",
+      "sha256": "4f0a37eb5ae53413fc1245399ee27b2e6c2efd8fc14d45e82abb862fcf786eaa",
+      "bytes": 6228,
+      "scope": "REA M174097；符号格式化，保留控制流警告"
+    },
+    {
+      "path": ".cache/rea-20261019-break-native/ubuntu-rea-0x44262b4.json",
+      "sha256": "c96426849accdb56239f7a314e6ed65ae65e89badf89c18ba85a1e545817352f",
+      "bytes": 10209,
+      "scope": "REA发送突破请求默认字段赋值"
+    },
+    {
+      "path": ".cache/rea-20261019-break-native/ubuntu-rea-0x4426528.json",
+      "sha256": "f1da6a924ee4ba80523dbdc3ab398443f274a93d0346fe1329cd3c042afdc1db",
+      "bytes": 6761,
+      "scope": "REA响应回调，仍有截断警告"
+    },
+    {
+      "path": ".cache/rea-20261019-break-native/ubuntu-rea-0x4426244.json",
+      "sha256": "1c48a883fe59e127debb00f5e5b94157c8648c30a664fa799cb2a42520939787",
+      "bytes": 4756,
+      "scope": "REA待领状态getter，动态分支未闭合"
+    },
+    {
+      "path": ".cache/github-checkpoints/campaign-break-native-20261019/upload-verification.json",
+      "sha256": "a324ded4c45ff9909568a3ada2faae5dbeccb22b424d26f6454cbd8b93705d3c",
+      "bytes": 4553,
+      "scope": "已远程回读7873964及282文件/33提交恢复，非当前054bd8c已备份证明"
+    },
+    {
+      "path": ".cache/training-regression-before-20261019.txt",
+      "sha256": "1ea76dc616538aad3371087ddea58ba18415bf9c26ca0b8b27f705db14f193ba",
+      "bytes": 8502,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/training-regression-before02-20261019.txt",
+      "sha256": "ccf0baca3e6d8fff63c1b8ef5084187698e8dd34a8d41cc5850a59a0132ddea8",
+      "bytes": 6112,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/training-targeted-20261019.txt",
+      "sha256": "7d7d08559f6604ea90b4dd7796cc092dcfb7534891bade6f75af62338d3b7d27",
+      "bytes": 6731,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/training-targeted02-20261019.txt",
+      "sha256": "e9949adfd2299d2490d2e169c3550078c3b8a9719550ee1b157bc930acc6e5cd",
+      "bytes": 669,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/training-full-20261019.txt",
+      "sha256": "fd11cbf6f109a488f700ba62c733ac1b868a7a0b5b39de12477bb832da2e6f26",
+      "bytes": 1897,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/training-ruff-final-20261019.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/ubuntu-rea-0x4118144.json",
+      "sha256": "0cd77da6df694c3da8fbbb7e01c20840dc33fc091cb52e1510e2dc50eeac4253",
+      "bytes": 8717,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/ubuntu-rea-0x43095d8.json",
+      "sha256": "1636c4913b5985c49bf0aa89b0e14f3eaa712f5990b406c4f27613d66e3d7584",
+      "bytes": 15383,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/ubuntu-rea-0x480aea4.json",
+      "sha256": "897d16d56c750e24d4b173cf891c4e340480f4f0250fd322fd85b2abe368fcf5",
+      "bytes": 5510,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/exact-bodies/ubuntu-rea-0x4118144.json",
+      "sha256": "6b3388e09a79d6549ab02d04f1c260533d7ddc89683421e2685799277217d8c8",
+      "bytes": 14022,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/exact-bodies/ubuntu-rea-0x41184c0.json",
+      "sha256": "e1b23a5ab4a31f01e93671a928f25ac837a3a89d5680001c6d3451cd5a96fbf6",
+      "bytes": 14022,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/exact-bodies/ubuntu-rea-0x43095d8.json",
+      "sha256": "68ec08ad2bea0fc314a230ff4f3c60b1de16567dd46a3ce1a8696a4793a0cf92",
+      "bytes": 14023,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/exact-bodies-native-socket/ubuntu-rea-0x4118144.json",
+      "sha256": "4865b333119205c6d3904954d6ce056d7e14cc6b1bbcfda65c78e960fc3dd0a7",
+      "bytes": 7033,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/exact-bodies-native-socket/ubuntu-rea-0x41184c0.json",
+      "sha256": "e33a6e80774ec9ecdd5f9257f1002c2c7f273416fc37006a3c07a08b64667d69",
+      "bytes": 5317,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/exact-bodies-native-socket/ubuntu-rea-0x43095d8.json",
+      "sha256": "6900ea8a47a2a29ea618a29794d0ca495ff6c3858c6472d405903d568b032a19",
+      "bytes": 6899,
+      "scope": "2026-10-19训练研究/失败/补正/验证；具体结论及限制见campaign-training报告"
+    },
+    {
+      "path": ".cache/rea-20261019-training-gain/campaign-mode-matrix.json",
+      "sha256": "e2f34bd61f7a0c51e662c02414627712765d741cc704edb0f46961d39bd55bbd",
+      "bytes": 141407,
+      "scope": "纠正模式泛化误诊；v22实际9档扣25返25；77专项/1175完整检查，详见训练报告"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v22/transaction-audit.json",
+      "sha256": "bc26234f91ed40af0d19f9dff4447b01ffcfe7caeec09613dcca5e79a3adddcc",
+      "bytes": 5170,
+      "scope": "纠正模式泛化误诊；v22实际9档扣25返25；77专项/1175完整检查，详见训练报告"
+    },
+    {
+      "path": ".cache/training-corrected-targeted-20261019.txt",
+      "sha256": "7fcaa774ed1cecfb95047bab5af7fcddc157d6271c2d4c5390019b401a66d57f",
+      "bytes": 669,
+      "scope": "纠正模式泛化误诊；v22实际9档扣25返25；77专项/1175完整检查，详见训练报告"
+    },
+    {
+      "path": ".cache/training-corrected-full-20261019.txt",
+      "sha256": "65ed07ea2a75bf316f6a8abebe596c151b6bb5c3b53c2636c02cbb9eed3c9f0c",
+      "bytes": 1897,
+      "scope": "纠正模式泛化误诊；v22实际9档扣25返25；77专项/1175完整检查，详见训练报告"
+    },
+    {
+      "path": ".cache/training-corrected-ruff-20261019.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "scope": "纠正模式泛化误诊；v22实际9档扣25返25；77专项/1175完整检查，详见训练报告"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v23/transaction-audit.json",
+      "sha256": "e7732d957fafa383ac6aa6ee353ba969f7267524db10766595f86fba9ab1227f",
+      "bytes": 4252,
+      "scope": "v23冷启/外部ADB环境/继承记录/关停；不覆盖完整训练或奖励档"
+    },
+    {
+      "path": ".cache/campaign-native-20261019-v23/owned-adb-live-proof.json",
+      "sha256": "fd080a5f21f1c058a5b7682828cdf26becac6e48338656585f8418f6dd2bcf62",
+      "bytes": 282,
+      "scope": "v23冷启/外部ADB环境/继承记录/关停；不覆盖完整训练或奖励档"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v25/transaction-audit.json",
+      "sha256": "62bda85e4b8ea64d6875a09d3422e2c5524ca864cf371cafd9a327f0da466b2c",
+      "bytes": 1381,
+      "scope": "v25 bounded file-backed12KiB read;60HTTP200,no new battle;normal stop/59table reopen,not positive gameplay"
+    },
+    {
+      "path": ".cache/rea-20261020-training-rewards-loaded-v25/ubuntu-rea-0x446cd48.json",
+      "sha256": "3a50c36e954747342d4684ce83ded0a5e5284117ed67ad8be086d629f488a3f9",
+      "bytes": 18838,
+      "scope": "REA single-method loaded body,partial due missing neighbor callees; retained PIC warning"
+    },
+    {
+      "path": ".cache/rea-20261020-training-rewards-loaded-v25/ubuntu-rea-0x446d460.json",
+      "sha256": "18bf1d0d89cc613f216f13ecdd8231a1a89cd0cb6acce46c79fd936e9f4e9853",
+      "bytes": 13016,
+      "scope": "REA loaded DropInfoGroup;response lists and separate AP refund;exception-end warning retained"
+    },
+    {
+      "path": ".cache/rea-20261020-training-rewards-page-context-v25/ubuntu-rea-0x446cd48.json",
+      "sha256": "51e0b9cd14831ff439be02499d770eb5ce23936ced54a63ae47a3d9f871a2d0f",
+      "bytes": 23751,
+      "scope": "REA same3pages54known neighbor seeds;Common model no longer truncated;globals warning remains"
+    },
+    {
+      "path": ".cache/rea-20261020-training-rewards-page-context-v25/campaign-response-virtuals.json",
+      "sha256": "b0d1c8fd7f78e6539abadb60ad5cf1298dd145000793238a26125eb9a3315a5a",
+      "bytes": 854,
+      "scope": "Frozen Campaign multiplier1 and null first rewards default methods;not native acceptance"
+    },
+    {
+      "path": ".cache/training-resources-targeted-20261020-attempt01.txt",
+      "sha256": "55d11ac46d08bd2acfcb8dea4daaffede51dd50fa717101b98724bf6406efe37",
+      "bytes": 10729,
+      "scope": "3test assertions failed due new receipt revision;46passed;not accepted final result"
+    },
+    {
+      "path": ".cache/training-resources-targeted-20261020-attempt02.txt",
+      "sha256": "de3cbe40a309d348015b6d3da7f2d2777f62ee30ca7d3e71f1c8c1dcb36f6fb4",
+      "bytes": 669,
+      "scope": "Corrected75targeted checks passed19.22s;one existing warning;synthetic resource tiers,not native gameplay"
+    },
+    {
+      "path": ".cache/github-checkpoints/training-research-20261020/upload-verification.json",
+      "sha256": "e3eb4973274eb312a1e7d9f5a61e4c0af68da9ab5896be96522e04a3da9dc98e",
+      "bytes": 4913,
+      "scope": "210eaeb private remote readback/newD restore302files41commits;current pending new business not in that checkpoint"
+    },
+    {
+      "path": ".cache/training-resources-full-20261020.txt",
+      "sha256": "8762e441bbc3478830b5f2e5abe091c807b76e4837d3efe2fe731b99372b635a",
+      "bytes": 1897,
+      "scope": "New training resource business1179full checks211.57s,oneexisting warning;not native acceptance"
+    },
+    {
+      "path": ".cache/training-resources-ruff-20261020.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "scope": "All authored Python Ruff zero diagnostics"
+    },
+    {
+      "path": ".cache/training-resources-20261020/validation.json",
+      "sha256": "9ad19a09dbaf27981ea1098e2ea126dd16c9f68bdd39aa49c082468b2a7a781e",
+      "bytes": 352,
+      "scope": "New business source fingerprint and acceptance boundary;positive native still pending"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v26/failure-preservation.json",
+      "sha256": "585d90beb4a31c22d2620a9f2bccf30640d0aa8c8e088ad6396adc7ab0704b71",
+      "bytes": 5709,
+      "scope": "v26 failed pending session preserved before owned process stop; no settlement accepted"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v26/failure-audit.json",
+      "sha256": "463eed9bf0550b4703b0776b4f21441c046c74916ec5d7b9d37b7301d849b6a0",
+      "bytes": 1086,
+      "scope": "v26 natural-outcome501;164requests;1pending;source1658inputs kept;forcedownedstop,not normal shutdown"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v27/native-results.json",
+      "sha256": "0e9625cb567eb6e5fbcc134c8c3054970eb51083f33102678d854e08e02218b5",
+      "bytes": 273,
+      "scope": "v27 identity initialnotready;backendnotstarted;1784inputs and pending kept;0facts"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v28/diagnostic-audit.json",
+      "sha256": "f1c9259777bce32ec3c03014080c01a4249d345ff043a4a974cdfdd6786e5138",
+      "bytes": 1270,
+      "scope": "v28 new natural zero defeat2/false/false77s;10requests1error;pendingkept1797inputs;59table reopen"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v28/validated-outcomes.jsonl",
+      "sha256": "6beef95639a9608dee4ee34e38e53bdd806a333c55188a7e13006bed29d53507",
+      "bytes": 343,
+      "scope": "Codec-validated whitelisted new QA natural result;not v26 original result;no auth/private telemetry"
+    },
+    {
+      "path": ".cache/training-natural-targeted-20261020-attempt01.txt",
+      "sha256": "4cdb72a3ec889829b49df4f2128ec6613e480553117ea9ec0c8e5d8456756f94",
+      "bytes": 669,
+      "scope": "81targeted passed39.13s;natural and voluntary tiers/retry/restart/journal;not nativeacceptance"
+    },
+    {
+      "path": ".cache/training-natural-full-20261020.txt",
+      "sha256": "8f451fe8464991e271fcfda100d9d0258e3508a220060835577f8ad113862005",
+      "bytes": 2591,
+      "scope": "1185full passed226.67s,2warnings;handle absent after resume,no invented finalexit"
+    },
+    {
+      "path": ".cache/training-natural-ruff-20261020.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "scope": "All authored Python Ruff zero diagnostics after natural guardfix"
+    },
+    {
+      "path": ".cache/training-natural-20261021/validation.json",
+      "sha256": "d1212d94fda26ccea501f9a1ce75f3534a8ca5e06904f9d0a535aa1a458269af",
+      "bytes": 572,
+      "scope": "Current sourcefingerprint and scope;nativefix/positive/fulltraining unverified"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v29/transaction-audit.json",
+      "sha256": "a899432a9a8909c4b4e05cb4a2260837bde6118d2d193f60c78802092093812d",
+      "bytes": 3889,
+      "scope": "32f134d native zero natural2/false/false refund25 journal848chars;38HTTP200;normalstop59table reopen,not positive/fulltraining"
+    },
+    {
+      "path": ".cache/campaign-native-20261020-v29/validated-outcomes.jsonl",
+      "sha256": "51ea91bee4297d063a15f5767c54778ad51a3f25bbb8268280de7fee459bedd6",
+      "bytes": 343,
+      "scope": "Native v29 codec-validated whitelisted zero natural result78s;no credentials/private telemetry"
+    },
+    {
+      "path": ".cache/natural-warning-investigation-20261021.txt",
+      "sha256": "60bca1457147e0e7ea953a9bcf4c5c589cf92d7a70c41865e8f4fe57ba5b3ddd",
+      "bytes": 586,
+      "scope": "Pydantic alias warning treated as error in focused concurrent shop test;1passed1.43s,not reproduced/not fixed"
+    },
+    {
+      "path": ".cache/training-natural-20261021/git-access-probe.json",
+      "sha256": "579c7bf561a60c0ab0e42f79c182e7c4be17507e8ef21d9519d314c179347754",
+      "bytes": 76,
+      "scope": "Noninteractive existing Git access exit128;no credentials saved;connector alternative authorized"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v30/transaction-audit-reviewed.json",
+      "sha256": "6017bda2c6feaee3057896f5e7cb8697cc16200f219d0520e032b178f68543e6",
+      "bytes": 6777,
+      "scope": "v30 natural raw92/effective88 zero-resource-tier,refund25/journal1068;111HTTP200;normalclose59table reopen;last return screenshot still loading,not positive reward"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v30/validated-outcomes.jsonl",
+      "sha256": "ecc87ced81e23a0cdc60f8ce24fe4a9787ea048a02df87ed75e4d8f4b99dd49d",
+      "bytes": 347,
+      "scope": "v30 codec validated92raw/88valid22percent273seconds;no authentication/private stats"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v30/initial-pause-result.json",
+      "sha256": "1461fb90fc57ac98a9cbc4b344c8ed7d16a2289c5f897972e5a60dd4ae6f6f21",
+      "bytes": 446,
+      "scope": "QA-only actual initial HUD pause verified once,hardwaretest-device-example/index1,8second Android commands"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v31/transaction-audit.json",
+      "sha256": "b7ca86523d38adcb404daedc56b7bf09b62cf8418e8dce94040a51a90060c437",
+      "bytes": 9637,
+      "scope": "v31 real141raw/133valid voluntary TRAINING100tier;refund17/gold80/XP80/trust8;natural first claim20/3;clientcold;79HTTP200;normalclose59table reopen,not fulltraining/servercold"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v31/fixture-audit.json",
+      "sha256": "26c7ca06fc07fb74b4597cb1bb58d8b462b2b416838b0e07ed09efca8bac26c0",
+      "bytes": 11120,
+      "scope": "v31 isolated operator-only fixture;59table compare53otheraccount;no target eligibility/payout seed"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v31/validated-outcomes.jsonl",
+      "sha256": "2804d54f7efce9028ee7ff7ac238ce55b507ea0dd0994a5169b6bc7602ff4a0d",
+      "bytes": 348,
+      "scope": "v31 codec validated141raw/133valid34percent319seconds2/true/false;no authentication/private stats"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v31/finish-receipt-audit.json",
+      "sha256": "1f022db4d46b14f19504a3606b7b5590afda7e2dd506b2947b1c200842eb27b2",
+      "bytes": 1125,
+      "scope": "Actual durable finish receipt and status/trust/progress deltas;GOLD only response list plus native inserted EXP single icon"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v32/transaction-audit.json",
+      "sha256": "6305bfaa0ecb220571c739a5323280fa4918aeaa22bcb78eca676731ce824aa4",
+      "bytes": 2991,
+      "scope": "Same v31 directory full server/emulator restart,new19HTTP200,old79excluded,no new battle/claim,59table reopen;not fulltraining"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v32/request-log-before.json",
+      "sha256": "87e333ed7e4073e865d14cd816845497e6aed618b02c5ccdaed6a902ae266595",
+      "bytes": 218,
+      "scope": "Before restart immutable79line prefix used to separate actual new requests"
+    },
+    {
+      "path": ".cache/campaign-native-20261021-v32/before-restart-tables.json",
+      "sha256": "00aeca91bc2c2b42c67225baf4e1ff8ba32fe290d3cbde07b6e9eac46d48ab09",
+      "bytes": 5188,
+      "scope": "59table fingerprints before same-folder restart;separate D snapshot verified"
+    },
+    {
+      "path": ".cache/rea-20261021-training-completion/ubuntu-rea-0x2af831c.json",
+      "sha256": "b02e3856163e1a4d02f7509341a1c9820b3182950c8c03da1f5ff142cb381688",
+      "bytes": 7863,
+      "scope": "REA default rank normal branch complete with globals/null terminal limitations,not runtimehotfix proof"
+    },
+    {
+      "path": ".cache/rea-20261021-training-completion/ubuntu-rea-0x250bf7c.json",
+      "sha256": "225796e8e89e91d76bcb37732a83e63ec220b4e40cdc52117770544734103c78",
+      "bytes": 5797,
+      "scope": "Initial rank parser fragment truncates on missing originalblock;failed reconstruction preserved"
+    },
+    {
+      "path": ".cache/rea-20261021-training-rank-context-retry/ubuntu-rea-0x250bf7c.json",
+      "sha256": "bfccd0b159a830c0265b6653a5040b9932a3d71986f59c5c2bb7882fd485e3c4",
+      "bytes": 6601,
+      "scope": "Original block/bridge context removes badinstruction;tailcall splitting remains,not full parser reconstruction"
+    },
+    {
+      "path": ".cache/rea-20261021-training-rank-context/preparation-failure.json",
+      "sha256": "684523adcd52b2b31eac66be8b3399d2d5fbad6163c941a386556f4258c9e0e2",
+      "bytes": 784,
+      "scope": "Quadratic QA preparation interrupted only after owned process/source proof;original retained,retry usesbisect"
+    },
+    {
+      "path": ".cache/training-complete-targeted-20261021-attempt01.txt",
+      "sha256": "642d61a6e19eee73131c00543d10adead2e739301a9d95097b4710a8c3f21693",
+      "bytes": 3327,
+      "scope": "103pass2failed27.44s;wrong expected501 for codec400,not product failure"
+    },
+    {
+      "path": ".cache/training-complete-targeted-20261021-attempt02.txt",
+      "sha256": "8c1e4ff2abd7152c9c1a1257bb519a3243d1ce785ea4fe607b5e08b589ec9fd5",
+      "bytes": 3699,
+      "scope": "103pass2failed26.91s;wrong expected errorcode,actualINVALID_NATIVE_FINISH preserved"
+    },
+    {
+      "path": ".cache/training-complete-targeted-20261021-attempt03.txt",
+      "sha256": "b61dacebed7f5924876626801d66e7050c38bb0f45b70fe28491150a1a76743c",
+      "bytes": 670,
+      "scope": "105targeted pass26.48s1existing warning;synthetic business tests,not nativefulltraining"
+    },
+    {
+      "path": ".cache/training-complete-full-20261021-attempt01.txt",
+      "sha256": "3dcccfb003f0ff5b857a2b068a0be56f250c4fbc59487f98b633148ac111fd0b",
+      "bytes": 1897,
+      "scope": "1194full pass216.24s1existing warning;fulltraining native still pending"
+    },
+    {
+      "path": ".cache/training-complete-ruff-20261021-final.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "scope": "All authored Python final Ruff zero diagnostics"
+    },
+    {
+      "path": ".cache/training-complete-20261021/validation.json",
+      "sha256": "b8bb0371fbf17393f320e7457c6c51a1b759c4e876ba8e060f9a8752980e5184",
+      "bytes": 14074,
+      "scope": "New source hash and actual validation scope;native fulltraining pending"
+    },
+    {
+      "path": ".cache/rea-20261021-training-completion/rank-callee-declarations.json",
+      "sha256": "6b1b6a633732b62d60b919666b966f0698feeb66eb4303eba88aabd8a66526c4",
+      "bytes": 1089,
+      "scope": "Frozen metadata names binding rank calls togameResult/life/maxlife/IsCampaign"
+    }
+  ],
+  "latest_working_business_hash": "f7359517faa469fa626d11df1e5eb838c8539e08ba5084ce32546d810c5a6f7d"
+}

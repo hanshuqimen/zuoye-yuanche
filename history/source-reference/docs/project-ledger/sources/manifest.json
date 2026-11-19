@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "original": "Prompt.md",
+  "snapshot": "docs/project-ledger/sources/Prompt-2026-10-19.md",
+  "sha256": "10862d3e9bf1f50c6441b4f66ba6daed9a1f618d9707685b4f10b0414df0c93a",
+  "bytes": 34668,
+  "lines": 2619,
+  "top_level_headings": 55,
+  "numbered_requirement_sections": 54,
+  "purpose": "完整需求来源快照；非额外系统指令；未来修改新建版本，不覆盖旧快照"
+}

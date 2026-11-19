@@ -26,8 +26,10 @@
     {
       "source_path": "AGENTS.md",
       "original_git_blob": "070a7d1ee1508bb70dcf3eb5f68dfb0b412f9ea8",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/AGENTS.md",
+      "public_sha256": "41429461f0e6e8da8395d99f84e530437efcee28f2429c9e041b93c4a4803c15",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "CHANGELOG.md",
@@ -39,14 +41,16 @@
     {
       "source_path": "Prompt.md",
       "original_git_blob": "f1c147b289e9cb9f9f4be587acfd000b5c80eb37",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/Prompt.md",
+      "public_sha256": "53c85b565330512d7044699d73362e5298834eeccfc299fa1cd38cdcf390a6ac",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "README.md",
       "original_git_blob": "4e751d5f9a37616f4cb07fbb24f09785bfa40d4c",
       "published_path": "README.md",
-      "public_sha256": "6b2d3d4ff129d5932d8b1b8be7fde209bf11a28a0d27d91a8d69dfd264cad2e0",
+      "public_sha256": "d2770c3b629f09a8a04cdc33510214f1db45a2f92b6e0fc0fe06a27547408f11",
       "modified_for_publication": true
     },
     {
@@ -318,8 +322,10 @@
     {
       "source_path": "docs/full-roster-data-audit.json",
       "original_git_blob": "c40c711bf81355a4b4559979b83271cdb4b8368e",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/docs/full-roster-data-audit.json",
+      "public_sha256": "91891eaf8ed13df595a580d07ff9c0ec4d4194d5d9cc979a787345ec886efcfc",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "docs/full-roster.md",
@@ -597,8 +603,10 @@
     {
       "source_path": "docs/project-ledger/evidence-index.json",
       "original_git_blob": "6c047ef4f9016b41f215d777ebc15ecddb79e512",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/docs/project-ledger/evidence-index.json",
+      "public_sha256": "197d884cab7383670015a2816dce4573dbd834eb3d6e2fb8625eb88e96a36531",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "docs/project-ledger/sources/Prompt-2026-10-19.md",
@@ -617,8 +625,10 @@
     {
       "source_path": "docs/project-ledger/sources/manifest.json",
       "original_git_blob": "f86a79539854883ec5c72054deba7998a43cb63d",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/docs/project-ledger/sources/manifest.json",
+      "public_sha256": "df1ecb05266919af0d824b8763a12d903abd58719e6ea9bffe477b705a0339a4",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/sources/objective-2026-10-25-scoped-reading.md",
@@ -1666,8 +1676,10 @@
     {
       "source_path": "docs/storage-audit.json",
       "original_git_blob": "07d64c71e4482970041661591f92f614f4a2aa44",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/docs/storage-audit.json",
+      "public_sha256": "97b584c128a09901e9b83f44cc7961d2d115d1ca3bc47e8f34b28425c51cee92",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "docs/storage-audit.md",
@@ -1784,26 +1796,34 @@
     {
       "source_path": "terralocal/launcher/adb_server.py",
       "original_git_blob": "e94e13f58bca4689e1ca42d34e6a6120164494c7",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/terralocal/launcher/adb_server.py",
+      "public_sha256": "64eba54edaa66610e7fa15c7c964335143f88e272b724aa3ed6d98803c950842",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "terralocal/launcher/android.py",
       "original_git_blob": "4fdb44463f7720d8fb19443dea0987e53d93af00",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/terralocal/launcher/android.py",
+      "public_sha256": "bc84b14eb5ea485e850de773b7350c6e9734f96c7ba89721e96167f1c2d4b059",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "terralocal/launcher/client_binding.py",
       "original_git_blob": "c9ec1c0db1adf31f0893d497f29088676bc9e1a0",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/terralocal/launcher/client_binding.py",
+      "public_sha256": "e132dfb2b36f1d07f0eb0d8d53cc98b643e748d6bce899b96ded2047419764a8",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "terralocal/launcher/client_connection.py",
       "original_git_blob": "7c3b5c8d4509867d56cf7dda8e59b0ce056c8f21",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/terralocal/launcher/client_connection.py",
+      "public_sha256": "d125853aed067409278a9d3cd7f54ecf379e213a9cec7781aeeb9562cce240f3",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "terralocal/launcher/client_session.py",
@@ -3187,8 +3207,10 @@
     {
       "source_path": "tests/fixtures/cn-2.7.71-native-contract.json",
       "original_git_blob": "b51e48d1c4cfdf069dabe51f16a3f40b603f67cc",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/fixtures/cn-2.7.71-native-contract.json",
+      "public_sha256": "1f9803b3ab4161ce7b5a9aeed6f13f9edbc73a1eaa107ac4f08a4cc3c7979c07",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/rogue_qa_rules.py",
@@ -3340,20 +3362,26 @@
     {
       "source_path": "tests/test_client_connection.py",
       "original_git_blob": "c900cd55be2b584db2079098058cdbed233a383d",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_client_connection.py",
+      "public_sha256": "e5e4408ad12f8368d20d5bd18cba75415b28ef817244ce2fbb6bc1358a51ba25",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_client_index.py",
       "original_git_blob": "9d3d19bc01d45add802a46f7e8b9551a2dbfc7cc",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_client_index.py",
+      "public_sha256": "67f166e3e5b96edce3262b1fc971f83778ef4348039f6fa2161fad68221b59ba",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_client_lua_assets.py",
       "original_git_blob": "1debf521806ae93278228c0222469ee931526aaa",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_client_lua_assets.py",
+      "public_sha256": "4dabbd33e1a9109fe7e4a08ede4e99f48efaf474fda7a23311f029e07af0fd32",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_clock_validation.py",
@@ -3463,8 +3491,10 @@
     {
       "source_path": "tests/test_launcher_android.py",
       "original_git_blob": "1628a28b44b05be9ea8b1aadc2b5f189ac6bb30c",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_launcher_android.py",
+      "public_sha256": "28357732e7c881df426c040075fb835dfb097600f341237fa136e63ebb803c6b",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tests/test_launcher_service_lifecycle.py",
@@ -3504,20 +3534,26 @@
     {
       "source_path": "tests/test_metadata_attributes.py",
       "original_git_blob": "7f9f17aee080958a9e829d1700dcd038089808ed",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_metadata_attributes.py",
+      "public_sha256": "9ef62b8b2d86c9cd9d1dddda8ae88d861e4dad08118c9eb8a0deb5ca5a14f2e2",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_metadata_pages.py",
       "original_git_blob": "2ec1ce9db9dc49ebc5465ebe8c91ad92dbbd29d7",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_metadata_pages.py",
+      "public_sha256": "f116733acaddb83ba4925af0f1a27f38b87247b282d7ed75470959944c81d362",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_metadata_readers.py",
       "original_git_blob": "df681d8d560a450c7da8e42fd3709bb53903fffb",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_metadata_readers.py",
+      "public_sha256": "356585ce1fea6e58d1d5611334ee3f5dee60e3a1a46b1ca48494d2a3eb58515f",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_mission_protocol.py",
@@ -3529,8 +3565,10 @@
     {
       "source_path": "tests/test_native_analysis_context.py",
       "original_git_blob": "f2ce4a8108f35f4713f4d147e26dc7e9213900f7",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_native_analysis_context.py",
+      "public_sha256": "f831e95dacdcfab3bd45b45b0361160fe60880048f942b4ca90462b7d4431d08",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_native_battle_finish.py",
@@ -3605,8 +3643,10 @@
     {
       "source_path": "tests/test_owned_adb_server.py",
       "original_git_blob": "680730716434bf2ff74244abd78e5cd4eb8032b8",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_owned_adb_server.py",
+      "public_sha256": "6023cd6c06e6604bc9843fed3bd60b70b0b44f23c134dc03518570d73cfb7df8",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tests/test_portable_launcher_directory.py",
@@ -3632,8 +3672,10 @@
     {
       "source_path": "tests/test_refresh_diagnostic.py",
       "original_git_blob": "81056990e299e77fd99929c7d01d06c34901df6d",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tests/test_refresh_diagnostic.py",
+      "public_sha256": "3fb6777a1879e449ab885c9a64d6fde3a78032e04990968fffcd7030d264518f",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tests/test_rogue_bank_awards.py",
@@ -4429,62 +4471,82 @@
     {
       "source_path": "tools/client/ApkSignerTool.java",
       "original_git_blob": "f14c602a117f45e0dba4f71e190036f92de3696a",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/ApkSignerTool.java",
+      "public_sha256": "89cc697e21a0a646dda1c98acfa37c8dcf08f2d845f9fa15ee115d80e5248f57",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/client/connect_test_instance.py",
       "original_git_blob": "4ca5ccd8325befcceb21426c18c451230a2f6483",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/connect_test_instance.py",
+      "public_sha256": "1d3c6c03bf5932d4e7b4c13560a169d97b8b3e7072a6de80b9169af5bc2a191c",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/client/patch_sdk.py",
       "original_git_blob": "f848117681b61c2fe55a0f5d2c0de294cacf0f37",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/patch_sdk.py",
+      "public_sha256": "db06033bc41189bd4cbcaf9dcd7c6a50fb5146078b9155f823d988d63a405f1d",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/client/prepare_resources.py",
       "original_git_blob": "c38890e394e9dfeeb89d3157ea2afd818515d60a",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/prepare_resources.py",
+      "public_sha256": "0158541d19433060274543cd6dd35e040b66f278212547f6651625417df05981",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/client/prepare_test_instance.py",
       "original_git_blob": "48a75bdec6c76d7e88d06587617500a6a6db60e4",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/prepare_test_instance.py",
+      "public_sha256": "efadfd8f9291e612dbf8633decdda66a40e7b8aef4583f34909510d1c53c20db",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/client/refresh_diagnostic.py",
       "original_git_blob": "b5deda26d1167372dd240b73c92c67e339f26f11",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/refresh_diagnostic.py",
+      "public_sha256": "98a7b2267289579ffdaa627d9e1b7b65dc375dc3e745f182f1cf943e9a5726c1",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/client/repair_test_resources.py",
       "original_git_blob": "ed0709728f53f22b4dd634e4d0ccb9e2a3e7221b",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/repair_test_resources.py",
+      "public_sha256": "df5097e9e5ad0149647064d828e0e8ca591463cf8a42470c9e86b9d6681d23b3",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/client/resource_options.py",
       "original_git_blob": "6807cca88c811f774c087d4509fac5da662562d8",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/resource_options.py",
+      "public_sha256": "2e2193bc16e78b7efcc56c5d9a41d99c1bcce7398cfd7162ea3974cfd980352a",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/client/skill_observer.py",
       "original_git_blob": "e5e3272c53fbf378be254052ef70a04d8b5f2bf0",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/skill_observer.py",
+      "public_sha256": "f041643ad7931bdaf44c666683c229ad8fe800418deb5caee1b2830e304c11ec",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/client/validation_app.py",
       "original_git_blob": "b1d9333aee581241278861416413a9c4d8885dc4",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/client/validation_app.py",
+      "public_sha256": "d8c6e74222a39bd4afce2a40282212d5654dd538c7960c004cf3347e66168f29",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/env.ps1",
@@ -4496,110 +4558,146 @@
     {
       "source_path": "tools/research/ARK_UNPACKER_LICENSE.txt",
       "original_git_blob": "dcc3c0c424b666c397cd50a8995abe4daf837c28",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/ARK_UNPACKER_LICENSE.txt",
+      "public_sha256": "b6c41a52ddfe0c91c326af3ee203e9e402b20ce660343ef0d7fbff48af1243ab",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/audit_full_roster.py",
       "original_git_blob": "439a4cfccc33bdfd78232ff0c9895d4291b6b62e",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/audit_full_roster.py",
+      "public_sha256": "e82a91ad988d52a5dd631b75dd662a5b59c72e65479ad51087ccc824f6a15da5",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/audit_roster_data.cjs",
       "original_git_blob": "daac1b13bbfe13ddb5d5a33af7723daac770cd75",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/audit_roster_data.cjs",
+      "public_sha256": "1676b7985e1fef18952caa806f5e07e222b6215271b6d17ba222d85123d3b301",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/client_error_logs.py",
       "original_git_blob": "f1292609c0aa0c6c2479a26c92143ae684253b8b",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/client_error_logs.py",
+      "public_sha256": "801e23e98de0982e8f3c79f84ea7be5a4ea2bc856898b2917af080fa071e263d",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/research/client_metadata_pages.py",
       "original_git_blob": "dcb9816c70f1e98eeb4198c9afba2c323e9c7304",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/client_metadata_pages.py",
+      "public_sha256": "dc5ebceea4a99daa7c11203e098750d8fd7ee833babd54cc176c7df7f1d2b7b8",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/extend_voice_data.py",
       "original_git_blob": "4ebb4ceefe192d8c2644adbb776ee063a3ff61a9",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/extend_voice_data.py",
+      "public_sha256": "8772e8fa730be55a97afed6cfceab02853da2b1163cc97f25f29b1bee74580b4",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/fetch_public_configs.py",
       "original_git_blob": "4e74308c8301acffbe4df72c83f34898deca746b",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/fetch_public_configs.py",
+      "public_sha256": "6b8c331bf10dbc0bf4a7271d26cf1a1e19bf711edaae21cd6448fda1a8bba0db",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/frida_probe.py",
       "original_git_blob": "30a9cee170d740480e86ff6f2c3c6400ccc4eb21",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/frida_probe.py",
+      "public_sha256": "38b51c619d64e92340293841498e5a3455f1f4980791130660827de2f8611b26",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/research/import_headhunting_rules.py",
       "original_git_blob": "012c1a27d062bb8568c9a2c573c9b66d7f6d7e0e",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/import_headhunting_rules.py",
+      "public_sha256": "0b14b7be013f095ce12095f30afe78c12789bf8985edd4f3600b8b294b092d9c",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/index_client.py",
       "original_git_blob": "61ec906b6a73d7ded35285f54362b184b3621c51",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/index_client.py",
+      "public_sha256": "02cb91bca02669eed1098ace843f6330aeaca4f6bb7cc76bd51fd6498146b548",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/inspect_client_attributes.py",
       "original_git_blob": "4a1bdab035c3a90705bc568d4da0c032ce631e37",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/inspect_client_attributes.py",
+      "public_sha256": "edf8212a664b787be3ad85d5b624aa40972e7c5d170cb600c90c1c812f36dd70",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/inspect_client_metadata.py",
       "original_git_blob": "da08c752a0638f27774a5b3918e0d093459d3924",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/inspect_client_metadata.py",
+      "public_sha256": "1a9780561ba4e132a17737dd593d44f916799d3eb57e6f9801903b994ae2e114",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/inspect_client_native_types.py",
       "original_git_blob": "f7490c50bc20870db0fae9a4c30223a65d39e529",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/inspect_client_native_types.py",
+      "public_sha256": "dc307657f97b089bec53c82127dfd3cad31b8d40b14497080fb6608ad49daa89",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/native_analysis_context.py",
       "original_git_blob": "16d0c1c23a643276e90488115e00b23c9a25d116",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/native_analysis_context.py",
+      "public_sha256": "c2f3d441becd43ce6f920ae6fd53a6722ad6682a3d71d162a783fd95d3e74c8f",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/network_probe.js",
       "original_git_blob": "04679d798881a5b1dd1f5c823799264fad3ccacc",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/network_probe.js",
+      "public_sha256": "70f59f6db9ff3f0f35a4c3f471f5c3335307a7642f9c8c023425af3684f91312",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "tools/research/read_client_code.py",
       "original_git_blob": "562653e9bceb06e66e8f74b082975977bf2199db",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/read_client_code.py",
+      "public_sha256": "49ef7eadb7dbf4243a43486d39b68017b27dc926622d1093287cb193a1cf6a25",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/research/read_client_tables.py",
       "original_git_blob": "fcbf6e02466276a55875b083f55fee2c8249a211",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/read_client_tables.py",
+      "public_sha256": "dfaac547772c800bb692da20b9c94c9161ae78b5a712d83e9823b69f101c456a",
+      "archival_reference": true,
+      "modified_for_publication": true
     },
     {
       "source_path": "tools/research/unpack_client_lua.py",
       "original_git_blob": "53f9639df7fb0fa5157b76361c774bb3d583916d",
-      "published_path": null,
-      "kept_locally": true
+      "published_path": "history/source-reference/tools/research/unpack_client_lua.py",
+      "public_sha256": "40428770651c4a602c9ec517d3f26620e157471e09da5ae0b09175feb8d3ff3c",
+      "archival_reference": true,
+      "modified_for_publication": false
     },
     {
       "source_path": "uv.lock",
@@ -4610,5 +4708,7 @@
     }
   ],
   "historical_reports": 234,
-  "git_history_subjects": 353
+  "git_history_subjects": 353,
+  "all_original_files_have_public_paths": true,
+  "complete_history_bundle": "history/source-history-d40aee9.bundle"
 }

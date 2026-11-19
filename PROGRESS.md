@@ -374,3 +374,7 @@
 | 2026-11-19 | `4529780` | Validate offline recovery before archiving and replacing the save |
 | 2026-11-19 | `89c3300` | Record staged publication inventory and file review |
 | 2026-11-19 | `d40aee9` | Preserve JSON value types in sync deltas and saved flags |
+
+## 本次公开发布核对
+
+全部 3,203 项检查已执行，3,187 项通过、15 项失败、1 项跳过。[发布验证](VALIDATION.md)列出当前失败与实际服务验收。[完整 Git 历史](history/source-history-d40aee9.bundle)可恢复原有 353 个开发提交。

@@ -1,0 +1,1290 @@
+{
+  "inspected_at": "2026-10-07T14:57:26.089684",
+  "cutoff_local": "2026-10-07T12:00:00+08:00",
+  "scope": "metadata only; symlinks and secrets/credentials directories excluded; no files modified except report",
+  "size_kind": "logical file bytes, not NTFS allocated clusters; creation and modification bytes are present sizes, not growth deltas",
+  "directories": [
+    {
+      "path": "<user-home>\\.cache\\uv",
+      "exists": false,
+      "logical_bytes": 0,
+      "files": 0,
+      "files_created_since_noon": 0,
+      "bytes_created_since_noon": 0,
+      "files_modified_since_noon": 0,
+      "bytes_modified_since_noon": 0,
+      "denied_count": 0,
+      "groups": {},
+      "largest_files": []
+    },
+    {
+      "path": "<user-home>\\AppData\\Local\\uv\\cache",
+      "exists": true,
+      "logical_bytes": 1869504046,
+      "files": 60520,
+      "files_created_since_noon": 0,
+      "bytes_created_since_noon": 0,
+      "files_modified_since_noon": 0,
+      "bytes_modified_since_noon": 0,
+      "denied_count": 0,
+      "groups": {
+        "archive-v0": {
+          "logical_bytes": 1808969514,
+          "files": 59572,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "simple-v21": {
+          "logical_bytes": 60211136,
+          "files": 213,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "wheels-v6": {
+          "logical_bytes": 261012,
+          "files": 675,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "interpreter-v4": {
+          "logical_bytes": 49647,
+          "files": 33,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "sdists-v9": {
+          "logical_bytes": 12369,
+          "files": 12,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "environments-v2": {
+          "logical_bytes": 324,
+          "files": 12,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "(root files)": {
+          "logical_bytes": 44,
+          "files": 3,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\0SZJdx3sWH7WKSPL\\torch\\lib\\torch_cpu.dll",
+          "logical_bytes": 305887744,
+          "created": "2026-10-05T11:04:04.863997",
+          "modified": "2026-10-05T11:04:11.103491"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\0SZJdx3sWH7WKSPL\\torch\\lib\\torch_cpu.lib",
+          "logical_bytes": 29325638,
+          "created": "2026-10-05T11:04:11.104019",
+          "modified": "2026-10-05T11:04:11.328259"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\OBLHTqrcmry-by_B\\ruff-0.16.10.data\\scripts\\ruff.exe",
+          "logical_bytes": 26332672,
+          "created": "2026-10-05T10:55:42.334363",
+          "modified": "2026-10-05T10:55:45.446174"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\k_d9hgJCkG2_xU0w\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "logical_bytes": 20589056,
+          "created": "2026-10-05T10:55:44.627786",
+          "modified": "2026-10-05T10:55:45.865571"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\0SZJdx3sWH7WKSPL\\torch\\lib\\torch_python.dll",
+          "logical_bytes": 20270080,
+          "created": "2026-10-05T11:04:11.329834",
+          "modified": "2026-10-05T11:04:11.815549"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\mUfEnPSjVyvCPW5z\\6ec57f84c680d3a3778b__mypyc.cp312-win_amd64.pyd",
+          "logical_bytes": 20232704,
+          "created": "2026-10-05T10:55:42.380276",
+          "modified": "2026-10-05T10:55:44.603217"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\GdKAhIvFwqNcugAf\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9908736,
+          "created": "2026-06-12T10:35:42.215921",
+          "modified": "2026-06-12T10:35:43.273581"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\FyP2p5QHRkFH0GtV\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9908736,
+          "created": "2026-06-12T10:35:42.215921",
+          "modified": "2026-06-12T10:35:43.273581"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\wnUUU-HjcAyj_2p6\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9907712,
+          "created": "2026-06-15T20:56:30.737306",
+          "modified": "2026-06-15T20:56:31.578898"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\qTU1FnDb6uj9pOrG\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9907712,
+          "created": "2026-06-15T20:56:30.737306",
+          "modified": "2026-06-15T20:56:31.578898"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\lt7opohPfTEKEv4e\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9907712,
+          "created": "2026-06-15T20:56:30.737306",
+          "modified": "2026-06-15T20:56:31.578898"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\VtwflPsiEPAGjdtQ\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9907712,
+          "created": "2026-06-15T20:56:30.737306",
+          "modified": "2026-06-15T20:56:31.578898"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\1KY_zoiE2XTNpU_M\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9907712,
+          "created": "2026-06-15T20:56:30.737306",
+          "modified": "2026-06-15T20:56:31.578898"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\yVob_mJYFCOvEtqq\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9903104,
+          "created": "2026-05-08T21:13:12.176834",
+          "modified": "2026-05-08T21:13:15.889422"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\uv\\cache\\archive-v0\\tk7ZOBJRHeT1Bkcx\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+          "logical_bytes": 9903104,
+          "created": "2026-05-08T21:13:12.176834",
+          "modified": "2026-05-08T21:13:15.889422"
+        }
+      ],
+      "root_created": "2026-05-08T21:13:05.278576",
+      "root_modified": "2026-10-05T11:35:50.045129"
+    },
+    {
+      "path": "<user-home>\\AppData\\Local\\Temp",
+      "exists": true,
+      "logical_bytes": 3612499454,
+      "files": 9400,
+      "files_created_since_noon": 1248,
+      "bytes_created_since_noon": 145716385,
+      "files_modified_since_noon": 1253,
+      "bytes_modified_since_noon": 157382975,
+      "denied_count": 0,
+      "groups": {
+        "hbqzgq1h": {
+          "logical_bytes": 2080685961,
+          "files": 397,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "(root files)": {
+          "logical_bytes": 156617831,
+          "files": 796,
+          "bytes_created_since_noon": 4876095,
+          "bytes_modified_since_noon": 15479402
+        },
+        "t52m5ewm.d5f": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "somuxzya.dkv": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "pvvxnznq.xx3": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "kynxq2bk.2fi": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "gbahbxhi.nns": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 131469618,
+          "bytes_modified_since_noon": 131469618
+        },
+        "g3rnnd1s.ykz": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "ezb02f4q.rbt": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "ai45yjh2.4eu": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "5r2vtfe2.5gi": {
+          "logical_bytes": 131469618,
+          "files": 868,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "vscode-stable-user-x64": {
+          "logical_bytes": 91717632,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "VS": {
+          "logical_bytes": 56054854,
+          "files": 3,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "DiagOutputDir": {
+          "logical_bytes": 19410944,
+          "files": 5,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "pytest-of-ASUS": {
+          "logical_bytes": 8872564,
+          "files": 335,
+          "bytes_created_since_noon": 8872564,
+          "bytes_modified_since_noon": 8872564
+        },
+        "Costura": {
+          "logical_bytes": 6874184,
+          "files": 2,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "node-compile-cache": {
+          "logical_bytes": 3954288,
+          "files": 14,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "battery-deadline-browser-preview": {
+          "logical_bytes": 2876494,
+          "files": 5,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "kccsdkbak": {
+          "logical_bytes": 1048576,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 1048576
+        },
+        "workbuddy-product-spill-Bdztd1": {
+          "logical_bytes": 531539,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        ".tmpDrzY4Y": {
+          "logical_bytes": 249054,
+          "files": 10,
+          "bytes_created_since_noon": 249054,
+          "bytes_modified_since_noon": 249054
+        },
+        ".tmp3pwouC": {
+          "logical_bytes": 249054,
+          "files": 10,
+          "bytes_created_since_noon": 249054,
+          "bytes_modified_since_noon": 249054
+        },
+        "battery-deadline-simulation-3c69b974-d16f-46f4-999f-0e3734eb56bd": {
+          "logical_bytes": 57344,
+          "files": 2,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "battery-deadline-simulation-2b2fda9e-9a89-406c-bc29-e39982c61084": {
+          "logical_bytes": 57344,
+          "files": 2,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "workbuddy-prompt-vars": {
+          "logical_bytes": 14707,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 14707
+        },
+        "QmProtector": {
+          "logical_bytes": 344,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "wb": {
+          "logical_bytes": 178,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "p5nr54os.hw2": {
+          "logical_bytes": 0,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.VisualStudio.IntelliCode.529688E2E376374234BC\\Microsoft.VisualStudio.IntelliCode.vsix",
+          "logical_bytes": 201885876,
+          "created": "2026-10-05T17:26:50.062072",
+          "modified": "2026-10-05T17:28:11.692402"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\VisualStudio.GitHub.Copilot.C72CC72189C7C1F69AF9\\VisualStudio.GitHub.Copilot.vsix",
+          "logical_bytes": 123925260,
+          "created": "2026-10-05T17:26:50.085845",
+          "modified": "2026-10-05T17:27:26.366918"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\vscode-stable-user-x64\\CodeSetup-stable-07f806f999227108933c2e30515b26eecc1fda74.exe.tmp",
+          "logical_bytes": 91717632,
+          "created": "2026-10-07T07:59:20.806065",
+          "modified": "2026-10-07T07:59:39.831983"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Win11SDK_WindowsPerformanceToolkit.45441DD1347DD4DE327E\\Installers\\WPTx64 (DesktopEditions)-x86_en-us.msi",
+          "logical_bytes": 84013056,
+          "created": "2026-10-05T17:27:34.345897",
+          "modified": "2026-10-05T17:28:12.252044"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Win11SDK_WindowsPerformanceToolkit.45441DD1347DD4DE327E\\Installers\\WPTx64 (DesktopEditions)-x64_en-us.msi",
+          "logical_bytes": 84013056,
+          "created": "2026-10-05T17:27:14.837086",
+          "modified": "2026-10-05T17:27:34.269802"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Win11SDK_WindowsPerformanceToolkit.45441DD1347DD4DE327E\\Installers\\WPTarm64 (DesktopEditions)-arm64_en-us.msi",
+          "logical_bytes": 79134720,
+          "created": "2026-10-05T17:27:11.423207",
+          "modified": "2026-10-05T17:27:43.663585"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Win11SDK_WindowsPerformanceToolkit.45441DD1347DD4DE327E\\Installers\\WPTx86 (DesktopEditions)-x86_en-us.msi",
+          "logical_bytes": 76414976,
+          "created": "2026-10-05T17:27:45.285518",
+          "modified": "2026-10-05T17:28:07.767472"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.CodeAnalysis.VisualStudio.ServiceHub.Setup.x64.75DC3FC7DF505099011E\\Roslyn.VisualStudio.ServiceHub.Setup.x64.vsix",
+          "logical_bytes": 62734107,
+          "created": "2026-10-05T17:26:20.305434",
+          "modified": "2026-10-05T17:26:40.112647"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.VisualStudio.TestTools.TestPlatform.IDE.20A9C9179688D8AFEAD7\\Microsoft.VisualStudio.TestWindow.Setup.vsix",
+          "logical_bytes": 58143571,
+          "created": "2026-10-05T17:26:45.725363",
+          "modified": "2026-10-05T17:27:07.041784"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Win11SDK_10.0.26100.F872955055CDB6106FAD\\Installers\\78fa3c824c2c48bd4a49ab5969adaaf7.cab",
+          "logical_bytes": 54881173,
+          "created": "2026-10-05T17:27:56.550314",
+          "modified": "2026-10-05T17:28:06.622692"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.VisualStudio.TeamExplorer.15E9290782E37884822C\\Microsoft.VisualStudio.TeamExplorer.vsix",
+          "logical_bytes": 50833070,
+          "created": "2026-10-05T17:26:31.151988",
+          "modified": "2026-10-05T17:26:56.929326"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\VS\\Setup\\3b65be0a-98e9-4c4d-82b0-4d609c7ec059\\vs_installer.opc",
+          "logical_bytes": 50363030,
+          "created": "2026-10-05T17:25:45.696081",
+          "modified": "2026-10-05T17:25:49.475529"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.Net.10.0.Runtime.B7ECBB7045D3A1EE5CE5\\aspnetcore-runtime-x64.zip",
+          "logical_bytes": 48487045,
+          "created": "2026-10-05T17:26:27.802742",
+          "modified": "2026-10-05T17:26:45.389048"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.CodeAnalysis.VisualStudio.Setup.E6BFBE402BFF9BBE44C3\\Roslyn.VisualStudio.Setup.vsix",
+          "logical_bytes": 46888365,
+          "created": "2026-10-05T17:26:21.426614",
+          "modified": "2026-10-05T17:26:39.121980"
+        },
+        {
+          "path": "<user-home>\\AppData\\Local\\Temp\\hbqzgq1h\\Microsoft.VisualStudio.WebToolsExtensions.Core.D1808078502C9D1B02C3\\Microsoft.VisualStudio.WebToolsExtensions.vsix",
+          "logical_bytes": 45654280,
+          "created": "2026-10-05T17:26:43.346597",
+          "modified": "2026-10-05T17:27:09.192809"
+        }
+      ],
+      "root_created": "2025-06-16T10:22:46.383863",
+      "root_modified": "2026-10-07T14:57:19.039971"
+    },
+    {
+      "path": "<user-home>\\AppData\\Roaming\\uv\\python",
+      "exists": true,
+      "logical_bytes": 63200572,
+      "files": 3322,
+      "files_created_since_noon": 0,
+      "bytes_created_since_noon": 0,
+      "files_modified_since_noon": 0,
+      "bytes_modified_since_noon": 0,
+      "denied_count": 0,
+      "groups": {
+        "cpython-3.12.13-windows-x86_64-none": {
+          "logical_bytes": 63200571,
+          "files": 3320,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "(root files)": {
+          "logical_bytes": 1,
+          "files": 2,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\DLLs\\libcrypto-3-x64.dll",
+          "logical_bytes": 7983104,
+          "created": "2026-08-10T14:02:28.187787",
+          "modified": "2026-08-10T14:04:28.525920"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\python312.dll",
+          "logical_bytes": 6972416,
+          "created": "2026-08-10T14:17:54.906601",
+          "modified": "2026-08-10T14:20:18.044410"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\DLLs\\tcl86t.dll",
+          "logical_bytes": 1859072,
+          "created": "2026-08-10T14:05:44.415592",
+          "modified": "2026-08-10T14:06:29.620222"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\Lib\\ensurepip\\_bundled\\pip-25.0.1-py3-none-any.whl",
+          "logical_bytes": 1841526,
+          "created": "2026-08-10T14:09:48.786765",
+          "modified": "2026-08-10T14:11:19.486640"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\DLLs\\sqlite3.dll",
+          "logical_bytes": 1598976,
+          "created": "2026-08-10T14:05:02.574165",
+          "modified": "2026-08-10T14:05:44.414482"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\DLLs\\libssl-3-x64.dll",
+          "logical_bytes": 1579520,
+          "created": "2026-08-10T14:04:29.010473",
+          "modified": "2026-08-10T14:04:59.034161"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\DLLs\\tk86t.dll",
+          "logical_bytes": 1534464,
+          "created": "2026-08-10T14:06:29.620222",
+          "modified": "2026-08-10T14:07:07.301167"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none\\DLLs\\unicodedata.pyd",
+          "logical_bytes": 1126400,
+          "created": "2026-08-10T14:07:07.302168",
+          "modified": "2026-08-10T14:07:34.368016"
+        }
+      ],
+      "root_created": "2026-08-10T13:26:47.165726",
+      "root_modified": "2026-08-10T14:21:50.639971",
+      "excluded_reparse_points": [
+        {
+          "path": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none",
+          "type": "junction",
+          "target": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none"
+        }
+      ]
+    },
+    {
+      "path": "<user-home>\\AppData\\Local\\skylot\\jadx",
+      "exists": true,
+      "logical_bytes": 0,
+      "files": 0,
+      "files_created_since_noon": 0,
+      "bytes_created_since_noon": 0,
+      "files_modified_since_noon": 0,
+      "bytes_modified_since_noon": 0,
+      "denied_count": 0,
+      "groups": {},
+      "largest_files": [],
+      "root_created": "2026-10-07T14:41:19.517686",
+      "root_modified": "2026-10-07T14:41:19.517686"
+    },
+    {
+      "path": "<user-home>\\.codex",
+      "exists": true,
+      "logical_bytes": 2290624617,
+      "files": 8404,
+      "files_created_since_noon": 2053,
+      "bytes_created_since_noon": 169214061,
+      "files_modified_since_noon": 127,
+      "bytes_modified_since_noon": 1004582656,
+      "denied_count": 0,
+      "groups": {
+        "sessions": {
+          "logical_bytes": 636316266,
+          "files": 64,
+          "bytes_created_since_noon": 15544763,
+          "bytes_modified_since_noon": 36552071
+        },
+        "plugins": {
+          "logical_bytes": 539178249,
+          "files": 1789,
+          "bytes_created_since_noon": 62638219,
+          "bytes_modified_since_noon": 461742211
+        },
+        "(root files)": {
+          "logical_bytes": 447430607,
+          "files": 46,
+          "bytes_created_since_noon": 9286584,
+          "bytes_modified_since_noon": 445112411
+        },
+        ".sandbox-bin": {
+          "logical_bytes": 384378240,
+          "files": 8,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        ".tmp": {
+          "logical_bytes": 128937155,
+          "files": 6244,
+          "bytes_created_since_noon": 49050383,
+          "bytes_modified_since_noon": 24101885
+        },
+        "generated_images": {
+          "logical_bytes": 105205418,
+          "files": 38,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "cache": {
+          "logical_bytes": 40623262,
+          "files": 6,
+          "bytes_created_since_noon": 32684551,
+          "bytes_modified_since_noon": 32684551
+        },
+        "sqlite": {
+          "logical_bytes": 4345504,
+          "files": 3,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 4345504
+        },
+        ".sandbox": {
+          "logical_bytes": 2735647,
+          "files": 19,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 33195
+        },
+        "skills": {
+          "logical_bytes": 1458163,
+          "files": 155,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "ambient-suggestions": {
+          "logical_bytes": 5094,
+          "files": 10,
+          "bytes_created_since_noon": 291,
+          "bytes_modified_since_noon": 291
+        },
+        "plans": {
+          "logical_bytes": 4391,
+          "files": 1,
+          "bytes_created_since_noon": 4391,
+          "bytes_modified_since_noon": 4391
+        },
+        "rules": {
+          "logical_bytes": 4214,
+          "files": 1,
+          "bytes_created_since_noon": 4214,
+          "bytes_modified_since_noon": 4214
+        },
+        "vendor_imports": {
+          "logical_bytes": 1267,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 1267
+        },
+        "browser": {
+          "logical_bytes": 520,
+          "files": 8,
+          "bytes_created_since_noon": 45,
+          "bytes_modified_since_noon": 45
+        },
+        "tmp": {
+          "logical_bytes": 468,
+          "files": 6,
+          "bytes_created_since_noon": 468,
+          "bytes_modified_since_noon": 468
+        },
+        "computer-use": {
+          "logical_bytes": 152,
+          "files": 1,
+          "bytes_created_since_noon": 152,
+          "bytes_modified_since_noon": 152
+        },
+        "thread-writer-locks": {
+          "logical_bytes": 0,
+          "files": 4,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\.codex\\thread_history_1.sqlite",
+          "logical_bytes": 369700864,
+          "created": "2026-09-18T09:03:29.936755",
+          "modified": "2026-10-07T14:56:53.233567"
+        },
+        {
+          "path": "<user-home>\\.codex\\plugins\\.plugin-appserver\\codex.exe",
+          "logical_bytes": 333357872,
+          "created": "2026-09-10T20:29:15.763424",
+          "modified": "2026-10-07T13:50:12.467457"
+        },
+        {
+          "path": "<user-home>\\.codex\\.sandbox-bin\\codex.exe",
+          "logical_bytes": 326872368,
+          "created": "2026-09-19T16:46:34.936749",
+          "modified": "2026-10-04T09:21:57.334312"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\09\\18\\rollout-2026-09-18T08-59-58-01a0b207-013c-77d3-be41-7f791f4a24dc.jsonl",
+          "logical_bytes": 208569381,
+          "created": "2026-09-18T09:03:29.926687",
+          "modified": "2026-09-25T15:25:58.151287"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\09\\28\\rollout-2026-09-28T19-28-03-01a0e7c5-9f26-79f0-a4c6-b93b775061b1.jsonl",
+          "logical_bytes": 193858765,
+          "created": "2026-09-28T19:30:59.256747",
+          "modified": "2026-10-04T10:45:02.831828"
+        },
+        {
+          "path": "<user-home>\\.codex\\plugins\\.plugin-appserver\\codex-code-mode-host.exe",
+          "logical_bytes": 74700592,
+          "created": "2026-09-10T20:29:15.763424",
+          "modified": "2026-10-07T13:50:02.640274"
+        },
+        {
+          "path": "<user-home>\\.codex\\logs_2.sqlite",
+          "logical_bytes": 63991808,
+          "created": "2026-09-10T20:29:11.002367",
+          "modified": "2026-10-07T14:57:19.043150"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\10\\04\\rollout-2026-10-04T13-27-37-01a10561-cca7-7c42-ba8d-5395360be2ae.jsonl",
+          "logical_bytes": 45259434,
+          "created": "2026-10-04T13:27:38.511906",
+          "modified": "2026-10-04T13:27:38.512509"
+        },
+        {
+          "path": "<user-home>\\.codex\\cache\\remote_plugin_catalog\\18264e013b651dba.json",
+          "logical_bytes": 31863879,
+          "created": "2026-10-07T14:52:37.621019",
+          "modified": "2026-10-07T14:52:37.637408"
+        },
+        {
+          "path": "<user-home>\\.codex\\.tmp\\plugins\\.git\\objects\\pack\\pack-9eac65e69ab5f58032c92cf4ede7b6ce9179e115.pack",
+          "logical_bytes": 24205624,
+          "created": "2026-09-12T19:44:52.296738",
+          "modified": "2026-09-12T19:44:54.164634"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\10\\05\\rollout-2026-10-05T14-06-43-01a10aab-f2e6-7f82-afe9-c6420b3c87f2.jsonl",
+          "logical_bytes": 21007308,
+          "created": "2026-10-05T14:07:51.270543",
+          "modified": "2026-10-07T12:19:39.771459"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\10\\04\\rollout-2026-10-04T19-23-04-01a106a7-38b6-72d2-b73f-ec6f5f316272.jsonl",
+          "logical_bytes": 18239587,
+          "created": "2026-10-04T19:23:22.339675",
+          "modified": "2026-10-06T08:42:09.797664"
+        },
+        {
+          "path": "<user-home>\\.codex\\plugins\\.plugin-appserver\\codex-windows-sandbox-setup.exe",
+          "logical_bytes": 17725232,
+          "created": "2026-09-10T20:29:15.763944",
+          "modified": "2026-10-07T13:50:04.658393"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\09\\25\\rollout-2026-09-25T15-04-06-01a0d760-e488-7ae2-982f-1913e571bfce.jsonl",
+          "logical_bytes": 16170736,
+          "created": "2026-09-25T15:04:06.537528",
+          "modified": "2026-09-25T15:04:06.538580"
+        },
+        {
+          "path": "<user-home>\\.codex\\sessions\\2026\\09\\27\\rollout-2026-09-27T09-44-49-01a0e089-4c6d-7e63-952b-0fc95f3da886.jsonl",
+          "logical_bytes": 15176858,
+          "created": "2026-09-27T09:46:34.101438",
+          "modified": "2026-09-28T12:45:13.754729"
+        }
+      ],
+      "root_created": "2026-08-05T10:55:49.509915",
+      "root_modified": "2026-10-07T14:57:19.193406"
+    },
+    {
+      "path": "<user-home>\\.cache\\codex-runtimes",
+      "exists": true,
+      "logical_bytes": 1987190838,
+      "files": 22470,
+      "files_created_since_noon": 0,
+      "bytes_created_since_noon": 0,
+      "files_modified_since_noon": 0,
+      "bytes_modified_since_noon": 0,
+      "denied_count": 0,
+      "groups": {
+        "codex-primary-runtime": {
+          "logical_bytes": 1368447998,
+          "files": 22468,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "codex-runtime-install-TpPk3T": {
+          "logical_bytes": 412354360,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        },
+        "codex-runtime-install-gIvxrM": {
+          "logical_bytes": 206388480,
+          "files": 1,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 0
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-runtime-install-TpPk3T\\node-runtime.tar.gz",
+          "logical_bytes": 412354360,
+          "created": "2026-10-06T21:44:26.207883",
+          "modified": "2026-10-06T21:49:22.982569"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-runtime-install-gIvxrM\\node-runtime.tar.gz",
+          "logical_bytes": 206388480,
+          "created": "2026-07-27T09:08:54.716732",
+          "modified": "2026-07-27T09:10:24.092718"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\artifact_tool_v2\\bin\\artifact_tool_rpc_daemon.exe",
+          "logical_bytes": 93381448,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:39:46"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+          "logical_bytes": 92825416,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-08-03T19:18:08"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\icudt78.dll",
+          "logical_bytes": 33126192,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:52:33"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\@napi-rs\\canvas-win32-x64-msvc\\skia.win32-x64-msvc.node",
+          "logical_bytes": 27310384,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:56:57"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\artifact_tool_v2\\bin\\node_modules\\skia-canvas\\lib\\skia.node",
+          "logical_bytes": 24247088,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:59:41"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\@oai\\artifact-tool\\node_modules\\skia-canvas\\lib\\skia.node",
+          "logical_bytes": 24247088,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:57:01"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-9e3e5a4229c1ca39f10dc82bba9e2b2b.dll",
+          "logical_bytes": 20419376,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T04:01:44"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\System.Management.Automation.dll",
+          "logical_bytes": 19646264,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:36:14.347034"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\@img\\sharp-win32-x64\\lib\\libvips-42.dll",
+          "logical_bytes": 18630448,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:56:45"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Microsoft.CodeAnalysis.CSharp.dll",
+          "logical_bytes": 18536312,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:36:13.222995"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\artifact_tool_v2\\bin\\artifact_tool_rpc_daemon.js",
+          "logical_bytes": 18429217,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:39:46"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\System.Private.CoreLib.dll",
+          "logical_bytes": 16033616,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:36:14.530930"
+        },
+        {
+          "path": "<user-home>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\PresentationFramework.dll",
+          "logical_bytes": 15816528,
+          "created": "2026-10-05T12:22:31",
+          "modified": "2026-09-17T03:36:13.889808"
+        }
+      ],
+      "root_created": "2026-07-27T09:08:54.061123",
+      "root_modified": "2026-10-06T21:44:22.479082"
+    },
+    {
+      "path": "<user-home>\\.Ld9VirtualBox",
+      "exists": true,
+      "logical_bytes": 1716415,
+      "files": 17,
+      "files_created_since_noon": 0,
+      "bytes_created_since_noon": 0,
+      "files_modified_since_noon": 2,
+      "bytes_modified_since_noon": 165153,
+      "denied_count": 0,
+      "groups": {
+        "(root files)": {
+          "logical_bytes": 1716415,
+          "files": 17,
+          "bytes_created_since_noon": 0,
+          "bytes_modified_since_noon": 165153
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.4",
+          "logical_bytes": 166726,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-15T14:48:52.197641"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.8",
+          "logical_bytes": 165781,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-03T12:14:34.535549"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.3",
+          "logical_bytes": 165781,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-18T19:31:32.963521"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.2",
+          "logical_bytes": 165537,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-23T10:11:45.615556"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.9",
+          "logical_bytes": 165297,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-02T19:45:41.380585"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.7",
+          "logical_bytes": 165176,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-06T14:38:21.249992"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.1",
+          "logical_bytes": 165153,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-10-07T13:37:49.097584"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.10",
+          "logical_bytes": 165105,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-08-19T18:53:29.443271"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.6",
+          "logical_bytes": 165055,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-09T18:39:28.983984"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\VBoxSVC.log.5",
+          "logical_bytes": 165054,
+          "created": "2026-03-31T15:29:53.984623",
+          "modified": "2026-09-09T19:48:20.023885"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\LdNatNetwork0-Dhcpd.log",
+          "logical_bytes": 29412,
+          "created": "2026-04-24T15:40:02.957349",
+          "modified": "2026-05-21T12:22:06.524098"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\LdNatNetwork0-Dhcpd.log.1",
+          "logical_bytes": 29284,
+          "created": "2026-04-24T15:40:02.957349",
+          "modified": "2026-04-24T15:55:10.527313"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\LdNatNetwork0.log",
+          "logical_bytes": 2123,
+          "created": "2026-04-24T15:40:02.881591",
+          "modified": "2026-05-21T12:25:33.683074"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\LdNatNetwork0-Dhcpd.config",
+          "logical_bytes": 461,
+          "created": "2026-04-24T15:40:02.769898",
+          "modified": "2026-05-21T12:06:59.347629"
+        },
+        {
+          "path": "<user-home>\\.Ld9VirtualBox\\LdNatNetwork0-Dhcpd.leases-prev",
+          "logical_bytes": 235,
+          "created": "2026-04-24T15:40:10.472397",
+          "modified": "2026-05-21T12:17:06.511500"
+        }
+      ],
+      "root_created": "2025-12-18T08:45:50.636889",
+      "root_modified": "2026-10-07T13:44:39.239922"
+    },
+    {
+      "path": "<user-home>\\AppData\\Roaming\\leidian9",
+      "exists": true,
+      "logical_bytes": 202233611,
+      "files": 436,
+      "files_created_since_noon": 16,
+      "bytes_created_since_noon": 3824864,
+      "files_modified_since_noon": 25,
+      "bytes_modified_since_noon": 64627391,
+      "denied_count": 0,
+      "groups": {
+        "cache": {
+          "logical_bytes": 139727270
+        },
+        "log": {
+          "logical_bytes": 60902362
+        },
+        "(root files)": {
+          "logical_bytes": 1603979
+        }
+      },
+      "largest_files": [
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\log\\leidian0_vbox.log",
+          "logical_bytes": 21154139,
+          "created": "2026-03-31T15:29:53.414390",
+          "modified": "2026-10-07T13:45:01.441971"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\log\\leidian0.log",
+          "logical_bytes": 21064366,
+          "created": "2026-03-31T15:29:52.941756",
+          "modified": "2026-10-07T14:49:56.417040"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\log\\dnconsole.log",
+          "logical_bytes": 18495925,
+          "created": "2026-03-31T15:36:34.478522",
+          "modified": "2026-10-07T14:57:32.555169"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod8e83a9fb345a4dd283de35fe66e33c36_jpg.jpg",
+          "logical_bytes": 1825346,
+          "created": "2026-08-19T18:52:46.772291",
+          "modified": "2026-08-19T18:52:47.527266"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprodda6bc5c5ccd040e3b577cdce50717d7c_jpg.jpg",
+          "logical_bytes": 1825346,
+          "created": "2026-09-03T11:55:31.076745",
+          "modified": "2026-09-03T11:55:31.258957"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod6f236909a5634d59bc9427176bcbdc65_jpg.jpg",
+          "logical_bytes": 1556055,
+          "created": "2026-03-31T15:29:55.786283",
+          "modified": "2026-03-31T15:29:56.152652"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod022d1ecc26b5459ba075d7d4d26b6ed6_jpg.jpg",
+          "logical_bytes": 1360903,
+          "created": "2026-03-31T15:29:56.275510",
+          "modified": "2026-03-31T15:29:56.636671"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod7df734a1c82143b3a09850eaef4b4b91_jpg.jpg",
+          "logical_bytes": 1181474,
+          "created": "2026-09-03T11:55:32.550822",
+          "modified": "2026-09-03T11:55:32.713247"
+        }
+      ],
+      "today_new_files": [
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\log\\leidian1.log",
+          "logical_bytes": 67351,
+          "created": "2026-10-07T13:57:03.522774",
+          "modified": "2026-10-07T14:51:45.502853"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\log\\leidian1_vbox.log",
+          "logical_bytes": 24109,
+          "created": "2026-10-07T13:57:03.997896",
+          "modified": "2026-10-07T14:51:46.003104"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\com.hypergryph.arknights_icon.png",
+          "logical_bytes": 73263,
+          "created": "2026-10-07T13:37:33.672224",
+          "modified": "2026-10-07T13:37:33.687077"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\com.hypergryph.arknights_icon64.png",
+          "logical_bytes": 73263,
+          "created": "2026-10-07T13:37:33.687635",
+          "modified": "2026-10-07T13:37:33.687077"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod0c85a9e75715425691d6467f932e802a_jpg.jpg",
+          "logical_bytes": 379938,
+          "created": "2026-10-07T13:34:52.016251",
+          "modified": "2026-10-07T13:34:52.148155"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod21bd6c0be04b421c87c5a24510a319e9_jpg.jpg",
+          "logical_bytes": 372949,
+          "created": "2026-10-07T13:34:53.366522",
+          "modified": "2026-10-07T13:34:53.479688"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod2219e67c3ad14d61a18b40cf9f223d0b_png.png",
+          "logical_bytes": 190821,
+          "created": "2026-10-07T13:34:51.834080",
+          "modified": "2026-10-07T13:34:51.859197"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod3933a8b229414292a4005b146f9c6629_jpg.jpg",
+          "logical_bytes": 245026,
+          "created": "2026-10-07T13:34:51.686613",
+          "modified": "2026-10-07T13:34:51.732047"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod39a481dee97045c8beeeff1f1cc59a10_png.png",
+          "logical_bytes": 237818,
+          "created": "2026-10-07T13:34:52.457059",
+          "modified": "2026-10-07T13:34:52.538097"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod533c4f95dbe84b70a69813188fededfe_jpg.jpg",
+          "logical_bytes": 376406,
+          "created": "2026-10-07T13:34:53.049367",
+          "modified": "2026-10-07T13:34:53.256273"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod761d0bbf8e1841ae974dc47da2506349_jpg.jpg",
+          "logical_bytes": 403542,
+          "created": "2026-10-07T13:34:52.253249",
+          "modified": "2026-10-07T13:34:52.364758"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod85c6931384aa4b6b84666c2977bf1dc0_jpg.jpg",
+          "logical_bytes": 234494,
+          "created": "2026-10-07T13:34:51.464848",
+          "modified": "2026-10-07T13:34:51.514677"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprod993420c8161d4fff947be8ac33bf1f19_png.png",
+          "logical_bytes": 201765,
+          "created": "2026-10-07T13:34:52.896427",
+          "modified": "2026-10-07T13:34:52.969692"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgproda0378595bb834a1ca93605e62fbe4151_jpg.jpg",
+          "logical_bytes": 352702,
+          "created": "2026-10-07T13:34:52.733823",
+          "modified": "2026-10-07T13:34:52.806257"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprodb720421678864b67a09daf1d8521428b_jpg.jpg",
+          "logical_bytes": 386068,
+          "created": "2026-10-07T13:34:52.614863",
+          "modified": "2026-10-07T13:34:52.657117"
+        },
+        {
+          "path": "<user-home>\\AppData\\Roaming\\leidian9\\cache\\httpsimg_ldmnq_commngtimgprodd2a6c7b7cb14439abef63bebe7d4a928_png.png",
+          "logical_bytes": 205349,
+          "created": "2026-10-07T13:34:53.670540",
+          "modified": "2026-10-07T13:34:53.699100"
+        }
+      ]
+    }
+  ],
+  "system_files": [
+    {
+      "path": "C:\\pagefile.sys",
+      "logical_bytes": 10737418240,
+      "creation_time": "2026-07-22T08:40:02.9261975+08:00",
+      "modified_time": "2026-10-07T14:52:07.7939925+08:00",
+      "automatic_managed": true,
+      "allocated_mebibytes": 10240,
+      "current_usage_mebibytes": 853,
+      "peak_usage_mebibytes": 1811,
+      "growth_baseline_available": false
+    },
+    {
+      "path": "C:\\hiberfil.sys",
+      "exists": false
+    },
+    {
+      "path": "C:\\swapfile.sys",
+      "logical_bytes": 16777216,
+      "modified_local": "2026-10-07T07:28:13.2324569+08:00"
+    }
+  ],
+  "disk_free_snapshot": {
+    "C": {
+      "free_bytes": 43243130880,
+      "used_bytes": 224942383104
+    },
+    "D": {
+      "free_bytes": 320968495104,
+      "used_bytes": 403419271168
+    },
+    "time_local": "2026-10-07T14:58:00+08:00"
+  },
+  "attribution_notes": [
+    "File timestamp cut-off is 2026-10-07 12:00 local; task-related downloads started later. Timestamp-preserving extraction/copy can weaken this evidence.",
+    "The 131469618-byte Temp/gbahbxhi.nns tree contains Microsoft Visual Studio Installer files. It is unrelated to TerraLocal on the observed metadata.",
+    "The 2080685961-byte Temp/hbqzgq1h tree is Visual Studio installer package cache from 2026-10-05.",
+    "UV cache consists of prior files; largest torch dll was created 2026-10-05, and Python 3.12.13 installation was created 2026-08-10.",
+    "The Python alias junction was excluded from final totals to avoid counting the same interpreter twice.",
+    "Codex session, shared plugin, and SQLite files belong to the desktop app. Today modified byte counts are present file sizes and do not measure their growth.",
+    "No baseline for pagefile or C free space exists in this read-only audit. A reported 20 GB reduction cannot be fully attributed from the current snapshot."
+  ],
+  "project_downloads_on_D": [
+    {
+      "path": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\data\\client\\base.apk",
+      "logical_bytes": 1882311496
+    },
+    {
+      "path": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\tools\\local\\frida-server",
+      "logical_bytes": 116322840
+    },
+    {
+      "path": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\tools\\local\\jadx\\lib\\jadx-1.5.3-all.jar",
+      "logical_bytes": 127558582
+    }
+  ],
+  "test_vm_on_D": [
+    {
+      "path": "D:\\leidian\\LDPlayer9\\vms\\leidian1\\data.vmdk",
+      "logical_bytes": 4491968512,
+      "created_local": "2026-10-07T13:51:38.6775233+08:00"
+    },
+    {
+      "path": "D:\\leidian\\LDPlayer9\\vms\\leidian1\\sdcard.vmdk",
+      "logical_bytes": 27989311488,
+      "created_local": "2026-10-07T13:51:38.6959365+08:00"
+    }
+  ],
+  "scan_excludes": "Secret/credential directories are not read; filesystem content was not opened; junction aliases excluded where detected.",
+  "phase": "pre_migration_snapshot",
+  "conclusion": "No 20 GB of TerraLocal downloads were found on inspected C locations. System pagefile is 10 GiB, but absence of a before baseline prevents assigning its growth to this task.",
+  "migration_candidate_logical_bytes": 1932704617,
+  "post_migration": {
+    "RecordedAt": "2026-10-07T15:14:00.7346112+08:00",
+    "CFreeBeforeBytes": 43244146688,
+    "CFreeAfterBytes": 43300384768,
+    "CFreeNetChangeBytes": 56238080,
+    "PythonState": "moved_to_D_C_compatibility_junction",
+    "PythonJunction": {
+      "FullName": "<user-home>\\AppData\\Roaming\\uv\\python\\cpython-3.12.13-windows-x86_64-none",
+      "LinkType": "Junction",
+      "Target": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\tools\\local\\python\\cpython-3.12.13-windows-x86_64-none"
+    },
+    "UVState": "copied_and_verified_C_original_retained",
+    "UVCSource": "<user-home>\\AppData\\Local\\uv\\cache",
+    "UVDCopy": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.cache\\uv",
+    "PreviousDProjectCache": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.cache\\uv-project-before-migration-20261007",
+    "PythonVerifiedBackup": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.cache\\storage-migration\\python-verified-copy",
+    "AutoReview": "Recursive C remove-and-junction batch rejected: blocked by policy; no further reason supplied. Single exact-path Python Move-Item ran before the later directive to retain shared C directories; UV C remained unchanged."
+  },
+  "runtime_verification": {
+    "sys_executable": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.venv\\Scripts\\python.exe",
+    "sys_base_prefix": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\tools\\local\\python\\cpython-3.12.13-windows-x86_64-none",
+    "sys_base_executable": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\tools\\local\\python\\cpython-3.12.13-windows-x86_64-none\\python.exe",
+    "sys_prefix": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.venv",
+    "temp_dir": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.cache\\tmp",
+    "pycache_prefix": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.cache\\pycache",
+    "imports": {
+      "fastapi": {
+        "file": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.venv\\Lib\\site-packages\\fastapi\\__init__.py",
+        "version": "0.142.2"
+      },
+      "sqlalchemy": {
+        "file": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.venv\\Lib\\site-packages\\sqlalchemy\\__init__.py",
+        "version": "2.0.54"
+      },
+      "frida": {
+        "file": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.venv\\Lib\\site-packages\\frida\\__init__.py",
+        "version": "17.22.2"
+      },
+      "UnityPy": {
+        "file": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.venv\\Lib\\site-packages\\UnityPy\\__init__.py",
+        "version": "1.25.4"
+      }
+    }
+  },
+  "original_project_D_cache": {
+    "logical_bytes": 333639504,
+    "files": 5023,
+    "created_local_range": "2026-10-07T13:47:50 to 2026-10-07T14:15:35",
+    "preserved_path": "D:\\CODE\\VibeCoding\\test\\TerraLocal\\.cache\\uv-project-before-migration-20261007",
+    "already_on_D_before_migration": true
+  }
+}
