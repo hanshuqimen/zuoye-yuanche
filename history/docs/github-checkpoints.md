@@ -1,5 +1,7 @@
 # GitHub 回滚检查点
 
+2026-11-19 Windows/目录迁移检查点已完成：源码 `f7b08f891be420a9ac283988912a2cc2836aa67d` 对应公开 MIT main `f7972563b31104c7939ab618972b800d68211d18`，树 `5cfd5ad6fe14f75499e9cd5df6ecb13991af3dd0`。在项目子目录匿名下载688个公开文件，逐项SHA-256及Git对象一致；下载的原始包加新增量实际恢复674个源码文件、361次开发提交，工作区干净且两仓严格Git检查通过。新增量50,935字节，SHA-256 `6e75e13943566922309ff40969e01bae77a73dda1b837dbf26d01cbe11f15f76`，Git blob `f396a6073c979fb6a9bc6d6e10fda14c7e918383`，需原始d40aee9完整包。原9ea增量、旧提交和备份全部保留。证据 `.cache/public-checkpoint-f7b08f8-v3-20261119/readback-verification.json`；通过恢复后才轮换两个权威索引。新Windows包源码721a26e已实际验证，原生玩法仍未复验。本段回执晚于包，不倒称包含于f7b08f8。首次两次准备因历史路径映射差异停止，均在远程写入前，脚本和失败目录保留。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/f7972563b31104c7939ab618972b800d68211d18)
+
 用户于 2026-10-12 授权使用其 GitHub 账号新建仓库并定期上传开发修改。
 目标为私有仓库 `hanshuqimen/TerraLocal`，本地开发分支使用 `codex/development`。
 

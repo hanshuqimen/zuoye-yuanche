@@ -1,0 +1,47 @@
+{
+  "source_commit": "a26411815aa3551a399eb143495794c67ba47662",
+  "contract": "cn-android-2.7.71-crisis-v2-map-v1",
+  "data_hash": "f44199a7d34a82bdbb232674db3a3cdf9d7958230217fce3960ccafd351b7406",
+  "client_elf_sha256": "3ece1e7b34165233fe8c3c919cf55dfcb4406b6bbc2725def2b1242b4c0a6259",
+  "implementation_sha256": "ff98fb5e8c5ae737a705995bde629b88421a13ed5a885e39ec1182f015499be9",
+  "focused_tests": 38,
+  "ruff_passed": true,
+  "actual_configurations": [
+    {
+      "map_id": "crisis_v2_01-01",
+      "stage_type": "PERMANENT",
+      "nodes": 60,
+      "bags": 9
+    },
+    {
+      "map_id": "crisis_v2_01-02",
+      "stage_type": "TEMPORARY",
+      "nodes": 35,
+      "bags": 0
+    },
+    {
+      "map_id": "crisis_v2_01-03",
+      "stage_type": "TEMPORARY",
+      "nodes": 35,
+      "bags": 0
+    },
+    {
+      "map_id": "crisis_v2_01-05",
+      "stage_type": "TEMPORARY",
+      "nodes": 29,
+      "bags": 0
+    },
+    {
+      "map_id": "crisis_v2_01-07",
+      "stage_type": "TEMPORARY",
+      "nodes": 29,
+      "bags": 0
+    }
+  ],
+  "synthetic_player_scenarios": 6,
+  "native_gameplay_verified": false,
+  "calendar_activated": false,
+  "battle_or_reward_service_added": false,
+  "full_suite_rerun": false,
+  "retained_failure": "Four temporary maps initially rejected for null defaultSlotId; corrected against native getter and actual config."
+}

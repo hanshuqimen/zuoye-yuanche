@@ -1,5 +1,13 @@
 # 验证证据登记
 
+2026-11-20 危机合约V2：`.cache/crisis-20261119/model-method-evidence.json`及`mcp-models-v1/`保存31方法/10,236字节的真实REA结果、捕获来源、容器指纹及公共关闭/退出0；两次独立代码捕获、原通道失败及八个计分加载等价证据继续保留。`rules-v2.xml`对应38项定向合成检查；`five-maps-compile-v1.json`保留四临时图空默认值被过严拒绝，`five-maps-compile-v2.json`记录修正后五图六组合成投影、源Git blob/SHA及实现指纹。不能推广为真实日历、奖励、路由或原生可玩。[合同与完整边界](../crisis-contract-2026-11-19.md#2026-11-20加载代码节点规则与六维计分实现)
+
+2026-11-20 用户指定目录再次回读位于 `.cache/workspace-move-readback-20261119T2256464147400Z/verification.json`：22原路径不存在、22目标为项目内实际目录，六个Junction目标一致且存在、原链接保留，本地Git包引用有效，归档仍被Git忽略。完整逐文件SHA-256沿用 `.cache/workspace-move-20261119/` 原迁移证据，本次未重跑；未重复移动或操作模拟器/游戏存档。[迁移报告](../workspace-directory-move-2026-11-19.md#2026-11-20按用户目录清单再次核对)
+
+2026-11-19 危机合约证据 `.cache/crisis-20261119/`：`frozen-tables.json`核a550f5e固定Git的三blob/data_version与f441基线一致，两表13/5季均早于本次实际系统时间结束；未激活。`reference-files.json`核EX-Public固定fcce42d两文件，`first-season-reference-audit.json`五地图关卡路径对应；reward_1实际TREASURE的空白runeId为未分类原始检查项，不能直接判坏。`rea-start-v2/static-methods.json`与`mcp-start-v1/rpc-0004..0006.json`保存三方法/544字节的真实REA/Ghidra默认结果；公共close成功、completion实际exit0/输入保持，14292/35716实际进程缺席。APK/ELF/metadata与索引回执同，见source-fingerprint-verification。未知callee/加载等价/Hotfix不推为业务；无Android/数据库写入/新接口。网络传输、API限额、空字典打印及末条RET假设失败均在报告保留。[报告](../crisis-contract-2026-11-19.md)
+
+2026-11-19 公开Windows/目录迁移检查点证据 `.cache/public-checkpoint-f7b08f8-v3-20261119/`：`prepared.json`保存27个发布文件及39个新增Git blob凭据格式扫描，`published.json`保存main/树/Public/MIT实际回读，`readback-verification.json`保存688公开文件全部SHA-256及674源码/361历史恢复。匿名克隆 `anonymous-public-clone/` 与新恢复 `restored-development/` 严格fsck/干净工作区通过；新增量50,935字节，SHA-256 6e75e13943566922309ff40969e01bae77a73dda1b837dbf26d01cbe11f15f76。前两权威索引字节分别保存在previous-*.json，均在全部通过后轮换。v1/v2准备脚本分别因误覆特殊历史映射及此前仅包内存在的新归档路径停止，远程写入前失败现场均保留；v3补齐所有674当前源文件的公开路径。无新原生游玩，全量未重跑。
+
 2026-11-19 `.cache/product-backup-release-20261119/published-bundle.json`：原实际验收的721a26e包复制到项目 `dist/releases/20261119T110746.380639Z-d13dd0fd/TerraLocal`；源、暂存及最终目录1,080文件清单一致，EXE/MIT指纹吻合，最终路径版本退出0，27份旧程序及原构建保留。`verification.json`记录16HTTP（15成功/1预期400）、5CLI、两中文管道、冷启重试与窗口备份/退出0。此发布只补验文件和路径，不重跑原生或无关通过检查。[完整范围](../windows-backup-release-2026-11-19.md)
 
 2026-11-19 目录迁移最终证据位于 `.cache/workspace-move-20261119/final-verification.json`。22个源路径均已不存在，新目录全部在项目内；`before/`、`after/`逐目录记录全部普通文件SHA-256、大小及相对路径，原样移动时80,926文件/2,910,429,928字节与六个链接完全一致。之后六个绝对Junction目标修复，原对象保存在 `original-links/`；一份Git本地origin改指迁入历史包，旧配置保存在 `reference-backups/`。5份Git严格fsck/干净工作区、2份当前索引及5脚本语法核对通过。`doctor-after-move.json`来自新路径EXE，退出0、合成库正常、TLS就绪，无原生客户端验证。历史JSON、日志、TOC和数据库不作批量替换；当前路径以 `.cache/moved/path-map.json` 解释。完整清单见[迁移报告](../workspace-directory-move-2026-11-19.md)。

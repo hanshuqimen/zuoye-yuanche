@@ -1,5 +1,9 @@
 # 全部项目记录索引
 
+2026-11-19 [危机合约V2冻结资料及请求合同](../crisis-contract-2026-11-19.md)：f441/v077同版本两表、首季五地图候选、290类型声明与三个REA默认方法；未激活或接路由。证据 `.cache/crisis-20261119/`，下一精确消费者清单 `next-consumers.json`。
+
+2026-11-19 [Windows及迁移公开检查点](../github-checkpoints.md)：main f7972563/source f7b08f8，688公开文件实际匿名下载、674源码及361完整提交恢复；所有新文件位于项目内。权威索引及完整证据位置见[CHECKPOINTS](CHECKPOINTS.md)。
+
 2026-11-19 [Windows备份修复发行目录](../windows-backup-release-2026-11-19.md)：721a26e包的真实接口、CLI、窗口、UTF-8管道与独立目录发布。证据 `.cache/product-backup-release-20261119/published-bundle.json`，原始功能结果 `verification.json`；不含新的原生玩法结论。
 
 2026-11-19 [22个外部目录迁入项目](../workspace-directory-move-2026-11-19.md)：完整目录清单、80,926文件哈希、六个Junction修复、五份Git检查、当前路径索引及新位置EXE诊断。本地权威映射 `.cache/moved/path-map.json`，证据 `.cache/workspace-move-20261119/`。用户请求见[sources/directory-move-2026-11-19.md](sources/directory-move-2026-11-19.md)。这些归档长期保留，不作为可清理缓存。

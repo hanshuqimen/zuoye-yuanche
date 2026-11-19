@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `f7b08f8`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `a264118`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -50,5 +50,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-f7b08f8.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约V2地图规则检查点
+
+2026-11-20 危机合约V2节点、连接/互斥接纳与六维计分组件已实现。38项定向合成检查及Ruff通过，五实际地图配置和六组合成投影通过；四临时图空默认节点的首次过严校验已撤回，失败保留。仅验证规则组件，尚无新模式路由、玩家授予、战斗结算或原生可玩结论；完整服务端仍未完成。
+
+[依据和反例](docs/crisis-contract-2026-11-19.md) · [合成验证摘要](validation/crisis-v2-map-rules-20261120.json)。
+
+[本次历史增量](history/source-updates-a264118.bundle)只需原始完整包，不需要先应用旧增量；保留全部旧包和历史：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-a264118.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```
