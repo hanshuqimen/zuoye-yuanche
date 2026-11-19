@@ -74,3 +74,15 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 已逐项核对全部 98 个标记文件的基线 Git 对象、用途和发布建议。启动器确实直接导入 `client_binding.py`，公开源码如包含启动器，需要保留账号及设备校验，并处理配置、绑定与测试夹具中的本机值。第三方 BSD 声明已核到对应衍生源文件。逐项结果在 `.cache/publication-review-20261119/file-review-tcivs5co/publication-actions.csv`，SHA-256 见同目录 `file-review-proof.json`。公开范围与项目许可待确认。
 
 进一步追踪查到 `android.py` 和其测试也使用同一台设备的标识，补充原审阅的遗漏。在 D 盘 `portable-check-odacu2zn` 中调整了五个源码或测试文件，配置默认空设备路径，测试使用合成身份。72 项相关检查和本机实际启动、在线备份、停止通过。预检拒绝无设备配置的连接，保留严格设备校验。该副本仅用于审阅，既有源码和发布物沿用原配置，公开发布仍待确认。
+
+用户再次要求先开源再开发。D 盘 `current-release-gid7ehck` 的审阅文件已更新至实际可恢复的源码 `d40aee9`，覆盖 353 个提交摘要与 665 个源码树条目。`publication-proof.json` 保存两个审阅文件的 SHA-256。公开仓库及许可证的确认仍在等待，私有回滚点的下载和恢复已独立通过。
+
+2026-11-19 用户确认「昨夜圆车」和 MIT。新仓库 `hanshuqimen/zuoye-yuanche` 已在 main 保存提交 `fbb2365ac934d5a9e781328ae1dfbca5caac2995`，树 `0bccad301eb9177861c89f8bbd976f833899a140`。620 个文件与发布副本的 Git blob、字节数逐项一致，其中有 234 份阶段报告及历史账本，353 个原提交的摘要及 665 个原文件的路径对应清单。发布副本按独立后端运行，客户端改包与设备接入工具保存在本地。用户已要求新仓库就绪后删除旧仓库。旧仓库 144 份完整 Git 包均在 D 盘找到精确对象一致的副本。
+
+发布副本的实际 HTTPS、同步、备份和新文件恢复通过。完整检查第一次缺失测试辅助，修复后遇到深路径限制，随后在 D 盘短路径继续运行。电脑操作工具在激活 Edge 时无法可靠判定当前网址，报告停止本轮电脑操作。新仓库仍为私有，旧仓库仍存在。操作停止后仅用连接器回读实际状态。上传与树核对证据在 `.cache/publication-review-20261119/zuoye-source-jwab9_ai/published-main.json`、`remote-tree-source-verification.json` 和 `old-retirement-audit.json`。
+
+2026-11-19 后续实际完成：用户手动设为 Public，连接器及匿名 Git 克隆确认 MIT 和公开可读。最终源码 f89163cfbaea793010f46788dde67319819cd1b1 共 674 个文件，逐项 SHA-256 及严格 Git 检查通过。全部 665 个原文件均有公开路径，完整历史包真实恢复 353 个原提交；发布检查 3,187 通过、15 失败、1 跳过，全部结果已公开。旧私有仓库的 290 个文件和 144 个完整 Git 包现已完整保存在 D 盘，与远端整树和逐对象一致。删除仍待完成，不能以备份成功宣称已删除。origin 迁至新公开仓库并保留旧远程，实际匿名恢复后轮换权威索引。早先「待许可/仍私有/仅 620 文件」是当时状态，当前以本条及[发布记录](publication-2026-11-19.md)为准。
+
+2026-11-19 备份修复源码 9ea5f815abd2e6ef3b43e7a3476013914000ba7f 已在公开 MIT main 7678761f056b491cfa943cf722ee7792797a084d 保存，树 5aaa20f9983289aefb57394ed73bd4b525bdbe92。D:/zy-public-7678761f 匿名下载 679 个文件逐项 SHA-256 一致；原包加 26,473 字节 source-updates-9ea5f81.bundle，在 D:/zy-source-9ea5f81 恢复 356 次提交、668 文件，全部 Git 对象、严格检查与干净工作区通过。增量 SHA-256 bcc552d9123c1cb85b0869c0f10f666db17689aa56fdfe57f02c19a8a847318f，Git blob 8b6cf08644653cbdd7926145e1fa94a55de8fe98；需要原始完整包 source-history-d40aee9.bundle。恢复后才轮换两个权威索引，前索引和所有旧包保留。原 15 项失败已复验通过，211 项不同相关检查通过，无新全量/原生/Windows 验收。本地随后文档回执不倒称已包含于这份源码增量。旧仓库再次实际回读仍为私有且存在，删除待用户页面操作。证据 .cache/backup-domain-validation-20261119/public-restore-verification.json。[公开修复](https://github.com/hanshuqimen/zuoye-yuanche/commit/7678761f056b491cfa943cf722ee7792797a084d)
+
+2026-11-19 用户初次回复「已删除」后，连接器与新 GitHub 页面仍显示旧仓库，未据回复虚报完成。准备最终删除页后，因电脑操作规则要求当次确认，用户明确回复确认现在删除。点击后 GitHub 要求身份验证，用户自行完成并回复已验证。页面随后明确提示 hanshuqimen/TerraLocal 成功删除，原连接器读回404，新公开仓库Public/MIT保持。旧290文件与144完整包的D盘保全保持，未重建旧仓库。证据 .cache/product-backup-release-20261119/old-repository-deleted.json 及 delete-old-repo-success.jpg。

@@ -19,6 +19,7 @@ from uuid import uuid4
 EXECUTABLE = "TerraLocal.exe"
 MANIFEST = "build-manifest.json"
 DOCUMENTS = ("README.md", "STATUS.md", "CHANGELOG.md")
+OPTIONAL_DOCUMENTS = ("LICENSE",)
 ADMIN_STATIC = Path("terralocal/admin/static")
 ADMIN_FILES = ("index.html", "app.js", "app.css")
 PACKAGE_FILES = {f"_internal/{(ADMIN_STATIC / name).as_posix()}" for name in ADMIN_FILES}
@@ -70,7 +71,7 @@ def _artifact_files(bundle: Path) -> dict[str, Path]:
                 raise ValueError(f"发行物包含未声明的 PEM 文件（{relative}）")
             if relative == "_internal/certifi/cacert.pem" and b"PRIVATE KEY-----" in path.read_bytes():
                 raise ValueError("发行物的 CA 文件含有私钥")
-            if current == bundle and relative not in (EXECUTABLE, MANIFEST, *DOCUMENTS):
+            if current == bundle and relative not in (EXECUTABLE, MANIFEST, *DOCUMENTS, *OPTIONAL_DOCUMENTS):
                 raise ValueError(f"发行物包含未声明文件（{relative}）")
             if relative.casefold().startswith("_internal/terralocal/") and relative not in PACKAGE_FILES:
                 raise ValueError(f"发行物包含未声明的项目数据（{relative}）")
@@ -128,6 +129,8 @@ def build_release(root: Path, *, clean: bool = False) -> Path:
         raise ValueError("项目版本字段无效")
     entry = _source_file(root, Path("terralocal/__main__.py"))
     documents = [_source_file(root, Path(name)) for name in DOCUMENTS]
+    documents.extend(_source_file(root, Path(name)) for name in OPTIONAL_DOCUMENTS
+                     if (root / name).exists() or (root / name).is_symlink())
     assets = [_source_file(root, ADMIN_STATIC / name) for name in ADMIN_FILES]
     # PyInstaller clears its COLLECT destination even without --clean. Never
     # direct COLLECT at an existing installation, including its portable data.

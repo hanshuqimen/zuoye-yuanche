@@ -16,6 +16,12 @@ def output(value):
 
 
 def main() -> int:
+    # Frozen Windows interpreters can use ANSI for pipes even when PYTHONUTF8
+    # is set. Keep redirected JSON and diagnostics readable across machines.
+    if getattr(sys, "frozen", False):
+        for stream in (sys.stdout, sys.stderr):
+            if stream is not None and hasattr(stream, "reconfigure") and not stream.isatty():
+                stream.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(prog="terralocal", description="TerraLocal 本地兼容服务器与存档工具")
     parser.add_argument("--version", action="version", version=__version__)
     parser.add_argument("--data-dir", type=Path, help="存档与资源目录（默认 EXE 同级 data）")

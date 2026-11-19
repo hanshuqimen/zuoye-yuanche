@@ -1,0 +1,90 @@
+{
+  "source_commit": "721a26e170d53b0a5a080a3d3ac85db13d726de2",
+  "build": {
+    "verified": true,
+    "build_id": "20261119T110746.380639Z-d13dd0fd",
+    "version": "0.1.0",
+    "schema_version": 2,
+    "files": 1080
+  },
+  "project_modules": 204,
+  "http_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    400,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "cli": [
+    {
+      "command": "restore",
+      "exit": 0
+    },
+    {
+      "command": "restore",
+      "exit": 2
+    },
+    {
+      "command": "restore",
+      "exit": 0
+    },
+    {
+      "command": "doctor",
+      "exit": 0
+    },
+    {
+      "command": "backup",
+      "exit": 0
+    }
+  ],
+  "encoding": [
+    {
+      "command": "doctor",
+      "exit": 1,
+      "stdout_utf8": true,
+      "stderr_utf8": true
+    },
+    {
+      "command": "backup",
+      "exit": 2,
+      "stdout_utf8": true,
+      "stderr_utf8": true
+    }
+  ],
+  "cli_service_exit_codes": [
+    0,
+    0
+  ],
+  "window_exit": 0,
+  "exe_sha256": "aadf9d10cb13fa360ad8814ab73e4cfa8e90d2d35417557fe0fc497ba21ac10a",
+  "license_sha256": "a4464a5da9acd05db01af0c6315a906ccc466bb0812278e87ed79d8b68ad443d",
+  "old_executables_preserved": 27,
+  "version_exit": 0,
+  "release_build_id": "20261119T110746.380639Z-d13dd0fd",
+  "build_safety_checks_passed": 22,
+  "encoding_checks_passed": 2,
+  "checks_scope": "focused checks and isolated synthetic Windows process/window validation",
+  "native_client_verified": false,
+  "full_suite_rerun": false,
+  "online_restore_preserved_B": true,
+  "invalid_wal_rejected": true,
+  "backup_journal_mode": "delete",
+  "output_restore_verified": true,
+  "offline_restore_preserved_C": true,
+  "cold_retry_equal": true,
+  "cold_sync_equal": true,
+  "frozen_online_backup_verified": true,
+  "launcher_window_verified": true,
+  "window_ports_and_lock_released": true
+}

@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码基线为 `d40aee9`，项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `f7b08f8`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -37,5 +37,18 @@ git clone --branch codex/development history/source-history-d40aee9.bundle resto
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-9ea5f81.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## Windows 修复和工作区迁移检查点
+
+2026-11-19 Windows 包的备份恢复、UTF-8 管道、冷启重试及启动窗口备份已在合成存档实际验证，并进入本机新的独立发行目录。1,080 文件和 MIT 清单匹配，27 份旧 EXE 保留。用户指定的22个目录已完整迁入项目，所有新增开发及恢复文件限于工作区；旧私有仓库已按当次确认删除。完整玩法、原生客户端、断网和 HarmonyOS 验收仍未完成。
+
+[Windows 验证范围](docs/windows-backup-release-2026-11-19.md) · [22目录迁移](docs/workspace-directory-move-2026-11-19.md)。发行物和本地数据不随源码仓库上传。
+
+[新增历史包](history/source-updates-f7b08f8.bundle)及[摘要](history/source-updates-f7b08f8.json)在原始完整包基础上恢复674个源码文件和361次开发提交；不需要先应用旧增量：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-f7b08f8.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

@@ -1,5 +1,13 @@
 # 全部项目记录索引
 
+2026-11-19 [Windows备份修复发行目录](../windows-backup-release-2026-11-19.md)：721a26e包的真实接口、CLI、窗口、UTF-8管道与独立目录发布。证据 `.cache/product-backup-release-20261119/published-bundle.json`，原始功能结果 `verification.json`；不含新的原生玩法结论。
+
+2026-11-19 [22个外部目录迁入项目](../workspace-directory-move-2026-11-19.md)：完整目录清单、80,926文件哈希、六个Junction修复、五份Git检查、当前路径索引及新位置EXE诊断。本地权威映射 `.cache/moved/path-map.json`，证据 `.cache/workspace-move-20261119/`。用户请求见[sources/directory-move-2026-11-19.md](sources/directory-move-2026-11-19.md)。这些归档长期保留，不作为可清理缓存。
+
+- [备份 WAL 遗漏及旧迁移夹具修复](../backup-domain-validation-2026-11-19.md)：四项真实恢复故障、十一项旧结构夹具、211 项定向检查及保留的中途失败。
+
+- [「昨夜圆车」公开发布与恢复核对](../publication-2026-11-19.md)：公开 MIT、674 个发布文件、353 个原始提交及 665 个原文件恢复、3,203 项实际检查和旧私有仓库保全与删除状态。
+
 - [HTTPS 证书预检与续签](../doctor-preflight-2026-11-18.md#2026-11-19-https-证书预检与续签)记录就绪误报、续签、CA 错误与重启核验。
 
 - [启动窗口手动备份与停止](../launcher-lifecycle-2026-11-18.md#2026-11-19-手动备份与停止)记录界面卡顿复现、写入期间停止、失败重试和冷重开。
@@ -404,7 +412,7 @@
 2026-10-30容量商店价格私有检查点完成：源18713d01875ffe0c77f3fb7076612fac330ec9cb/业务30b23c22，私有上传29bef6ca2a15fa91f0854f789405018c98fbef53；bundle2066378字节、SHA256 7fa3b9550a68c62a8cad33f722fe402703e8680aea77e6814496dc641fffa489。实际浏览器下载双hash，新D493源码/186完整历史/Prompt/fsck/干净工作区恢复相同；495历史路径/2174blob扫描，禁止路径与凭据标记0，旧183非README条目和完整101815字符旧索引保留。远程树6f9f9bd785694ce32e4c974c1f816e73cb6e379e。正常Git128，采用已授权私有完整bundle回读；连接器create_tree初次字段名tree错误被验证拒绝，无远程变更，修为tree_elements后成功。权威.cache/github-checkpoints/heartbeat-latest.json和rogue-capacity-merchant-20261030/upload-verification.json。完成文字晚于备份，不为补文字重打包；下一仅补缺失容量购买原生代表，不进入战斗、不逐件复购。完整目标未完成。
 
 
-2026-10-30一次容量获得原生代表完成：新D v2沿用QA21/原run，无新建探索/招募/战斗。唯一购买a35，原生金6→5、售罄/库存图标，编队页screen17实际2/7与容量6→7一致；单SHOP/一锭仍为显式QA夹具，不证明正常8锭自然供给。27原生HTTP200，rlv2仅moveTo/shopAction各1，定向异常0。源码171/业务30b23c22与193保护输入保持，旧20完整用户保持，最终21用户/74表重开/真实备份恢复/新D恢复相同。97385实际exit0，18544缺席，服务/自有ADB/index1正常停止，index0保留，无新EXE。启动seq1–3未就绪保留，同一worker继续；只读核对自有端口设备5556/硬件<test-device>后成功，没有改共享5037或放宽守卫。截图全部逐次查看，输入均ACK后≥3.5秒再截图，无盲批点击。用户已确认协议；本次直接进入主页，未再次弹出，无代签输入。自然资格/地图/抽样及完整交付未完成，下一不追加同类购买或旧关，转a40容量13资格/自然供给的数据与消费者依据。 证据：.cache/rogue-capacity-native-20261030-v2/{prepared.json,native-results.json,saved-verification-v1.json,screen-14.png,screen-16.png,screen-17.png,errors-0032.json}；保存快照/图片仅本地。
+2026-10-30一次容量获得原生代表完成：新D v2沿用QA21/原run，无新建探索/招募/战斗。唯一购买a35，原生金6→5、售罄/库存图标，编队页screen17实际2/7与容量6→7一致；单SHOP/一锭仍为显式QA夹具，不证明正常8锭自然供给。27原生HTTP200，rlv2仅moveTo/shopAction各1，定向异常0。源码171/业务30b23c22与193保护输入保持，旧20完整用户保持，最终21用户/74表重开/真实备份恢复/新D恢复相同。97385实际exit0，18544缺席，服务/自有ADB/index1正常停止，index0保留，无新EXE。启动seq1–3未就绪保留，同一worker继续；只读核对自有端口设备5556/硬件0063090c后成功，没有改共享5037或放宽守卫。截图全部逐次查看，输入均ACK后≥3.5秒再截图，无盲批点击。用户已确认协议；本次直接进入主页，未再次弹出，无代签输入。自然资格/地图/抽样及完整交付未完成，下一不追加同类购买或旧关，转a40容量13资格/自然供给的数据与消费者依据。 证据：.cache/rogue-capacity-native-20261030-v2/{prepared.json,native-results.json,saved-verification-v1.json,screen-14.png,screen-16.png,screen-17.png,errors-0032.json}；保存快照/图片仅本地。
 
 
 2026-10-30历史容量13资格源码推进：业务f2a00f7a/172文件、schema0033/74表。匹配a40条件/容量资源/结构化NORMAL0门槛；初始、事件每选择、物品购买、结算的有序验证峰值支持13后降回6，跨局取最大，不采信外部声明或当前总数。21新增+261受影响=282检查/9文件Ruff；新D正式QA22五件免费明确物品达13但未持有a40，资格state1/[13,13]、历史驱动报价16，新局容量6仍保留；旧21仅新目标投影变化，其他字段与新动作后用户保持，完整22用户74表重开/真实备份/新D一致，原74表196输入保持。0新原生/战斗/EXE；复用REA M154269两整数消费者及旧原生2/7，不重复解码/游玩。失败夹具REST排除容量/惰性属性编译及导入顺序保留。现有completion v9未包含容量资格提示/相关奖励，下一先补时机/版本；自然供给/完整交付未完成。[报告](../roguelike-capacity-goals-2026-10-30.md)。 本地.cache/rogue-capacity-goals-20261030/verification-v1.json、source-reuse-supplement-v1.json及capacity-unlocks-v1至v4.xml/regression-v1.xml。

@@ -1,5 +1,9 @@
 # 验证证据登记
 
+2026-11-19 `.cache/product-backup-release-20261119/published-bundle.json`：原实际验收的721a26e包复制到项目 `dist/releases/20261119T110746.380639Z-d13dd0fd/TerraLocal`；源、暂存及最终目录1,080文件清单一致，EXE/MIT指纹吻合，最终路径版本退出0，27份旧程序及原构建保留。`verification.json`记录16HTTP（15成功/1预期400）、5CLI、两中文管道、冷启重试与窗口备份/退出0。此发布只补验文件和路径，不重跑原生或无关通过检查。[完整范围](../windows-backup-release-2026-11-19.md)
+
+2026-11-19 目录迁移最终证据位于 `.cache/workspace-move-20261119/final-verification.json`。22个源路径均已不存在，新目录全部在项目内；`before/`、`after/`逐目录记录全部普通文件SHA-256、大小及相对路径，原样移动时80,926文件/2,910,429,928字节与六个链接完全一致。之后六个绝对Junction目标修复，原对象保存在 `original-links/`；一份Git本地origin改指迁入历史包，旧配置保存在 `reference-backups/`。5份Git严格fsck/干净工作区、2份当前索引及5脚本语法核对通过。`doctor-after-move.json`来自新路径EXE，退出0、合成库正常、TLS就绪，无原生客户端验证。历史JSON、日志、TOC和数据库不作批量替换；当前路径以 `.cache/moved/path-map.json` 解释。完整清单见[迁移报告](../workspace-directory-move-2026-11-19.md)。
+
 2026-11-19 `.cache/modern-pool-coverage-20261118/actual-v2/verification.json` 记录真实程序 12 抽及原体验存档保护，`.cache/service-soak-20261118/actual-2h-v2/verification.json` 与控制进程最后输出一致。
 
 2026-11-18 寻访打包核验在 `.cache/modern-pool-schedule-20261118/packaged-v1/verification.json`，远端回读和恢复在 `.cache/github-checkpoints/modern-pool-schedule-20261118/upload-verification.json`。
@@ -142,7 +146,7 @@
 |---|---|---|
 | `.cache/campaign-native-20261021-v30/transaction-audit-reviewed.json` | `6017bda2c6feaee3057896f5e7cb8697cc16200f219d0520e032b178f68543e6` | v30 natural raw92/effective88 zero-resource-tier,refund25/journal1068;111HTTP200;normalclose59table reopen;last return screenshot still loading,not positive reward |
 | `.cache/campaign-native-20261021-v30/validated-outcomes.jsonl` | `ecc87ced81e23a0cdc60f8ce24fe4a9787ea048a02df87ed75e4d8f4b99dd49d` | v30 codec validated92raw/88valid22percent273seconds;no authentication/private stats |
-| `.cache/campaign-native-20261021-v30/initial-pause-result.json` | `1461fb90fc57ac98a9cbc4b344c8ed7d16a2289c5f897972e5a60dd4ae6f6f21` | QA-only actual initial HUD pause verified once,hardware<test-device>/index1,8second Android commands |
+| `.cache/campaign-native-20261021-v30/initial-pause-result.json` | `1461fb90fc57ac98a9cbc4b344c8ed7d16a2289c5f897972e5a60dd4ae6f6f21` | QA-only actual initial HUD pause verified once,hardware0063090c/index1,8second Android commands |
 
 ## 2026-10-21：v31自然100档与首档领取
 
@@ -473,7 +477,7 @@ M33629提供器exit0/600字节完整，ev_88882407204084d03198b6e0f1faaa3ad21d19
 
 - `.cache/github-checkpoints/rogue-floor-progress-20261025/github-index-proof.jpg` SHA256 `49db731e94a05d1ae5f9d44f7038df52e6d9c22b10fed678b2a8ac47c9583362`：72a843c私有回读恢复与索引证据。
 
-2026-10-25跨层原生v27准备完成、尚未启动：上一轮72a843c源码/私有回读恢复为进展，本轮e0bf845干净已核实、无所属模拟器/源码服务在运行。新D.cache/refresh-diagnostic/rogue-oct25-v27从真实停止v26复制，73→74旧列保持；仅副本放弃旧run后创建独立新run，13HTTP全200/delta、明确QA两层，初始券放弃/地图/金币结果在HTTP准备，现待最后离开。59原输入摘要保持，0新战斗；旧run/原存档/发行物保留。准备不算原生过层通过，下一步只允许selectChoice/finishEvent，其他肉鸽节点和开战显式阻止。索引.cache/rogue-native-20261025-v27/{prepared.json,prepared-scene.json,native.py,control.py}；8秒Android/instance1/<test-device>/TLS/离线/源指纹守卫保持。不恢复取消的剿灭，不重打任何旧关。完整交付目标保持未完成。
+2026-10-25跨层原生v27准备完成、尚未启动：上一轮72a843c源码/私有回读恢复为进展，本轮e0bf845干净已核实、无所属模拟器/源码服务在运行。新D.cache/refresh-diagnostic/rogue-oct25-v27从真实停止v26复制，73→74旧列保持；仅副本放弃旧run后创建独立新run，13HTTP全200/delta、明确QA两层，初始券放弃/地图/金币结果在HTTP准备，现待最后离开。59原输入摘要保持，0新战斗；旧run/原存档/发行物保留。准备不算原生过层通过，下一步只允许selectChoice/finishEvent，其他肉鸽节点和开战显式阻止。索引.cache/rogue-native-20261025-v27/{prepared.json,prepared-scene.json,native.py,control.py}；8秒Android/instance1/0063090c/TLS/离线/源指纹守卫保持。不恢复取消的剿灭，不重打任何旧关。完整交付目标保持未完成。
 
 - `.cache/rogue-native-20261025-v27/prepared.json` SHA256 `f72d0a271d1701470d7e9f7c2825d1736a8d8b0fe3da53b07e0e538421a4ee4f`：v27独立现场与明确QA准备。
 
@@ -1024,7 +1028,7 @@ M33629提供器exit0/600字节完整，ev_88882407204084d03198b6e0f1faaa3ad21d19
 2026-10-30容量商店价格私有检查点完成：源18713d01875ffe0c77f3fb7076612fac330ec9cb/业务30b23c22，私有上传29bef6ca2a15fa91f0854f789405018c98fbef53；bundle2066378字节、SHA256 7fa3b9550a68c62a8cad33f722fe402703e8680aea77e6814496dc641fffa489。实际浏览器下载双hash，新D493源码/186完整历史/Prompt/fsck/干净工作区恢复相同；495历史路径/2174blob扫描，禁止路径与凭据标记0，旧183非README条目和完整101815字符旧索引保留。远程树6f9f9bd785694ce32e4c974c1f816e73cb6e379e。正常Git128，采用已授权私有完整bundle回读；连接器create_tree初次字段名tree错误被验证拒绝，无远程变更，修为tree_elements后成功。权威.cache/github-checkpoints/heartbeat-latest.json和rogue-capacity-merchant-20261030/upload-verification.json。完成文字晚于备份，不为补文字重打包；下一仅补缺失容量购买原生代表，不进入战斗、不逐件复购。完整目标未完成。
 
 
-2026-10-30一次容量获得原生代表完成：新D v2沿用QA21/原run，无新建探索/招募/战斗。唯一购买a35，原生金6→5、售罄/库存图标，编队页screen17实际2/7与容量6→7一致；单SHOP/一锭仍为显式QA夹具，不证明正常8锭自然供给。27原生HTTP200，rlv2仅moveTo/shopAction各1，定向异常0。源码171/业务30b23c22与193保护输入保持，旧20完整用户保持，最终21用户/74表重开/真实备份恢复/新D恢复相同。97385实际exit0，18544缺席，服务/自有ADB/index1正常停止，index0保留，无新EXE。启动seq1–3未就绪保留，同一worker继续；只读核对自有端口设备5556/硬件<test-device>后成功，没有改共享5037或放宽守卫。截图全部逐次查看，输入均ACK后≥3.5秒再截图，无盲批点击。用户已确认协议；本次直接进入主页，未再次弹出，无代签输入。自然资格/地图/抽样及完整交付未完成，下一不追加同类购买或旧关，转a40容量13资格/自然供给的数据与消费者依据。 证据：.cache/rogue-capacity-native-20261030-v2/{prepared.json,native-results.json,saved-verification-v1.json,screen-14.png,screen-16.png,screen-17.png,errors-0032.json}；保存快照/图片仅本地。
+2026-10-30一次容量获得原生代表完成：新D v2沿用QA21/原run，无新建探索/招募/战斗。唯一购买a35，原生金6→5、售罄/库存图标，编队页screen17实际2/7与容量6→7一致；单SHOP/一锭仍为显式QA夹具，不证明正常8锭自然供给。27原生HTTP200，rlv2仅moveTo/shopAction各1，定向异常0。源码171/业务30b23c22与193保护输入保持，旧20完整用户保持，最终21用户/74表重开/真实备份恢复/新D恢复相同。97385实际exit0，18544缺席，服务/自有ADB/index1正常停止，index0保留，无新EXE。启动seq1–3未就绪保留，同一worker继续；只读核对自有端口设备5556/硬件0063090c后成功，没有改共享5037或放宽守卫。截图全部逐次查看，输入均ACK后≥3.5秒再截图，无盲批点击。用户已确认协议；本次直接进入主页，未再次弹出，无代签输入。自然资格/地图/抽样及完整交付未完成，下一不追加同类购买或旧关，转a40容量13资格/自然供给的数据与消费者依据。 证据：.cache/rogue-capacity-native-20261030-v2/{prepared.json,native-results.json,saved-verification-v1.json,screen-14.png,screen-16.png,screen-17.png,errors-0032.json}；保存快照/图片仅本地。
 
 
 2026-10-30历史容量13资格源码推进：业务f2a00f7a/172文件、schema0033/74表。匹配a40条件/容量资源/结构化NORMAL0门槛；初始、事件每选择、物品购买、结算的有序验证峰值支持13后降回6，跨局取最大，不采信外部声明或当前总数。21新增+261受影响=282检查/9文件Ruff；新D正式QA22五件免费明确物品达13但未持有a40，资格state1/[13,13]、历史驱动报价16，新局容量6仍保留；旧21仅新目标投影变化，其他字段与新动作后用户保持，完整22用户74表重开/真实备份/新D一致，原74表196输入保持。0新原生/战斗/EXE；复用REA M154269两整数消费者及旧原生2/7，不重复解码/游玩。失败夹具REST排除容量/惰性属性编译及导入顺序保留。现有completion v9未包含容量资格提示/相关奖励，下一先补时机/版本；自然供给/完整交付未完成。[报告](../roguelike-capacity-goals-2026-10-30.md)。 本地.cache/rogue-capacity-goals-20261030/verification-v1.json、source-reuse-supplement-v1.json及capacity-unlocks-v1至v4.xml/regression-v1.xml。
@@ -1463,3 +1467,25 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 2026-11-19 D 盘启动器审阅证据位于 `.cache/publication-review-20261119/portable-check-odacu2zn`。`tests.xml`、`standalone-check.json` 及 `backend-tls-qrwmowvd/verification.json` 分别记录 72 项检查、独立服务和四账号 HTTPS 负载。 [服务验证](../service-soak-and-product-2026-11-18.md#2026-11-19-四账号本机-https-验证)
 
 2026-11-19 增量与保存类型缺陷证据位于 `.cache/sync-json-types-20261119`。基线复现、两次测试失败副本、独立 SQLite 回读和 90 项测试 XML 保留。 [同步验证](../sync-failure-review-2026-10-09.md#2026-11-19-增量与保存的-json-类型一致性)
+
+2026-11-19 `d40aee9` 私有远端回读及新 D 盘恢复实物位于 `.cache/github-checkpoints/typed-sync-20261119`。`upload-verification.json` 对应 665 个文件、353 次提交及 SHA-256。检查点证明源码可恢复，公开发布仍待完成。 [检查点](CHECKPOINTS.md)
+
+2026-11-19 最新公开审阅材料位于 `.cache/publication-review-20261119/current-release-gid7ehck`。`PROGRESS.md` 和 `source-files.csv` 与基线 `d40aee9` 相符。摘要、文件清单和发布待确认状态记于 `publication-proof.json`。 [发布核对](../github-checkpoints.md#2026-11-19-公开发布核对)
+
+2026-11-19 `.cache/publication-review-20261119/zuoye-source-jwab9_ai` 中 `prepared-v3.json`、`published-main.json`、`remote-tree-source-verification.json` 和 `old-retirement-audit.json` 记录 620 个发布文件、远端 main 的实际提交、逐对象核对和旧 144 个归档的 D 盘副本一致性。公开可见性及旧仓库删除尚未完成。
+
+2026-11-19 公开发布完整证据在 .cache/publication-review-20261119/zuoye-source-jwab9_ai：published-final.json、prepared-final.json 及 public-final-readback.json 对应公开 f89163c、674 个匿名下载文件和全部 SHA-256。原始历史恢复目录 D:/zy-history-1ai9uk36，公开克隆目录 D:/zy-public-w4754hof；353 次提交、665 个原文件及两处严格 Git 检查通过。old-repository-fully-preserved.json 对应旧仓库 290 文件、294,345,318 字节与树 ef820946；独立本地快照 3c48a10 保留全部 144 个历史包。tests-v3.xml、tests-rest.xml、tests-final.xml 合计 3,203 项结果，15 个失败未隐藏；smoke-v2/verification.json 记录本机 HTTPS 和新文件恢复。原两份检查点索引以 previous-heartbeat-latest.json、previous-local-latest.json 保留。[发布记录](../publication-2026-11-19.md)
+
+2026-11-19 发布回读记录已追加至公开 main 119e9bd2b6fec495b35210d1472e28ca8cc3d7b0，树 cd2a20e022a90e0fbca71021214ed36a39698432。D:/zy-public-119e9bd2 匿名下载的 675 个文件全部 SHA-256 一致，严格 Git 检查与干净工作区通过；功能源码及原始历史包保持。权威索引指向此记录提交，源码原始恢复头仍为 d40aee9。证据 .cache/publication-review-20261119/zuoye-source-jwab9_ai/public-receipt-readback.json。旧仓库删除仍待实际回读。
+
+2026-11-19 备份与旧迁移阶段证据位于 .cache/backup-domain-validation-20261119。baseline.xml 记录四个原始失败；wal-reproduction.json 记录 WAL 4152 字节、余额666/1000及主文件索引仍匹配。verified.xml、fixed-envelope.xml、copy-race.xml、migrations.xml、fixed-migration-comparison.xml 保留全部中途结果，followup-results.json 按用例合并为 211 通过。D:/zy-wal-proof-mkw36w3y 和所有唯一测试目录保留。原公开 3203 项结果继续保留，不混称新全量已通过。[修复报告](../backup-domain-validation-2026-11-19.md)
+
+2026-11-19 备份修复源码 9ea5f815abd2e6ef3b43e7a3476013914000ba7f 已在公开 MIT main 7678761f056b491cfa943cf722ee7792797a084d 保存，树 5aaa20f9983289aefb57394ed73bd4b525bdbe92。D:/zy-public-7678761f 匿名下载 679 个文件逐项 SHA-256 一致；原包加 26,473 字节 source-updates-9ea5f81.bundle，在 D:/zy-source-9ea5f81 恢复 356 次提交、668 文件，全部 Git 对象、严格检查与干净工作区通过。增量 SHA-256 bcc552d9123c1cb85b0869c0f10f666db17689aa56fdfe57f02c19a8a847318f，Git blob 8b6cf08644653cbdd7926145e1fa94a55de8fe98；需要原始完整包 source-history-d40aee9.bundle。恢复后才轮换两个权威索引，前索引和所有旧包保留。原 15 项失败已复验通过，211 项不同相关检查通过，无新全量/原生/Windows 验收。本地随后文档回执不倒称已包含于这份源码增量。旧仓库再次实际回读仍为私有且存在，删除待用户页面操作。证据 .cache/backup-domain-validation-20261119/public-restore-verification.json。[公开修复](https://github.com/hanshuqimen/zuoye-yuanche/commit/7678761f056b491cfa943cf722ee7792797a084d)
+
+2026-11-19 本轮六次 pytest 临时目录参数使用未引用的 Windows 反斜杠，解析为 D 盘当前目录的相对路径，因此六个临时目录一度出现在工作区根目录。所有检查完成后，先核对源目录均在本工作区、目标为对应未占用 D:/zy-* 路径，再用原生 Move-Item 保留到 D 盘根目录；未删除。后续命令使用 D:/ 形式或原 env.ps1 的已引用路径。XML 中执行时的原路径保留，移动不作为重新测试结论。发布脚本第一次采用错误的旧验证 JSON 字段名，在任何远程修改前停止；核对实际 cases 字段后完成 15 项结果对应和发布。
+
+2026-11-19 Windows 备份修复包证据根 .cache/product-backup-release-20261119：build-checks.xml 保存 22 项构建检查，protected-old-executables.json 保存 27 份旧程序指纹。构建、实际程序及恢复验证结果将分别追加，不沿用源码检查作为发行通过。
+
+2026-11-19 用户初次回复「已删除」后，连接器与新 GitHub 页面仍显示旧仓库，未据回复虚报完成。准备最终删除页后，因电脑操作规则要求当次确认，用户明确回复确认现在删除。点击后 GitHub 要求身份验证，用户自行完成并回复已验证。页面随后明确提示 hanshuqimen/TerraLocal 成功删除，原连接器读回404，新公开仓库Public/MIT保持。旧290文件与144完整包的D盘保全保持，未重建旧仓库。证据 .cache/product-backup-release-20261119/old-repository-deleted.json 及 delete-old-repo-success.jpg。
+
+2026-11-19 .cache/product-backup-release-20261119/build-a8920ed.log 与 D:/zy-build-a8920ed 保存首包；D:/zy-exe-backup-a8920ed/progress.json 保存13次实际请求结果。encoding-baseline.json 保存真实EXE的doctor/backup两项UTF-8解码失败，encoding-before.xml为两项模拟失败，encoding-fixed.xml为修复后两项通过。verify_exe.py首次使用subprocess文本读取，子线程错误未传递到主断言；后续改为显式二进制解码，不能沿原脚本退出0忽略该错误。
