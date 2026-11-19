@@ -1,0 +1,35 @@
+# 正常探索可达性审计与开战前能力检查（2026-11-08）
+
+完整交付目标保持ACTIVE。QA27固定收藏品一个原生代表完成后，不再次游玩该来源或旧关卡，转审正常玩家开局、地图及战斗闭环。当前导入19表e915675d/v077/77.6.0、client_verified=false，冻结客户端CN2.7.71/V070；本报告不把整体版本匹配或官方后台全部逆向当作已完成。
+
+## 实物发现
+
+正常初始化三券处理完成后，finishEvent仍只激活已保存RogueMapDraft；未预置则ROGUE_MAP_NOT_PREPARED/503。prepare/prepare_floors均为内部调用，当前没有按正常开局自动供给完整地图及所有节点内容的驱动。地图几何存在也不能证明事件、商店、作战奖励已接齐：场景缺绑定会ROGUE_EVENT_PLAN_MISSING/503，非INCIDENT/REST/SHOP等专用流程仍明确拒绝。未知后台概率不能从rollNodeData空对象、全部目录或QA方案推导。本轮没有添加默认全池或伪装官方权重，也没有把这次防护修复当作正常地图供给完成。
+
+更直接的问题是rogue_battle.start只校验BATTLE_TYPES/区域/相邻位置，包含BATTLE_ELITE及任意已接纳Boss；rogue_settlement.compute却只接普通战斗或满足严格五层默认终局的Boss。因此能创建STARTED和原生PENDING，但相应结果必然501，已经进入无法正常结算的流程。旧test_battle_kind_reuses_bound_node_and_data要求三类均200，只验证开战而忽略结算可用性；这是旧测试的范围缺陷，已更正。
+
+回归反例regression-before-v1.xml的两项均实际失败/exit1：紧急和非终局Boss确实得到200、新battleId及PENDING。两份失败夹具保存在本阶段failed-fixtures-v1，后续检查使用各自新D目录，不覆盖失败现场。本轮没有实际启动这些原生战斗。
+
+## 修复范围
+
+新增只读admit_start，在新RogueBattle加入事务前检查对应结算能力。require_branch与历史compute共享原有模式/分队/护盾/作战类型条件；最终Boss复用既有terminal.validate，核对完整五层、游标/转换记录、确切stage、终点及已支持藏品。按实际区域奖励及指挥经验曲线预检下一次胜利会触发的尚未实现生命/部署上限升级效果，提前拒绝，不扣款或创建战斗/收据/待处理状态。
+
+不构造虚假战报调用结算，不发放任何奖励。现有STARTED分支及幂等收据先于新能力检查，旧记录仍原样可读取/同序号和新序号重试，不迁移或重解释历史规则；旧七场作战的事实、结果、摘要保持。没有改变地图/结算策略版本或schema0036/77表，没有实现紧急收藏品奖励或中间Boss结算。被拒绝的按钮仍属于未完成玩法，不能称原生流程已无缺口。
+
+## 实际检查
+
+最终119项不同检查通过：v2四文件114，v3旧STARTED兼容1，v4升级两项2，v5跨层与工具正向2。v3另两项因测试误把既有error对象当字符串而失败；服务器已正确501，改为error.code后仅重跑这两项，原输出/夹具保留。四文件Ruff、192业务AST及diff通过。既有Starlette/httpx弃用提示保持，不为记录重跑上一固定事件145项。
+
+actual-v1审计actualexit0，在新的D副本上使用真实导入数据及QA27原生结束存档：27完整用户、77张表在Runtime重启、真实BackupService备份恢复及另一个新D恢复后相等，7旧作战和29报价保持。259原始输入及未修改190业务文件保持，只有rogue_battle.py与rogue_settlement.py变化；当前业务1fd3c1ad989dc184f109f3290d69775dcece97a9bb4212aceeca8d40d8b75129/192Python/0036-77。0游戏API输入/Android/新战斗/新EXE。
+
+具体数据矩阵81个区域绑定：36普通能力通过，36紧急在新开战前拒绝，9Boss在非规范五层终局图上下文拒绝。这里只检查给定已接纳上下文的结算能力，不证明这些关卡全部已开放、玩家有资格到达、区域六隐藏路线已接、官方生成概率或原生逐关通过。当前rogue_1/NORMAL0、审计保存的固定服务器时点已开始且归档；具体时点在verification.json.scope。默认五层最终Boss正向由本轮既有自动流程覆盖；其先前唯一原生战斗不重打。
+
+## 证据、后续与检查点
+
+全部本地证据在.cache/rogue-playable-admission-20261108：regression-before-v1.xml、failed-fixtures-v1、related-v2.xml、new-cases-v3.xml、recheck-v4.xml、floor-tool-v5.xml、final-checks.json及actual-v1/{verification,admission-matrix}.json，含新D恢复目录。原始GameData/保存/客户端/日志/夹具只在本地，不进入Git。
+
+正常地图仍缺可复用完整供给方案、资格/概率和全部节点内容；中间Boss/紧急完整奖励及其供给依赖须继续实现。下一先保存本次自有源码检查点，再补这些实际阻塞；不能仅用更多QA事件图替代正常玩家闭环。其他主题/全部命名模式、Golden/断网长时/性能/Harmony/成熟EXE目标未完成。当前最新已验证私有包仍为源3f986ef/private c91e04b，本批新源码的远程完成必须另有实际回读及新D恢复。
+
+## 私有检查点实际回读完成
+
+2026-11-08 新开战防护私有检查点完成：源43ee121220e629f5cb2300b462d7cff6c0bbb20b/业务1fd3c1ad→private0837b79397b8daa498603371350910265632d440，父c91e04b，tree2d9c0a9fd1af99e9b7e4e12a5d14548e1370c34c。bundle2695362字节，SHA256 5dedd5f3b42cf52c9591e6056ffd2962f17a97c4f0756d2722e3467b08541306，Gitblobb7f7bb2908023a2800c606624dafe108ff537554。589源码文件/272完整提交、591历史路径3047文本blob扫描无禁入路径或凭据标记；实际私有/ref/commit/tree/全文README/note回读，227旧非README项和完整旧索引保持，新tree230项。授权浏览器仅实际入站下载，双hash及新D全部源码blob/历史/Prompt/fsck/干净检出相同，verify_remote实际exit0；仅本次双hash新C临时下载移D，无权限扩大、凭据或8080访问。普通Git非交互只读probe128/no ref，采用已授权完整bundle备用方式，不称正常源码分支已推送。含119不同自动检查、27完整用户77表真备份/重启/新D同及QA27一次剑锤原生记录与缺口；正常供给/中间Boss/紧急奖励及完整交付仍未完成。权威.cache/github-checkpoints/heartbeat-latest.json与playable-admission-20261108/upload-verification.json。完成文字晚于源包，不重复包；下一补正常地图所需的具体结算/供给依赖，不重打旧关或已过来源。

@@ -1,0 +1,105 @@
+# 支援道具的战斗消费合同
+
+完整目标ACTIVE、未完成。购买/替换六项明确接线及一个原生代表见[上阶段报告](roguelike-support-flow-2026-11-01.md)；本报告从只读研究推进到六效果源码及一个新战斗代表，以下按时序保留原始阶段范围，当前事实见末节。不重复旧关。19表e915/镜像a550f5e/v077/client_verified=false与CN2.7.71/V070边界保持。
+
+只读metadata定位M33723 RoguelikeDataUtil.CreateBattlePlayerData(slots,levelData)，返回Battle.BattlePlayerData。其characters/tokens字段声明存在，旧索引offset为16843009xx失真，不将其作为真实对象布局。没有据声明写入Battle/Trap响应键。
+
+冻结R-X完整1568/1568静态可解码，范围0x44fb154–0x44fb774，代码hash d3ca6314bd6193c3fd746205c1734b9e19f385caade1f6426ef4520d4f06afa2。新8192字节两页工件b731656a7a0f8e01145166d1a7144c555b7db733600df578433c8936f95d9397/6完整种子，.cache/rogue-support-battle-20261101/rea-battle-player-static-v1。未在既有文档找到该函数行为证据，故新开有界REA，不重复已核GetCurrTrapId。
+
+REA worker65456/PID22312、WSL23768；初始化ready已实见，公开open请求1成功，pseudo请求2正在实际会话等待，不据时间/标志另开。最终以ACK/伪码和实际退出/公开close为准。下一从完整默认函数恢复工具如何进入战斗、数量和必要来源绑定；若是另一路token装配则只定位对应完整消费者再核，不凭字段名推规则。当前没有生产修改/新发行物/完成声明。
+
+## 首次REA超时与工具环境
+
+65456实际exit0，公开close请求4成功，server0；Windows22312/23768现场缺席。pseudo2在45秒控制观察后仍pending，原worker随后46.563秒返回provider_timeout（报告timeout_ms120000），未获伪码/未重排同请求；status3显示未观测活动provider，未据此写业务规则。207保护输入及185源保持。工件8192字节含ELF头页+一个R-X页，不是两代码页。
+
+doctor92901实际exit1，原始报告是文本而非JSON，首次按JSON读取失败后保留原文；8项Ghidra配置/安装/平台/版本/headless/native_decompiler/JDK均healthy，全局audit含未安装可选Hopper，不把总体false解释为Ghidra损坏。已安装REA配置默认启动绝对期限330000ms，旧复制脚本强制120000ms；README说明可提高此启动期限。未找到npm包内README所链docs/cli.md/installation.md（未据缺页推功能）。不改已安装工具，只在新会话v2恢复工具已声明默认330000ms。
+
+前会话实际关闭/进程缺席后启动9794/rea_session_v2.py，同一不可变最小完整函数工件；当前初始化中，下一一次open/pseudo并观察同句柄，若仍失败先核诊断，不反复同字节空跑。当前0Android/新战斗/生产代码改动，业务仍f385f066。
+
+## 完整默认干员转换与下一入参覆盖
+
+9794实际exit0/server0。默认M33723于57.641秒取得ev_83a1e717c5df475d6f8e3a01ed8082315402f28ea56c829b3ea6887578c1b299：EnsurePlayerRoguelike后按探索chars构造AdvancedCharacterInst，保留探索阶段/等级/技能/皮肤/装备等，再调M76966 ConvertToBattlePlayerData。默认调用的参数与metadata签名slots/levelData/difficulty/assistChar/isMemory/playerSide/resetIdCounterFlag/isSkillSelectablePredefined交叉核对；这不是工具携带量消费者。片段外Hotfix及异常分支误并邻居M33725/坏指令警告保留，不声称完整Hotfix或所有callee已恢复。
+
+公开close3返回cleanup_incomplete（观察java与预期绝对Java命令身份不匹配），不能写成成功关闭；随后实际server0/workerexit0，Windows5144/28592缺席，工具报告Linux481缺席、唯一runtime rea-ghidra-3Uk9Df对应Java缺席，207保护输入保持。原错误/伪码/rea-v2-closure.json保留，核实后才开下一目标。
+
+metadata另定位BattleStartController.Param/InParams有trapToolMeta、BattleTrapToolMeta.trapList；仅字段声明，不用旧坏offset推布局/数量。具体探索BattleStartControllerPlugin.OverrideInParams M155650(inParams,response) 0x3f52904–0x3f53544完整3136/3136静态可解码，新工件ff24b8159beee5fdd5411dd99a60758d49c7a437ffe0a413f285ad83fe3d6091/12288字节/31完整种子，正在REA21445初始化。下一核此实际消费者；当前0新Android/生产代码/战斗。
+
+## 入参覆盖默认消费者已核
+
+21445/27200/10828实际ready、open、pseudo58.437秒成功；M155650 ev_133cd872652dd89baea53d133f48b3d3388aaef9ed8d02f79f94436591d04cc6，3136完整静态范围，REA仅全局符号重叠警告。默认重建探索干员、复制已核战斗/主题元信息并创建RoguelikeInput，其中M33712 GetOutBuffs及M33711 GetRelicFeatures结果传入战斗对象。工具数量的来源尚未定位，不据trapToolMeta字段名加响应；下一沿本函数实际调用核GetRelicFeatures，不作全局无工具的结论。
+
+公开close3成功/server0，21445实际exit0，Windows27200/10828缺席；207输入/185业务源保持。首次PowerShell误将-ErrorAction作为rg参数的只读搜索失败保留，改正确rg目录/-g后确认已有文档无M33711函数证据，未因空搜索删功能。
+
+新M33711 GetRelicFeatures完整1084/1084静态可解码，0x44f93e0–0x44f981c，工件4cda550c548b74821526ca73ddbfac80d7e498493097c5fdb60294aa406d162b/8192字节/4完整种子。35250初始化中，下一核默认列表元素与当前工具来源。0新Android/战斗/业务代码/EXE，完整目标保持。
+
+## 收藏品特性列表的边界及本轮结束现场
+
+GetRelicFeatures M33711于52.75秒取得ev_a26eaeaa3779e291ed9042afde192336c4db1729e634c12e3d845bb2048d08bb。默认EnsurePlayerRoguelike/当前主题明细后遍历current.inventory.relic，TryGetItem后只接纳原生物品类型值12或9，将对应relic定义及来源layer写入BattleRoguelikeRelicBuff列表；不是遍历current.inventory.trap，未在此取得工具携带量。仅全局符号重叠警告保留，Hotfix分支与所有下游不作已恢复声明。不能把ACTIVE_TOOL放入relic行或据此增加服务器字段来伪造工具效果。
+
+目标续醒时35250执行句柄缺失，stop辅助脚本先核实际PID失败而未投递请求；现场Windows30140/29540不在，completion.json没有生成、仅ACK1/2，不能补写actualexit0或公开close成功。随后只读WSL/proc核对本项目路径所属REA Node/Ghidra Java均无，匹配此工件的D盘ghidra/script日志不存在；207保护输入及185业务源保持。实际终态见features-terminal-audit.json，原伪码/失败和缺失事实保留，没有据观察超时重启同目标。
+
+当前实际无待续REA/原生。另已静态准备M81850 RoguelikeGameMode.Init476/476工件95d18b8e/9种子，未提交REA，不算函数行为依据。随后完整核对metadata：RoguelikeInput仅outerBuffs/relicBuffs/extraBuffs/hp/maxHp/shield/meta，无声明工具字段；首主题traps三字段itemId/trapId/trapDesc、gameConst/detailConst未找到专用支援工具数量配置，不能从此断言客户端没有工具机制。M155650实际还有主题extraBuffs路径，默认SquadStatePlugin与RL05覆盖元数据已定位但未反编译，不推首主题工具规则。第一轮广泛Battle/Trap方法搜索输出被截断，未据截断作全局结论；之后范围化保存候选并按实际文件读取。
+
+下一从具体UI开始战斗构造器M155625 RoguelikeSquadState._StartBattle（native66389568）继续核完整默认入参与实际字段写入；它比未分析的模式Init更贴近本次工具来源。必要时再按真实调用/当前加载Hotfix追踪，不能因三个默认函数未见工具就猜实现不存在。一次购买/替换代表已通过后不复购/重打旧关；战斗入参、来源冻结/恢复和实际部署仍未完成。业务f385f066/185/0036/77表无本轮新变更，不为只读研究重跑已过211检查或旧23存档测试；源码范围已由private6abedb6完整回读恢复，本研究文字晚于该包。
+
+## UI开始战斗入口的磁盘代码拒绝及加载页核验
+
+本次恢复先核账本/Git1c910eb干净工作区、207保护输入/185源保持、现场WSL自有REA后端0。M155625 _StartBattle 0x3f50640–0x3f50fe8为2472字节，连续解码0；skipdata诊断618条中492条为数据，首字ce776784，不能把不可解析代码送REA后编造逻辑。prepare_ui_start静态拒绝并保留rea-ui-start-static-v1/static-diagnostic.json及ui-start-static-skipdata.json，未启动此函数REA。
+
+仅借用已有只读file-backed代码页工具，在新的D副本loaded-ui-start-v1启动已准备index1到版权画面，固定硬件/APK/资源/TLS/离线与8秒指令守卫；目标RVA0x3f50640/2472，预期页0x3f50000/4096。只读已核com.hypergryph.arknights进程、原冻结ELF首个文件映射R-X对应页，不读匿名/玩家/认证内存；0TLS服务器/登录/点击/战斗，保留原保存/index0。worker12099运行中，最终以actual句柄/图像/输出及自有退出核验，若同磁盘字节不重复REA。
+
+### 加载页与磁盘不同，完整函数已恢复供REA
+
+12099实际exit0/PID41564已缺席，实际看startup版权图，0登录/点击/战斗/服务器。只读页0x3f50000/4096的SHA1b9bef29963f5a4c0c8c9bb83ec1552436105b4489b6b6381147bbca133774d4，与磁盘同范围不同；目标2472字节SHA331c33177d904c7f564e8c8c0dc369c0897610b906edf0c0e5d185a705121cb1，连续解码2472/2472。不是拿首轮未解码字节继续猜，也不从先前另一个函数“加载同磁盘”的反例推广本函数。helper完成206保护输入185源/index0保持；补核最初207保护输入、185源均同，ldconsole实际index1停止。终态loaded-ui-start-v1/{compared,terminal-witness,completion}.json。
+
+仅在工件生成器内存中用这4096页替换原ELF对应范围，原客户端/库不写。新8192字节最小工件a7c40dfd132471161696253f23927a833c8f38fbc4f55bc0c4eaacb7c947c1ad/5完整种子，rea-ui-start-loaded-v1。新REA78485初始化中，尚未获本函数行为证据；下一实际默认入参和支援工具来源，不增加虚构响应字段。
+
+## 原生临时效果入口与六项完整数据依据
+
+UI_StartBattle加载页REA ev_d23d4da47e690b1b99e32cac0441f11de07f8627b868e6dfabd7de239fcf4182，55.86秒，完整2472静态范围；Type propagation not settling/全局符号重叠警告保留。默认构造当前节点关卡、编队和CommonStartBattleRequest/Param，经过CreateBattlePlayerData及BattleStartController.StartBattle；未在此构造工具列表。公开close成功/78485actualexit0/server0，Windows41456/38076现场无，见ui-start-closure.json。
+
+改核本轮已明确类型的BattleContent.unKeepBuff（List<RoguelikeBuff>），而非猜trapToolMeta。GameData19具体rogue_1.relics实际含六个active_tool条目，每项唯一misc_insert_token_card，blackboard完整token_key/valueStr、level1、skill(-1或0)、cnt(1/3/1/1/1/2)；对应character_table六TRAP/TIER_1、一级可用，首项无技能其余各一个实际技能。逐完整relic行及token行指纹、完整本地事实见actual-six-tool-battle-effects-v1.json。此前购买身份指纹仅item/trap/archive，不应冒称已验证此完整战斗效果；新效果验证必须独立，保留旧报价指纹/历史格式。
+
+新工件5c6989dfef451504f7158a193f7579035a797c8466f6157653cc8802d2327289/12288/20完整种子；GetOutBuffs M33712 ev_cb5b7fc783bfba70950ae27fbd3f59a65375220d82264ad98cc2c625c8d354d8，默认Ensure→current.player.pending[0].content.battle.unKeepBuff直接返回；偏移链与实际类型/字段交叉核对。OverrideInParams已核将其放入RoguelikeInput.outerBuffs，因此服务器原固定[]确实缺了持有工具的战斗投影。片段外Hotfix halt_baddata/全局警告保留，不称完整Hotfix。
+
+MInsertTokenCard.OnInit M84989 ev_fbcedb5b28d37d730da2eecd4170d77d291196c55f998b41a1c9516bb9cbd073，默认先_TryAddCntIfAlreadyExist再InsertToken。M84990 ev_b7de3b71138ed141f1dba5ee09db0fb3e0b1e5df02fe25689e0f15cf45f7a7cc只全局警告，按黑板查同token并累加数量。M84991 ev_c15ce1351cdb0b399371c141d71e7f156548c14b52e7cd14e9a5b221d5178693，默认先转换黑板token再加入battleplayerdata.tokens，但尾部/Hotfix坏指令、PIC/移除不可达块警告仍在，不能称完整插卡或工厂dispatch已恢复。最终仍需一个新工具战斗原生代表，不能用HTTP200/这些局部伪码当效果完成。
+
+98046/PID12080/WSL35376实际exit0，公开close6成功/server0、Windows进程无，207保护输入185业务源保持。本阶段0新登录/点击/战斗，只一次版权只读加载页。不重打旧关/复购旧代表。下一接六项完整效果规则和因果购买历史→具体战斗unKeepBuff；保留旧quote与schema0036/77表，检查替换/重复/未来工具不改过去/重启恢复、真实23旧保存，再一个未玩关卡的工具原生代表。尚未生产改动/新EXE，业务仍f385f066。
+
+## 源码接线、失败修正与当前验证
+
+新增独立FirstThemeToolEffects目录：六项完整relic行及TRAP模板逐项指纹，唯一misc_insert_token_card/四黑板字段、实际token/level1/skill(-1或0)/cnt校验，wire从已核原始buff生成独立副本。购买目录/quote v1指纹不加新效果字段，旧报价不重算或改价。ToolHistory沿同一可信路径在每场战斗前绑定当时的不可变ToolGrant，之后替换只影响后续战斗；相同时刻仍按节点因果顺序，不能由最新库存反算过去。无新表或可编辑工具余额。
+
+新工具战斗记录使用独立首层v3/跨层v4能力版本；旧无工具战斗保留v1/v2，旧reader不再默许新工具战斗后丢效果。绑定验证能力标志与持有来源一致，拒绝降回旧版、错误楼层、无来源伪造。已有battle数据版本/编队/session/hash/节点校验保持。pending.STARTED的unKeepBuff仅取该战斗绑定源的完整效果，每战一份，重复sync/请求不叠加；客户端不能提供工具buff或物品/价格。source变更5旧Python+1新模块，schema0036/77表不变。
+
+new-v1共27：16过/7失败/4fixture错误。生产新代码对无节点历史的合法None回放结果直接读属性，导致初始化异常；已显式处理无历史为空绑定，存在战斗仍要求来源映射，不能用万能空成功隐藏。新QA relic行漏id被严格导入拒绝，夹具补id。fix-v2排除未受影响旧8纯规则检查后19项：18过/1失败；新夹具继承旧temporary gold同时training加入test_gold，结算正确拒绝重复主题货币。仅修新QA夹具移除未使用gold，不放宽生产唯一货币。service-v3四服务检查通过。
+
+相关六模块related-v1共123：119过/4失败。无工具坏owner因新冗余检查提前变为泛化错误分类；把工具所属检查限定真实工具，旧无工具仍走既有战斗校验，恢复原错误分类且拒绝/原字节保护。其余3项是0022及0028迁移夹具漏移除后来的两银行表/当前75表旧断言，补正确历史drop顺序、当前77表，生产迁移未动。policy-v4新能力源和服务8过；该轮-k也筛掉了显式旧节点用例（8过/36 deselected），不称旧迁移已测。随后legacy-v5用完整nodeid定点4项均过。初始失败XML/目录均保留。
+
+最终不同检查154（新16、相关138）均有通过结果，按classname/name去重，不累加重复。覆盖实际购买→两场战斗/相同时间替换历史、旧战斗来源保持、增量/缓存、真实备份恢复/重启、坏源投影事务回滚、非法客户端字段、两Runtime并发只建一场、不额外扣款、能力降级/伪来源/旧reader写前拒绝。9相关Python Ruff、186业务AST通过；Starlette及一处既有Pydantic alias警告仍在。
+
+actual-compatibility-v1/verification.json：业务b71f042e5f6540237e8ed030f573928e33c8fa0c686019785869a9622a47bc43/186，实际23完整用户及77原始表保持，包含上批真实两工具购买来源、26旧报价/5旧战斗；六效果与导入buff完全同，计数1/3/1/1/1/2，旧六工具只读报价a02b3136保持。真备份恢复/重启/新D恢复均23用户77表同，212输入保持，98747实际exit0。0本阶段新战斗/EXE，工具实际战斗原生尚未通过。
+
+下一仅一个新原生工具代表。已查旧5保存关卡为ro1_b_6、ro1_n_1_1/2/3/4；ro1_n_1_5“死斗”未在其中，当前19表rogue_1/NORMAL0/zone_1普通放置规则明确接纳。将用新D、同QA23已批准账号准备明确QA商店及一名已有干员，工具购买只做夹具API，原生不复购旧代表；由客户端实际进入此未玩关卡。正常价/自然生成、直接奖励/图鉴、其他模式及完整目标仍未完成。
+
+2026-11-01 新D工具战斗代表已准备：同QA23的已结束旧23账号副本/原账号与同意行保留，13明确夹具API全200（只招募已有Texas一名、购买地雷组各QA价1并离开商店），0夹具战斗，5旧战斗保持；准备95472actualexit0，212原输入保护，源码b71f042e/186。当前WAIT_MOVE/工具地雷组cnt3/金币5/1干员，下一只允许客户端进此前未保存ro1_n_1_5死斗。不是正式自然商店/价格，原生未启动，不复购旧代表。本地.cache/rogue-tool-battle-native-20261101-v1/prepared.json。
+
+## 唯一新原生代表：插卡与数量通过，部署尚未通过
+
+2026-11-01 工具新原生代表收尾：同QA23唯一新ro1_n_1_5死斗显示地雷卡x3/unKeepBuff完整；一次拖放未落地，charStats为空，随后自然战败，不能写成部署/触发通过，不重打。battleFinish/gameSettle各一次、56HTTP200/异常Lua0，得分9、笔记16→25/灵感+1、回主题首页已看。27450/PID7304实际exit0，自有服务ADB/index1退出，61其他账号表/212输入保持。实际6战斗中新v3/FINISHED、探索SETTLED，23完整用户77表真实备份/重启/新D恢复同，25378actualexit0。核验v1把原始战报同规范化facts直接比较失败（不是生产保存丢字段），保留目录；v2按现有normalize映射通过，无生产源改动。证据.cache/rogue-support-battle-20261101/native-tool-witness-v1.json、native-save-compatibility-v2/及.cache/rogue-tool-battle-native-20261101-v1；图片/原始资料仅本地。源码b71f042e/186、0036/77，新16+相关138=154检查最终过。下一本批私有检查点，再定位部署实际操作/消费者；自然价格/供给/直接奖励/图鉴及完整目标未完成。
+
+原生画面024/026显示x3、费用5；028恢复后一次拖放1095,658→751,246未落地，030仍x3且费用未扣。随后分析耗时未及时暂停，032已自然失败；保留此操作失误，不据失败拖放推定工具规则或篡改生命。036结算9、038笔记25/200、040回主题首页均实际查看。后续必须先识别可放区域/卡片状态，再仅在新关做必要验证；进行较长分析前先暂停。未重开本关。
+
+同QA23未新弹协议、请求无update_agreement、队列无勾选/接受；用户本次确认已收到，不补造本次接受动作。原生56请求中RLV2仅moveAndBattleStart、battleFinish、gameSettle各一，其余普通同步不等于性能验收：本轮若干syncPush为300–622ms，gameSettle约737ms，含QA观察开销，尚无可对照P95，不称性能达标。新battle policy为rogue-tool-battle-start-v3，pending buff逐完整目录相等；常规battle_sessions仍0，已有5旧肉鸽战斗保留，只新增本关1。
+
+2026-11-02 本批战斗工具私有检查点完成：源8e14620ae9b12f99f9eb4188a726232a79be2d06/业务b71f042e→private96678a4330a11753937c1381d2d8ea943405326b，父6abedb6，tree1569bf633854cd02a78bad54755f2efbacc1761a。2426257字节、SHA256 897887e648037da5c9e6e26ed65ec9b91e5588403d29b1b35fa5f504f50bc8c8、Git blob10c88419aa66e95135bf5242e7af1c15323de61f。实际授权浏览器下载双hash/新D551文件233完整历史及fsck/干净状态恢复同；553历史路径2694文本blob扫描无禁止项或凭据标记，205旧非README条目及115269字符完整索引保持。普通Git只读probe128未分类，不称源码分支直推。连接器大文件base64空内容/非UTF8拒绝保留；浏览器初始kernel-assets失败，单次reset后正常，无权限改动，只有本次新C下载双hash后移D。远程核验脚本实际exit0。权威.cache/github-checkpoints/heartbeat-latest.json、rogue-tool-battle-20261101/upload-verification.json，页面截图remote-page.jpg仅本地。工具插卡数量通过/部署触发未验证及完整目标未完成；完成文字晚于包，不为文字重打包，旧备份全保留。
+
+2026-11-02 部署问题进一步定位：从已核InsertToken实际callee0x299fab8交叉metadata得M76967 BattleDataConverter.CreateTokenData(Blackboard)。磁盘232字节连续解码0/被拒绝（保留rea-token-factory-static-v1），未用乱码推规则。新D只读加载页worker78943/PID3624actualexit0，版权图实际看，0服务器/登录/点击/战斗；仅index1文件映射0x299f000/4096、SHA4dea0299f6b14edbb9a03d2f08213c096e05f4f06be6599139c7d3d8192301f6。加载体232/232完整解码/SHA99978f65a15a163a726aa5787a9d826bcece7b8c16ef12eca860d47ff5490886；214保护输入/186源/index0保持、实际index1停止。新8192字节工件8c34e9f459db6a5cf4f953afee9c759672fd66a10f22c394e42167fdc65a616a/11完整种子，仅生成器内存替换代码页，官方ELF/APK未写。REA76290/PID31868/WSL21024初始化中，尚无本函数行为证据，不改业务规则。当前部署/触发仍未验证、不重打死斗。
+
+2026-11-02 M76967默认消费者已核：REA ev_0630ddeec5627d68000362157c0a9582b42dbb0f12edeb6eb778a0f644dfd5d0，53.953秒。默认先调generic DataConvertUtil.CreateTokenInst<object>(Blackboard)（精确generic function201798/spec220574/method33286），再ConvertToCharacterData(slot,isToken=true,isAssistChar=false,playerSide=0,levelData=null)，最后写0xa4；当前metadata同型有效offset164为tokenInitialCnt，后续受保护的1684301xxx offset不使用。GetIntOrDefault键的受保护字符串尚未读出，不能只据字段认定所有黑板键/Hotfix已恢复。片段外Hotfix badinstruction/全局重叠及终端callee未知警告保留。默认数量链与原生x3一致，但部署/触发仍未验证；没有因此增加API或改数据。公开close3成功/server0/76290actualexit0，Windows31868/21024缺席，212输入186源保持。
+
+同数据只读选下一关时尝试不存在的ro1_n_1_6被目录拒绝，未创建副本/地图/战斗；首区实际仅五普通关且均已玩，不能臆造第六或用同图紧急变体重打。下一按已接明确FloorSequence，用QA首区单商店完成交易正常推进至第二区，再选实际存在且未玩ro1_n_2_2巡逻队；不修改区域资格或直接改游标。此为显式QA方案，非官方自然分布，原生尚未启动。
+
+2026-11-02 新D同QA23部署代表准备通过：8106actualexit0，13夹具API200/0新战斗，已有6旧战斗保持；明确FloorSequence首区单商店→第二区巡逻队ro1_n_2_2，真实shopAction完成推动cursor2/journal1，不直接改游标或放宽区域。217输入保护/b71源186保持，地雷cnt3/QA价1、金币5/Texas1。原生尚未启动，先工具选择/地块提示再落地，不重打首区五关；本方案与价格仅QA，非自然供给。证据.cache/rogue-tool-deploy-native-20261102-v1/prepared.json。
+
+2026-11-02 新巡逻队ro1_n_2_2唯一原生部署代表通过相应范围：先选卡看绿色地块，再一次拖放，地雷实际落地/库存3→2/费用及冷却/地面模型已看；随后模型消失。保存战报trap_012_mine的SPAWN1/DEAD1、实际kills=validKills=1、无干员部署，支持本地启动/触发一次。爆炸动画未捕获，2000伤害与15秒+50%易伤未独立测量，不推广六工具逐项原生或全部数值正确。原辅助safe_counter仅允许char_导致n31观察AssertionError，游戏battleFinish仍200且完整归档保存；未改线上worker，以归档定点补核，不补造旧观察成功。032画面出现暂停但队列无对应暂停输入，33仅恢复；来源未归因。043得分39/蜡烛+39、045笔记25→64/灵感+4、047返回主题均已看。32HTTP全200/异常及Lua0，99075/PID32516实际exit0，自有服务ADB/index1退出、61其他账号表217输入保持。新v4/zone_index2/FINISHED，探索SETTLED、cursor2/journal1；全7战斗/27报价保留，23完整用户77表真实备份/重启/新D恢复同，88290actualexit0。证据.cache/rogue-support-battle-20261101/native-deploy-witness-v1.json及native-deploy-save-compatibility-v1、.cache/rogue-tool-deploy-native-20261102-v1。业务b71f042e/186、0036/77无本轮新生产改动/EXE，新16+相关138=154自动检查不重复。下一支援道具永久图鉴/来源合同，已有购买/替换/一次部署不复购重打；自然供给价格/直接发放及全目标保持未完成。

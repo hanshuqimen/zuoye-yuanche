@@ -1,0 +1,44 @@
+# 关闭探索时保留待确认结算
+
+完整交付未完成。本轮继续主动giveUpGame边界研究，不重打关卡，不恢复剿灭。用户已明确确认本次协议接受；本轮没有启动模拟器，也没有执行协议接受输入。
+
+## 客户端依据
+
+只读冻结ARM64 ELF（SHA256 3ece1e7b34165233fe8c3c919cf55dfcb4406b6bbc2725def2b1242b4c0a6259）与metadata（bf14421bbafe9c71d944ba4f97b31ecd666232640eac0829db3d84ac716ac8b8），索引30c555d4479d4a0f708b9fc61aa4ecfeb945a169e4a82586e31d243afdaa4804；不读玩家堆或官方认证。游戏规则范围仍是实际导入19表e915675d、rogue_1/NORMAL0；客户端控制流不能代替服务端评分或其他模式规则。
+
+REA/Ghidra两次独立有界代码页会话：
+
+- M134520 `_CloseGame`，0x39823f8、720字节：默认分支组装确认对话框。证据ev_d43c4f3c18cc296d71744744b98b8c139b07c1de0eb1a576458c5fe9bcd7d069。
+- M134521 `_SendCloseGameRequest`，0x39826c8、860字节：构建网络请求并注册回调。证据ev_048d8453812b1f9411b20e61bb3402efbd8911cd133dbc4282fefa43fdd8582e；端点全局字面量尚未独立解码，不靠猜指针确认URL。
+- M134562 关闭请求回调，0x398479c、252字节：先调用M134529 `_LoadData`，再取主题，调用M154256 `CheckIfGameSettle`；判断为真则构建RoguelikeDungeonPage.Params并OpenPage。证据ev_957e1c281794181c05501be62f413397e04ce337e18efb43f6e42f274dda3add。实际响应类型RoguelikeTopicGiveUpGameResponse没有自身字段，继承PlayerDeltaResponse；这不意味着没有后续结算。
+- M154256，0x3eec308、276字节：默认分支读取当前主题匹配、player.state整数2及首待处理事件类型15。字段偏移对应CurrentData.game.theme、player.state和pending；PENDING/GAME_SETTLE沿用已经能原生消费的自然结束合同，本轮不把受保护枚举默认值冒称已解码。证据ev_7ed72f1dd81759dee7f6273862023b7e57f4f58a35f6f130cb0931b8730e0ca1。
+
+两个artifact分别12288/8192字节，SHA256为8542c2d1eca8c463450b11e4446dcec9f916fe4bafaaebbdc86788ea3c6d7855、149fcc43191e5c7d865e431729f389580fe5b3e4ba52412922f24895bae703ef。边界来自校验索引；REA种子是调用者标注，不是自动发现。四个目标均能逐指令静态解码；最后一个反编译在Hotfix分支报告bad instruction/truncating，只有完整的默认分支用于上述结论，不声称还原Hotfix。所有结果有全局符号重叠警告，保留实际函数终止边界。
+
+首会话79812、次会话63493都经公开close_binary及实际wrapper/server exit0，artifact未改。两次首次反编译观察器45秒超时，但同一请求随后分别59.594/51.531秒ACK成功，未重发或重启；观察器失败和原始结果保留。
+
+[PRTS集成战略](https://prts.wiki/w/集成战略)说明探索后主动放弃也有成果结算；[本主题准备阶段](https://prts.wiki/w/傀影与猩红孤钻)另明确初始化放弃没有结算和奖励。这里只采用有限社区依据；不能把两阶段合并，也不能从空响应自身字段推断无奖励。
+
+## 已确定缺陷与有限修复
+
+旧rogue_runs.abandon把自然失败的待确认GAME_SETTLE直接改为ABANDONED并清空current，后续无法领取已接纳成果；成功结局则409拒绝。关闭回调本来会读取差量并检查结算入口，这两种行为都没有保留正常关闭请求后的入口。
+
+新请求发现已经校验过的DEFEAT/SUCCESS结果时返回空业务响应，保留当前探索、事件、战斗和外部余额，随后仍由原gameSettle事务独立确认。关闭响应本身不提前发奖励；已有幂等收据/版本号照常写入。重复关闭、新序号、重启不会覆盖结果，新局仍被活跃探索保护挡住。
+
+这是待确认的自然结束保护，不是仍在探索中的主动放弃结算实现。初始化、活跃战斗/场景/商店放弃暂沿既有有限本地策略；旧ABANDONED记录不重新打开、不追发、不迁移。schema0033/74表不变，既有v1–v10评分/响应/通知公式未改。完整主动放弃还需独立建立终止事实、未完成节点/招募计数和确认流程。
+
+## 验证与下一步
+
+修改自然失败关闭检查、成功Boss关闭后并发确认检查及基础结束重试/恢复检查，新增关闭与确认双Runtime竞争、旧已放弃失败不追发两项。最初定点1过1失败，原因是新增测试createGame误用grade，实际schema要求modeGrade；改正后两定点通过，成功Boss定点已通过。正式副本核验第一次对所有表完全不变的断言漏掉既有receipts和player_profiles.revision，已保留失败副本；修订核验限定两张表的预期变化，复用已通过的22用户兼容证据，不重跑无关检查。完整受影响检查和正式副本结果待实际完成后追加。
+
+本地证据入口：.cache/rogue-giveup-20261030/{rea-close-game-v1,rea-settle-gate-v1,mcp-close-game-v1,mcp-settle-gate-v1,pending-v1.xml,pending-v2.xml,pending-regression-v1.xml,verification-v1,verification-v2,verify_pending.py,verify_pending_v2.py}。原始代码页、数据、保存、日志、图片和临时分析工具仅本地，不提交。0新增原生输入/战斗/授物/EXE，不声称本次关闭链已另做原生代表。
+
+下一先完成当前检查和私有源码检查点，再补探索中主动放弃结算，不重复自然结束或旧关。其他资格、自然供给、其他主题/模式、Golden/长时断网/性能/Harmony及成熟发行物均未完成。
+
+2026-10-30本批验证完成：5相关测试文件157不同检查全部通过，139.94秒；4文件Ruff及diff检查通过。两项新增分别覆盖关闭/确认双Runtime竞争和旧ABANDONED不追发；自然失败/成功关闭、初始化/活跃战斗放弃、事务回滚、幂等、重启/备份等既有检查同步通过。Starlette弃用提示保持。
+
+正式核验72325实际exit0：业务c3ee7b6a26f34b5087ec61cb4a212c0b4c8b4ec7d6cf31e36a21e6eeff981761、173文件；22完整用户/74表兼容、备份后重开相同的证据复用本轮v1已通过段落，未因改核验断言再次重跑。新D pending17副本三次关闭/三次确认均200；关闭后所有游戏表不变，只有两新幂等键对应的两收据和本账号revision+2，完整17用户投影不变且另开Runtime仍保留待结算。随后一次v10确认/两重试仍437基础分、22项550额外蜡烛，旧16完整用户保持；最终17用户/74表在重开、真实BackupService和新D恢复一致，原数据库/202保护输入保持。首次v1因核验器误认记录表名且遗漏版本号而断言失败，不是事务异常；失败副本及脚本不覆盖。证据verification-v2/verification-v1.json。
+
+两会话Windows wrapper和当前WSL所属REA/Ghidra进程已实际核对缺席；ps屏幕尺寸提示保留，无退出异常。0本轮原生/战斗/授物/EXE；完整探索中主动放弃和全目标继续未完成。源码/文档检查点尚待实际上传回读，不凭本地提交宣称远程完成。
+
+2026-10-30关闭保护私有检查点实际完成：源29f263e587702ee8d68c5512743ed53f3daf2a2f/业务c3ee7b6a，私有上传c15131e512a049a8c8f0951ae9cd701c198d4727、父36485b2；bundle2115346字节，SHA256 0d85a889e8fc97405d6617626392dcb213998b2ef3b2ea5def6eeae5b431ea74/Git blob9e6f21fa8268f8256d2e5b06ef05ae917aeb7d57。实际浏览器下载双hash与新D500源码/193完整历史/Prompt/fsck/干净工作区恢复相同；502历史路径/2254blob扫描，禁止路径/凭据标记0。旧187非README条目和完整104582字符旧索引保持，新树e7327b8d732cea0cbcbeb7c89f6007c5fcd6ea29、README1830119f6d0ec838ffb677758f7791a1f8f4ee91，189条目；private/ref/树/索引实际回读。普通Git仍128，不冒称源码分支推送。权威.cache/github-checkpoints/heartbeat-latest.json及rogue-close-pending-20261030/upload-verification.json；实际C临时下载仅验证后移D。含157检查及正式保存/恢复证明，0原生/战斗/授物/EXE。完成文字晚于包，不因补文字重打包；下一继续探索中主动放弃终止事实/评分/确认及其他缺口，不重打旧关。完整目标未完成。

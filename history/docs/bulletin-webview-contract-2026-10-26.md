@@ -1,0 +1,36 @@
+# 公告 WebView 页面失败合同（进行中）
+
+源码基线94e03978/schema0031，最新本地记录9e8bfcc；业务995ddf2已私有回读。FREE四星初招v34的2操作/40HTTP/0新战斗及91输入/74表恢复通过，不重复该代表或旧关。当前问题由实际screen10主页“页面打开失败”toast触发，不能从全部HTTP200/Unity错误统计0判定页面成功。
+
+## 已知事实
+
+- 现代冻结network_android将an指向announcement.meta.json，prean为ak-webview根；gate_android实际为preAnnounceId/actived/preAnnounceType三字段。旧preannouncement则带独立preAnnounceUrl。来源均经Bootstrap来源SHA及固定profile读取，仅为冻结历史配置，不是当前官网公告。
+- 本地/gameBulletin现在只返回简单HTML；preannouncement/gate及announcement元数据也指向该页。HTTP状态与Content-Type本身不能证明公告插件的页面/桥接/回调合同。
+- SDK服务说明使用独立/protocol/plain/ak/service，v34 screen06已在真实WebView显示TerraLocal非约束性存档说明；这只证明SDK的独立页面路径，不推广到主页公告窗口。初始黑屏一次Back回登录页的成因仍未知。
+
+## 正在核对
+
+冻结索引30c555d4/ELF3ece1e7b/metadata bf14421b。已取得HomeAnnounceWebState.GetQuery M141999、UIWebWindow.OpenWindow M112381、UIWebWindowState._OpenWebWindow M112462、DataConvertUtil.GetAnnouncementUrl M33390的REA结果。GetQuery/GetAnnouncementUrl保留Hotfix截断警告；_OpenWebWindow构造参数后进入OpenWindow/Core，不把SDK独立说明页的成功推广到此处。
+
+首静态采样失败保留：M142406 _ShowAnnouncement在冻结文件中的288字节线性解码为0，守卫拒绝，没有放宽完整方法约束；空失败目录rea-bulletin-static保留，未启动REA。其余4目标完整解码且无同址别名，v2只采这4项。将来确需受保护页，必须独立代码页证据，不能把文件坏指令当函数逻辑。初次Python内联查询的PowerShell引号错误也保留为未执行研究命令，随后改用脚本；未据此修改业务。
+
+本地证据`.cache/bulletin-20261026/{targets.json,web-methods.json,sampler-failure-targets.json,rea-bulletin-static-v2}`，官方元数据/代码页不提交。研究初始业务未改、无模拟器操作；其后候选修复及待验状态见下。
+
+## Android实际桥接缺口与候选修复
+
+原版APK与本地v3 APK内HGUniWebUrlMapping.json相同SHA23753991：ak_announcement内容路径/gameBulletin、版本/api/game/bulletinVersion。没有通过修改APK删除公告。原版WebviewDialog注册名HGSDK；其onPageFinished只记页面事件，不完成业务等待。REA对固定APK0b79b853的postMessage/ready/loadingFinishWithBusiness确认：type=ready分派到ready，currentVersionUrl非空时进入loadingFinishWithBusiness，主线程任务取消waitingTimer/waitingTask、移除加载层并显示WebView。缺少ready是当前HTML的确定合同缺口，是否完全修复screen10仍待本轮原生代表。
+
+自有页面新增DOMContentLoaded后HGSDK.postMessage的ready与关闭按钮的close；无账号/令牌读取、无外部资源，不关闭公告开关。页面脚本用精确SHA的CSP执行，普通浏览器缺桥接时仍显示文字并隐藏关闭按钮。VM的loading/complete×有/无桥接4种检查及CSP哈希通过；bootstrap/SDK/寻访网页27项相关检查通过，旧Starlette弃用提示保留。这些不等于原生验收。
+
+证据REA ev_658f10c3(postMessage)、ev_17003c8d(ready)、ev_bf7cc292(loadingFinishWithBusiness)，完整JSON仅本地rea-*-v2.json。第一次CLI未配置既有JAR被capability_unavailable拒绝，补上已校验JAR后取得结果；内部类$1名称不被JADX接受失败保留，ready方法本身已经包含匿名任务源码，不重复成功检查。Ghidra会话30161实际exit0，但close_binary曾报cleanup_incomplete，故不写清理完全成功；另核对报告Linux PID519已缺席，Windows31972/12392缺席。45秒观察超时未重排或重启。
+
+仅公告代表夹具已准备：`.cache/bulletin-native-20261026-v1`/`.cache/refresh-diagnostic/bulletin-oct26-native`，严格克隆已停止v34全部74表/完整rlv2，98保护输入；新worker禁止全部rlv2和战斗，不重抽/不复购/不游玩。当前原生尚未启动；拟只验证公告显示与关闭，其他模式/完整公告系统及SDK初始黑屏成因仍未完成。
+
+
+2026-10-26公告ready/close原生代表完成：08d34bb/源368598fe，screen04实际显示本地公告文字和关闭按钮，screen05点击关闭返回主页；17HTTP全200、0rlv2/战斗操作。34356实际exit0、14188缺席，服务/自有ADB/index1正常停止。98输入保持、完整rlv2和Runtime重开相等，74表仅账号6的local_sessions更新，其余行相等；HTML改动未重复无关备份/恢复或FREE/旧关检查。27相关检查/4VM环境仍为各自范围。启动screen02黑屏经一次Back回主页，与旧v34返回登录页不同，原因仍未确定，不能写启动全程已修复；本地公告是简单自有说明，原版完整公告样式/内容、其他模式公告及整体交付仍未完成。Git非交互连接仍无登录，后续完整私有bundle需实际回读/新D恢复，不能冒称08d已远程完成。
+
+
+2026-10-26公告私有检查点完成：source11cb0714e132ca0bdfd993284cd5c9798628939f，上传/索引eb682d32cad2b9b58f5f1141b85f53f59c7faca7。完整bundle1614205字节/SHA256 092e399d4f2a846c28e33db5102be5925604d38bbb22e2315b27ce0345df0d99；420自有文件/126历史提交/422历史路径/1558blob扫描无禁止路径及凭据标记。CLI禁交互仍无既有登录，私有连接器完整bundle方式，不宣称源码分支正常推送；保存164个旧非README条目和旧索引全文。API回读head/tree/索引及网页最新11cb标题/完整SHA/实际范围相符；连接器二进制回读被UTF-8守卫拒绝，采用固定提交View raw真实下载，双摘要一致，新的D目录restored-remote-11cb071全部文件Gitblob/126历史/fsck/Prompt相等。仅本次新C下载在再次核对后移D，旧包保留。网页两种文档化截图API都报Unable to capture screenshot，保留失败，不冒称有本轮网页截图。权威.cache/github-checkpoints/heartbeat-latest.json；本条完成记录晚于11cb源包，不为完成文字生成重复包。公告17HTTP/0玩法/98输入原生范围和启动黑屏未决、完整交付未完成保持。
+
+
+2026-10-26黑屏观察修订：direct-native-v1全程0 Back，初始标题存在，START后screen02黑过渡，screen03无输入自行进入登录页。此前“普遍必须Back”判断撤回；旧v34/elite现场确实使用过Back的操作记录保持，不能据此认定根因、稳定阻塞或已修复。证据direct-native-20261026-v1/screen01-03及native-results/requests。

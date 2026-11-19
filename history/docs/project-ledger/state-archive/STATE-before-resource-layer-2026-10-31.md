@@ -1,0 +1,27 @@
+# 当前状态与按需入口
+
+完整目标ACTIVE、未完成：Prompt全系统及成熟EXE，抽卡/战斗/集成战略/卫戍/剿灭/危机合约原生体验、Golden/断网长时/性能/Harmony。[需求](REQUIREMENTS.md)。不恢复已取消剿灭、不重打旧关；代表通过后按类接线。
+
+## 当前工作
+
+正在核[资源分层收藏品](../roguelike-resource-layer-relics-2026-10-31.md)：从已有M84561输入层数证据续接，定位M84566重算/BasicRelic.Init/按层加属性，静态完整小包16384字节已准备。先REA判明实际层数来源，再接q28/银行资格；本轮尚无业务/UI/战斗，不按普通属性layer0冒称完整效果。
+
+[三件立即源石锭效果](../roguelike-bank-relic-effects-2026-10-31.md)源码/API已接：r11/r12/r13分别10/18/25，独立完整定义/金额校验、新报价收益绑定、银行/非银行先付后奖因果回放、库存/支付/收益/收据/链同事务。业务cf6f2772/179 Python、0036/77表；新26/相关去重208检查通过，9文件Ruff/179业务AST，失败/旧59上限修订保留。实际22完整sync/77表/24旧报价/214输入保持，真备份/重启/新D恢复同；后仅两独立导入排序有AST等价证明，不为格式重跑旧检查。0实际新发放/UI/战斗/EXE。r13傀影普通商店禁售，QA报价不代表正式来源；q28资源分层效果、银行收藏资格和自然供给仍未实现，下一继续这些缺口。
+
+前阶段[结算银行奖赏](../roguelike-bank-awards-2026-10-31.md)：业务1e31e116、0036/77表，结果/奖赏/链头同事务，PUT或列表不发奖，旧0值保留。新20/相关95阶段检查、22账号0035迁移/备份新D保持；五实际奖励只内存合成来源，不是实际获得。marker1为社区模板支持本地约定，官服通用值语义未恢复。新探索取款准备从已核奖赏日志取得资格，但不是自然开放。
+
+[已有原生银行代表](../roguelike-bank-native-success-2026-10-30.md)：一次PUT、存后重启、一次WITHDRAW看图bank0→1→0/gold6→5→6，22用户77表恢复同、213输入保持。不重做；不能当新奖励/新收藏/自然供给通过。
+
+## 实际运行与数据边界
+
+当前无待续UI/REA输入。用户这次QA22协议确认已收到；此前重看已公告且队列无勾选/继续，不能补造本轮接受操作。本阶段仅离线源码/接口/新D保存兼容，未启动模拟器或重打旧关。旧会话的公开close/清理失败及实际资源缺席分别保留在上述报告，不凭旧PID复用。
+
+仅index1/<test-transport>/<test-device>，保留index0；APK/资源/数据/硬件/TLS/离线/8秒Android及ACK→等待→看图约束保持，不绕被阻8080或读认证。当前19表e915镜像a550f5e、v077/77.6.0、client_verified=false；冻结CN2.7.71/V070，具体适配不等于全部表原生验证。
+
+## 私有检查点
+
+本批源daf6196/业务cf6f2772→privateafc30d4已完成：2273332字节/SHA256 7e7f0b289712b55afe0e0842de9cfe55e298dec24f83d38548aec459d8c56a68；实际下载双hash、新D527文件209完整历史/Prompt/fsck/干净状态恢复同，旧193非README和111978字符索引保留。529路径2463blob无禁止/凭据标记。普通Git只读probe128未分类、未称源码分支直推；授权连接器+网页回读，只有新C临时下载验后移D。权威.cache/github-checkpoints/heartbeat-latest.json及rogue-gold-relics-20261031/upload-verification.json；[总索引](CHECKPOINTS.md)。完成文字晚于包，不重复打包；旧c7b1787/9ecceeba等检查点保留。
+
+## 按需入口
+
+[当前报告](../roguelike-bank-relic-effects-2026-10-31.md)、[银行来源](../roguelike-supply-consumers-2026-10-30.md)、[自然供给边界](../roguelike-natural-supply-2026-10-29.md)、[历史](HISTORY.md)、[证据](EVIDENCE.md)。本次前STATE逐字节存state-archive/STATE-before-gold-effects-2026-10-31.md。

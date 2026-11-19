@@ -1,0 +1,37 @@
+# 猩红舞会资源交易扩展
+
+完整目标ACTIVE未完成。上一轮cf8dac8c同步优化与生命交易代表已保存至private91c4cc8；本轮按代表后批量接线推进五种同类资源交易，0新原生或战斗，不重打七个旧关/剿灭。
+
+研究起点：当时尚未更改产品。实际导入19表e915675d…71ae29仍client_verified=false，相对冻结CN2.7.71/V070，不能由单事件匹配证明全部同版。audit-v1.json核scene_exchange_enter及六条完整选择行hash/显示/后继：金币10换HP8、金币10换希望6、可用希望4及等量上限换HP10、HP5换希望8、HP5换金币15、独立逃走零效果。自愿生命支付保留1的边界复用上一生命交易明确规则，不支付护盾。希望的已使用量不能拿来支付。
+
+[PRTS首主题事件页](https://prts.wiki/w/傀影与猩红孤钻/事件一览)正文核对五项效果及四选项形状，其中必须包含逃走。它没有证明三项交易组合的每个组合、权重或所有层级开放；本阶段仅拟接显式保存的三项交易加逃走方案，不自行使用均匀随机，不把所有六选项同时显示。实际rollNodeData/subTypeData均空，只能说明这两个字段没有提供供给数据，不能推广为官方无条件开放。
+
+为核四选项投影消费者，复用此前已受守卫读取的两页只读加载代码，不启动模拟器或读取新内存。M150515 RoguelikeChoiceScene.UpdateData 0x3e00778–0x3e00ad4完整线性解码860/860，body SHA62228b5357c56ee60d90ce0448db192b3490e30945bb25f757e8c0ab228dfb32；页SHA e32d8c02714672da8e9b04a242cf2ba632525a58c60fd5f183f12305967d60fc，与旧捕获一致。新12288字节隔离ELF摘要2d3107c1…3d810c，46完整方法种子；不称线性解码等于REA结论。REA wrapper36820/child15336、exec54300已ready，公开open排队中；后续按实际ack和exit核，不凭超时重启。
+
+本地证据.cache/rogue-dance-trades-20261107/{audit_v1.py,audit-v1.json,prepare_scene_rea_v1.py,rea-scene-update-loaded-v1,mcp-scene-update-loaded-v1}。前次一条PowerShell嵌套引号命令在Python解析前SyntaxError、无数据修改，后改独立脚本；一次猜文件名读取失败后按rg实存路径读取。研究时产品实现/自动检查/冻结HTTP与保存尚未完成；以下续记为当前事实。原生新代表和发行物仍未完成。官方数据/代码/运行日志仅本地，文档和自有代码可进检查点。
+
+
+## REA实际收尾与边界
+
+M150515默认UpdateData的REA ev_2f0f26492d487b3b907ae93a706dfd499e58d8025a65fb37e58ddac3869e86a9，伪码摘要3c1fc12886c47a4a22879eccc5635f9f54d036e1dc2f13197c3904feaef3724f：遍历param3+0x18的choices，按key查当前主题选择定义，将可用bool、对应additional及hint工厂传给M150366 CreateChoice，再逐项加入列表，未见固定“两项”分支。协议SceneContent字段id/choices/choiceAdditional偏移16/24/32与代码相符；UI类静态offset出现1684300xxx保护值，明确不可用，不据此映射UI字段。Hotfix入口、全局符号重叠及末端0x2310650未知调用/终止流模型保留；只证明默认消费者行为，不称全函数、运行Hotfix、官方后端或四项实际画面已还原。
+
+pseudo helper93553在45秒观察超时返回pending后未重复排队；同一54300会话后63.328秒实际ack成功，才读取并公开close seq3成功/server0，wrapper54300实际exit0/artifact不变。新D隔离ELF12288字节/46种子，原代码未改。0新模拟器启动/内存读取/认证或协议接受。
+
+## 实现、检查与真实保存
+
+时间边界补核：本测试使用保存内固定服务器时间，实际值见本地time-admission-v4.json；createGame已调用topic(at=ctx.now)检查主题开始状态，仅NORMAL/grade0。topic.main_screen_end是主页展示字段，不能当活动玩法截止时间或本事件楼层资格。首次补记错用不存在的Topic.end导致只读脚本AttributeError且未写证据，按实际类型字段改正；不据此新增结束限制或改旧保存。现实当前时间/官方活动状态和本事件自然供给仍未证明。
+
+新增rogue_dance.py独立惰性编译，五条明确效果及最低余额、六个完整选择hash/明确后继。十种显式三交易+逃走方案各四项、五场景，逃走零效果且独立结果页。这里表示服务端已保存的具体方案，不声称十种都具有官方自然出现资格或均匀概率。每项选择只在本次保存子集中有效；结果页只可离开，重试不重复。registry按精确新程序ID分发，旧fixed/trade/rest/health程序不新增表行依赖或更改digest，schema0036/77不变，189 Python/业务f6116dd3a82aaf2a0930305d582cb808b8b515778e7dd0c51c89d194d874f2ed。
+
+新12项覆盖五种完整资源变化/同步增量/其他属性不变和重试；gold9、可用hope3、HP5（另有7护盾）分别不可支付，仍可逃走；不可选择未下发交易，拒绝不变全DB；结果中途备份/恢复/重启；SQL触发器500故障整笔回滚、两并发新序号只提交一次。十方案形状与缺失完整行拒绝也检查。首次12pytest过但Ruff三E701失败，改测试格式后4Ruff通过，未为格式重复12。另相关81项真实通过83977 exit0，最终93不同检查，不累加重复。189AST/diff通过，既有Starlette弃用警告保留。
+
+实际19表十方案编译，五条支付完整hash逐个破坏均拒绝，原表不写。先新D核旧23完整用户/77表与原生基线一致，真备份恢复/Runtime重启/新D一致。新增本地QA24（显式主线开放前置，不伪称真实打过），一个已接金币事件取得5金币后，按3→4→5→1→2→逃走顺序用真实选择支付。未手改探索余额：从HP4/金币11/希望6，最终HP12/金币6/希望16；每笔重试无重复，未下发选项409且全表行不变，中途结果保存恢复和重启同。41HTTP40成功1预期409；最后giveUp/结算和重试仅一次7步/7分，无新战斗/工具分。
+
+旧23完整用户及全部旧run/场景/7战斗28报价/关闭结算保持；最终24完整用户/77表再次真备份恢复、Runtime重启和新D同，原DB/settings和旧未选择种子字节保持，93285实际exit0。证据actual-compatibility-v1/{verification.json,users24.json,all77-table-hashes.json,old-restored-new-d,new-event-restored-new-d}。保留真实第一舞会尚未选择的完整native-seed-before-dance.sqlite3及24用户，SHA256 4206dd8fa729ba3576e9d81e69f6e77f1a2134724052f558e5759f90b6634331；不反改最终SETTLED。地图和前置是QA、原生四项画面未验，不由API200宣称完成视觉。
+
+coverage-v2按frames.branches统计19程序/18唯一choice/24场景；不是把每个program.choices完整152目录都算已接。自然供给、组合概率/资格、剧目幻觉、收藏品/券/特殊战斗事件、全部主题和模式、GM/Golden/断网长时/性能/Harmony/成熟EXE仍未完成。下一私有回读检查点后继续缺失来源，不重复同类支付原生或旧关。
+
+
+## 新私有回读与恢复完成
+
+2026-11-07 舞会私有检查点已完成：源0c3ebe09af7be2a8c57ae8c7b1021071fb9eca79/业务f6116dd3→private3c07c06c2982435ca08d52a422380da6502f8522，父91c4cc85e6dcbf111bf2f43ba65f548e35ddacac/treef322c4c311f83213e23741f98f4c10ca4663ef2b。2574347字节，SHA256 82de7c7dd5da1e20d2471477af006b2768c3f7b9da97636bfe4e0270a0ddc3d6、blob3bbcd36f5719700fb328b48b94c849de6088a946。连接器expected_sha/force=false及private/ref/commit/tree/完整README/note实际回读一致；217旧非README项和119647字符完整旧索引含原CRLF保持，新tree220。572历史路径2895UTF8 blob扫描无禁止路径/凭据标记。正常Git禁交互只读probe128/1.369秒无ref，不称源码分支直推。浏览器文件页真实Download事件后立即completion_summary；实际二进制双hash、新D570文件255完整提交及全tree/blob/Prompt/fsck/干净恢复一致，核验actualexit0。只本次新C临时下载双hash后移D，不提取凭据/扩权；旧91c4cc8及全部历史/备份/存档/失败/发行物保持。权威.cache/github-checkpoints/heartbeat-latest.json和rogue-dance-20261107/upload-verification.json。包内93检查/24用户77表恢复、REA默认消费者/保护和Hotfix边界、显式QA方案非自然概率与原生画面未验均按实记录。完整目标ACTIVE未完成，完成文字晚于包，不为文字创建重复bundle。

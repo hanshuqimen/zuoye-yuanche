@@ -1,0 +1,35 @@
+# 主线剧情关与章节衔接
+
+## 问题与实现
+
+旧story.finish仅写StoryCompletion/剧情flags，没有把story-only关卡写入StageProgress，也没有发关卡定义中的首次源石。冻结数据有13个章节以剧情关结束，因此仅修复普通战斗仍会在这些章节衔接处停住。
+
+新增数据驱动绑定：只接受BEFORE_BATTLE、useRegex=false、精确trigger.key对应MAIN/isStoryOnly关卡；不解析故事文件名推测关卡，也不把普通战斗的战前剧情当作通关。核对NORMAL、NONE或ALL、零费用和零战斗收益、无额外掉落；ALL另校验storyStageShowGroup及其环境/关卡引用。突袭、非零消耗、额外奖励等保留明确错误，不用空成功。
+
+新完成在同一事务保存剧情标记、关卡三星完成、首通源石领取标记及奖励，完整同步/增量可导出后续关卡和章节。剧情关不创建BattleSession/代理，不扣理智、不增加虚构开战次数、不反复增加通关次数，也不发送BattleFinished来伪装战斗。源石数量来自对应stage.diamondOnceDrop，物品类型来自同版本item表，不依赖随机掉落目录。
+
+已有StoryCompletion或旧flags的恢复属于本地策略：修复通关状态和章节进度，不根据未知历史补发源石；保留其他已保存次数，不抹掉历史。恢复有StoryStageFinished审计事件、policy及数据指纹。Runtime.sync在组装完整同步之前处理一次并增加revision；后续同步无重复修复。不能等客户端重新提交，因为REA默认路径有首次阅读检查。既有缺失奖励可另凭确定记录作GM修正，本次不猜测既往余额来源。
+
+## 数据覆盖
+
+18表f44199a7d34a82bdbb232674db3a3cdf9d7958230217fce3960ccafd351b7406、19表f4ef9ba642138521ac84a16943b72a4f31a7c74d48417f017c314a9d729ae219均重新验证。各43个MAIN剧情关一一绑定唯一可提交剧情，23个NONE和20个ALL均通过结构及引用检查。模式共享只指剧情关，不意味着EASY/NORMAL/TOUGH战斗已全部接通。章节开放时间逐条登记，真实请求仍经过账号前置与章节开放判断；目录检查不等于账号全部解锁。
+
+13个章节终点：main_5/st_05-01、main_6/st_06-03、main_7/st_07-04、main_8/st_08-06、main_9/st_09-04、main_10/st_10-04、main_11/st_11-03、main_12/st_12-03、main_13/st_13-03、main_14/st_14-03、act2mainss_zone1/st_15-03、act3mainss_zone1/st_16-02、act4mainss_zone1/st_17-04。第八章的剧情st_08-06与缺掉落样本的战斗main_08-06是不同关卡，不混淆完成范围。
+
+## REA依据与限制
+
+固定ELF SHA3ece1e7b34165233fe8c3c919cf55dfcb4406b6bbc2725def2b1242b4c0a6259，声明索引SHA30c555d4479d4a0f708b9fc61aa4ecfeb945a169e4a82586e31d243afdaa4804。使用现有REA6.4/Ghidra12.1.4和Ubuntu，所有新分析文件/缓存均在D；既有WSL系统目录仍可能使用C。没有启动Android、读取进程内存、官方认证或浏览器凭据。
+
+M189629 _OnStoryStageClicked静态508字节可线性解码，REA ev_8aac4dbd3ed5e297aeaa1c0f9a82168a4892bda0ba8fe4499972a0e16cddf68e仍因外部尾调用/热修桥截断，只作为局部证据。尾调用0x4807f48经声明绑定为StageZoneStoryOnlyPanel.Show，不能将面板显示直接当成已提交结算。
+
+M54831 AVGUtils.FinishStoryAndCommit静态720字节，REA ev_4c204fc39293956390a1e68b603997a383a4cae5a9663b987697728712de7846的默认路径检查StoryData.CheckNeedCommit与CheckFirstRead，构造FinishStoryRequest并把故事标识写入字段后提交；全局符号警告及hotfix委托限制保留，不称全部函数还原。请求声明仅storyId，响应items ItemBundle[]，与现有/story/finishStory协议对应。关卡发奖与阶段推进是结合此协议、冻结表及缺失代码作出的实现，不冒称已观察官方服务端内部逻辑或本轮原生画面。
+
+首次REA进程等待期间实际CIM身份仍在；只读WSL检查后原句柄正常exit0，未因观察超时重启或杀共享环境。面板的局部截断原件保留；其他两个已准备静态候选未执行REA，不列为已分析。
+
+## 验证及未完成范围
+
+37项相关检查通过，6.13秒，1项既有FastAPI/httpx弃用警告；Ruff最终零。代表覆盖NONE→跨章节ALL→下一战斗解锁、奖励/增量、重复/并发只发一次、重开和备份恢复、锁定/未来章节拒绝、事务中途失败回滚、账号隔离、旧flags全同步恢复一次，以及普通战斗前剧情不假通关。前阶段16/17检查与Ruff一次导入排序诊断原样保留。未重跑未受影响的完整1194基线，未新游玩或生成EXE。
+
+证据在`.cache/rea-20261021-story-chain/`与`.cache/rea-20261021-story-commit/`；validation.json保存本轮业务指纹c10a1a1a3cf08ba578d541e1d15754cdac936e0e4334d6354127a7ae48531c09、逐源摘要、检查、43关/13终点覆盖。官方表、代码页、反编译输出不提交。
+
+仍需真实客户端代表场景与视觉验收；尚未为剧情专门模板CompleteAnyStage任务完成适配（冻结表act3mainssPermanent_8指向st_16-02），不以剧情关通过宣称该任务完成。普通战斗特殊干员前置、不同环境/保护和高级玩法、完整寻访、Golden/断网/两小时/性能/HarmonyOS与成熟发行目标仍未完成。用户停止剿灭游玩的优先级保持。

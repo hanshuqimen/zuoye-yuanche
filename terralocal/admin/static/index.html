@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TerraLocal · 本地控制台</title><link rel="stylesheet" href="/static/app.css"></head>
+<body>
+<aside><a class="brand" href="/">TERRA<span>LOCAL</span><small>私人世界 / 本地存档</small></a>
+<nav aria-label="管理页面">
+<button data-page="dashboard" class="active">运行概览</button>
+<button data-page="accounts">账号与存档</button><button data-page="operators">干员</button>
+<button data-page="inventory">资源与仓库</button><button data-page="stages">关卡与战斗</button>
+<button data-page="mail">邮件</button><button data-page="time">服务器时间</button>
+<button data-page="backups">备份与恢复</button><button data-page="logs">请求与审计</button>
+<button data-page="settings">配置与兼容性</button>
+</nav><div class="sidebar-foot"><i></i> 进度保存在这台电脑<br><span>TerraLocal 0.1 · 开发版本</span></div></aside>
+<main><header><div><p class="eyebrow">TERRALOCAL / CONTROL CENTER</p><h1 id="heading">运行概览</h1></div>
+<div class="header-controls"><label for="account">当前存档</label><select id="account"><option value="">尚无账号</option></select>
+<button id="refresh" class="secondary">刷新</button></div></header>
+<div id="notice" class="notice" role="status">正在连接本地服务器…</div>
+<section id="content" aria-live="polite"></section>
+<footer>本地兼容服务器 · 实际客户端支持范围以验收记录为准</footer></main>
+<div id="toast" role="status" class="toast hidden"></div>
+<dialog id="login"><form id="login-form"><h2>登录管理面板</h2><label>管理密码<input name="password" type="password" autocomplete="current-password" required></label><button>登录</button><p id="login-error" class="error"></p></form></dialog>
+<script src="/static/app.js" defer></script></body></html>

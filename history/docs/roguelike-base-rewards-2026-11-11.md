@@ -1,0 +1,25 @@
+# 正常探索中的普通基础奖励结果
+
+本轮从完整探索主流程检查出发，补上显式内容方案无法表达“普通作战无额外藏品或剧目”的缺口。此前每个已规划战斗候选必须包含至少一个藏品组或一个剧目；这会强迫普通战斗发额外物品，并耗尽无重复藏品分配。现在可信配置可以明确选择基础金币与招募券结果，不把奖励池耗尽或未知配置自动变成成功。默认自然供给和官方权重仍未完成；没有配置或预置地图时，finishEvent仍返回ROGUE_MAP_NOT_PREPARED/503，这个正常开局阻塞没有被本轮隐藏。
+
+基础奖励方案新增rogue1-explicit-base-battle-rewards-v4，配置必须显式base_only=true、groups和eligibility均空、无capsule，并校验完整主题金币物品引用。普通内容配置v5可在同一battle池中同时包含基础结果和藏品结果；先按节点类别过滤，再按显式权重抽取，不重抽或回退。基础结果只绑定BATTLE_NORMAL，不套用紧急作战、中间首领或最终首领。编译时若某类别没有可用候选就拒绝整个配置；领域准备时再次核具体关卡、区域和基础奖励规则。旧配置v1至v4、旧奖励方案和规则摘要保持。无数据库迁移或新增游戏路由。
+
+这是一项结果表达能力和本地可信供给合同，不能证明官方普通战斗的自然掉落频率。已有原生奖励列表和REA列表/index/sub证据只支持客户端能消费对应结构，不作为官方概率或资格证明。本批没有新REA会话、Android输入、原生游玩或EXE；继续沿用固定客户端和协议依据，不重复已玩关卡。实际数据为e915的19表、v077/77.6.0/client_verified=false，主题rogue_1/NORMAL0、保存时钟1792645099，started/archived均true；冻结客户端CN2.7.71/V070，不称全表同版。
+
+14项新检查最终通过：无显式意图的空结果仍拒绝，完整货币定义、保存指纹和严格布尔值、基础结果不能混藏品/剧目、紧急与首领不可误用、只有两个奖励、越界选择不写库、同/新序号不重复发金币、招募关闭、重启/备份恢复、按kind筛池且全局RNG保持、旧配置版本拒绝新字段，以及一个配置五层通关确认。首轮13过1失败是测试把asdict的tuple直接交给只接JSON list的解析器；只将夹具规范化为真实JSON，未放宽产品校验，受影响五项补验通过。
+
+相关回归113项有一失败：上一批新增货币开战检查正确拒绝多GOLD的未规划新战斗，但遗留STARTED用例仍以当前入口制造历史战斗。现在只在该自有夹具创建STARTED的调用中明确模拟旧准入，随后立即恢复全部生产检查，仍证明不能给已开战记录追加方案。单项补验通过；最终按用例合并为127项不同相关检查，不能相加各轮次数。
+
+由此纠正上一批e287f034的“185项末版全过”表述：其汇总中的该遗留用例取自货币开战检查修改前的XML，已经受后续变更影响，不能继续作为末版通过证据。旧XML、汇总、检查点和失败保留，本次补验不倒写成当时已经通过。具体节点和修正依据见本地final-v1/prior-check-scope-correction.json；当前事实以本批127项及实际保存验证范围为准。
+
+真实数据验证先在新D副本核完整35用户与78原始表不变，旧65项藏品和3项剧目编译字节/摘要相同。普通区域能力矩阵核规范五层的34个实际关卡/区域引用，不推广隐藏层、概率、逐关原生验收或其他难度。只新增QA36，在明确标记的有限QA配方中由finishEvent自动发布五层，然后普通基础奖励、金币重复领取、第二层事件、中间首领藏品选择、第四层商店离开、默认最终首领和gameSettle全部闭合。三场战斗是合成API遥测；28HTTP200，另1个越界领奖按预期400且原始表不变。
+
+完整36用户/78原始表经真实BackupService备份恢复、Runtime重启、移除外部配置和新D恢复均一致；原35用户、13旧肉鸽战斗及全部旧行保留，新总16肉鸽战斗，普通battle_sessions仍0。原生DB/settings、种子、失败副本和其余保护输入保持；检查点索引的上次授权换代通过previous-heartbeat-latest原字节和当前验证记录核对。actual-v1在任何QA36请求前错误序列化archived方法，失败准备保留；v2复制该准备、只修为archived(at)后续接，未重跑已过编译矩阵或游戏请求。actual-v2/70380实际exit0。新测试、回归和修正XML保留，final-v1/verification.json记录127不同用例、200Python AST及保护摘要。
+
+业务84c56a4fb1b670fc0021bc4b180b94262335ac0e9d9ebdd1cbab756131a465d5，200Python、schema0037/78表；四业务文件与两测试文件，Ruff/diff通过。本地证据`.cache/rogue-base-rewards-20261111`，实际表、保存、会话、日志与官方工件仅本地，不提交。完整目标保持ACTIVE；下一优先补默认正常内容供给与资格依据，而不是重复可选剧目代表。全部自然池/权重、其他主题和命名模式、完整原生开局、成熟发行/Golden/断网长时/性能/Harmony仍未完成。
+
+2026-11-11 普通基础奖励源码私有回读完成：sourceac7e25288759d581acd41bdcfcee15dbc086b1f1/业务84c56a4f/200Python/0037-78 → privatee640eb07c43cab04e48247d9e7c7d23071dae8d2，父3baf961/treee38ef7f4cd83fb2979449dc199ab2108c38230bf。包2859862字节/SHA256 516d74da1c4823a252e9771d804eeb1f7f8df84e9302092c73950f9f0d6ca3a1/Gitblobe309ed9c786afd96b5d4238c23174681b4751f86。623源码文件/301完整提交，新D完整tree/blob/Prompt/fsck/clean同；625历史路径3381UTF8 blob扫描无禁入/凭据标记。旧247非README条目保持，新增bundle/清单，README只加968字节最新范围及185计数纠正前缀，原171436字节完整后缀同；远端250项。
+
+普通Git禁交互probe1无登录/无ref；授权连接器Git data写对象、expected_sha+force=false续main，非codex/development源码直推。连接器二进制回读限制沿既有证据不重跑，授权网页精确提交Download raw file真实事件入站；双hash后只将本次新C下载移D，新D恢复actualexit0，不改浏览器权限、不读凭据、不访问本地8080。私有标志、父/tree/ref、清单及README全文后缀均实际API回读同。权威heartbeat-latest/local-latest更新，旧索引字节在本次previous-*保留，旧包/历史不动。
+
+阶段证据.cache/github-checkpoints/base-rewards-20261111/{prepared.json,git-transport.json,old-remote.json,readback-tree.json,manifest-readback.json,readme-preservation.json,remote-meta.json,upload-verification.json,received-web,restored-remote-ac7e252}。本包127不同相关检查/36完整用户78表恢复/QA36有限五层接口结算及前批185汇总纠正已入；0本批Android/原生/新REA/EXE。无配置或预置图的默认正常开局仍503、自然供给/概率与全部成熟交付目标未完成；下一优先其真实规则，不继续重复可选剧目代表或旧关。完成文字晚于包，不重打文档bundle，完整目标ACTIVE。

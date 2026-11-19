@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "terralocal"
+version = "0.1.0"
+description = "Local service and transactional save tools for Zuoye Yuanche"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.128,<1", "uvicorn>=0.34,<1", "pydantic>=2.10,<3",
+  "sqlalchemy>=2.0.40,<2.1", "alembic>=1.14,<2", "httpx>=0.28,<1",
+  "jinja2>=3.1.6,<4", "argon2-cffi>=23.1", "cryptography>=44",
+]
+
+[project.optional-dependencies]
+client = [
+    "capstone==5.0.7",
+    "frida>=17,<18",
+    "frida-tools>=14,<16",
+    "UnityPy>=1.20,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.9", "pyinstaller>=6.18,<7"]
+
+[project.scripts]
+terralocal = "terralocal.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["terralocal"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+

@@ -1,0 +1,41 @@
+# 商店报价的历史资格适配与进度消费者
+
+本轮按用户效率要求继续开发，不恢复取消的剿灭、不重打旧关。上一轮实际完成私有检查点0b3367e/75ed2c7的二进制回读及新D全恢复，属于实际进展；不是只重述状态。本轮新增内部服务端报价适配器，完整目标仍未完成。
+
+## 源码及实际边界
+
+业务摘要089a0f2c33c792e6d8f9eb1ac901e97d2efe4a056c12a6671cfafc80e19f5221，170个业务Python文件，schema0033/74表不变。新增domain/rogue_merchant.quote：从当前账号验证后的探索、历史发现及已接通条件事实投影资格；从当前探索取得时间和持有关系；委托53件目录检查商品身份、完整效果和基础报价。返回报价摘要额外绑定账号、探索、seed和原报价，交由既有商店方案保存和交易流程使用。
+
+输入只有服务端明确选择的商店/槽位/物品ID，没有客户端资格、价格或授物参数。未直接使用保存的collect字典授权商品，也不将缺记录或无解锁文案自动变成state1。已发现但本局已持有仍拒绝。目录失配为503，所选商品资格/规则不足为409；报价编译只读，不给旧报价重新定价。该函数是供规划器调用的适配入口，没有新增公开游戏/GM路由，尚未启用自动抽样、完整自然地图/全部资格来源、概率、折扣、银行或刷新。
+
+冻结CN Android2.7.71/build190、19表e915675d8d8a1cc97df8fa46eed27ef1bdaa9d1b0fdb07461dcabda36271ae29。实际首主题items的条件字段只有unlockCondDesc，不能把旧RoguelikeItemData中的unlockCond/stableUnlockCond套到本主题已导入数据；无文案仍不证明自然供给已解锁。仅NORMAL0、已开放探索时间及已有完整效果的藏品适用；无新作战关卡。
+
+## 新REA证据
+
+M154269 TryGetItemUnlockProgress原磁盘684字节不能解码，本轮仅启动已准备index1，在未登录的启动画面读取其所在4KiB文件映射代码页。硬件/APK/资源/TLS/离线与8秒命令守卫保留；未启动游戏服务器、未投递账号、无点击/新战斗/授物。页SHA256 e80897aabe5329325e75cda6a41373d29602ce524e9126fee3d441e1521c9d06，完整函数684字节均可线性解码。
+
+首REA工件8192字节/9个完整种子，SHA7885920987b9ae84adbe1ad47fcf62705c274027ac25730269f966c772c34cf5，证据ev_79a8bc8a0c70d6791c113c4834a2c604e9ed54ec49dda747e5e41754f473ff73。首次缺少0x94da047的六字节跳转表，保留无法解析间接跳转的结果；从冻结ELF补入具体只读表页后，新12288字节工件SHAd8bbaea177b43ab312ffb72904ecfb6fde8335def1f5f6bb47901f0f28448ff2，ev_299d8b4f27a3bde39d9ac4da5b2ef07499515bd805f20365e727b21ad5498d6d已显示完整switch。两次观察45秒pending后，同一请求实际56.438/52.375秒成功，没有重排或重启；全局符号重叠警告与Hotfix未验边界保留。
+
+默认路径先判断物品模型unlockCondDesc非空，再按主题和类型查询具体collect字典；relic分支访问collect.relic。找到progress且长度为2时把两个整数写到curr/target，返回true；其他分支保持默认0/1并返回false。函数没有根据条件文案计算资格，没有读取ItemUnlockInfo.state来授予资格，也不是地图/商品池生成器。因此不能由它补造34项缺失状态。
+
+已从方法实际参数native_index66199解析Torappu.UI.RoguelikeTopic.RoguelikeTopicItemModel，核对值类型描述kind17与metadata值类型位。元数据字段偏移包含16字节装箱头；函数传入未装箱96字节结构，id/type/unlockCondDesc实际偏移16/48/88，对照指令一致。初次按名称读到旧RoguelikeItemData，以及随后未扣装箱头的候选偏移，均不能用于该参数，原候选文件保留并以v2字段/结构布局记录纠正。ItemUnlockInfo.progress偏移24、List<int>，state偏移16；Collection.relic偏移24分别核对，不猜enum序号。
+
+首次启动脚本把ensure_running的EMULATOR_STARTING当成异常退出，实际模拟器仍在启动。已先查到本次启动的实例PID34896/12344及状态2，再接续同一实例，未重新launch；失败副本保留。读取后正常关闭游戏、自有ADB和index1；list2现场确认index1停止，index0仍停止，183保护输入不变。两REA都公开close、实际exit0/server0，相关Windows worker/child及本项目Java现场缺席。
+
+## 针对检查与正式数据
+
+6个不同新增检查通过：缺资格/保存中单独声明state1或2均不授权；真实保留发现、本局重复持有拒绝、新局报价只读；同一报价稳定、持久报价接既有购买/重试/增量；重启和真实备份恢复；旧QA报价不重新定价；部分无资格/重复选择无写入；目录损坏区分503。以v2中的4项、v3中定点修复的1项、v4中新增1项计数，不重复累计。两个源码文件Ruff通过。未重跑旧27/163等未受影响检查。
+
+首次夹具缺unlockCondDesc导致5个setup错误，显式补齐合成身份后4通过、1因测试误取game.gold失败；按真实player.property.gold纠正后该项定点通过。错误XML保留。测试使用自有合成两锭报价/身份，不证明官方价格或自然池；既有Starlette弃用提示保持。
+
+新D正式数据副本仅为账号19准备一个新探索及明确SHOP地图，复用其上一局已验证a11发现；没有新招募干员/战斗/购买授物。实际适配器生成a11基础8锭报价，a14缺资格仍拒绝，重复编译无写入；该报价经既有方案保存、Runtime重开与完整验证后摘要相同。原始全部74表/收据和183保护输入保持不变。正式报价摘要64c259f71900743cb66c9641099ff306317968c3da49000e9e1a38b9e7f8e55d。首次复制profiles因settings.save已建目录失败，保留qa-v1；新qa-v2复制成功，不覆盖失败目录。
+
+本轮没有新EXE，未新增原生视觉验收，不声称所有藏品/主题/游戏已无bug。下一自然供给需要资格完整来源、地图和抽样规则；复用本函数结论，不再重复M154269或旧图鉴消费者。
+
+## 本地证据入口
+
+.cache/rogue-natural-supply-20261028/{loaded-unlock-progress-v1,loaded-unlock-progress-v2,rea-unlock-progress-v1,rea-unlock-progress-v2,mcp-unlock-progress-v1,mcp-unlock-progress-v2,unlock-progress-field-types.json,unlock-progress-field-types-v2.json,unlock-progress-struct-layout.json,unlock-progress-cleanup.json,merchant-driver-v1.xml,merchant-driver-v2.xml,merchant-driver-v3.xml,merchant-driver-v4.xml,merchant-driver-qa-v1,merchant-driver-qa-v2,merchant-driver-verification-v2.json}；代码页、伪代码、原始元数据、保存、截图和日志只在本地，不进入Git。
+
+2026-10-29历史资格报价适配检查点完成：源c8b1dd45831286d1fb6619acec3a4ba7b3f303ec/业务089a0f2c，私有上传e2864becf7fead481cde62cf8695dbe52a371f32；bundle2046841字节/SHA256 9ed478aa0a50b6080913a21fbc19c67780f153bdcbbb40f8e5e45c985c74c659。实际浏览器二进制下载双hash、新D488源码/181历史/Prompt/fsck/干净工作区恢复通过，旧181非README条目/完整原索引保持。全历史490路径/2118blob扫描，无禁止路径/凭据标记；只含自有源码、工具、测试、锁及文档。权威.cache/github-checkpoints/heartbeat-latest.json和rogue-merchant-driver-20261029/upload-verification.json。完成文字晚于包，不重复打包；自然完整资格、地图/抽样及全交付未完成，不重打旧关或恢复剿灭。
+
+备份工具首轮23路并发读取分片未取得有效结果；现场核对无相应进程后改每3路，23段总长度、远端Git blob及最终下载双hash一致。初次较大索引分段写入未完整，旧README blob守卫拒绝继续；保留失败文件，改小分段新-v2文件，确认旧c93e2ab逐字节/后缀相同后才提交新树。浏览器旧绑定失效，重绑定仍失败；重置工具内核后恢复原browser2/tab1，没有更改网站权限、登录或访问8080。仅本次双hash核对的浏览器C临时下载移至D，旧下载不动。

@@ -1,0 +1,2 @@
+# Preserve the exact user-supplied requirement snapshot, including its whitespace.
+docs/project-ledger/sources/Prompt-2026-10-19.md -text whitespace=-blank-at-eol

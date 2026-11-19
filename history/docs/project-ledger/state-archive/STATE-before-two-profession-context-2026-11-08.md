@@ -1,0 +1,49 @@
+# 当前状态与按需入口
+
+2026-11-08 加载页已读并正常停止：16853actualexit0，6方法8页32KiB/无heap-auth-UI/只5配置HTTP，只有local_sessions变化；完整25用户/77表其余相同、255输入/191源码/旧保存代码页保持。新d733852a/36KiB/122种子loaded ELF已构建；REA40341 ready（wrapper35800/child27276），原seq2首pseudo处理中，helper65444只观察、超时不重排。恢复必须核实际句柄/进程/ack。本轮产品无修改，随机分支未实现。[研究报告](../roguelike-two-profession-research-2026-11-08.md)。
+
+2026-11-08 当前在核随机两职业消费者：[研究报告](../roguelike-two-profession-research-2026-11-08.md)。新静态5方法REA已取得但M153826/153939默认流截断，线性完整不作协议依据；过滤循环只证明UI按职业/子职业筛候选。静态REA25231已actualexit0/close7/server0，首helper45秒超时未重排、原请求54.672秒ack。下一只读加载页：新D复制既有QA25闭券保存、0新引导/玩法设置，16853会话刚启动、实际读取未验；只6个明确方法/文件支持代码段/≤64KiB、无UI输入/heap/auth，保留APK资源硬件TLS离线8秒守卫。恢复必须核实际句柄，不凭旧PID。源码c0b86ef7/191/0036-77未变，上一ba7ecbf已回读，完整目标未完成。
+
+2026-11-08 当前普通5金币固定招募来源已接：独立惰性图含支付与叙事出口、完整行/ITEM/普通规则摘要，共用原子支付/券序号/激活/重放屏障。业务c0b86ef7c1b2bacef4725d5d19843eed9054a66504a023a69c88405819ececb6、191Python、0036/77；9新+62相关=71不同最终检查/5Ruff/191AST/diff通过。15849实际exit0：旧25完整用户77表/旧21程序及7战斗29报价保持，27HTTP23成功4预期409，金币6→1唯一普通券后六星招募扣6希望，主阵容保持；中途及最终26/77真备份/重启/新D一致，一次2步2人6分。早期夹具/收据断言/400预期、旧迁移过期表数和v1/v2审计范围错误均保留，未削弱业务/改变schema。原生新入口未验，随机2职业/premium来源/自然资格未实现；0新Android/REA/战斗/EXE。下一私有回读检查点，后继续缺失供给。[报告](../roguelike-recruit-event-sources-2026-11-08.md)。
+
+2026-11-08 最新原生v2空候选代表通过：008暂无干员→009放弃确认→010先遣结果→011地图HP4金币6；29HTTP200，仅券6 close与choice_leave各一次，无新发券/晋升/抽卡/战斗/节点进入/协议接受。56721实际exit0，61其他账号表/251保护输入/190源码保持，所属ADB/server/worker/index1退出；源码994b不变。完整25用户77表备份恢复/Runtime重启/新D恢复80215实际exit0；audit_v2误用不存在scene_id字段的失败保留，v3按实际program_id及steps核过。v1主页引导失败及QA25授权后重看已主页、模型无接受动作均保留。v2只补6个显式QA引导标记，不能称自然完成；全职业空券/两事件初始选项与自然规则仍未验。下一未接事件引用与资格核查，不重复空券代表。[报告末节](../roguelike-fixed-upgrade-events-2026-11-07.md)。
+
+完整目标ACTIVE未完成：Prompt全系统/成熟EXE，抽卡/战斗/集成战略/卫戍/剿灭/危机合约原生体验、Golden/断网长时/性能/Harmony。[完整需求](REQUIREMENTS.md)。不恢复已取消剿灭、不重打旧关；同类代表过后按数据批量接线。
+
+## 当前源码和验证
+
+上一固定进阶券源码基线：两事件已接，先遣小队发五星及以下券、高卢老兵发全职业券，绑定完整ITEM/选择hash/后继/升级规则，旧REST屏障和旧程序digest保持。业务994b5be18fc853938f98a7c8a9986391d00ea42fdf414b0ada3878437d828bc7、190Python、0036/77。新8+相关76共84不同检查/4Ruff/190AST通过。暂停后原29548已不在且最终报告缺失；独立最终17653actualexit0核原24用户/77表同基线，现有25/77最终保存与旧新D副本同、新独立真备份恢复/Runtime重启/新D同。券4/5分别免费升级五星/六星，券6空候选已放弃，成功收据38不作为HTTP总数，原exit/HTTP列表未知不补造。0恢复游戏请求/新Android/REA/战斗/EXE，两个新事件初始选择展示未验、五星空列表已在最新v2验证、自然供给未完。[本轮报告](../roguelike-fixed-upgrade-events-2026-11-07.md)。源码b902445已实际备份8c39a4c，完成文字晚于包不重打；完整目标保持。
+
+2026-11-07 猩红舞会五种资源交易及逃走已接独立惰性程序，显式三交易+逃走共10种可表示方案；不是官方组合权重/自然池或完整主题。金币10换HP8/希望6，可用希望4及等量上限换HP10，HP5换希望8/金币15；HP支付须留1，不使用护盾/已使用希望。旧程序hash/依赖保持。业务f6116dd3a82aaf2a0930305d582cb808b8b515778e7dd0c51c89d194d874f2ed，189 Python，0036/77。详[舞会报告](../roguelike-dance-trades-2026-11-07.md)。
+
+新12项与相关81项共93不同检查通过，4Ruff/189AST/diff通过；首次pytest12过但Ruff3项格式失败已修正，不称一次全绿。真实19表10方案编译、5完整选择变异拒绝；41HTTP40成功1预期409，所有五交易/逃走/重试/结果中途恢复/关闭仅一次7分。原23完整用户77表真备份重启新D同；新增QA24后旧23完整用户及旧探索/场景/7战斗28报价/关闭结算保持，最终24完整用户77表恢复同，原DB/settings/旧种子字节不改，93285实际exit0。显式QA地图/前置非自然通关，0新Android/战斗/EXE。
+
+最新事件覆盖按frames.branches计22程序/22唯一choice/31场景（152/172目录），不是完整自然事件系统。固定券两个受信准备来源只限NORMAL/0，空候选放弃是本地适配，未补造官方概率/资格。未选择事件及空候选两完整种子在.cache/rogue-ticket-events-20261107/actual-compatibility-v1，已在新D冷开验证；不反改最终SETTLED，不为同类免费进阶重复原生。
+
+## 研究与实际会话
+
+M150515 UpdateData860/860复用旧受保护代码页，经REA ev_2f0f2649…e86a9核默认分支遍历SceneContent.choices/CreateChoice并传bool及additional，无固定两项限制。SceneContent字段16/24/32与代码匹配；UI类的受保护静态offset异常不可使用，Hotfix/末端未知调用与全局符号警告保留，不称全方法/后端完整还原。公开close seq3/server0、54300实际exit0，36820/15336无待续所属会话；此前helper93553等待超时不是终止，未重排，实际ack后收尾。无新Android读内存/协议接受。
+
+此前生命交易原生代表：018选项HP4/金币6→028结果→033返回地图HP2/金币14，40HTTP全200，仅支付/leave各一次；两次短触未产请求，文字区域/180ms按压后完成，原因待核，不称所有按钮无问题。82106实际exit0、自有ADB/index1退出/247保护输入保持；最终23/77恢复69759 exit0。[事件报告](../roguelike-health-trades-2026-11-07.md)。不重新启动旧会话。
+
+上批cf8dac8c同步优化保留：单次快照复用成功验证、写入失效/结束清除；89相关检查/实际23-77恢复通过。5函数样本syncData中位743→113ms/轮询1531→196ms，不是HTTP/P95认证；普通API50ms未达，内存/长时/并发/本版新原生延迟未验。本批未更改或重测该优化。[性能报告](../roguelike-sync-validation-performance-2026-11-07.md)。工具结束页默认_showTrap=0及REA反码过滤已核，但运行Hotfix/工具工厂仍未完整核，不强改图标。[专项报告](../roguelike-ending-prefab-inspection-2026-11-07.md)。
+
+## 保留与版本边界
+
+只控雷电index1/<test-transport>/<test-device>，保留index0；APK/资源/硬件/TLS/离线/8秒Android守卫保持。不读官方认证/浏览器凭据，不绕被阻止8080。实际19表e915675d8d8a1cc97df8fa46eed27ef1bdaa9d1b0fdb07461dcabda36271ae29，镜像a550f5e/v077/77.6.0/client_verified=false，相对冻结CN2.7.71/V070，局部事件通过不证明全表同版。
+
+七个已玩且不重打：ro1_b_6、ro1_n_1_1至ro1_n_1_5、ro1_n_2_2。此前原生保存.cache/refresh-diagnostic/rogue-health-trade-native-20261107-v1仍MAP_READY/HP2金币14/次节点未入；本批QA24最终SETTLED仅在独立D副本，不覆盖它。旧失败、存档、发行物和Git历史都保留，不reset/clean/强推。
+
+## 私有检查点与下一步
+
+2026-11-08 最新普通来源检查点已实际完成：源5a6694749bc7d9d4cf59be8a0a4b701468e0409a/业务c0b86ef7→private ba7ecbfb7bf4d39e59f296266f37501dc65ee7f6，父8c39a4c/treed8a7385043f7b356b2ae95efa23cf1c25fd35e4b。2623429字节/SHA256 6d7278f381e442194f645446dc305b6421b923d8e21c6cfe7a254a7f302830bb/blob97789df2c583656f7c9371732742d4210e03ec7c。579文件262完整历史/581路径2959UTF8blob扫描0禁止/凭据标记；221旧项/121796字符完整索引含CRLF保持/tree224。Git禁交互probe128无ref，连接器受保护续main，private/ref/commit/tree/README/note实读及真实浏览器下载双hash/新D全tree/blob/history/Prompt/fsck/clean恢复均同，verify_remote实际exit0，仅新C临时下载核验后移D。权威heartbeat-latest及rogue-recruit-events-20261108/upload-verification.json；71检查/实际26-77和未完成边界入包。下一REA核随机2职业事件待办请求与数据消费，不用全职业券替代；无自有worker/REA/Android待续，不重复已过原生。完成文字晚于包，不重复纯文字包。
+
+2026-11-08 固定进阶券事件私有检查点完成：源b902445cd97662b295b2699aabbcf5ab3b0a440c/业务994b5be1→private8c39a4cd5931df4a576ee7a746f2bfa0a8cb0436，父3c07c06c2982435ca08d52a422380da6502f8522/tree68c35b4add837967c6efd41a6227a06558b62f2d。2598682字节，SHA256 3ea9a039c69c53059e2648d9f6d69a8c1762762ef05646892d5c9e1c41522258、blob680fdfdeed4e296a2d8a63513a9142990540a85d。576历史路径2916UTF8 blob扫描无禁止项/凭据标记，219旧非README项与120677字符完整旧索引含原CRLF保持、新tree222。正常Git禁交互只读probe128/1.481秒无ref，不称codex/development直推；已授权连接器逐blob预期SHA及expected_sha/force=false续main，private/ref/commit/tree/完整README/note实际回读一致。浏览器文件页真实Download事件后立即completion_summary，实际二进制双hash/新D574文件257完整提交及全tree/blob/Prompt/fsck/干净恢复同，核验actualexit0。仅本次新C临时下载核验后移D，不改权限/读凭据/动旧下载；旧3c07c06、所有历史/备份/存档/失败/发行物保持。权威.cache/github-checkpoints/heartbeat-latest.json及rogue-fixed-tickets-20261108/upload-verification.json。包内完整保留84检查/最终25用户77表独立恢复、v1未知退出和HTTP列表缺失、38保存收据不作为HTTP数、空目标本地适配和新事件/空候选原生未验、0新Android/REA/战斗/EXE及完整目标未完成。完成文字晚于包，不重复打包。
+
+994b固定进阶券来源已在上述8c39a4c内，实际回读恢复完成。空候选新代表及完整25/77恢复已通过，新增文字晚于源码包，不重复打包。下一核未接事件完整引用/版本及资格依据，再按类接线，不重打7个旧关或取消的剿灭。继续完整主题/全部主要系统、自然供给和成熟交付目标。当前无本轮待续worker/REA/Android会话。最新原生保存.cache/refresh-diagnostic/rogue-fixed-ticket-empty-native-20261108-v2仍MAP_READY/HP4金币6/券6DONE/待办空；旧生命交易保存保留。
+
+## 证据入口
+
+2026-11-08 已完成来源核查并已接普通固定来源：[普通招募事件来源](../roguelike-recruit-event-sources-2026-11-08.md)。委托choice_recruit1_2完整ITEM/plain all、5金币与PRTS相符；皇家choice_recruit2_2是extraEliteNum1的premium券、8金币，不能照搬普通券或把全局候选当事件池。源码及真实检查见首段，随机2职业/精英自然范围保持未实现。
+
+[舞会](../roguelike-dance-trades-2026-11-07.md)、[生命交易](../roguelike-health-trades-2026-11-07.md)、[性能](../roguelike-sync-validation-performance-2026-11-07.md)、[历史](HISTORY.md)、[证据](EVIDENCE.md)、[索引](INDEX.md)。此前完整STATE归档[state-archive/STATE-before-dance-trades-2026-11-07.md](state-archive/STATE-before-dance-trades-2026-11-07.md)，旧“下一步”不触发重启。

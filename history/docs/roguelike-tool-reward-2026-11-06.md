@@ -1,0 +1,58 @@
+# 支援工具直接奖励与事件来源审计
+
+完整交付目标保持未完成。本阶段承接已验证的工具购买、替换、战斗绑定与永久图鉴；不重复购买、已玩关卡或取消的剿灭。用户关于QA23三项协议的当次确认已收到；恢复时无运行中的QA23界面，最新已结束只读验收没有新协议页或接受动作，不补造新的同意记录。
+
+## 起点与待验证范围
+
+起点提交4dce731，业务2ba37f0a/187 Python、schema0036/77表；工作区干净。恢复进程检查仅见共享wslservice及adb，无Python/REA/雷电游戏进程，不停止共享进程。最新原生和私有检查点见永久图鉴报告及账本。
+
+现代码ToolHistory只接已验证商店购买，战斗结算只生成GOLD和RECRUIT_TICKET，事件只接显式已审程序。不能将任意物品、藏品或测试发放当成工具自然掉落；后续奖励来源必须保留身份、因果顺序、替换和历史战斗绑定，并维持旧存档重放。
+
+复用2026-11-01四个默认奖励消费者。未解决的M153308完整无二次选择接收函数，本次只读静态提取628字节且全部线性解码，范围0x3eb1de4–0x3eb2058；工件1bb9d07f9b027d8fffca5cb81a9aa53e048b49f6f5a116083b730605812f1c06，12288字节、25完整种子。完整解码不等于反编译/路由已确认，REA结果另记。所有原始客户端页、伪代码和会话只留D盘.cache/rogue-tool-reward-20261106，不入Git。
+
+下一核REA完整接收、匹配表里具体来源及现结算/事件账本，再决定可审计的接线范围。未知自然池不造默认发放，未验证原生范围不标完成。
+
+## 研究结论与范围纠正
+
+M153308完整默认路径ev_ce336dd3485769d9077341d71b24c8cfdc6bca448d319e6be61c1c86c446c33e，创建RoguelikeSelectRewardRequest，父奖励index写0x10、sub=0写0x14，再进入请求管线；只有全局符号重叠警告。和旧M153331的二次选择合同一致，但URL槽仍未解码，不能由请求类型补造URL。观察器45秒先返回pending，真实同worker在53.907秒完成，没有重排；35383实际exit0、公开close3成功/server0，Windows36684/26564现场缺席。
+
+只读核当前19表e915首主题152 choices/172 choiceScenes，未找到active_tool引用或所搜索的支援/战术道具、装备、工具箱文字；首主题其他顶级目录（排除items/traps/archiveComp/relics）也未提供明确工具引用。这是特定版本/检索条件的负结果，不证明事件/其他模式永远没有工具。公开PRTS[主题页](https://prts.wiki/w/傀影与猩红孤钻)和[珍藏页](https://prts.wiki/w/傀影与猩红孤钻/猩红珍藏)的检索能佐证单种持有与6种目录，未取得本批直接奖励/事件发放依据；一次正文读取超时保留。故撤回把“直接奖励/事件发放”当成已确定下一接线任务的预设，不为填计划向普通战斗硬加随机工具。未知自然供给仍未实现。
+
+审计发现独立可修缺口：自然战败/成功及主动放弃的GAME_SETTLE.record.activeToolList固定为空，尽管当前inventory.trap及历史ToolGrant已经验证存在。
+
+## 结束页消费者与证据边界
+
+新工件3ddfe881f57de04b3f6637fb5553c791a9dba1527d97cc5420b871eaba21575a，8192字节、8完整种子。M151930 LoadData316字节（ev_2b9a551d2e57a0e56e79ae3a2153ef5fe27d1982a4d931179790fb1bbeb61534）将EndingResult.record交给M151931；M151931 _LoadRelics1180字节（ev_ae807b0781473b0c9ffd8aa14a228b229bfe30a70f2d3c3161d511ba8924e264）在0x3e6756c的调用后默认分支被REA截断，多个PIC/不可达移除警告保留。M151932 LoadWholeRelicViewModelList904字节（ev_505f80524fc2f65c2c887891e59493ca72ceeb7720673da885ed6573ab6705dd）在未过滤时把trapViewModels加入总列表；Hotfix坏指令警告保留。不能把这三份结果称为全部函数完整恢复。
+
+用同一冻结ELF的有界ARM64指令逐项补核截断区域：0x3e67570读取record+0x28，索引循环调用M150626 RoguelikeTrapViewModel.Create(topic,id,-1)，追加到model+0x18的trapViewModels；0x3e67654的record+0x48另属exploreToolList。冻结元数据核EndingRecord.activeToolList偏移40且类型List<string>，与指令一致。原始指令及完整元数据仅本地ending-tools-tail-disassembly.txt。该核对证明该字段参与工具显示，不恢复官方后端选择列表成员的规则。
+
+REA24476实际exit0、公开close5成功/server0，Windows26680/2960现场缺席；49.094秒首次分析只等待同一请求，后两次0.031/0.062秒，0新原生输入。未启动模拟器或接受协议。
+
+## 源码修正与验证
+
+仅改4个旧生产模块：rogue_runs.snapshot从本局已验证ToolGrant按首次取得顺序去重，向battle.project/settlement.pending和giveup.pending传递工具ID列表。替换后取得过的工具保留在本局结果，跨局永久图鉴不混入本局；返回新list，不产生取得、装备、价格、余额或评分写入。不改领取路由、旧compute规则、评分/结算收据、旧报价或schema0036/77表。
+
+**上述成员选择是明确的本地结果投影策略**，依据真实本局取得历史；目前没有恢复官方后端在重复获得、替换或其他模式下的完整列表成员规则。客户端支持列表不等于官方服务端也按本策略生成。原生结束页工具视觉仍未验，后续若有反例先修策略，保留本批证据。
+
+业务9cfbecdf744f1fce35ca63697c14e309637245dc1d0699bd2ad3e3439e08bf34，仍187 Python。新6检查过，覆盖普通/终局战败、终局成功、主动放弃纯投影，以及真实API购买替换/重试后的自然战败与主动放弃、增量、重启和真备份；相关6模块150检查过，合计156不同检查，5文件Ruff/187 AST通过。新模块只用自有QA物品、价格和战斗记录，不是官方自然池或原生结果显示证明。Starlette已有httpx弃用警告保留。未为记录重跑先前未受影响检查。
+
+真实兼容actual-compatibility-v1：最新23完整当前用户与77原表全部同基线，7旧战斗/27旧报价保持；独立quote/index得到两个旧QA23探索都仅取得地雷，逐局完整回放后只读结果投影各补1地雷，其余结束字段完全相同。没有重开已结算探索或修改原存档；真备份/恢复/重启/新D全部23用户77表一致，229保护输入字节保持。13310实际exit0，证据verification.json、users23.json、all77-table-hashes.json仅本地。
+
+下一优先寻找已保留的未确认结束副本，用一个只读结果页验工具图标；若不存在可用现场，不手改SETTLED或重打旧关。直接工具奖励/事件来源、自然供给、主动放弃工具计分与全部交付范围仍需独立证据；本批没有新EXE、原生游玩或远程完成声明。最新已完成远程仍是上一业务2ba/源849801a的private609d86f，本批后续保存新检查点时需真实回读及新D恢复。
+
+## 本批私有检查点实际完成
+
+2026-11-06恢复工作核实bab2ada干净，业务9cf/187源与上一私有2ba有新增修改，故建立新检查点，不为旧包重复提交。源bab2ada846ce7bec3cb52a31912ca46b2855908e→private3ddb5781930c3e4b2bfd37e7a800ecf7651c257a，父609d86fd3dc3fc989e8d7931bf1d5df983a5d602、treec215aa4d93d5bada0f7156fc7f006766515397bf、README6a3d5920fb9cfeb68838f7820b255afdc37e6339、note bdda48c87df9b91bd83ad450436370c0c0b9abe7。完整bundle2478741字节，SHA256 ab70d09f41aaccda19a49c7c33433bb81004295b3f66f482421dbf6893a48dac、Git blob24d5f06409a02f2ed794bdd42467a0c443d55ab1。
+
+准备39377actualexit0：557当前源码/242完整提交/559历史路径2771UTF8 blob，禁止路径及凭据标记0，新的本地D恢复相同。连接器逐对象hash匹配、expected_sha父提交/force=false，新树保留209旧非README项/完整116339字符旧索引，新tree212项；private/ref/commit/tree/完整README/note实际回读。第一次本地read_text自动规范化旧索引CRLF，上传前发现suffix不符后改用read_bytes.decode，旧索引原字节保持，失败诊断保留。
+
+普通Git只读ls-remote没有结果，现场确认专属git→remote-https→credential-manager进程树等待认证返回，只停止这棵已核树，实际句柄41736 exit1；未提取凭据/调用新授权，不称源码分支直推。后进程检查同数字26164已复用为msedge，不把数字当成旧Git身份或再停止它。没有中断模拟器或共享服务。
+
+授权IAB私有文件页首次等待下载60秒超时/内核重置，实际该新文件尚未出现；重新获取同页当前状态后，用明确Download raw file语义控件下载成功，真实事件给出新文件路径，立即完成浏览器completion_summary。没有重复上传、改权限或查看凭据。远程核验脚本actualexit0：实际下载双hash、新D557源码文件/242完整历史/完整树和blob/Prompt/fsck/干净状态全部相同，仅本次新C下载验证后移D，旧下载不动。权威.cache/github-checkpoints/heartbeat-latest.json、rogue-ending-tools-20261106/upload-verification.json及新恢复目录；旧609d86f与更早全部检查点保持。
+
+本轮不重跑游戏/既过自动检查、不新增EXE；备份内明确156检查/实际23用户77表恢复范围，原生工具结束画面仍未验，未恢复官方后端列表成员规则和直接自然来源。完成文字晚于包，不为补文字重打包。只读核两旧工具native.py未生成领取前数据库备份；尚无确认可复用的未确认结果副本，不从响应快照冒称已还原完整保存，不手改SETTLED或重打。下一继续核备份索引或推进独立计分来源。
+
+2026-11-07后续原生反例与边界纠正：新合法QA工具放弃记录的activeToolList非空，但前页收藏品分组实际0/无地雷图标；计分页获得物品1/5分、总6分和笔记+6/灵感+1已验。新REA Render用showTrap反码的bit8过滤工具后才写前页数量，故撤回非空列表必然显示图标的预期；实际prefab/Hotfix值与工具工厂仍待核，不改原生过滤、不标图标通过。服务端模型输入字段与本地成员策略分别保留/记录，不能由旧自动检查证明原生图标显示。见[后续完整报告](roguelike-tool-giveup-score-2026-11-06.md)与本地pending确认前完整备份；未重打任何关卡。
+
+
+2026-11-07后续冻结资源核查已读出具体默认值：9月独立ui/rglktopic/rogue_1.ab的结束页→统计页→收藏品组件本地引用链明确，内嵌_showTrap为UInt8/0；清单ZIP成员大小/MD5及SHA通过。结合原REA默认过滤，说明该prefab默认不把工具计入前页收藏品分组，和原生反例一致；不再将此配置记为未知，也不强改显示。当前运行Hotfix/所有主题仍未验证。工具计分通过范围不扩大；0新原生/战斗，详[资源核查及失败记录](roguelike-ending-prefab-inspection-2026-11-07.md)。
