@@ -30,3 +30,5 @@ git clone --branch codex/development history/source-history-d40aee9.bundle resto
 ```
 
 历史包保留原始开发目录和当时配置。当前可运行入口以此仓库 main 分支说明为准。
+
+公开访问、匿名下载、历史恢复及旧仓库迁移的实际结果见[发布核对](docs/publication-2026-11-19.md)。
