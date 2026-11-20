@@ -1,5 +1,11 @@
 # 验证证据登记
 
+2026-11-20 `.cache/crisis-20261119/challenges-v1.xml`23通过（新9/信息14）、challenges-binding-v2.xml10条件通过；challenges-frozen-v1.json记录14457902/v077首季五图15条件全编译（7评分/8槽位，含两槽选一）、当前日历关闭、源包/设置保持，无数据库/发奖/原生。新增组件仅返回条件满足集合，未知类型/来源篡改拒绝；枚举raw载荷候选未当成已核状态迁移。[当前入口](../crisis-battle-contract-2026-11-20.md#首季15个挑战的匹配数据条件)
+
+2026-11-20 主结算加载证据`.cache/crisis-20261119/loaded-finish-20261120-v4/capture.json`及finish-loader-probe-v1.json：两页8KiB、五方法2,960完整字节、index0/保存/设置保持及index1关闭。rea-finish-loaded-v1容器b0b1240a…，mcp-finish-loaded-v1五次实际伪代码/public status/close成功、completion子进程0/输入保持；settle-param-field-correspondence-v1.json确认正确Param类的runeCountOld/Current偏移和2元素门槛，未混作外层ViewModel。finish-contract-v1.xml一项合成合同实际通过，Ruff通过；模型未接路由/保存，未重复210既有检查。编队越界异常路径分析边界、Hotfix及完整奖励仍未验。[入口](../crisis-battle-contract-2026-11-20.md#2026-11-20受控加载的主结算字段)
+
+2026-11-20 公开研究检查点`.cache/crisis-20261119/public-checkpoint-e54cee2-v1/`：prepared.json记录18发布对象/11新增文本blob扫描，published.json实际main34b10ad/treef3888ce/Public/MIT回读，readback-verification.json记录713公开文件及690源码/367提交恢复、两目录严格fsck/干净工作区。128,704字节增量SHA-256 8969befe72a3236c24837d3d75cbfc7e7e5ef4f6ccc9bd7f4bb0a648b8dd967b；前索引previous-*.json保持，恢复通过后才轮换。[摘要](../github-checkpoints.md#2026-11-20-战斗合同和工作区研究工具检查点)
+
 2026-11-20 结算v2`.cache/crisis-20261119/finish-analysis-summary-v2.json`及mcp-finish-v2/：同一1b62dc8a…容器，五方法2,432字节实际伪代码，无bad instruction；status成功，close cleanup_incomplete，控制器退出1、子进程0，cleanup-revalidated.json实际/proc/488及项目内报告目录不存在。没有/tmp socketRoot；工具原件与指纹在rea-workspace-transport-v1/。新tools/research/configure_rea_loopback.py的真实--apply为已配置/未改写，Ruff通过；210产品定向检查未重复运行，研究工具检查不混加游戏测试数量。主加载保护体、异常偏移及原生仍未验。[报告](../crisis-battle-contract-2026-11-20.md#结算默认消费者结果及剩余范围)
 
 2026-11-20 战斗研究`.cache/crisis-20261119/`：battle-analysis-methods-v1.json记录8范围/3,384字节及三个bad-instruction辅助方法，mcp-battle-v1保留public close清理警告及cleanup-revalidated.json实际进程/目录消失；battle-stage-source-projection-v1.json记录五图stageId不在普通stage_table和148正常节点packedRune覆盖，属性别名有known current/nst阳性对照。mcp-finish-v1保留Unix socket Operation not supported的四次分析失败、原队列/正常关闭；rea-workspace-transport-v1保存第三方原文件及选择已有认证loopback TCP的双哈希，mcp-finish-v2代表分析待实际结果。[入口](../crisis-battle-contract-2026-11-20.md)

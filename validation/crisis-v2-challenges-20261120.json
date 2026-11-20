@@ -1,0 +1,38 @@
+{
+  "source_commit": "c06199fcab36cc2345a82fa7d8799595048854db",
+  "latest_distinct_focused_tests": 221,
+  "full_suite_rerun": false,
+  "new_wire_contract_tests": 1,
+  "new_challenge_tests": 10,
+  "affected_information_tests": 14,
+  "ruff_passed": true,
+  "loaded_methods": 5,
+  "loaded_method_bytes": 2960,
+  "capture_bytes": 8192,
+  "public_close_succeeded": true,
+  "rea_child_exit": 0,
+  "rune_count_fields": [
+    "runeCountOld",
+    "runeCountCurrent"
+  ],
+  "score_axes": 6,
+  "gamedata_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "gamedata_version": "Stream://torappu-data/v077/rel77.0\nChange:123576 on 2026/09/17\nVersionControl:77.6.0",
+  "maps": 5,
+  "conditions": 15,
+  "condition_types": {
+    "dimension_score": 7,
+    "required_slots": 8
+  },
+  "first_season_open_at_observation": false,
+  "package_and_settings_unchanged": true,
+  "battle_transaction_or_reward_service_added": false,
+  "native_gameplay_verified": false,
+  "windows_package_rebuilt": false,
+  "unknown_conditions_rejected": true,
+  "pending": [
+    "Battle session and settlement transactions",
+    "Reward/unlock and comment eligibility",
+    "Native representative and full gameplay validation"
+  ]
+}

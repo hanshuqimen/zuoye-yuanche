@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `e54cee2`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `c06199f`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -89,5 +89,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-e54cee2.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约V2主结算合同及挑战条件
+
+2026-11-20 取得主结算/地图/编队/缓存五个默认消费者的加载依据（2,960字节），确认runeCount为旧/当前两个数量，新增九字段响应模型。按匹配数据实现首季五图15项挑战条件，保留二选一、通关和源指纹门槛。221个不同定向检查的最新结果通过；本批无全量重跑、新战斗会话/发奖路由、原生游玩或新EXE。独立冻结包未改动，首季观察时已按绑定本地日历关闭，不能把条件覆盖当成当期可领取或完整模式。
+
+[依据和实际支持范围](docs/crisis-battle-contract-2026-11-20.md) · [本批验证摘要](validation/crisis-v2-challenges-20261120.json)。
+
+[本次历史增量](history/source-updates-c06199f.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-c06199f.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

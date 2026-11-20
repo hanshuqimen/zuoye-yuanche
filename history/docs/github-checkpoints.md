@@ -1,5 +1,13 @@
 # GitHub 回滚检查点
 
+## 2026-11-20 战斗合同和工作区研究工具检查点
+
+source `e54cee24de0e6c092bc411bb635d06dc89b6e02b`已公开至Public/MIT main `34b10ad8917766796bd2523f774881c98dec3d87`，树`f3888ce916086009a62fec33b83699ca8bb13563`。11个新增文本blob扫描无凭据格式命中，18发布对象的Git ID逐项对应；项目内匿名下载713文件全部SHA-256/Git对象一致。原始完整包加128,704字节新增量实际恢复690源码/367次提交，两目录严格fsck和干净工作区通过，随后才轮换两权威索引并保留原字节。
+
+新增量`history/source-updates-e54cee2.bundle` SHA-256 `8969befe72a3236c24837d3d75cbfc7e7e5ef4f6ccc9bd7f4bb0a648b8dd967b`、Git blob `ece234fbd61db54ee04fc7c181fea910983fe56d`，只需原始d40包。证据`.cache/crisis-20261119/public-checkpoint-e54cee2-v1/`的prepared/published/readback-verification.json，以及新restored-development/。旧文件/包/提交保持，没有reset、clean、强推或覆盖发行目录。
+
+包括开战八范围、结算五默认方法的明确边界和失败、自有REA认证本机TCP配置工具；原始代码页、第三方原件、工具、日志及数据仍只在本地。游戏服务保持48e71eb的信息实现，相关210不同检查沿用未改动代码的实际结果，本批没有重复产品检查、新原生或EXE。本段回执晚于包，不为回执再造重复增量。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/34b10ad8917766796bd2523f774881c98dec3d87)
+
 ## 2026-11-20 危机合约V2信息与存档检查点
 
 自有源码`48e71eb6e01c198604649b096c942fc979b4dcc5`公开至MIT main `c35dce0b37552c99c360f9dd9165c54e57818fe1`，树`4898ca87fe89eef12b6041c1c18290970cb39afc`。40个新增文本blob扫描无凭据格式命中，42发布对象Git ID对应。项目内新匿名克隆708文件全部SHA-256/Git对象一致，下载的原始完整包及114,662字节增量实际恢复688源码/366次提交，两目录严格fsck及干净工作区通过。新增量SHA-256 `00edcb6c000dc061866503576d794bd5eca4cc029c3f8a641d1fefaa4c2fd941`、Git blob `91c84c0f19000b1649d5ee6c30da754bba5599d8`，只需原始d40包。所有旧文件、提交和历史包保留。

@@ -126,6 +126,7 @@ class CrisisV2Catalog:
         self.permanent = MappingProxyType(permanent)
         self.temporary = MappingProxyType(temporary)
         self._refreshes = MappingProxyType(refreshes)
+        self._challenge_rules = {}
         self.data_hash = data.manifest["hash"]
         self.fingerprint = fingerprint({"policy": POLICY, "data_hash": self.data_hash,
                                         "source": source, "shared": shared})
@@ -149,6 +150,18 @@ class CrisisV2Catalog:
 
     def info(self, season_id: str):
         return json.loads(self._payloads[season_id]) if season_id else None
+
+    def challenges(self, season_id, map_id):
+        from terralocal.server.gamedata.crisis_v2_challenges import CrisisV2ChallengeRules
+
+        key = (season_id, map_id)
+        if key not in self.rules:
+            raise ValueError("危机合约挑战引用了未导入的赛季或地图")
+        if key not in self._challenge_rules:
+            info = self.info(season_id)
+            compiled = CrisisV2ChallengeRules(info["mapDetailDataMap"][map_id], self.rules[key])
+            self._challenge_rules.setdefault(key, compiled)
+        return self._challenge_rules[key]
 
 
 def validate_crisis_v2(tables, version):

@@ -33,3 +33,30 @@ GetPackedRuneData与请求槽位过滤是两段处理：遍历选择节点，经
 public status成功。public close再次遇到Java退出身份竞态，故控制器明确退出1，completion记录底层子进程退出0及输入保持；随后实际/proc/488、报告运行目录和两个Windows PID均不存在，无手动强杀/删除。没有socketRoot或/tmp回退，运行目录及TCP endpoint均在项目内。端口号没有另行保存，不声称做了独立端口探测。错误、快照、cleanup-revalidated.json及成功方法回执全部保留，不能把成功分析与关闭警告合并成全流程无错误。
 
 证据`finish-analysis-summary-v2.json`、`finish-consumer-fields-v2.json`及`mcp-finish-v2/`。FinishView字段索引仍有1684300xxx异常偏移，不根据这些值强行给对象命名；地图detail的commentDataMap偏移有正常声明与实际读取对应。主响应/地图/编队加载方法的APK字节仍受保护，scoreRecord/scoreCurrent/isNewRecord/runeCount/结果枚举及奖励解锁的完整合同继续未完成。下一补这些关键消费者的受控加载依据，再接事务性开战与结算；本批没有新增成功占位路由或原生游玩。
+
+## 2026-11-20：受控加载的主结算字段
+
+上一阶段的主加载保护体缺口已补到冻结默认方法。重新核对实际Git及index0/1均停止后，仅启动已准备index1一次，读取0x40f0000和0x40f1000两页文件映射代码，共8,192字节。APK适配指纹、原始ELF、硬件0063090c、资源、f441数据、TLS和IPv4/IPv6离线均校验，Android命令经8秒传输；宿主只绑定不监听的随机游戏端口，没有游戏服务写入。读取前在同一root shell核硬件和原进程身份，不读取玩家/认证对象或创建客体dump文件。两页捕获完成、index1正常关闭、index0保持，宿主现用保存及设置指纹相同。
+
+OnInit、_LoadResponseData、_LoadMapData、_LoadSquadData和GetCacheData共2,960字节全部完整线性解码，REA五项实际返回默认伪代码。16,384字节容器SHA-256 `b0b1240ad8bce2fb1f745f557c249e3bef7fbf5d2878caa70e2193df685a5db7`。使用现有认证本机TCP及项目内短目录，public status/close均成功，控制器及WSL子进程退出0，输入保持，实际24984/6100/4976均已消失。本批没有新关卡游玩或危机合约原生验收。
+
+字段结论来自实际指令偏移与声明共同对应：
+
+- 结算目的对象是CrisisV2SettleViewModel.Param，不是外层ViewModel。response.scoreRecord写Param+0x60，scoreCurrent写+0x68，当前总分由scoreCurrent逐项求和；isNewRecord另写+0x84。
+- `runeCount`长度恰为2才分别写+0x88/runeCountOld与+0x8c/runeCountCurrent；长度为6会跳过这两个数量赋值。两个元素是旧数量、当前数量，不是六维分数，也没有依据把第二项解释为增量。解锁统计的业务计算仍须独立完成。
+- response.ts写Param.finishTs；mapId用于同一缓存里的stage/detail双查找，后者提供维度说明与显示最大值。OnInit依次要求缓存、响应、地图及编队加载成功才发布有效模型。GetCacheData从包装的info字段读取，未用HTTP200替代缓存一致性。
+- _LoadSquadData在越界异常路径的伪代码包含邻接构造函数内容，存在未知throw helper返回性造成的分析边界问题。只采用正常路径的字段复制，不把展开的构造副作用归属于正常编队流程；元数据范围和原输出都保留。
+
+新增自有`terralocal/server/protocol/crisis_v2_battle.py`约束九个finish专有字段，明确区分两个符文数量与六个分数轴；分数保留CLR有符号int32，不擅自截断。一个合成合同回归检查验证正确旧/当前数量与JSON分数保留，并拒绝六维数量误填，实际通过；Ruff及diff检查通过。该模型还没有注册游戏路由，不发奖、不改变存档，也不构成可玩结算。既有210产品检查没有为此重跑。
+
+证据在`loaded-finish-20261120-v4/capture.json`、`finish-loader-pages.json`、`finish-loader-probe-v1.json`、`rea-finish-loaded-v1/`、`mcp-finish-loaded-v1/`、`settle-param-field-correspondence-v1.json`和`finish-contract-v1.xml`。固定GPL参考路由的零纪录/零计数/共享文件仍不能作业务完成依据，没有复制其实现。下一核符文完成态、挑战/符文组奖励条件及评论资格，再接独立事务会话与实际结算；完整战斗、奖励及原生仍未完成。
+
+## 首季15个挑战的匹配数据条件
+
+新增`crisis_v2_challenges.py`，从匹配mapDetailDataMap编译挑战条件，通过catalog.challenges按地图延迟读取。条件源与原地图整体指纹再次核对，不能把修改后的低门槛绑到旧计分组件。只接纳本批实际出现的两类条件：PassWithDimScore累加指定分数轴并与阈值比较；PassWithRunes统计指定普通槽位中本场实际选中数量，与requiredSlotCount比较。独立参数列表及槽位列表/数量必须相符，未知类型、缺失节点或参数冲突在创建战斗前可被拒绝。
+
+这些业务条件来自同版本GameData及其明确字段/说明，不宣称逆向到了官方服务端实现。分数沿用已核原版计分组件，重复请求槽位按该组件的集合表示处理；未通关显式返回无已满足挑战。组件只给出满足条件的节点集合，不改挑战状态、不发放奖励，也不替代后续事务结算。
+
+实际20表14457902包的首季五图共15个挑战全部编译：7个指定轴评分条件、8个指定槽位数量条件，包含两槽选一，未误设为全部携带。GameData版本v077/rel77.0、Change123576、VersionControl77.6.0；观察时该首季按当前已绑定本地日历关闭。本次验证是条件编译覆盖，不能写成15项当期可领或所有主题完成。包内文件及现用设置字节保持，没有打开数据库、启动模拟器或授予奖励。
+
+首次23项检查通过（9项新条件检查及14项受影响信息检查）。随后加源指纹一致性拒绝，10项条件检查再次通过；信息代码未再变化，不重复14项。覆盖指定轴/等号边界、二选一互斥项、重复槽不增计、战败零阈值不完成、跨数据及来源篡改拒绝、未知条件拒绝。与前一项协议合同检查分别记录，旧210范围没有全量重跑。Ruff与diff检查通过。证据`challenges-v1.xml`、`challenges-binding-v2.xml`、`challenges-frozen-v1.json`；枚举原始压缩值候选另保存在progress-enum-raw-defaults-v1.json，仍未把未核载荷保护的候选当作新的状态迁移依据。
