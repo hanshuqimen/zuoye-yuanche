@@ -1,5 +1,5 @@
 {
-  "source_commit": "48e71eb6e01c198604649b096c942fc979b4dcc5",
+  "source_commit": "e54cee24de0e6c092bc411bb635d06dc89b6e02b",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "d4677fba6e4bfb677b56cdd4d90236af7414ad11",
+      "original_git_blob": "56e1a78d295771c6f4fa7c6284c6e410dfe743c3",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "04bb97197402d9856bec18d6e731e0b11ad831b347d7d6b455d395bb538dd24b",
+      "public_sha256": "42738f05b6931b04a30ea6dd9c851a4d5af7172a1985d706a8d568c0b74e9743",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "cb9a7bd0a3bde730bf0917f4dd7a61ad7f8a2f9ef150917e2c9ae1eab9e841f7",
+      "public_sha256": "1922d153575d8c60c77c81aac30699ce958b1a0e4bc1d2fc2f0c4a9ad0b7b2f5",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "d2d744ac3a837a6d02ac4a5b2d9262b5314a9808",
+      "original_git_blob": "2484283ddae8dabae6b7cf7acee23763a74074cb",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "783633948124d319e7edd446936da32920da229732f3f1e5d17f692117defb3a",
+      "public_sha256": "61dc22e89512c89317066a44d817572b498edc45125414f04f4a132120306862",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "d2afffb9d13f1af1640a273a96caa1cccd7bdb82",
+      "original_git_blob": "3d3c78b0d8514704d532169dca84a9a9b9b812d9",
       "published_path": "history/STATUS.md",
-      "public_sha256": "a6faf3be6dbd1d71b852750dd5c2eb78bdbdaa24f993dfa9aac628b0024667f5",
+      "public_sha256": "ec109a98ea3ca732fd31cc0c4955d5630602df495535973ef90fe2a693ea0ff1",
       "modified_for_publication": false
     },
     {
@@ -298,6 +298,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/crisis-battle-contract-2026-11-20.md",
+      "original_git_blob": "5fe934b6cc0d8c612ef8000df1b08ca26d5d437a",
+      "published_path": "docs/crisis-battle-contract-2026-11-20.md",
+      "public_sha256": "f4952bf402e643b4cbf8b1e9183cd44cbfe9d6890affe0b2bc76f8834aabc1c5",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/crisis-contract-2026-11-19.md",
       "original_git_blob": "6180535feeb13377ccd585b34d371e4ffb049f2f",
       "published_path": "docs/crisis-contract-2026-11-19.md",
@@ -397,9 +404,9 @@
     },
     {
       "source_path": "docs/github-checkpoints.md",
-      "original_git_blob": "531a6c65836cb1f2c2292884dc79016e3e7066a7",
+      "original_git_blob": "ac3db7f8045118593ea0fad4639b639f30d57415",
       "published_path": "history/docs/github-checkpoints.md",
-      "public_sha256": "c0fe4038da203aa68e3238b08d1417de56bee5e35bfa67ceb7ce653899c69be4",
+      "public_sha256": "b9e18ed3e688678ba34829a2a8b881cd50b05e4fad9e8baa52677e5cc32d257f",
       "modified_for_publication": false
     },
     {
@@ -565,30 +572,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "aba637a03ba6ee2cffb169bd3694117e3610e7eb",
+      "original_git_blob": "e996becd535c41eba916d59cb87db726e9cdad7d",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "8c1395318dbcf6d03b28bcc2d774d8acf48841d3c85c64afb8bfbddd816ef06a",
+      "public_sha256": "39686a419f8b758e5f6d57643498775fac6f72b628a85e35c5f88ce0b8f89ca5",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "44970953cd7c073bba9bac47cac5932fbb54ce8a",
+      "original_git_blob": "d6b4a804153128b20ef3f577302aa80fe9a08ec0",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "3e426f8cf237e1cb6a5bcab8a46a144f5e4ef0c3c2488339865aa24eaea11516",
+      "public_sha256": "5aee9c0d996741fbc0b9220037e1c21de3ff3b9cc1d3694d7464cd0ed5ea1e0c",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "27fecf951c3dda49e91f9daaa27a79d982e3d869",
+      "original_git_blob": "c2ebf6f38a9b893de1b00d5e70a14e4bc3528ba7",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "5791082be5147d58efc2481d76878011816aa3551394f762f88228af07bb448a",
+      "public_sha256": "46f4333272d0d3882b7f736f9daf9d4e42a2d7f2edd2c0a955a0783d4e4b9952",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "31d4c0b34141925df4fdb9edab58ba73847eae2f",
+      "original_git_blob": "3fd05bc2f93648d7ac4460b0dfd05514551550d9",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "447f9d2c519dfb2f8e9d8c57a202ae296a8dd48e5c308c280779317f851a5a3e",
+      "public_sha256": "4d5c92a1622d36c05bd8f0205c44b688b12625aebad37acb67efdb0bc0d83b24",
       "modified_for_publication": false
     },
     {
@@ -621,9 +628,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "38bbe1c87df8930030cc5489308136f28e367f03",
+      "original_git_blob": "b76c81578176afb6a9a5ead3cab5c140b1f28583",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "d75ade3a560989f7c9664ee8e486f39f844c156f6514b0c538fd655247d41f5e",
+      "public_sha256": "4fcc9ad319cc0b24d42abebe7eb77389541dccb625bedafe93aaca04f4d8feb7",
       "modified_for_publication": false
     },
     {
@@ -4715,6 +4722,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "tools/research/configure_rea_loopback.py",
+      "original_git_blob": "86c7683461f9596665afeb23764058fe781e554a",
+      "published_path": "tools/research/configure_rea_loopback.py",
+      "public_sha256": "7abba7d0216c0fbc21d27fe7aa42b20216882bf7f549129e1268145083296966",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "tools/research/extend_voice_data.py",
       "original_git_blob": "4ebb4ceefe192d8c2644adbb776ee063a3ff61a9",
       "published_path": "history/source-reference/tools/research/extend_voice_data.py",
@@ -4821,14 +4835,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-48e71eb.bundle",
-    "bytes": 114662,
-    "sha256": "00edcb6c000dc061866503576d794bd5eca4cc029c3f8a641d1fefaa4c2fd941",
-    "git_blob": "91c84c0f19000b1649d5ee6c30da754bba5599d8",
-    "source_commit": "48e71eb6e01c198604649b096c942fc979b4dcc5",
+    "path": "history/source-updates-e54cee2.bundle",
+    "bytes": 128704,
+    "sha256": "8969befe72a3236c24837d3d75cbfc7e7e5ef4f6ccc9bd7f4bb0a648b8dd967b",
+    "git_blob": "ece234fbd61db54ee04fc7c181fea910983fe56d",
+    "source_commit": "e54cee24de0e6c092bc411bb635d06dc89b6e02b",
     "branch": "codex/development",
-    "source_files": 688,
-    "source_history_commits": 366,
+    "source_files": 690,
+    "source_history_commits": 367,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"

@@ -1,5 +1,11 @@
 # 验证证据登记
 
+2026-11-20 结算v2`.cache/crisis-20261119/finish-analysis-summary-v2.json`及mcp-finish-v2/：同一1b62dc8a…容器，五方法2,432字节实际伪代码，无bad instruction；status成功，close cleanup_incomplete，控制器退出1、子进程0，cleanup-revalidated.json实际/proc/488及项目内报告目录不存在。没有/tmp socketRoot；工具原件与指纹在rea-workspace-transport-v1/。新tools/research/configure_rea_loopback.py的真实--apply为已配置/未改写，Ruff通过；210产品定向检查未重复运行，研究工具检查不混加游戏测试数量。主加载保护体、异常偏移及原生仍未验。[报告](../crisis-battle-contract-2026-11-20.md#结算默认消费者结果及剩余范围)
+
+2026-11-20 战斗研究`.cache/crisis-20261119/`：battle-analysis-methods-v1.json记录8范围/3,384字节及三个bad-instruction辅助方法，mcp-battle-v1保留public close清理警告及cleanup-revalidated.json实际进程/目录消失；battle-stage-source-projection-v1.json记录五图stageId不在普通stage_table和148正常节点packedRune覆盖，属性别名有known current/nst阳性对照。mcp-finish-v1保留Unix socket Operation not supported的四次分析失败、原队列/正常关闭；rea-workspace-transport-v1保存第三方原文件及选择已有认证loopback TCP的双哈希，mcp-finish-v2代表分析待实际结果。[入口](../crisis-battle-contract-2026-11-20.md)
+
+2026-11-20 公开信息检查点`.cache/crisis-20261119/public-checkpoint-48e71eb-v1/`：prepared.json保存42发布文件/40新增文本blob扫描；published.json保存实际新头c35dce0、树4898ca8及更新后解析错误说明；readback-verification.json保存708公开文件、688源码/366提交实际下载恢复及严格fsck/干净工作区。114,662字节新增量SHA-256 00edcb6c000dc061866503576d794bd5eca4cc029c3f8a641d1fefaa4c2fd941；两索引在恢复后轮换，原字节previous-*.json保留。[回读摘要](../github-checkpoints.md#2026-11-20-危机合约v2信息与存档检查点)
+
 2026-11-20 IsInSeason返回桥证据`.cache/crisis-20261119/rea-info-island-v1/static-methods.json`与`mcp-info-island-v1/completion.json`：0x4103878八字节返回原方法0x40f7008，三页原始容器d352bdc4…；REA仍未内联，不能标官方日历已核。公共status/close、子进程退出0及输入保持，无Android/认证读取。[研究边界](../crisis-contract-2026-11-19.md#2026-11-20赛季判断的返回桥与信息实现)
 
 2026-11-20 冻结信息包准备`.cache/crisis-20261119/real-information-v1/preparation.json`：20表14457902、只提取首季info、五图，f441及根设置未改。`https-verification-v1/verification.json`记录9实际HTTPS200、两进程退出0、冷启重试一致、赛季结束current增量及旧图保持、实际备份新目录恢复SHA-256 2064ca2d5723aad4e3d540b465aee4e65d2a7eeb0146fe244aaca0200335ffc6。`information-prepare-v4.xml`3通过、`information-preflight-v5.xml`受影响23通过（5新增），累计210不同检查最新通过；缺表失败前未调用可写初始化，数据库字节/全行不变。无原生消费或新EXE，9次延迟不当作性能P95。[入口](../crisis-information-2026-11-20.md)

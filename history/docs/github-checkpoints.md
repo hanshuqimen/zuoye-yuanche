@@ -1,5 +1,13 @@
 # GitHub 回滚检查点
 
+## 2026-11-20 危机合约V2信息与存档检查点
+
+自有源码`48e71eb6e01c198604649b096c942fc979b4dcc5`公开至MIT main `c35dce0b37552c99c360f9dd9165c54e57818fe1`，树`4898ca87fe89eef12b6041c1c18290970cb39afc`。40个新增文本blob扫描无凭据格式命中，42发布对象Git ID对应。项目内新匿名克隆708文件全部SHA-256/Git对象一致，下载的原始完整包及114,662字节增量实际恢复688源码/366次提交，两目录严格fsck及干净工作区通过。新增量SHA-256 `00edcb6c000dc061866503576d794bd5eca4cc029c3f8a641d1fefaa4c2fd941`、Git blob `91c84c0f19000b1649d5ee6c30da754bba5599d8`，只需原始d40包。所有旧文件、提交和历史包保留。
+
+实际证据`.cache/crisis-20261119/public-checkpoint-48e71eb-v1/`：prepared.json、published.json及readback-verification.json，新的restored-development/目录；两索引在恢复通过后才轮换，旧字节保存在previous-*.json。连接器更新ref返回非JSON确认，通用解析器在更新后报错；随后真实GET确认新头，未重复更新或强推。此失败及已完成操作均记录，不把解析错误误作远程更新未发生。
+
+包内含信息源/getInfo/0038同步与存档保护、210不同定向检查最新结果、独立冻结包9次真实HTTPS/冷启/恢复的脱敏摘要及未完成范围。官方数据、保存、证书、原生代码页和第三方工具均未发布；未重建EXE或做新原生游玩。本段回执晚于包。[公开检查点](https://github.com/hanshuqimen/zuoye-yuanche/commit/c35dce0b37552c99c360f9dd9165c54e57818fe1)
+
 ## 2026-11-20 危机合约V2地图规则检查点
 
 自有源码 `a26411815aa3551a399eb143495794c67ba47662` 已公开至MIT main `1b3cac250f7ab0e19cfefeba8666c607e5ba8054`，树`9add222b598162df48ce83e5d3729789e7657434`。包括规则组件、38项定向检查、五张实际配置六组合成投影的范围及空默认节点失败记录；历史GameData、代码页、玩家保存和第三方工具不上传。

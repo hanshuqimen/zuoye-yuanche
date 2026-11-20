@@ -1,0 +1,39 @@
+{
+  "source_commit": "e54cee24de0e6c092bc411bb635d06dc89b6e02b",
+  "game_server_source": "48e71eb6e01c198604649b096c942fc979b4dcc5",
+  "battle_methods_queried": 8,
+  "battle_nominal_body_bytes": 3384,
+  "battle_partial_protected_methods": [
+    163091,
+    163092,
+    163181
+  ],
+  "finish_methods_with_pseudocode": 5,
+  "finish_body_bytes": 2432,
+  "finish_artifact_sha256": "1b62dc8ac3b433362bd3cc75c215b74cdf5d8e9d6be0e40628680c241b3f60c2",
+  "finish_loaded_equivalence_verified": false,
+  "transport": "authenticated-loopback-tcp",
+  "public_close_succeeded": false,
+  "actual_owned_resources_revalidated_absent": true,
+  "close_warning_retained": "cleanup_incomplete / exited Java identity race",
+  "maps_not_in_ordinary_stage_table": [
+    "crisis_v2_01-01",
+    "crisis_v2_01-02",
+    "crisis_v2_01-03",
+    "crisis_v2_01-05",
+    "crisis_v2_01-07"
+  ],
+  "research_tool_actual_idempotent_check_passed": true,
+  "research_tool_ruff_passed": true,
+  "game_tests_rerun": false,
+  "prior_game_distinct_tests": 210,
+  "new_battle_service_added": false,
+  "native_gameplay_verified": false,
+  "windows_package_rebuilt": false,
+  "pending": [
+    "Protected main settlement/map/squad loaders",
+    "Outcome and runeCount semantics",
+    "Reward/unlock contracts",
+    "Transactional battle service and native verification"
+  ]
+}

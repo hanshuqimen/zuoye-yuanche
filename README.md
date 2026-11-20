@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `48e71eb`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `e54cee2`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -76,5 +76,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-48e71eb.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约V2战斗合同与研究工具检查点
+
+2026-11-20 继续危机合约V2战斗合同：开战8个方法范围与结算5个默认方法经REA查询，三辅助Hotfix分支保护仍保留；五实际地图的stageId不在普通stage_table。新增自有研究配置工具，选择REA已有认证本机TCP并要求项目内短运行路径；原件/失败保留。两次public close的清理竞态分别记录，实际进程/目录随后消失；不称全流程无错误。游戏服务仍为48e71eb信息阶段，未新增战斗路由、原生、产品测试或EXE。
+
+[依据与未完成项](docs/crisis-battle-contract-2026-11-20.md) · [研究结果摘要](validation/crisis-v2-battle-research-20261120.json)。
+
+[本次历史增量](history/source-updates-e54cee2.bundle)只需原始完整包，不需先应用其他增量：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-e54cee2.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```
