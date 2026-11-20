@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `af686f3`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `ab461ec`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -141,5 +141,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-af686f3.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约失败与退出回执
+
+2026-11-21 危机合约新增失败/退出版本化回执、终态重试与只读保存预检，任务组件拒绝终态再写进度。102个不同当前定向检查最新通过；冻结五图人工加密请求、三实际进程和82表冷启/新恢复一致，现用/源数据保持。三个新REA方法3048字节补写入器/构造器及ListDict对象格式，先前超时保留，公共关闭/退出0。通关候选仍明确拒绝，分数/全部评论、领取、原生路由及成熟成品尚未完成，无新EXE。
+
+[结果、依据和支持范围](docs/crisis-exits-2026-11-21.md) · [验证摘要](validation/crisis-v2-exits-20261121.json)。
+
+[本次历史增量](history/source-updates-ab461ec.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-ab461ec.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

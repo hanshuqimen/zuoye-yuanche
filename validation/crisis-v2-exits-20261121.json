@@ -1,0 +1,54 @@
+{
+  "source_scope": "Versioned non-clear exits; positive clear candidates remain unimplemented",
+  "latest_distinct_focused_tests_passed": 102,
+  "new_exit_cases": 39,
+  "affected_cases": 63,
+  "full_suite_rerun": false,
+  "initial_checks": {
+    "passed": 38,
+    "failed": 1
+  },
+  "second_checks": {
+    "passed": 101,
+    "failed": 1
+  },
+  "final_targeted_recheck": 1,
+  "qa_failures": [
+    "Missing mandatory ordinary-settlement test arguments",
+    "Incorrect expected existing mode error code"
+  ],
+  "new_rea_methods": 3,
+  "new_rea_method_bytes": 3048,
+  "artifact_sha256": "220478780a1ac735c5de9ab5e5d8642e0d35b0ba6afe34f5b9bdabf851876882",
+  "rea_public_close_succeeded": true,
+  "rea_process_exit": 0,
+  "rea_input_unchanged": true,
+  "old_timeout_preserved": true,
+  "gamedata_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "frozen_maps": 5,
+  "saved_tables": 82,
+  "actual_processes": 3,
+  "only_battle_sessions_changed": true,
+  "cold_restart_and_fresh_backup_restore_all_rows_match": true,
+  "authored_encrypted_requests": true,
+  "different_iv_and_unused_stats_retries": true,
+  "source_and_current_save_unchanged": true,
+  "native_request_observed": false,
+  "native_route_exposed": false,
+  "clear_settlement_supported": false,
+  "map_progress_scores_comments_or_rewards_changed": false,
+  "windows_package_rebuilt": false,
+  "counter_format_evidence": "ListDict converter writes a JSON object; two same-type pools not interchanged",
+  "counter_field_bindings_or_all_comments_verified": false,
+  "pending": [
+    "Complete clear outcome handling",
+    "Selected counter binding and all comments",
+    "Score records",
+    "Claim transactions",
+    "Native route pair and representative",
+    "All original delivery requirements"
+  ],
+  "source_commit": "ab461ecdca220ed06bf1dc252e0d2f7dfbc138e8",
+  "ruff_passed": true,
+  "whitespace_check_passed": true
+}

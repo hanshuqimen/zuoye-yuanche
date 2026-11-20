@@ -135,3 +135,9 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 首次Node读取发布清单失败，尚未写远程；底层返回原因没有保存，不补造原因。重新读取成功后，全部23对象逐项核对并非强制更新分支，再读回提交及匿名恢复。证据 .cache/crisis-20261119/public-checkpoint-8dcbcd5-v1/readback-verification.json，同目录anonymous-public-clone/与restored-development/分别为实际下载/恢复目录，previous-*-latest.json保留两旧索引。
 
 本批74定向检查、15个新REA默认方法/9,712字节、受控保护页读取及失败边界、冻结五图自造包/82表保持分别记录。原生请求、结果分类、进度/奖励和完整客户端体验尚未验收，无新EXE。[实现与边界](crisis-finish-logs-2026-11-20.md)
+
+## 2026-11-21 危机合约任务事务组件检查点
+
+2026-11-21 当前公开检查点source `af686f30015ff5aa3317b5b3290455b40ef55aee` → main `8c797dbe2ad66ccb77e77b653b022ded11098c63`，树`e2a291cf7a631d701d515f4c152396f4387214c5`。23发布对象Git SHA匹配、19新增文本blob扫描通过；742公开文件匿名下载全部SHA-256/Git对象一致，原始d40完整包加209,463字节`history/source-updates-af686f3.bundle`在项目内新目录恢复707源码/376完整提交，严格fsck/干净工作区通过。新包SHA-256 `30fab32ce83b7709f8a417a25911791e0254e77fcfb59ce4c4c58a26bc4855e9`，Git blob `1487b0ac9e2268c1221c554e376a46ac05ac1f61`，仅需原始d40包。证据`.cache/crisis-20261119/public-checkpoint-af686f3-v1/readback-verification.json`及同目录restored-development/。Public/MIT回读、恢复后才轮换两索引，旧索引/包保持。含任务事务组件、89不同当前检查、冻结五图人工结果/82表冷启恢复；原生结果、分数/全部评论、领奖/终态回执和EXE尚未完成。本段晚于包。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/8c797dbe2ad66ccb77e77b653b022ded11098c63)
+
+匿名下载与新恢复分别为上述证据同目录的 anonymous-public-clone/ 与 restored-development/；previous-*-latest.json 保留两个旧索引。实现、QA策略及失败范围见[本阶段报告](crisis-objectives-2026-11-21.md)。

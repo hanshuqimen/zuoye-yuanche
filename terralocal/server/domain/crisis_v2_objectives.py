@@ -12,6 +12,8 @@ from terralocal.server.persistence import models as m
 
 def record(ctx, battle_id, *, cleared):
     pending = crisis_v2_battles.context(ctx, battle_id, require_session=True)
+    if pending.battle.state != "STARTED":
+        raise DomainError("CRISIS_V2_BATTLE_ALREADY_FINISHED", "已结算战斗不能再写入任务进度", 409)
     key = (pending.crisis.season_id, pending.crisis.map_id)
     catalog = ctx.data.crisis_v2
     try:

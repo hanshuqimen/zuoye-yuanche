@@ -2,8 +2,9 @@
 
 Selection arithmetic uses the REA-backed map rules. Admission to the current
 season and a map's startTime is an explicit local policy. rewardEndTime is not
-treated as a battle closing time. Finish/rewards and new-login recovery need
-their own verified transactions; ordinary battle handlers cannot replace them.
+treated as a battle closing time. Versioned non-clear exits are validated
+separately; clear settlement, rewards and pending new-login recovery still need
+their own transactions. Ordinary battle handlers cannot replace them.
 """
 
 import json
@@ -107,9 +108,7 @@ def validate_record(data, parent, saved):
     if (saved["map_hash"] != rule.fingerprint or saved["challenge_hash"] != challenges.fingerprint
             or saved["level_id"] != stage["levelId"] or parent["stage_id"] != stage["stageId"]
             or type(parent["sanity_cost"]) is not int or parent["sanity_cost"] != 0
-            or parent["practice"] is not False or parent["state"] != "STARTED"
-            or parent["finished_at"] is not None or parent["settlement"] is not None
-            or parent["request_hash"] is not None
+            or parent["practice"] is not False
             or type(parent["started_at"]) is not int or parent["started_at"] < 0
             or type(parent["seed"]) is not int or not 0 <= parent["seed"] < 2**31):
         raise ValueError("危机合约战斗的地图、状态或规则不匹配")
@@ -131,6 +130,9 @@ def validate_record(data, parent, saved):
             or type(saved["start_hash"]) is not str or not SHA256.fullmatch(saved["start_hash"])
             or saved["start_hash"] != _start_hash(parent, saved)):
         raise ValueError("危机合约战斗选择快照或指纹不一致")
+    from terralocal.server.domain.crisis_v2_exits import validate_terminal
+
+    validate_terminal(parent, saved)
     return evaluation
 
 
@@ -184,7 +186,8 @@ def context(ctx, battle_id, *, require_session=False):
         evaluation = validate_record(ctx.data, _values(source), _values(saved))
     except (ValueError, KeyError, TypeError) as exc:
         raise DomainError("CRISIS_V2_BATTLE_INCOMPATIBLE", "危机合约战斗保存或规则不匹配", 503) from exc
-    if require_session and source.native_context["session_binding"] != _latest_session(ctx):
+    binding = _latest_session(ctx) if require_session else None
+    if require_session and source.state == "STARTED" and source.native_context["session_binding"] != binding:
         # Preserve the pending session: automatic abandonment is not established
         # for this mode and must not be borrowed from ordinary battle recovery.
         raise DomainError("CRISIS_V2_SESSION_CONFLICT", "战斗属于较早登录，尚未修改待结算记录", 409)
