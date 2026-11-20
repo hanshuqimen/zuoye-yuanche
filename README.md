@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `8dcbcd5`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `af686f3`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -128,5 +128,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-8dcbcd5.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约任务事务组件
+
+2026-11-21 危机合约新增绑定地图的任务进度事务组件：符文/挑战、指标集和同场宝藏，保留领取态、空0/0单列。89个不同当前定向检查通过；冻结首季五图人工给定clear，82表冷启/新目录恢复一致且现用/源数据保持。REA两个方法中一个588字节正常路径完成，另一个超时保留；公共关闭/退出0。本批不分类原生通关，不写分数/评论，不领奖或结束战斗，原生路由与完整成品仍未完成。
+
+[规则、验证和失败](docs/crisis-objectives-2026-11-21.md) · [验证摘要](validation/crisis-v2-objectives-20261121.json)。
+
+[本次历史增量](history/source-updates-af686f3.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-af686f3.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

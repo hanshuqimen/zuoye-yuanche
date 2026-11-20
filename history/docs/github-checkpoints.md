@@ -128,3 +128,10 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 发布途中工具宿主换代使旧上传句柄失效。重新读取远程仍为21b8a17，GitHub树校验定位第27号blob缺失；只补剩余11对象并逐项核SHA后树创建成功，再执行非强制分支更新。没有盲目重复分支更新或生成重复公开提交。此前一项文档补丁上下文不匹配、一次PowerShell文档命令解析失败均在写入前停止，修正后继续；源码和验证证据保持。
 
 证据 .cache/crisis-20261119/public-checkpoint-4228e95-v1/readback-verification.json；匿名下载和新恢复分别在同目录anonymous-public-clone/、restored-development/，两个旧索引在previous-*-latest.json。含0039内部战斗会话及291不同定向检查的最新记录、首季五图三进程/82表恢复。没有新原生战斗路由、结算/奖励或EXE，完整交付目标继续。[源码及恢复范围](crisis-battle-sessions-2026-11-20.md)
+## 2026-11-20 危机合约结算日志与只读绑定检查点
+
+源码8dcbcd5e15af6c3a0a8ce5e2e0b93cf339a82efa已公开至main d2ec0eb45f4a031528770fd4899c93122f549621，树bf6e02981ee65683d80909890de5f826b51b80d2。23发布对象Git SHA匹配、20新增文本blob凭据格式检查通过。733公开文件实际匿名下载全量SHA-256/Git对象一致；原始d40完整包加186,612字节history/source-updates-8dcbcd5.bundle在项目内新目录恢复701源码/374完整提交，严格fsck与干净工作区通过。增量SHA-256 c04bfe58439e24ce2441bf9097eba3b2f79acee4cc0d8de68b9a2e001f550757，Git blob 9d815ff0d9e8efafad9358ff3da3c4787ee72857，只需原始包。Public/MIT实际读取、下载恢复后才轮换两权威索引，旧索引和旧包保留。本段晚于源码包，不倒称包含于其中。
+
+首次Node读取发布清单失败，尚未写远程；底层返回原因没有保存，不补造原因。重新读取成功后，全部23对象逐项核对并非强制更新分支，再读回提交及匿名恢复。证据 .cache/crisis-20261119/public-checkpoint-8dcbcd5-v1/readback-verification.json，同目录anonymous-public-clone/与restored-development/分别为实际下载/恢复目录，previous-*-latest.json保留两旧索引。
+
+本批74定向检查、15个新REA默认方法/9,712字节、受控保护页读取及失败边界、冻结五图自造包/82表保持分别记录。原生请求、结果分类、进度/奖励和完整客户端体验尚未验收，无新EXE。[实现与边界](crisis-finish-logs-2026-11-20.md)

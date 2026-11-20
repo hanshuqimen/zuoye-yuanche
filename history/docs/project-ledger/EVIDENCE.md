@@ -1531,3 +1531,8 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 2026-11-20 会话源码4228e95已公开至main6d4d39a，38发布对象、726公开文件及697源码/372完整历史在项目内匿名下载恢复通过，Public/MIT实证，恢复后才轮换两索引。增量165921字节/SHA-256 def7f7161930d9da4ec6317b290edaa2013f54f12af475d509b99056111e9d98。旧包/索引保持；工具宿主切换后先读远程，再依树校验补11对象，没有重复提交或强推。证据 .cache/crisis-20261119/public-checkpoint-4228e95-v1/readback-verification.json。本段晚于包，原生/结算/奖励与完整交付继续未完成。[检查点](CHECKPOINTS.md)
 
 2026-11-20 危机合约结算准备：两批REA新增15默认方法/9712字节，public status/close成功、两个进程退出0且输入保持。v5在APK校验8秒超时而零代码读取，正常收尾；v6三页12288字节成功、实际零哈希重试，8秒上限保持，index1停止/index0和宿主保存保持。新专用解码及只读会话/关卡/编队绑定：finish-codec-v1.xml 61通过，finish-binding-v1.xml 13通过；合计74不同用例含33新检查。冻结20表五图自造包核对且82表不变，非客户端实际发送或原生结算。一次导入排序修正后Ruff/空白通过；宽候选检索截断和原生字面量对照初次失败均保留，修正后有界对照成功。汇总 .cache/crisis-20261119/finish-progress-summary-v1.json；下一结果、受信计数、进度/奖励及评论事务。[报告](../crisis-finish-logs-2026-11-20.md)
+
+2026-11-20 结算解码/只读绑定源码8dcbcd5已公开至main d2ec0eb，733公开文件及701源码/374完整提交在项目内匿名下载恢复通过；23发布对象/20新blob检查通过。增量186612字节、SHA-256 c04bfe58439e24ce2441bf9097eba3b2f79acee4cc0d8de68b9a2e001f550757。恢复及Public/MIT确认后才轮换两索引，旧包/索引保持。首次Node清单读取失败发生在远程写入前，重读后完成，不猜底层原因。证据 .cache/crisis-20261119/public-checkpoint-8dcbcd5-v1/readback-verification.json。本段晚于包；结果、计数、奖励和原生路由继续未完成。[检查点](CHECKPOINTS.md)
+
+
+2026-11-21 危机合约新增绑定地图的符文/挑战、指标集和同场宝藏任务事务参与组件，0/0空组单列、领取2保持；89个不同当前检查通过（12规则/13事务/64关联）。v2测试文件名错误零执行，修正后v3的77项通过；旧QA非法终态构造已替换为历史地图进度并保留原输出。冻结14457902首季五图显式人工clear=true，仅地图任务变化，82表冷启动/新目录恢复全行一致、start_hash及现用/源数据保持；首季实际关闭，不标原生通关。新REA准备1160字节，M66406超时/M66405实际588字节成功，status/close及exit0、输入保持，原句柄/对应进程已不存在。证据 .cache/crisis-20261119/objective-progress-summary-v1.json 及 objectives-frozen-v1/verification.json；下一结果/计数/全部评论、分数/领取/终态回执，原生路由和完整成品未完成。[报告](../crisis-objectives-2026-11-21.md)
