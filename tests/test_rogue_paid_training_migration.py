@@ -67,7 +67,7 @@ def test_0029_free_history_and_all_rows_preserved_or_transaction_rolled_back(tra
     try:
         assert reopened.sync(token)["user"] == before_user
         after = rows(runtime.database.path)
-        assert len(before) == 74 and len(after) == 81
+        assert len(before) == 74 and len(after) == 82
         assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == []
         assert after["rlv2_bank_visits"] == after["rlv2_bank_wallets"] == []
         assert after["rlv2_battle_loot_plans"] == []

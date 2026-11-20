@@ -1,5 +1,13 @@
 # GitHub 回滚检查点
 
+## 2026-11-20 主结算合同及首季挑战组件
+
+source `c06199fcab36cc2345a82fa7d8799595048854db`已公开至Public/MIT main `21b8a17ca3b47fe5c35073d4b67de5f19c1c68d8`，树`f7dd2f82a2c1329e1c5b264b03ae6745d2d889d6`。25新增文本blob扫描无凭据格式命中，21发布对象逐项Git ID对应；项目内匿名下载720文件全部SHA-256/Git对象匹配，原始完整包加143,504字节新包实际恢复694源码/370完整提交，两目录严格fsck/干净工作区通过后才轮换两个索引，旧字节及全部历史包保留。
+
+新包`history/source-updates-c06199f.bundle` SHA-256 `6429dc7454c8f8dd40abb4bb73ef99c2d1d5fb1101a4bf2d8b109cb9b57d4ada`，Git blob `cc8feb99b10e4e145d8eb269cca003d6d0fcb4ba`，只需原始d40包。证据`.cache/crisis-20261119/public-checkpoint-c06199f-v1/`的prepared/published/readback-verification.json及新restored-development/；所有新准备/下载/恢复在项目内，未覆盖旧发行目录。
+
+包内包含受控加载五方法2,960字节的合同结论、两元素runeCount九字段模型、匹配首季五图15挑战条件及明确未完成项。221个不同定向检查最新结果由已有210范围加新1合同/10条件组成，受影响14信息检查已复验，没有新全量重跑或原生战斗。原始代码页/工具/数据/保存/运行输出不发布，游戏事务战斗/奖励及新EXE仍未完成。本段回执晚于包，不为文字另造增量。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/21b8a17ca3b47fe5c35073d4b67de5f19c1c68d8)
+
 ## 2026-11-20 战斗合同和工作区研究工具检查点
 
 source `e54cee24de0e6c092bc411bb635d06dc89b6e02b`已公开至Public/MIT main `34b10ad8917766796bd2523f774881c98dec3d87`，树`f3888ce916086009a62fec33b83699ca8bb13563`。11个新增文本blob扫描无凭据格式命中，18发布对象的Git ID逐项对应；项目内匿名下载713文件全部SHA-256/Git对象一致。原始完整包加128,704字节新增量实际恢复690源码/367次提交，两目录严格fsck和干净工作区通过，随后才轮换两权威索引并保留原字节。

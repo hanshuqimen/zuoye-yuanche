@@ -447,7 +447,7 @@ def test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic(tr
     try:
         assert reopened.sync(token)["user"] == before_user
         after = rows(path)
-        assert len(before) == 74 and len(after) == 81
+        assert len(before) == 74 and len(after) == 82
         assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == []
         assert after["rlv2_battle_loot_plans"] == []
         for name, values in before.items():

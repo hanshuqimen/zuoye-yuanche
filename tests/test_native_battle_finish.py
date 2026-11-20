@@ -365,6 +365,11 @@ def test_0006_upgrade_preserves_started_local_battle_without_fabricating_context
     before = runtime.sync(token)
     runtime.database.close()
     with sqlite3.connect(runtime.database.path) as connection:
+        # This fixture predates Crisis V2. Keep its historical shape instead
+        # of leaving new empty mode tables beside a pre-context parent.
+        from schema_legacy import remove_crisis_v2_tables
+
+        remove_crisis_v2_tables(connection)
         connection.execute("DROP TABLE operator_acquisitions")
         connection.execute("DROP TABLE owned_furniture")
         connection.execute("ALTER TABLE battle_sessions DROP COLUMN native_context")

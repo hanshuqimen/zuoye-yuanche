@@ -1,5 +1,7 @@
 # 验证证据登记
 
+2026-11-20 公开主结算/挑战检查点`.cache/crisis-20261119/public-checkpoint-c06199f-v1/`：prepared.json记录21发布文件及25新增文本blob扫描，published.json回读main21b8a17/treef7dd2f8/Public/MIT；readback-verification.json记录720公开文件、694源码/370提交实际匿名恢复、严格fsck/干净工作区。143,504字节新包SHA-256 6429dc7454c8f8dd40abb4bb73ef99c2d1d5fb1101a4bf2d8b109cb9b57d4ada；恢复后两索引轮换、原字节previous-*.json保持。[摘要](../github-checkpoints.md#2026-11-20-主结算合同及首季挑战组件)
+
 2026-11-20 `.cache/crisis-20261119/challenges-v1.xml`23通过（新9/信息14）、challenges-binding-v2.xml10条件通过；challenges-frozen-v1.json记录14457902/v077首季五图15条件全编译（7评分/8槽位，含两槽选一）、当前日历关闭、源包/设置保持，无数据库/发奖/原生。新增组件仅返回条件满足集合，未知类型/来源篡改拒绝；枚举raw载荷候选未当成已核状态迁移。[当前入口](../crisis-battle-contract-2026-11-20.md#首季15个挑战的匹配数据条件)
 
 2026-11-20 主结算加载证据`.cache/crisis-20261119/loaded-finish-20261120-v4/capture.json`及finish-loader-probe-v1.json：两页8KiB、五方法2,960完整字节、index0/保存/设置保持及index1关闭。rea-finish-loaded-v1容器b0b1240a…，mcp-finish-loaded-v1五次实际伪代码/public status/close成功、completion子进程0/输入保持；settle-param-field-correspondence-v1.json确认正确Param类的runeCountOld/Current偏移和2元素门槛，未混作外层ViewModel。finish-contract-v1.xml一项合成合同实际通过，Ruff通过；模型未接路由/保存，未重复210既有检查。编队越界异常路径分析边界、Hotfix及完整奖励仍未验。[入口](../crisis-battle-contract-2026-11-20.md#2026-11-20受控加载的主结算字段)
@@ -1521,3 +1523,7 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 2026-11-19 用户初次回复「已删除」后，连接器与新 GitHub 页面仍显示旧仓库，未据回复虚报完成。准备最终删除页后，因电脑操作规则要求当次确认，用户明确回复确认现在删除。点击后 GitHub 要求身份验证，用户自行完成并回复已验证。页面随后明确提示 hanshuqimen/TerraLocal 成功删除，原连接器读回404，新公开仓库Public/MIT保持。旧290文件与144完整包的D盘保全保持，未重建旧仓库。证据 .cache/product-backup-release-20261119/old-repository-deleted.json 及 delete-old-repo-success.jpg。
 
 2026-11-19 .cache/product-backup-release-20261119/build-a8920ed.log 与 D:/zy-build-a8920ed 保存首包；D:/zy-exe-backup-a8920ed/progress.json 保存13次实际请求结果。encoding-baseline.json 保存真实EXE的doctor/backup两项UTF-8解码失败，encoding-before.xml为两项模拟失败，encoding-fixed.xml为修复后两项通过。verify_exe.py首次使用subprocess文本读取，子线程错误未传递到主断言；后续改为显式二进制解码，不能沿原脚本退出0忽略该错误。
+
+2026-11-20 用户所列22个外部目录的迁移请求交接回读：实际22个原路径全部不存在、22个项目内目标均为实际目录，六个Junction目标与原始链接备份保持，本地Git历史包引用存在，归档仍被Git忽略。新增回执 .cache/workspace-move-readback-20261120T0504112637243Z/verification.json；旧完整SHA-256证据保持，本次不重复移动、哈希或程序验收。仅更新验证及项目记录，未启动模拟器或修改游戏存档。[目录报告](../workspace-directory-move-2026-11-19.md)
+
+2026-11-20 继续完整服务端目标，新增危机合约0039持久化开战/上下文及跨模式保护，修复同步非法编队槽位越界。291个不同定向用例最新记录通过；首轮表名错误、越界和旧夹具失败XML保留，替代/复验关系见 .cache/crisis-20261119/battle-session-checks-summary-v1.json。冻结14457902首季五图各独立QA账号的开战重试、三进程和82表备份/独立恢复通过，现用设置/库及冻结源字节保持。历史时钟显式固定，观察时首季关闭；没有新原生路由、游玩或EXE。下一结算、battleLog、符文/挑战状态和奖励/评论资格。[报告](../crisis-battle-sessions-2026-11-20.md)

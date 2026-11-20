@@ -1029,6 +1029,28 @@ class CrisisV2MapProgress(Base):
     comments: Mapped[list] = mapped_column(JSON, default=list)
 
 
+class CrisisV2Battle(Base):
+    __tablename__ = "crisis_v2_battles"
+    __table_args__ = (
+        ForeignKeyConstraint(["account_id", "season_id", "map_id"],
+            ["crisis_v2_maps.account_id", "crisis_v2_maps.season_id", "crisis_v2_maps.map_id"], ondelete="CASCADE"),
+    )
+    # The common parent provides the account-wide one_active_battle index.
+    battle_id: Mapped[str] = mapped_column(ForeignKey("battle_sessions.id", ondelete="CASCADE"), primary_key=True)
+    account_id: Mapped[int] = mapped_column(index=True)
+    season_id: Mapped[str] = mapped_column(String(160))
+    map_id: Mapped[str] = mapped_column(String(160))
+    level_id: Mapped[str] = mapped_column(String(160))
+    policy_version: Mapped[str] = mapped_column(String(64))
+    gamedata_hash: Mapped[str] = mapped_column(String(64))
+    catalog_hash: Mapped[str] = mapped_column(String(64))
+    map_hash: Mapped[str] = mapped_column(String(64))
+    challenge_hash: Mapped[str] = mapped_column(String(64))
+    # Bounded map inputs and derived selection, never an entire player save.
+    selection: Mapped[dict] = mapped_column(JSON)
+    start_hash: Mapped[str] = mapped_column(String(64))
+
+
 class ServerClockState(Base):
     __tablename__ = "server_clock"
     id: Mapped[int] = mapped_column(primary_key=True, default=1)

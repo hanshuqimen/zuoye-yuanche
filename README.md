@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `c06199f`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `4228e95`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -102,5 +102,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-c06199f.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约V2持久化开战会话
+
+2026-11-20 新增危机合约0039内部持久化开战/上下文，绑定地图、版本、选择、编队及本地登录；普通结算、恢复和代理增加模式保护，修复同步非法编队槽位越界。本批291个不同定向用例最新记录通过，原失败保留；冻结首季五图各独立QA账号的三进程/82表恢复通过。QA使用显式历史时钟，首季观察时已关闭，未开放原生战斗路由、发奖或重建EXE。
+
+[保存与实际验证范围](docs/crisis-battle-sessions-2026-11-20.md) · [验证摘要](validation/crisis-v2-battle-sessions-20261120.json)。
+
+[本次历史增量](history/source-updates-4228e95.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-4228e95.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

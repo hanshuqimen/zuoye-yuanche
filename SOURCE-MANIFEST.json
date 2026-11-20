@@ -1,5 +1,5 @@
 {
-  "source_commit": "c06199fcab36cc2345a82fa7d8799595048854db",
+  "source_commit": "4228e95ed239deb898df638ab6782d342f055a51",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "7899d4137c60b4e4f5aa5cd4e2fd0b63d30ff155",
+      "original_git_blob": "f4dbdf6c1085a12813445cb12f4f099b77d8e517",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "39e83fc5c9f0eb099d177869a2cf981ea5eeb7fef979ade9987a349cae89ea50",
+      "public_sha256": "683be0a320711fecc0240449681a6a9740e011fe9c348bc46ed0645e68a23f5c",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "3d71e0b3da465dd711b7e9c5ae4d37086a4521e401fe00cd1df09b87adc2a3cb",
+      "public_sha256": "25b369c2c0a58a2df9e186b8b0f1a174e198e857bbc9d9dd050dbcca0900371b",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "5677f3737f0d66d81067fafa711791b3b7c93efd",
+      "original_git_blob": "83d1e37c5c53bc5a0ca3de8238269b26beab8fd4",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "0ca1c654b403cd4f12761e7dc5966082df11c16c0978091cf7f7876ece35ff3f",
+      "public_sha256": "f2cf9e3f7ee3e648631dc4ec4c99bac68081253aebfb815e2668f4c8b622a145",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "b53c77c4f40eae8366507b0fa9dd1eb5f2a00017",
+      "original_git_blob": "5819f6bfe46c10ad6f13cbdf6e565e19661195a1",
       "published_path": "history/STATUS.md",
-      "public_sha256": "3e19e74adbc9488e93d1c9e75993383a39e34ed3df74291e5fa891a7c827036f",
+      "public_sha256": "79e941f32af1e8221eb0cb164954e9b3dd8d657329244faa323c58bc20f3c869",
       "modified_for_publication": false
     },
     {
@@ -305,6 +305,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/crisis-battle-sessions-2026-11-20.md",
+      "original_git_blob": "fe74f171bcfc339cc8727cf6f71f68ee8f8033bc",
+      "published_path": "docs/crisis-battle-sessions-2026-11-20.md",
+      "public_sha256": "4a8b03fa3193b015314d96c0442616edda98543bcea7197cfe1888b7f91d7157",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/crisis-contract-2026-11-19.md",
       "original_git_blob": "6180535feeb13377ccd585b34d371e4ffb049f2f",
       "published_path": "docs/crisis-contract-2026-11-19.md",
@@ -404,9 +411,9 @@
     },
     {
       "source_path": "docs/github-checkpoints.md",
-      "original_git_blob": "e43ea68221e356a5e8790b5efa92ccf018defa05",
+      "original_git_blob": "d1258d5f4f35e253d81c9fb500a68c178cccc237",
       "published_path": "history/docs/github-checkpoints.md",
-      "public_sha256": "30ea911154b47f8bc0e8813b3c926ea6c8a85779e53b98712789a1101b0615fc",
+      "public_sha256": "8fc96fb42bb0b2c4c2439a8079b69c4dc97e47c10cf65d85a4b7816dbf09dda9",
       "modified_for_publication": false
     },
     {
@@ -572,30 +579,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "8ca08eb63239559e03a70691e0674efa8b692053",
+      "original_git_blob": "0d9844890ee8d79b4658aa21533ebb0e2ee04b3a",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "a9210cc76a2c61089c1ec9c30dbba5dec71ec84f39ab2d5e90fea69e7f953fd1",
+      "public_sha256": "3f6e48dec44b52ab9c0aa143bcae50355d4b8f5fa19ed6e35dc571cdda4c7467",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "2858f235a78192bb017773ae726c1a4fe76da788",
+      "original_git_blob": "11bbc7db475b5766a07af6d0001402378690d996",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "cd8061556e23f086c2c274633e6147128e3a2acd502649d0f059209b096cbc93",
+      "public_sha256": "5c41c1abc76642858b461f3a0d8d92594bd3fae5c152c74a2f5de0842d0a9bd5",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "e23a5827494681fe42fb2318b847c19c95de6e85",
+      "original_git_blob": "b15d0e6e6f50b69375a3e5f446055882330d50fc",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "50ec7f233dc84b40fc607d017634b22cd2f7625591dc9c0da6b15232e127f181",
+      "public_sha256": "b9130d57b8b25578e12d5e3feb365f374a61d6f55506c2796f20ea742e27db09",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "3fd05bc2f93648d7ac4460b0dfd05514551550d9",
+      "original_git_blob": "2ed6e5d653dcf98c0806bf0bb33764f46359f4c7",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "4d5c92a1622d36c05bd8f0205c44b688b12625aebad37acb67efdb0bc0d83b24",
+      "public_sha256": "73248523a3662eb9b24ce6531784ead8a068f948cd37ac7335bb3cf624bc15c2",
       "modified_for_publication": false
     },
     {
@@ -628,9 +635,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "eeb41052a65a61aa3c7553471689e65e78c9916e",
+      "original_git_blob": "650dc297edaee8260b1414b9ac481fe408727a77",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "3b94d6b7a101387f49f201ed46327082915617ae93dfe39a45cb42f4dab2a194",
+      "public_sha256": "7a69a0ffefa4d9d325ad98b842a859d9866b942a7d500fcb4954913e8e89f373",
       "modified_for_publication": false
     },
     {
@@ -1783,9 +1790,9 @@
     },
     {
       "source_path": "docs/workspace-directory-move-2026-11-19.md",
-      "original_git_blob": "ac03163b9388b36134ede4235b677f9b50a665af",
+      "original_git_blob": "a44cbc3ba755901d060c0576dd215b5a81fcdcd9",
       "published_path": "docs/workspace-directory-move-2026-11-19.md",
-      "public_sha256": "731e6e5fb5be19e3d24bc99783fc7c60cc2fc552c13a202e5ff8e2f382d9cbf4",
+      "public_sha256": "36f8feff908cd93dd476f40c8e1e1b8ede878382cdecbe9c45237c4967e0151a",
       "modified_for_publication": false
     },
     {
@@ -1979,9 +1986,9 @@
     },
     {
       "source_path": "terralocal/server/domain/battle.py",
-      "original_git_blob": "62a6005c4734832c71a30d777f453b96a72d334c",
+      "original_git_blob": "74fd00cf2c68c6bdee579b8c1b26a3a5008f42cd",
       "published_path": "terralocal/server/domain/battle.py",
-      "public_sha256": "73641e241e707023796397a25d1de9f122cb050618b7f73acf93e8d4276d4a31",
+      "public_sha256": "6fb569e3a73c99f93af0c40f2d493ae8629dfa97d410511fecf0e39b4eb45a8f",
       "modified_for_publication": false
     },
     {
@@ -2035,9 +2042,16 @@
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2.py",
-      "original_git_blob": "b8d5b72febd999ba14bec618c1bfc14d106fc537",
+      "original_git_blob": "89891924b75f748a786d1289658e134245ecbc5e",
       "published_path": "terralocal/server/domain/crisis_v2.py",
-      "public_sha256": "a14770c9d04585e85bc5745b8789236a005d2179c58d353fd1732aaab6116941",
+      "public_sha256": "d33e88433bd35afefdc77ce40450b94e36b1f24f88896aa3ee082e0c1e7d51fa",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "terralocal/server/domain/crisis_v2_battles.py",
+      "original_git_blob": "636e54a97a7b3c6e03449d64461ee9373fb57b21",
+      "published_path": "terralocal/server/domain/crisis_v2_battles.py",
+      "public_sha256": "797d09ce24adff3c421d792e44ee3c2b6c73ba242906dfb30cf186467611c10f",
       "modified_for_publication": false
     },
     {
@@ -2987,16 +3001,16 @@
     },
     {
       "source_path": "terralocal/server/persistence/migrations.py",
-      "original_git_blob": "6c218a1d02aec08a6219077f39b9e418a42f2b41",
+      "original_git_blob": "9d003751790276b6241cd9d5ea968aa154cb85ff",
       "published_path": "terralocal/server/persistence/migrations.py",
-      "public_sha256": "35bfeef4d1da12ae87b139d34609d799c700c00f8ccd9eb3ee740c0915491db2",
+      "public_sha256": "05c5dd516289047ff141b755f642073241b96bae6b26a9a669289431b0d881c6",
       "modified_for_publication": false
     },
     {
       "source_path": "terralocal/server/persistence/models.py",
-      "original_git_blob": "fb246ebc647d503d1ddbae928d0705bf36bf3b60",
+      "original_git_blob": "17c0866b1d7c734a749fd223bde52117e146d589",
       "published_path": "terralocal/server/persistence/models.py",
-      "public_sha256": "63b20b0aca0e511621758b38d76146a6c10aa919fc0b590d0e3367148f15aaef",
+      "public_sha256": "eec93b505eeefdc3cac19694a8b94f763a505fcb918b5ce5d44d16ac057330ca",
       "modified_for_publication": false
     },
     {
@@ -3029,9 +3043,9 @@
     },
     {
       "source_path": "terralocal/server/protocol/battles.py",
-      "original_git_blob": "9aeff36d2437f29f27031688e63ad5de20220052",
+      "original_git_blob": "57680197b8d3748dccfd4a5aa17840abe0b89c42",
       "published_path": "terralocal/server/protocol/battles.py",
-      "public_sha256": "9e04ec37c1a6d9b7b9a7418432fb10225322548554b92d2c7daf93e977fd9e43",
+      "public_sha256": "573f7cc3aa2b6ed0c42de2e847a7e27c53813c0c1fdb6d912cd03b049f08499b",
       "modified_for_publication": false
     },
     {
@@ -3239,9 +3253,9 @@
     },
     {
       "source_path": "terralocal/server/protocol/sync.py",
-      "original_git_blob": "6b56dd64072187057d964dccdc2cdf5b867c90ff",
+      "original_git_blob": "cccaf62edbf49c44917bb72eb5b64da7e95c8f52",
       "published_path": "terralocal/server/protocol/sync.py",
-      "public_sha256": "e4bc4f19a72cba5c377c8999126281ddd406e4cf450c0f08d1b80ff734b7d611",
+      "public_sha256": "3f3b0557b8df2b515c6a4265141e91d105ab9553645f87bfa242c1ce04c3178a",
       "modified_for_publication": false
     },
     {
@@ -3323,9 +3337,9 @@
     },
     {
       "source_path": "tests/crisis_v2_qa.py",
-      "original_git_blob": "4af88336dbc6ff711b283cfe014d7cc8609eb731",
+      "original_git_blob": "ad7e4d061f9d3d5e436af991dfc6d11a93670e4b",
       "published_path": "tests/crisis_v2_qa.py",
-      "public_sha256": "514618a45065c764bc0487438036aaeee1e1c07c6a9c43eefeda62df284ef0ba",
+      "public_sha256": "7f31343822454933d6b4c5582d08c35ecce8dbfeb7bf05ac05927bca25ae7961",
       "modified_for_publication": false
     },
     {
@@ -3344,9 +3358,9 @@
     },
     {
       "source_path": "tests/schema_legacy.py",
-      "original_git_blob": "ddbf5b9729ce619c80f48c0cdc5efd748b293102",
+      "original_git_blob": "58f40c04d652e3202181d90a4f4ea2952ca0a85b",
       "published_path": "tests/schema_legacy.py",
-      "public_sha256": "6b2b0c8fce17799d2686d333bc8f611c751e06b8ec5a0741d5c007ea8d18651b",
+      "public_sha256": "781bb2cfc75c768ca0b71971cd4e332a79797d5e7c6749c00a4152512691876d",
       "modified_for_publication": false
     },
     {
@@ -3539,6 +3553,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "tests/test_crisis_v2_battle_sessions.py",
+      "original_git_blob": "d350b97f774ffea803efecda4b8767a08dec7622",
+      "published_path": "tests/test_crisis_v2_battle_sessions.py",
+      "public_sha256": "0ba42e6cc923ac41db4b77a14d7ea73c8f1b73078c299a7b847651da9537fee0",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "tests/test_crisis_v2_challenges.py",
       "original_git_blob": "4a54242364bccc50310a0b13692212a88bb6e232",
       "published_path": "tests/test_crisis_v2_challenges.py",
@@ -3554,9 +3575,9 @@
     },
     {
       "source_path": "tests/test_crisis_v2_persistence.py",
-      "original_git_blob": "ca7a9bc7c1c503acaf39738b975bdcf69ba60dd6",
+      "original_git_blob": "e050292db6cac351d3b8e235c434abfb89734dfd",
       "published_path": "tests/test_crisis_v2_persistence.py",
-      "public_sha256": "a557a557146d0f01f7c969b728a6c80b02611cac9fbf5e2166eedfd605f61b91",
+      "public_sha256": "9e649d989b3d9782e1046f9d0bce1c7d48d2679fe45585bcdbbde478224fd454",
       "modified_for_publication": false
     },
     {
@@ -3638,9 +3659,9 @@
     },
     {
       "source_path": "tests/test_headhunting.py",
-      "original_git_blob": "1c59c37c057f38edf779df7d4610b27c0e068c3b",
+      "original_git_blob": "abfd63fd58059542ea6e1927e03573feab998904",
       "published_path": "tests/test_headhunting.py",
-      "public_sha256": "857e8b2e606bec5ed74142f3745a0db92c5d56db909b8551928ce3222e9eec78",
+      "public_sha256": "16ac3af5f1a2d3c31bd1bf9eba5a03383dce9477211777330e3eb6f98dc0a353",
       "modified_for_publication": false
     },
     {
@@ -3743,9 +3764,9 @@
     },
     {
       "source_path": "tests/test_native_battle_finish.py",
-      "original_git_blob": "53b8777bfd24a82d1217fcbc35e68086458e1bee",
+      "original_git_blob": "ecb02cbca7ccf75b6f270a108466155a4f045938",
       "published_path": "tests/test_native_battle_finish.py",
-      "public_sha256": "9ce4ad238802a9e22a76017a9d7e8fb5618f4210317c9637fcfde215d3c13c6b",
+      "public_sha256": "5087b07753d1c612da3896a706d493368d17f68a8382978f312a05be114cfdf8",
       "modified_for_publication": false
     },
     {
@@ -3834,9 +3855,9 @@
     },
     {
       "source_path": "tests/test_recruitment.py",
-      "original_git_blob": "d4cc7790d768dbf8d4805f293994b3de6ebdb594",
+      "original_git_blob": "fb2720d3b6168ce1d57a789dd52b275fb4e2640d",
       "published_path": "tests/test_recruitment.py",
-      "public_sha256": "8b8fa9637a0b2bf695b939f436015541079268e2c0ed05d953c7ca599c699cbe",
+      "public_sha256": "bff95fc0b41032aeb453f857e6af6bfffddf474d3e6cfe9b2b6452974ba29c72",
       "modified_for_publication": false
     },
     {
@@ -4072,9 +4093,9 @@
     },
     {
       "source_path": "tests/test_rogue_direct_migration.py",
-      "original_git_blob": "29a7b4432346dc6bdad09748770eed285650ada0",
+      "original_git_blob": "fa916bb6db1c7f4c545342c1b4ee42abd543c750",
       "published_path": "tests/test_rogue_direct_migration.py",
-      "public_sha256": "57669272172547587412a9a1cf08752427cdc48cb7965c7cfcf9e121ab6eef85",
+      "public_sha256": "33f62ca4f5349ba9aa5ff4229b6fd19c592b171b99355bbb325d908c1562b216",
       "modified_for_publication": false
     },
     {
@@ -4086,9 +4107,9 @@
     },
     {
       "source_path": "tests/test_rogue_elite_migration.py",
-      "original_git_blob": "814f25760ec9cd38e9c3ba844f124009c4e7218a",
+      "original_git_blob": "8e2d8b5bb99f44a74ef0bbaee79bc159390278cb",
       "published_path": "tests/test_rogue_elite_migration.py",
-      "public_sha256": "cb0672eb51289dc9e4608c946d8dbe5817e465ab7d13082065fea90af8ffc0d0",
+      "public_sha256": "461891aafe15c1e7be23363b71c6f9b6903399a291edab194c8fa066527b5d12",
       "modified_for_publication": false
     },
     {
@@ -4226,9 +4247,9 @@
     },
     {
       "source_path": "tests/test_rogue_paid_training_migration.py",
-      "original_git_blob": "339d6a488a1a498ee44ed384641c905890469403",
+      "original_git_blob": "69d82198d84c6ab3e8728ce0f90900533b9e9da3",
       "published_path": "tests/test_rogue_paid_training_migration.py",
-      "public_sha256": "e00fb5747fbf4b65bec63b41a2bb01fe8e14f3bedf909cedb7c12605ab69732a",
+      "public_sha256": "b48622077514c1c7dbe663798811225b7f47f53cd6457660c5ec8529fe4a5c73",
       "modified_for_publication": false
     },
     {
@@ -4380,9 +4401,9 @@
     },
     {
       "source_path": "tests/test_rogue_temporary_migration.py",
-      "original_git_blob": "f16296c5b4c8f56d0b32b7c8325b4078af5d6960",
+      "original_git_blob": "0ba45e36b3915fddcaf0c40668a7e3ff6ac47dad",
       "published_path": "tests/test_rogue_temporary_migration.py",
-      "public_sha256": "a13274492a98f1845aa9c2b2bb8908676ed68c5d1161ad50bc075c39f9e9126d",
+      "public_sha256": "7c608679f155014fc4c5de473018bc067ebe55f43ec9bc613ed8c7a953ca621c",
       "modified_for_publication": false
     },
     {
@@ -4422,9 +4443,9 @@
     },
     {
       "source_path": "tests/test_rogue_training.py",
-      "original_git_blob": "2c8657d1e48d245ea3d2389be99c271d37860d25",
+      "original_git_blob": "2f9181d80f7b8f2fd52e88a9e82fc5645f3bcd1b",
       "published_path": "tests/test_rogue_training.py",
-      "public_sha256": "f2f951269dcc8f10894eab51930ad9219f0c4a341cd10a6f73871d60042a416d",
+      "public_sha256": "d4d323b84888d97ae55d9d6eeab00ea4e65e1e0fe38b6522c69a2c6cf1269948",
       "modified_for_publication": false
     },
     {
@@ -4513,9 +4534,9 @@
     },
     {
       "source_path": "tests/test_sdk_state.py",
-      "original_git_blob": "d0ecc4aff4ac9e221002fa0ed0a20c12dfbbf618",
+      "original_git_blob": "6a7c7c404f57902bbc57720bfa0c6b4ec12953f6",
       "published_path": "tests/test_sdk_state.py",
-      "public_sha256": "a3ca38258b3041187341c4b62c6387b542d0cfbc515b7262e4ebacd307d7d5d5",
+      "public_sha256": "81728cbe83aa4550e43623c1b274661988ed60df129ff1f8beedb29a8778e49d",
       "modified_for_publication": false
     },
     {
@@ -4863,14 +4884,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-c06199f.bundle",
-    "bytes": 143504,
-    "sha256": "6429dc7454c8f8dd40abb4bb73ef99c2d1d5fb1101a4bf2d8b109cb9b57d4ada",
-    "git_blob": "cc8feb99b10e4e145d8eb269cca003d6d0fcb4ba",
-    "source_commit": "c06199fcab36cc2345a82fa7d8799595048854db",
+    "path": "history/source-updates-4228e95.bundle",
+    "bytes": 165921,
+    "sha256": "def7f7161930d9da4ec6317b290edaa2013f54f12af475d509b99056111e9d98",
+    "git_blob": "d7f4045cde702cb90d8b55c2df3430de530e19f4",
+    "source_commit": "4228e95ed239deb898df638ab6782d342f055a51",
     "branch": "codex/development",
-    "source_files": 694,
-    "source_history_commits": 370,
+    "source_files": 697,
+    "source_history_commits": 372,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"

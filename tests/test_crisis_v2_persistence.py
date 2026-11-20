@@ -49,10 +49,11 @@ def test_0037_additive_upgrade_preserves_every_old_row(runtime, monkeypatch, rol
     with closing(Database(path)) as database:
         database.initialize()
     after = rows(path)
-    assert set(after) - set(before) == {"crisis_v2_accounts", "crisis_v2_seasons", "crisis_v2_maps"}
+    assert set(after) - set(before) == {
+        "crisis_v2_accounts", "crisis_v2_seasons", "crisis_v2_maps", "crisis_v2_battles"}
     for name, values in before.items():
         assert after[name] == ([(migrations.REVISION,)] if name == "alembic_version" else values)
-    assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == []
+    assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == after["crisis_v2_battles"] == []
 
 
 def test_information_retry_is_atomic_under_concurrency(tmp_path):
@@ -119,6 +120,7 @@ def test_changed_information_source_fails_before_writable_startup(tmp_path, monk
 
 
 @pytest.mark.parametrize("missing", [
+    ("crisis_v2_battles",),
     ("crisis_v2_accounts",), ("crisis_v2_seasons",), ("crisis_v2_maps",),
     ("crisis_v2_maps", "crisis_v2_seasons", "crisis_v2_accounts"),
 ])

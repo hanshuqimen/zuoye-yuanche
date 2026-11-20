@@ -252,6 +252,9 @@ def test_0005_upgrade_preserves_existing_counter_and_does_not_invent_old_policy(
         session.add(m.GachaPity(account_id=1, group_id="NORM_TEST", total_pulls=3, seed=123))
     runtime.database.close()
     with sqlite3.connect(runtime.database.path) as connection:
+        from schema_legacy import remove_crisis_v2_tables
+
+        remove_crisis_v2_tables(connection)
         connection.execute("DROP TABLE operator_acquisitions")
         connection.execute("DROP TABLE owned_furniture")
         connection.execute("ALTER TABLE battle_sessions DROP COLUMN native_context")

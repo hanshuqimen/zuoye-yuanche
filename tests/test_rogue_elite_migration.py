@@ -88,7 +88,7 @@ def test_free_training_history_and_all_old_columns_survive_0031_or_atomic_rollba
     try:
         assert reopened.sync(token)["user"] == expected
         after = rows(runtime.database.path)
-        assert len(before) == 74 and len(after) == 81
+        assert len(before) == 74 and len(after) == 82
         assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == []
         assert after["rlv2_bank_visits"] == after["rlv2_bank_wallets"] == []
         assert after["rlv2_battle_loot_plans"] == []

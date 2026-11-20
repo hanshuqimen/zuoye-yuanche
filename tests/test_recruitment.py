@@ -238,6 +238,9 @@ def test_story_revision_upgrades_recruitment_without_replacing_save(recruit_runt
     before = runtime.sync(token)["user"]
     runtime.database.close()
     with sqlite3.connect(runtime.settings.database_path) as conn:
+        from schema_legacy import remove_crisis_v2_tables
+
+        remove_crisis_v2_tables(conn)
         conn.execute("DROP TABLE operator_acquisitions")
         conn.execute("DROP TABLE owned_furniture")
         conn.execute("ALTER TABLE battle_sessions DROP COLUMN native_context")

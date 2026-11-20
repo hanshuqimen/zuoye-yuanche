@@ -113,6 +113,7 @@ def router(runtime) -> APIRouter:
         def save(ctx):
             # Authenticate and check ownership before decompressing client data.
             source = battle.get_session(ctx, payload.battleId)
+            battle.require_non_crisis(ctx, source)
             record = decode_replay(payload.battleReplay)
             if ctx.data.stage(source.stage_id).get("stageType") == "CAMPAIGN":
                 from terralocal.server.domain.campaign_battle import save_journal

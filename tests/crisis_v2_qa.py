@@ -56,10 +56,10 @@ def tables(*, second_info=False):
     return result
 
 
-def create(directory, *, second_info=False):
+def create(directory, *, second_info=False, source_tables=None):
     source = directory / "source"
     source.mkdir(parents=True)
-    for key, value in tables(second_info=second_info).items():
+    for key, value in (tables(second_info=second_info) if source_tables is None else source_tables).items():
         (source / (key + ".json")).write_text(json.dumps(value), encoding="utf8")
     (source / "data_version.txt").write_text(VERSION, encoding="utf8")
     manifest = import_data(source, directory / "data/cache")

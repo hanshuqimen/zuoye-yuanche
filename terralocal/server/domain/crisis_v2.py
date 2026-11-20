@@ -28,7 +28,7 @@ def available(data):
 
 
 def preflight(data, path):
-    from terralocal.server.persistence.migrations import REVISION
+    from terralocal.server.persistence.migrations import CRISIS_V2_REVISION, REVISION
 
     catalog = data.crisis_v2 if available(data) else None
     if not path.exists():
@@ -37,18 +37,25 @@ def preflight(data, path):
         tables = {row[0] for row in connection.execute("SELECT name FROM sqlite_master WHERE type='table'")}
         expected = {"crisis_v2_accounts", "crisis_v2_seasons", "crisis_v2_maps"}
         present = tables & expected
+        has_battles = "crisis_v2_battles" in tables
         revisions = (connection.execute("SELECT version_num FROM alembic_version").fetchall()
                      if "alembic_version" in tables else [])
         # An older save without this feature can migrate additively. A current
         # or partially damaged save must fail before any writable initialization.
-        if (present and present != expected) or (not present and (REVISION,) in revisions):
+        if ((present and present != expected) or (has_battles and present != expected)
+                or (not present and any((version,) in revisions for version in (CRISIS_V2_REVISION, REVISION)))
+                or ((REVISION,) in revisions and not has_battles)):
             raise ValueError("危机合约存档表不完整；请保留原存档并从已验证备份恢复")
         if not present:
             return
         rows = connection.execute("SELECT gamedata_hash,catalog_hash,policy_version FROM crisis_v2_accounts").fetchall()
-    for digest, binding, policy in rows:
-        if (catalog is None or digest != data.manifest["hash"] or binding != catalog.fingerprint or policy != POLICY):
-            raise ValueError("危机合约保存绑定了其他数据或信息源；请保留原配置和存档")
+        for digest, binding, policy in rows:
+            if (catalog is None or digest != data.manifest["hash"] or binding != catalog.fingerprint or policy != POLICY):
+                raise ValueError("危机合约保存绑定了其他数据或信息源；请保留原配置和存档")
+        if has_battles:
+            from terralocal.server.domain.crisis_v2_battles import preflight as preflight_battles
+
+            preflight_battles(connection, data)
 
 
 def _account(ctx):

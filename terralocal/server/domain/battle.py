@@ -200,6 +200,7 @@ def _recover_previous_session(ctx: Context, drop_rules: dict) -> None:
     if len(active) != 1:
         raise DomainError("INVALID_BATTLE_STATE", "存档存在多个未结算战斗，请检查存档", 503)
     previous = active[0]
+    require_non_crisis(ctx, previous)
     if ctx.data.stage(previous.stage_id).get("stageType") == "CAMPAIGN":
         from terralocal.server.domain.campaign_battle import recover
 
@@ -273,6 +274,15 @@ def get_session(ctx, battle_id):
     if battle is None or battle.account_id != ctx.account_id:
         raise DomainError("UNKNOWN_BATTLE", "战斗会话不存在", 404)
     return battle
+
+
+def require_non_crisis(ctx, source):
+    # Check before stage_table lookup or a cached ordinary settlement: Crisis
+    # stages can live only in mapStageDataMap and may reuse a stage identifier.
+    if (ctx.session.get(m.CrisisV2Battle, source.id) is not None
+            or isinstance(source.native_context, dict)
+            and source.native_context.get("formation_mode") == "CRISIS_V2"):
+        raise DomainError("CRISIS_V2_BATTLE_REQUIRES_DEDICATED_FLOW", "危机合约战斗需要独立处理，尚未修改保存", 501)
 
 
 def native_context(ctx: Context, battle_id: str) -> dict:
@@ -350,6 +360,7 @@ def finish(ctx: Context, battle_id: str, stars: int, *, drop_rules: dict,
             or not math.isfinite(duration)):
         raise DomainError("INVALID_BATTLE_RESULT", "战斗结算数据非法")
     battle = get_session(ctx, battle_id)
+    require_non_crisis(ctx, battle)
     duration = float(duration) if duration else 0.0
     request_hash = fingerprint({"stars": stars, "kills": kills, "duration": duration})
     if battle.state in {"FINISHED", "ABORTED"}:

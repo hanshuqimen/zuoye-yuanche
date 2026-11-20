@@ -8,6 +8,7 @@ from terralocal.server.domain.campaign import snapshot as campaign_snapshot
 from terralocal.server.domain.context import Context
 from terralocal.server.domain.crisis_v2 import available as crisis_available
 from terralocal.server.domain.crisis_v2 import snapshot as crisis_snapshot
+from terralocal.server.domain.errors import DomainError
 from terralocal.server.domain.headhunting import snapshot as headhunting_snapshot
 from terralocal.server.domain.operators import check_condition
 from terralocal.server.domain.progress import main_stage_progress
@@ -61,6 +62,8 @@ class SyncDataAssembler:
             squad_slots = [None] * 12
             for slot in slots:
                 if slot.squad_id == squad.squad_id:
+                    if type(slot.slot) is not int or not 0 <= slot.slot < 12:
+                        raise DomainError("INVALID_SQUAD_STATE", "存档中的编队槽位超出范围，请保留原存档", 503)
                     squad_slots[slot.slot] = {"charInstId": slot.operator_id, "skillIndex": slot.skill_index,
                                              "currentEquip": slot.module_id}
             squads[squad.squad_id] = {"squadId": squad.squad_id, "name": squad.name, "slots": squad_slots}

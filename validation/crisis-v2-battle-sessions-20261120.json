@@ -1,0 +1,83 @@
+{
+  "source_commit": "4228e95ed239deb898df638ab6782d342f055a51",
+  "latest_distinct_focused_test_records_passed": 291,
+  "full_suite_rerun": false,
+  "new_session_cases": 37,
+  "schema": "0039_crisis_v2_battles",
+  "test_runs": [
+    {
+      "file": "battle-sessions-v1.xml",
+      "passed": 31,
+      "failed": 1,
+      "skipped": 0
+    },
+    {
+      "file": "battle-sessions-v2.xml",
+      "passed": 96,
+      "failed": 1,
+      "skipped": 0
+    },
+    {
+      "file": "battle-shared-v1.xml",
+      "passed": 176,
+      "failed": 1,
+      "skipped": 0
+    },
+    {
+      "file": "battle-sessions-v3.xml",
+      "passed": 54,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "file": "battle-legacy-v1.xml",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "retired_case_replacement": [
+    {
+      "case": [
+        "tests.test_crisis_v2_battle_sessions",
+        "test_corrupt_saved_squad_slot_fails_without_inserting_a_battle"
+      ],
+      "status": "failed",
+      "source": "battle-sessions-v2.xml",
+      "replacement": [
+        "test_corrupt_saved_squad_slot_fails_without_inserting_a_battle[-1]",
+        "test_corrupt_saved_squad_slot_fails_without_inserting_a_battle[12]"
+      ]
+    }
+  ],
+  "ruff_passed": true,
+  "whitespace_check_passed": true,
+  "gamedata_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "gamedata_version": "Stream://torappu-data/v077/rel77.0\nChange:123576 on 2026/09/17\nVersionControl:77.6.0",
+  "frozen_maps": 5,
+  "independent_processes": 3,
+  "process_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "restored_tables": 82,
+  "all_restored_rows_equal": true,
+  "archive_sha256": "2b3d57e9357426de7f9ba22dab4d930c6aa29f63e7604049e73f37d583cef36e",
+  "independent_restore_sha256": "19661688c64d42cc87ad1fd7431aa0903c8d9c6218d800b4e04326f493c89425",
+  "source_package_and_current_save_unchanged": true,
+  "first_season_open_at_real_time": false,
+  "qa_clock_explicitly_historical": true,
+  "ordinary_mode_misuse_rejected": true,
+  "pending_battles_created_in_independent_qa_only": true,
+  "native_battle_route_exposed": false,
+  "battle_settlement_or_reward_service_added": false,
+  "native_gameplay_verified": false,
+  "windows_package_rebuilt": false,
+  "pending": [
+    "Finish/outcome and battleLog contract",
+    "Rune/challenge transitions, reward and comment eligibility",
+    "Paired native battle routes and representative validation",
+    "Full original delivery requirements"
+  ]
+}
