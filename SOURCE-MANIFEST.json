@@ -1,5 +1,5 @@
 {
-  "source_commit": "4228e95ed239deb898df638ab6782d342f055a51",
+  "source_commit": "8dcbcd5e15af6c3a0a8ce5e2e0b93cf339a82efa",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "f4dbdf6c1085a12813445cb12f4f099b77d8e517",
+      "original_git_blob": "fe1f489bfa2d2715695e34061273a6c27e8d70e6",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "683be0a320711fecc0240449681a6a9740e011fe9c348bc46ed0645e68a23f5c",
+      "public_sha256": "f7b387525e4d85acc008f27755c873146f56731be2b9320d58715885eccfd779",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "25b369c2c0a58a2df9e186b8b0f1a174e198e857bbc9d9dd050dbcca0900371b",
+      "public_sha256": "ccc42c6b831cb778c56b612b860aa9716a720eb7d914bf0d992bf902b61f0423",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "83d1e37c5c53bc5a0ca3de8238269b26beab8fd4",
+      "original_git_blob": "fe0acfdea91fd35d582f1be6935cd2b5e1a0da7f",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "f2cf9e3f7ee3e648631dc4ec4c99bac68081253aebfb815e2668f4c8b622a145",
+      "public_sha256": "eb9d873830268949678def98f253276166eb77634a99174f696d47cd15823b3d",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "5819f6bfe46c10ad6f13cbdf6e565e19661195a1",
+      "original_git_blob": "7b0ff35c5ff24c14c1cfdc3ea7346e96f6968a85",
       "published_path": "history/STATUS.md",
-      "public_sha256": "79e941f32af1e8221eb0cb164954e9b3dd8d657329244faa323c58bc20f3c869",
+      "public_sha256": "f8b2e8c6edd0db5e17113be2bd8fa3372723cb1737cd87ac134ad11e7a30b208",
       "modified_for_publication": false
     },
     {
@@ -319,6 +319,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/crisis-finish-logs-2026-11-20.md",
+      "original_git_blob": "72f41ce7e8dbe133b81dd0fb0e29b278a5e9559c",
+      "published_path": "docs/crisis-finish-logs-2026-11-20.md",
+      "public_sha256": "f3ed51d07dcc5be339577c85fb5a74b930b5df60873d44b4149b56b1e7cb1960",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/crisis-information-2026-11-20.md",
       "original_git_blob": "4235df29b93a0d0fa5968fcdd63460869712b36d",
       "published_path": "docs/crisis-information-2026-11-20.md",
@@ -411,9 +418,9 @@
     },
     {
       "source_path": "docs/github-checkpoints.md",
-      "original_git_blob": "d1258d5f4f35e253d81c9fb500a68c178cccc237",
+      "original_git_blob": "965f6627f52fc34b17c744eaac2a4bd68ef0f84b",
       "published_path": "history/docs/github-checkpoints.md",
-      "public_sha256": "8fc96fb42bb0b2c4c2439a8079b69c4dc97e47c10cf65d85a4b7816dbf09dda9",
+      "public_sha256": "2956753901d0e63f67fdbb5cb67bc46465903994ffcbd50f8acaf38d0d8b90bb",
       "modified_for_publication": false
     },
     {
@@ -579,30 +586,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "0d9844890ee8d79b4658aa21533ebb0e2ee04b3a",
+      "original_git_blob": "130ec950acd3a7660734f3e677d4c7e2ffff678e",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "3f6e48dec44b52ab9c0aa143bcae50355d4b8f5fa19ed6e35dc571cdda4c7467",
+      "public_sha256": "ffef0b4ddefe46f2145eced92cc6ac7eae2a9e0f6957fd7ecb92e6daa636de9e",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "11bbc7db475b5766a07af6d0001402378690d996",
+      "original_git_blob": "7dedc31972cb2c69b9a5d08d86e3fb5d87172f77",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "5c41c1abc76642858b461f3a0d8d92594bd3fae5c152c74a2f5de0842d0a9bd5",
+      "public_sha256": "c2b53ffa2624fe11908683121c95117fd6208bac95a35aae16424f8cea60127e",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "b15d0e6e6f50b69375a3e5f446055882330d50fc",
+      "original_git_blob": "541874a47d6aa1ef98f324c5fb56d4300796012b",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "b9130d57b8b25578e12d5e3feb365f374a61d6f55506c2796f20ea742e27db09",
+      "public_sha256": "75568a4b4697a2f6ff2e30deaedfdfb99288d9b000947f56ca6b437259699ef8",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "2ed6e5d653dcf98c0806bf0bb33764f46359f4c7",
+      "original_git_blob": "ecc4a44ef347046616c84ae81746036200d23819",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "73248523a3662eb9b24ce6531784ead8a068f948cd37ac7335bb3cf624bc15c2",
+      "public_sha256": "cc9e10df54c0fdb421503f5e50ef92e1e4f0cdb45529ca5fb2c766242afe3fe8",
       "modified_for_publication": false
     },
     {
@@ -635,9 +642,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "650dc297edaee8260b1414b9ac481fe408727a77",
+      "original_git_blob": "108cd3bae685983ee856a0da9e31da6e4943722c",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "7a69a0ffefa4d9d325ad98b842a859d9866b942a7d500fcb4954913e8e89f373",
+      "public_sha256": "4afc96bf22f42dda15f63147c122c480f4fc3e21223de45622ec840e7e7d48d0",
       "modified_for_publication": false
     },
     {
@@ -2049,9 +2056,9 @@
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2_battles.py",
-      "original_git_blob": "636e54a97a7b3c6e03449d64461ee9373fb57b21",
+      "original_git_blob": "2f4b1615fbe1179258446507cde95257308ad77e",
       "published_path": "terralocal/server/domain/crisis_v2_battles.py",
-      "public_sha256": "797d09ce24adff3c421d792e44ee3c2b6c73ba242906dfb30cf186467611c10f",
+      "public_sha256": "627f28ba1743f0f4e97b9512eb2d7e5cbba6f83f86016df8f7a1c5df38dc6c60",
       "modified_for_publication": false
     },
     {
@@ -3036,9 +3043,9 @@
     },
     {
       "source_path": "terralocal/server/protocol/battle_codec.py",
-      "original_git_blob": "90c395a63133dc7598fb3e67872d357c007190f5",
+      "original_git_blob": "4ddf59bd3823d13268210917ffc73e235a744e02",
       "published_path": "terralocal/server/protocol/battle_codec.py",
-      "public_sha256": "3920c39d8967d2ba23f56a41441366cc336dea0d5af2ff2450fbb26eed4d13fb",
+      "public_sha256": "9f44ce97b82bde9970fcc09b5302ab05d78e43a53e577fc03d85677e0a766ef3",
       "modified_for_publication": false
     },
     {
@@ -3095,6 +3102,13 @@
       "original_git_blob": "04e14476dab1112421217c53984f1bdd208edc3b",
       "published_path": "terralocal/server/protocol/crisis_v2_battle.py",
       "public_sha256": "360bd6e53a5c7252fd03ad81d492983b544b155094c1d1d1128d2f35b155611a",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "terralocal/server/protocol/crisis_v2_codec.py",
+      "original_git_blob": "b3d52171aa2cf064090a94732e591b95058a2e12",
+      "published_path": "terralocal/server/protocol/crisis_v2_codec.py",
+      "public_sha256": "8cc060ac6ea44964fefbc7390857d7a091e249bfc390369558c4a8de801c7060",
       "modified_for_publication": false
     },
     {
@@ -3183,9 +3197,9 @@
     },
     {
       "source_path": "terralocal/server/protocol/replay_codec.py",
-      "original_git_blob": "128a422d77c7ff89e359a5469ba85787ad1d5d71",
+      "original_git_blob": "c9a2c5d1da1895638e006b6737eba44f771c1c4a",
       "published_path": "terralocal/server/protocol/replay_codec.py",
-      "public_sha256": "b23752f8513edd2a2fa4811f939c426640dc03ca798a1ffb02d74ca4a4d38c0c",
+      "public_sha256": "899177c3ba9f38e016b7b4851251dd03e756575bf2c59596cff781eb38910874",
       "modified_for_publication": false
     },
     {
@@ -3564,6 +3578,20 @@
       "original_git_blob": "4a54242364bccc50310a0b13692212a88bb6e232",
       "published_path": "tests/test_crisis_v2_challenges.py",
       "public_sha256": "0b880ef8735e3004c03756a390d89b17c18a39de5ff89d5fc3a33c9ee3c8ce82",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "tests/test_crisis_v2_codec.py",
+      "original_git_blob": "2989b84246f177e42bbfab447efa67836ceca90a",
+      "published_path": "tests/test_crisis_v2_codec.py",
+      "public_sha256": "4c80fb90b519a0ca902c339254de428ac8fa92631dc973abcb18d23ed9f4a194",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "tests/test_crisis_v2_finish_binding.py",
+      "original_git_blob": "8e76a484a11b50767f4d768aa6a033a4f8db78ae",
+      "published_path": "tests/test_crisis_v2_finish_binding.py",
+      "public_sha256": "9d0c73d464a75320729f52da6db6183bb55eed96793cb90489c0438efb5da093",
       "modified_for_publication": false
     },
     {
@@ -4884,14 +4912,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-4228e95.bundle",
-    "bytes": 165921,
-    "sha256": "def7f7161930d9da4ec6317b290edaa2013f54f12af475d509b99056111e9d98",
-    "git_blob": "d7f4045cde702cb90d8b55c2df3430de530e19f4",
-    "source_commit": "4228e95ed239deb898df638ab6782d342f055a51",
+    "path": "history/source-updates-8dcbcd5.bundle",
+    "bytes": 186612,
+    "sha256": "c04bfe58439e24ce2441bf9097eba3b2f79acee4cc0d8de68b9a2e001f550757",
+    "git_blob": "9d815ff0d9e8efafad9358ff3da3c4787ee72857",
+    "source_commit": "8dcbcd5e15af6c3a0a8ce5e2e0b93cf339a82efa",
     "branch": "codex/development",
-    "source_files": 697,
-    "source_history_commits": 372,
+    "source_files": 701,
+    "source_history_commits": 374,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"

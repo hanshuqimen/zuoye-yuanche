@@ -87,6 +87,14 @@ class DecodedRogueFinish(DecodedFinish):
     """
 
 
+class DecodedCrisisFinish(DecodedFinish):
+    """Inherited wire facts; Crisis V2 outcome admission belongs to its domain.
+
+    In particular, retain interruption flags rather than treating ranks as
+    ordinary stage stars or granting progress while decoding.
+    """
+
+
 Decoded = TypeVar("Decoded", bound=DecodedFinish)
 
 
@@ -140,6 +148,16 @@ def decode_rogue_payload(request: FinishRequest, login_times: list[int]) -> Deco
     and mode-specific outcome admission must precede any eventual domain write.
     """
     return _decode_finish(request, login_times, DecodedRogueFinish, interrupted_ranks=frozenset({1, 2, 3}))
+
+
+def decode_crisis_payload(request: FinishRequest, login_times: list[int]) -> DecodedCrisisFinish:
+    """Decode the common base without borrowing ordinary victory semantics.
+
+    The frozen CrisisV2BattleFinishRequest inherits CommonFinishBattleRequest.
+    Its additional battleLog is decoded separately, after the owned session
+    lookup. No native route or reward operation is registered by this helper.
+    """
+    return _decode_finish(request, login_times, DecodedCrisisFinish, interrupted_ranks=frozenset({1, 2, 3}))
 
 
 def _decode_finish(request: FinishRequest, login_times: list[int], decoded_type: type[Decoded], *,

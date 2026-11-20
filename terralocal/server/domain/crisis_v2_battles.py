@@ -191,6 +191,36 @@ def context(ctx, battle_id, *, require_session=False):
     return PendingBattle(source, saved, evaluation)
 
 
+def prepare_finish(ctx, request):
+    """Bind owned saved context before decrypting/decompressing a submission.
+
+    This read step grants nothing. The eventual settlement must interpret
+    outcome, counters and missing logs, then commit its own durable result.
+    """
+    from terralocal.server.protocol.battle_codec import signature_battle_id
+    from terralocal.server.protocol.crisis_v2_codec import decode_submission
+
+    ident = signature_battle_id(request.battleData.isCheat)
+    pending = context(ctx, ident, require_session=True)
+    submission = decode_submission(request, [pending.battle.native_context["login_time"],
+        ctx.profile.flags.get("loginTime", ctx.profile.last_online_at)])
+    if submission.facts.stageId != pending.battle.stage_id:
+        raise DomainError("BATTLE_STAGE_CONFLICT", "危机合约结算关卡与保存会话不一致", 409)
+    if submission.battle_log is not None:
+        members = submission.battle_log.squad
+        expected = pending.battle.squad_snapshot
+        if len(members) != len(expected):
+            raise DomainError("CRISIS_V2_LOG_SQUAD_CONFLICT", "危机合约日志编队与开战快照不一致", 409)
+        for member, row in zip(members, expected, strict=True):
+            skills = ctx.data.character(row["charId"])["skills"]
+            skill_id = skills[row["skillIndex"]]["skillId"] if skills else None
+            if (member.operator_id != row["charInstId"] or member.skill_index != row["skillIndex"]
+                    or member.template_id not in {None, row["charId"]} or member.skill_id != skill_id
+                    or member.is_assist or member.module_id or member.module_level):
+                raise DomainError("CRISIS_V2_LOG_SQUAD_CONFLICT", "危机合约日志编队与开战快照不一致", 409)
+    return pending, submission
+
+
 def start(ctx, map_id, squad_id, slots, rune_slots, *, assist_friend=None):
     from terralocal.server.domain.rogue_battle import ensure_no_active
 

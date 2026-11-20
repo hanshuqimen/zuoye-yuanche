@@ -1,0 +1,79 @@
+{
+  "source_commit": "8dcbcd5e15af6c3a0a8ce5e2e0b93cf339a82efa",
+  "latest_distinct_focused_tests_passed": 74,
+  "new_codec_cases": 20,
+  "new_owned_binding_cases": 13,
+  "full_suite_rerun": false,
+  "methods": 15,
+  "method_bytes": 9712,
+  "batches": [
+    {
+      "methods": 8,
+      "method_bytes": 6040,
+      "artifact_sha256": "996c63d48847ad18e1eeeecee4381e5c9178bb18e47adea09ad10559e6a5e6ed",
+      "evidence_ids": [
+        "ev_aeade17db879d4112dc2737fe19166c12c801205f74917ff4513daf1e8529e59",
+        "ev_f275fdb884680b729e65821268fb97a1641af6b623decdfadb60b72f9d8a5e48",
+        "ev_2d6d73f1383eae2a6a837f9bd1ec20dd5fbcf591742a3c1ed5257d7d1c8a0970",
+        "ev_c04b115a4abba9ed8b6672f59b009277435cc13f6169a6365b90736da126be44",
+        "ev_eb034a63409ce4073a26d961a7859b34ef1ef262581a7acefec08506b2650245",
+        "ev_bda6a1c71b1d61e076f8ddfbb5e15845212936f6b672e71b34e2fe58c574f53c",
+        "ev_f2c4b725a96fabcbc52a447038513e4815909ee134b76e56fac11268a281c3d7",
+        "ev_ea668102aabbe7febae83377cff62090fe6a0fcc1fcbf8c6b85b30a5baecca61"
+      ],
+      "public_close_succeeded": true,
+      "process_exit": 0,
+      "input_unchanged": true
+    },
+    {
+      "methods": 7,
+      "method_bytes": 3672,
+      "artifact_sha256": "1c6b9161d2fd1d35f1dec2693a1a46df36fd40e39c43257eb165b65e72153413",
+      "evidence_ids": [
+        "ev_7b156a6cd1deb3db62e40c8d7c9115109f3c44dfcd4486cf46be93c5ef87d6fb",
+        "ev_e6df2bec0d23360e9a02d7209bbbcea4d2942b2f8cd6d10e79c23f77d9e65d00",
+        "ev_c9574a0f33e43fe62be21689a35d25231c562bf5aa125126a46a84ae633beff0",
+        "ev_1e5b9dc6665cc840347fb9dc658a48dada9764175b71eb6233fc9825282a2643",
+        "ev_62903de95cd95174ba951f6d29511edde28bbce4588572c9fca74c51c8201b59",
+        "ev_f324eaaa27cc718743858bca6b04ad3880e22e53b40b457560ee452bdb8c27dc",
+        "ev_6664c0ba06877f2fb3defd116e20a6fc54459292b5d0f86329f5bbaebceabe85"
+      ],
+      "public_close_succeeded": true,
+      "process_exit": 0,
+      "input_unchanged": true
+    }
+  ],
+  "capture_bytes": 12288,
+  "first_capture_failed_before_code_reads": true,
+  "each_android_command_max_seconds": 8,
+  "successful_capture_hash_retries": 0,
+  "both_rea_public_close_confirmed": true,
+  "index1_stopped": true,
+  "current_save_settings_and_index0_unchanged": true,
+  "frozen_data_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "frozen_maps": 5,
+  "saved_tables_unchanged": 82,
+  "frozen_requests_are_authored": true,
+  "codec_and_owned_snapshot_binding_added": true,
+  "decompression_follows_owned_context_lookup": true,
+  "ordinary_replay_wire_limit_unchanged": true,
+  "progress_or_rewards_written": false,
+  "native_client_request_observed": false,
+  "native_route_exposed": false,
+  "windows_package_rebuilt": false,
+  "ruff_passed": true,
+  "whitespace_check_passed": true,
+  "analysis_limits": [
+    "OnUnitBorn/OnEnemyReachedExit exceptional paths can include adjacent methods because throw helper returnness is unresolved",
+    "AchieveBattleLog pseudocode return type is void; metadata declares string and normal instructions forward CompressBattleLog return",
+    "Multiple captures are not one process snapshot; every selected method has one source",
+    "No official backend outcome, score/reward algorithm or live Hotfix object read"
+  ],
+  "pending": [
+    "Outcome and trusted counters",
+    "Rune/challenge and score progression",
+    "Rewards and all comments",
+    "Paired native battle routes and representative",
+    "Full original delivery requirements"
+  ]
+}

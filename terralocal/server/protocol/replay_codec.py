@@ -49,9 +49,13 @@ def _member(value) -> ReplayMember:
     return ReplayMember(identifier, template, skill, index, module, level, assist)
 
 
-def decode_replay(encoded: str) -> ReplayRecord:
+def decode_replay(encoded: str, *, max_wire: int = MAX_WIRE) -> ReplayRecord:
     try:
-        if not isinstance(encoded, str) or not 1 <= len(encoded) <= MAX_WIRE:
+        # Other native BattleLog consumers can choose a bounded admission cap
+        # without enlarging the ordinary proxy route's established limit.
+        if type(max_wire) is not int or not 1 <= max_wire <= 8 * 1024 * 1024:
+            raise ValueError("Invalid server wire limit")
+        if not isinstance(encoded, str) or not 1 <= len(encoded) <= max_wire:
             raise ValueError("Invalid wire size")
         packed = base64.b64decode(encoded, validate=True)
         with zipfile.ZipFile(io.BytesIO(packed)) as archive:

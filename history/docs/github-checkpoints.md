@@ -120,3 +120,11 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 2026-11-19 备份修复源码 9ea5f815abd2e6ef3b43e7a3476013914000ba7f 已在公开 MIT main 7678761f056b491cfa943cf722ee7792797a084d 保存，树 5aaa20f9983289aefb57394ed73bd4b525bdbe92。D:/zy-public-7678761f 匿名下载 679 个文件逐项 SHA-256 一致；原包加 26,473 字节 source-updates-9ea5f81.bundle，在 D:/zy-source-9ea5f81 恢复 356 次提交、668 文件，全部 Git 对象、严格检查与干净工作区通过。增量 SHA-256 bcc552d9123c1cb85b0869c0f10f666db17689aa56fdfe57f02c19a8a847318f，Git blob 8b6cf08644653cbdd7926145e1fa94a55de8fe98；需要原始完整包 source-history-d40aee9.bundle。恢复后才轮换两个权威索引，前索引和所有旧包保留。原 15 项失败已复验通过，211 项不同相关检查通过，无新全量/原生/Windows 验收。本地随后文档回执不倒称已包含于这份源码增量。旧仓库再次实际回读仍为私有且存在，删除待用户页面操作。证据 .cache/backup-domain-validation-20261119/public-restore-verification.json。[公开修复](https://github.com/hanshuqimen/zuoye-yuanche/commit/7678761f056b491cfa943cf722ee7792797a084d)
 
 2026-11-19 用户初次回复「已删除」后，连接器与新 GitHub 页面仍显示旧仓库，未据回复虚报完成。准备最终删除页后，因电脑操作规则要求当次确认，用户明确回复确认现在删除。点击后 GitHub 要求身份验证，用户自行完成并回复已验证。页面随后明确提示 hanshuqimen/TerraLocal 成功删除，原连接器读回404，新公开仓库Public/MIT保持。旧290文件与144完整包的D盘保全保持，未重建旧仓库。证据 .cache/product-backup-release-20261119/old-repository-deleted.json 及 delete-old-repo-success.jpg。
+
+## 2026-11-20 危机合约持久化会话检查点
+
+源码4228e95ed239deb898df638ab6782d342f055a51已公开至main6d4d39a7763b5fe7a068ad3ecc995654f92c7be2，树cb91872756b55af764a9fd9ae3b6bf45e3775f3f。38发布对象经GitHub树核验，35新增文本blob扫描通过；726公开文件实际匿名下载全部SHA-256/Git对象一致，原始d40完整包与165,921字节history/source-updates-4228e95.bundle在项目内新目录恢复697源码/372完整提交，严格fsck和干净工作区通过。新包SHA-256 def7f7161930d9da4ec6317b290edaa2013f54f12af475d509b99056111e9d98，Git blob d7f4045cde702cb90d8b55c2df3430de530e19f4，只需原始完整包。实际恢复和Public/MIT核对后才轮换两权威索引，原索引及全部旧包保留。本回执晚于包，不倒称已在该源码内。
+
+发布途中工具宿主换代使旧上传句柄失效。重新读取远程仍为21b8a17，GitHub树校验定位第27号blob缺失；只补剩余11对象并逐项核SHA后树创建成功，再执行非强制分支更新。没有盲目重复分支更新或生成重复公开提交。此前一项文档补丁上下文不匹配、一次PowerShell文档命令解析失败均在写入前停止，修正后继续；源码和验证证据保持。
+
+证据 .cache/crisis-20261119/public-checkpoint-4228e95-v1/readback-verification.json；匿名下载和新恢复分别在同目录anonymous-public-clone/、restored-development/，两个旧索引在previous-*-latest.json。含0039内部战斗会话及291不同定向检查的最新记录、首季五图三进程/82表恢复。没有新原生战斗路由、结算/奖励或EXE，完整交付目标继续。[源码及恢复范围](crisis-battle-sessions-2026-11-20.md)

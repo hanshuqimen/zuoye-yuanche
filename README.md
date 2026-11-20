@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `4228e95`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `8dcbcd5`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -115,5 +115,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-4228e95.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约结算日志与只读绑定
+
+2026-11-20 危机合约结算准备新增15个REA默认方法/9,712字节，确认日志调用链、符文完成及任务状态消费者。新增专用解码和自有保存/关卡/编队只读绑定，74个不同定向检查通过；冻结五图自造请求核对，82表保持。原生APK校验首次8秒超时及后续三页成功捕获分别保留；两REA会话关闭/退出0，index1已停且index0/宿主保存保持。本批未分类通关、写入进度/奖励、开放原生路由或重建EXE。
+
+[依据、失败和支持边界](docs/crisis-finish-logs-2026-11-20.md) · [验证摘要](validation/crisis-v2-finish-logs-20261120.json)。
+
+[本次历史增量](history/source-updates-8dcbcd5.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-8dcbcd5.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```
