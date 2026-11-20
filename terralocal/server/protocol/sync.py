@@ -6,6 +6,8 @@ from terralocal.server.domain.battle import unlocked
 from terralocal.server.domain.campaign import available as campaign_available
 from terralocal.server.domain.campaign import snapshot as campaign_snapshot
 from terralocal.server.domain.context import Context
+from terralocal.server.domain.crisis_v2 import available as crisis_available
+from terralocal.server.domain.crisis_v2 import snapshot as crisis_snapshot
 from terralocal.server.domain.headhunting import snapshot as headhunting_snapshot
 from terralocal.server.domain.operators import check_condition
 from terralocal.server.domain.progress import main_stage_progress
@@ -115,6 +117,7 @@ class SyncDataAssembler:
                 # PlayerDataModel.campaign has JsonProperty("campaignsV2").
                 **({"campaignsV2": campaign} if campaign is not None else {}),
                 **({"rlv2": rogue_snapshot(ctx)} if rogue_available(ctx.data) else {}),
+                **({"crisisV2": crisis_snapshot(ctx)} if crisis_available(ctx.data) else {}),
                 **({"recruit": recruit_snapshot(ctx)} if "gacha_table" in ctx.data.manifest["tables"] else {}),
                 **({"gacha": headhunting_snapshot(ctx)} if "gacha_table" in ctx.data.manifest["tables"] else {}),
                 **initial_display(ctx),

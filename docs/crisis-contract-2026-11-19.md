@@ -95,3 +95,33 @@ REA另完成15个节点/进度辅助方法，以及本轮31个模型方法/10,23
 | `five-maps-compile-v1.json`、`five-maps-compile-v2.json` | 过严默认值校验失败，以及修正后五图六组合成投影 |
 
 下一核对独立赛季信息源、真实请求服务码、玩家状态初始化与解锁授予，再把本组件接入事务性BattleSession及结算。客户端实际消费、日历/商店、成就及奖励领取、旧版危机合约和其余赛季仍未完成。
+
+## 2026-11-20：V2路由漏项与开战服务码对应
+
+进一步定位到研究索引的路由白名单只接纳`crisis/`，未列`crisisV2/`。这说明旧SQLite索引缺少V2路由行不能证明客户端没有这些服务。修正`tools/research/index_client.py`后，用同一冻结元数据重新只读扫描得到118个候选，原来为111个，新增七个：`crisisV2/battleFinish`、`battleStart`、`buyGood`、`confirmMissions`、`getGoodList`、`getInfo`、`getSnapshot`。现有SQLite索引没有重建或覆盖；扫描证据单独保存。Ruff通过，没有新增服务器路由。
+
+M27994开战服务码默认getter的REA结果读取静态间接地址`0xc171fc8`，冻结文件中的指针指向`0xc60e8b0`，其中为编码字`0xa000cf93`。按固定版本的[Il2CppDumper元数据解码参考](https://github.com/Perfare/Il2CppDumper/blob/4741d46ba9cd6159c5d853eb9d6fc48b4bfa2b1a/Il2CppDumper/Il2Cpp/Metadata.cs)，对应字符串用法5及字面量索引26569，恰为`crisisV2/battleStart`；用法分类另核同提交的MetadataClass.cs。只采用与已冻结布局及该编码字一致的解释，不拿受保护头的前两个原始字声明版本。读取范围均为冻结文件映射，没有访问活动堆字符串或认证。
+
+这补齐默认开战getter与路由文字的对应，不代表读取了活动Hotfix、取得了全部请求校验规则或真实客户端已成功开战。其他六个字符串仍是候选，需逐项对应消费者。原始候选在`v2-literal-route-candidates.json`，修正后扫描在`route-scan-after-fix.json`，精确绑定在`start-route-binding.json`；第三方解析参考的固定提交与SHA-256保存在本地`decoder-source-4741d46/source.json`，不收入Git。
+
+## 2026-11-20：赛季信息请求和缓存有效性
+
+随后REA实际分析9个信息/缓存相关默认方法，共2,428字节；20,480字节容器指纹为`61cdc3c23a4129c8d11548ab61d3c1b451184af14df70438498d1b526651b272`。公共status/close成功，completion记录WSL子进程退出0，实际19104/11048两PID已消失。本次没有启动模拟器。IsInSeason方法体与前次加载捕获相同，其余八个方法未新增加载后等价证明。原准备模板错误要求每个方法含RET，拒绝了合法尾调用转发M162496；v1保留，v2撤回该无依据启发式，保留边界/完整线性解码/指纹与未知调用约束，才启动REA。
+
+M162500请求的静态服务码已进一步对应`crisisV2/getInfo`：间接地址`0xc03ec78`到文件单元`0xc60e8d0`，编码字`0xa000cf9b`对应字面量26573。该路径构造CrisisV2GetInfoRequest，回调读取CrisisV2GetInfoResponse.info并写入缓存包装的+0x10。响应声明另有ts；没有把历史样本外层玩家delta作为初始化数据。至此默认开战和信息请求均有精确文字对应，其他五个服务仍为候选。
+
+已核的客户端一致性要求：
+
+- 启用赛季时，缓存验证读取玩家`crisisV2.currentSeason`和`info.seasonId`。任一非空时要求两者字符串相等；二者均为空允许空赛季状态。包装缺失或类型不匹配则无效。返回HTTP成功本身不能补齐这项一致性。
+- LoadCurrentSeason还要求当前ID能在客户端赛季表和玩家`crisisV2.seasons`中同时找到，否则得到空赛季描述。后续初始化、信息响应和增量必须来自同一版本/赛季配置。
+- 信息请求路径有全局`constData.sysStartTime`、UILockTarget原始值24的CheckIfUnlocked、已有缓存及跨日重同步门槛。隐藏方法上下文静态解码为ConstTable<CrisisV2SharedData,CrisisV2DB>，字段布局与全局开始时间读取对应；没有从这个门槛推断单赛季结束边界。
+
+需要保持的缺口：GetCacheData/M162498在APK中148字节无法完整解码，本批未分析。IsInSeason默认方法转给未索引的`0x4103878`，不能据此宣布已核实赛季日历。缓存包装字段的旧索引偏移值1684300916明显异常；包装写入+0x10来自本批REA方法体，不据此擅改整份字段索引。受保护字段和泛型共享调用继续分开核对。
+
+证据在`rea-info-v2/static-methods.json`、`mcp-info-v1/`、`info-analysis-summary.json`、`info-route-binding.json`、`info-callee-context.json`；失败准备保存在`rea-info-v1/`及`prepare_info_rea_v1.py`。下一实现版本绑定的独立赛季信息源与一致的玩家根对象/赛季初始化，再接入现有事务、BattleSession和同步；活动日历、解锁发放、结算及原生仍未完成。
+
+## 2026-11-20：赛季判断的返回桥与信息实现
+
+进一步读取冻结文件确认`0x4103878`并非独立日历算法，而是8字节控制流桥：读取`[x8]`后跳回M162595方法内`0x40f7008`。新增只含原始三页的16,384字节容器，SHA-256为`d352bdc4e7f067592f578d9b5d187d87d0f4dab47aaf16a1cce03e55474b0cbc`，没有改写指令或把桥伪装成已知业务函数。REA仍将该分支输出为岛调用，没有内联返回边，尚不能据此给出官方完整日历逻辑。公共状态读取和关闭成功，子进程退出0，输入保持；本次没有Android或认证读取。
+
+证据在`.cache/crisis-20261119/rea-info-island-v1/static-methods.json`及`mcp-info-island-v1/completion.json`。GetCacheData受保护体及活动Hotfix继续未验。其后已实现独立信息源、0038玩家初始化和同步，并以独立冻结包验证HTTPS/冷启/恢复，具体范围见[信息阶段报告](crisis-information-2026-11-20.md)；明确的本地表时间政策仍与官方算法分开记录。

@@ -398,6 +398,9 @@ def test_corrupt_training_rejected_before_startup_writes(training_runtime, damag
 def legacy_columns(path):
     """Authored 0028 schema shape, with all existing child FKs retained."""
     with sqlite3.connect(path) as con:
+        from schema_legacy import remove_crisis_v2_tables
+
+        remove_crisis_v2_tables(con)
         con.execute("PRAGMA foreign_keys=OFF")
         con.execute("DROP TABLE rlv2_bank_visits")
         con.execute("DROP TABLE rlv2_bank_wallets")
@@ -444,7 +447,8 @@ def test_0028_migration_adds_only_empty_history_and_null_target_and_is_atomic(tr
     try:
         assert reopened.sync(token)["user"] == before_user
         after = rows(path)
-        assert len(before) == 74 and len(after) == 78
+        assert len(before) == 74 and len(after) == 81
+        assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == []
         assert after["rlv2_battle_loot_plans"] == []
         for name, values in before.items():
             if name == "alembic_version":

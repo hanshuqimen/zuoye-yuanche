@@ -979,6 +979,56 @@ class RogueInventory(Base):
     definition: Mapped[dict[str, Any]] = mapped_column(JSON)
 
 
+class CrisisV2Account(Base):
+    __tablename__ = "crisis_v2_accounts"
+    __table_args__ = (CheckConstraint("shop_coin >= 0 AND new_record_ts >= 0 AND next_refresh_ts >= 0"),)
+    account_id: Mapped[int] = mapped_column(ForeignKey("accounts.id", ondelete="CASCADE"), primary_key=True)
+    gamedata_hash: Mapped[str] = mapped_column(String(64))
+    catalog_hash: Mapped[str] = mapped_column(String(64))
+    policy_version: Mapped[str] = mapped_column(String(64))
+    current_season: Mapped[str] = mapped_column(String(160), default="")
+    new_record_ts: Mapped[int] = mapped_column(Integer, default=0)
+    next_refresh_ts: Mapped[int] = mapped_column(Integer, default=0)
+    shop_coin: Mapped[int] = mapped_column(Integer, default=0)
+    shop_info: Mapped[list] = mapped_column(JSON, default=list)
+    shop_progress: Mapped[dict] = mapped_column(JSON, default=dict)
+    initialized_at: Mapped[int] = mapped_column(Integer)
+
+
+class CrisisV2Season(Base):
+    __tablename__ = "crisis_v2_seasons"
+    __table_args__ = (CheckConstraint("coin >= 0 AND assist_count >= 0 AND assist_max_points >= 0"),)
+    account_id: Mapped[int] = mapped_column(
+        ForeignKey("crisis_v2_accounts.account_id", ondelete="CASCADE"), primary_key=True)
+    season_id: Mapped[str] = mapped_column(String(160), primary_key=True)
+    coin: Mapped[int] = mapped_column(Integer, default=0)
+    assist_count: Mapped[int] = mapped_column(Integer, default=0)
+    assist_max_points: Mapped[int] = mapped_column(Integer, default=0)
+    assist_chars: Mapped[list] = mapped_column(JSON, default=list)
+
+
+class CrisisV2MapProgress(Base):
+    __tablename__ = "crisis_v2_maps"
+    __table_args__ = (
+        ForeignKeyConstraint(["account_id", "season_id"],
+                             ["crisis_v2_seasons.account_id", "crisis_v2_seasons.season_id"], ondelete="CASCADE"),
+        CheckConstraint("kind IN ('PERMANENT','TEMPORARY')"),
+    )
+    account_id: Mapped[int] = mapped_column(primary_key=True)
+    season_id: Mapped[str] = mapped_column(String(160), primary_key=True)
+    map_id: Mapped[str] = mapped_column(String(160), primary_key=True)
+    kind: Mapped[str] = mapped_column(String(16))
+    cleared: Mapped[bool] = mapped_column(Boolean, default=False)
+    score_total: Mapped[list] = mapped_column(JSON, default=lambda: [0] * 6)
+    score_single: Mapped[list] = mapped_column(JSON, default=lambda: [0] * 6)
+    runes: Mapped[dict] = mapped_column(JSON, default=dict)
+    challenges: Mapped[dict] = mapped_column(JSON, default=dict)
+    extra_runes: Mapped[dict] = mapped_column(JSON, default=dict)
+    rune_packs: Mapped[dict] = mapped_column(JSON, default=dict)
+    rewards: Mapped[dict] = mapped_column(JSON, default=dict)
+    comments: Mapped[list] = mapped_column(JSON, default=list)
+
+
 class ServerClockState(Base):
     __tablename__ = "server_clock"
     id: Mapped[int] = mapped_column(primary_key=True, default=1)

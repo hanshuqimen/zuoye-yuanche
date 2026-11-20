@@ -1,0 +1,115 @@
+{
+  "source_commit": "48e71eb6e01c198604649b096c942fc979b4dcc5",
+  "schema_revision": "0038_crisis_v2_state",
+  "policy": "cn-2.7.71-crisis-v2-information-v1",
+  "calendar_policy": "shared-table-inclusive-end-v1",
+  "latest_distinct_focused_tests": 210,
+  "latest_failures": 0,
+  "reports": [
+    {
+      "report": "information-v1.xml",
+      "sha256": "3f519929e86b08f0f9b958573770850d922fe3313174975c9a8edfaed9dd8ae5",
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "report": "information-v2.xml",
+      "sha256": "6d99024caf9d0c5afd552ae58744cb882f22631173f9468741e67a611642a483",
+      "passed": 200,
+      "failed": 2,
+      "skipped": 0
+    },
+    {
+      "report": "information-migration-v3.xml",
+      "sha256": "3099a32fe5e3cdfa4a358c790d58bf506ca556373552b9b808b5e7580f751f69",
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "report": "information-prepare-v4.xml",
+      "sha256": "7ec463d782b20b1414821683367f40673ec6a511cf96f6e6d8528af782f53d0e",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "report": "information-preflight-v5.xml",
+      "sha256": "5356e95c5008c9cc58fc4c1e0107e38d2bab1b58a48a98f2f9823e09bc3ac232",
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "ruff_passed": true,
+  "full_suite_rerun": false,
+  "gamedata_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "data_tables": 20,
+  "maps": 5,
+  "https_calls": 9,
+  "https_statuses": [
+    {
+      "route": "/local/v1/login",
+      "status": 200
+    },
+    {
+      "route": "/account/syncData",
+      "status": 200
+    },
+    {
+      "route": "/crisisV2/getInfo",
+      "status": 200
+    },
+    {
+      "route": "/crisisV2/getInfo",
+      "status": 200
+    },
+    {
+      "route": "/account/syncData",
+      "status": 200
+    },
+    {
+      "route": "/crisisV2/getInfo",
+      "status": 200
+    },
+    {
+      "route": "/account/syncData",
+      "status": 200
+    },
+    {
+      "route": "/crisisV2/getInfo",
+      "status": 200
+    },
+    {
+      "route": "/account/syncData",
+      "status": 200
+    }
+  ],
+  "process_exits": [
+    0,
+    0
+  ],
+  "cold_retry_identical": true,
+  "calendar_delta_uses_current": true,
+  "old_season_progress_preserved": true,
+  "backup_recovery_sha256": "2064ca2d5723aad4e3d540b465aee4e65d2a7eeb0146fe244aaca0200335ffc6",
+  "latencies_milliseconds": [
+    31.958,
+    37.206,
+    57.837,
+    20.452,
+    15.52,
+    44.091,
+    31.501,
+    21.902,
+    17.136
+  ],
+  "p95_gate_verified": false,
+  "current_settings_unchanged": true,
+  "native_client_verified": false,
+  "emulator_started": false,
+  "windows_package_rebuilt": false,
+  "battle_settlement_unlock_shop_complete": false,
+  "retained_failure": "First expanded run: 200 passed / 2 new harness errors; corrected closing(Database), only those two rechecked. Later preflight/information checks: 23 passed."
+}

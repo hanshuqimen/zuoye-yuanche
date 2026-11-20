@@ -174,6 +174,9 @@ def create_account(session, data, name: str, preset: str = "Vanilla", password: 
     from terralocal.server.domain.rogue_topics import initialize as initialize_rogue
 
     initialize_rogue(ctx)
+    from terralocal.server.domain.crisis_v2 import initialize as initialize_crisis
+
+    initialize_crisis(ctx)
     return account
 
 

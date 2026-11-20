@@ -1,5 +1,17 @@
 # 验证证据登记
 
+2026-11-20 IsInSeason返回桥证据`.cache/crisis-20261119/rea-info-island-v1/static-methods.json`与`mcp-info-island-v1/completion.json`：0x4103878八字节返回原方法0x40f7008，三页原始容器d352bdc4…；REA仍未内联，不能标官方日历已核。公共status/close、子进程退出0及输入保持，无Android/认证读取。[研究边界](../crisis-contract-2026-11-19.md#2026-11-20赛季判断的返回桥与信息实现)
+
+2026-11-20 冻结信息包准备`.cache/crisis-20261119/real-information-v1/preparation.json`：20表14457902、只提取首季info、五图，f441及根设置未改。`https-verification-v1/verification.json`记录9实际HTTPS200、两进程退出0、冷启重试一致、赛季结束current增量及旧图保持、实际备份新目录恢复SHA-256 2064ca2d5723aad4e3d540b465aee4e65d2a7eeb0146fe244aaca0200335ffc6。`information-prepare-v4.xml`3通过、`information-preflight-v5.xml`受影响23通过（5新增），累计210不同检查最新通过；缺表失败前未调用可写初始化，数据库字节/全行不变。无原生消费或新EXE，9次延迟不当作性能P95。[入口](../crisis-information-2026-11-20.md)
+
+2026-11-20 信息接线证据`.cache/crisis-20261119/information-{v1,v2}.xml`及`information-migration-v3.xml`：51首批、扩展200通过/2测试脚本错误，修正后仅两项复验通过，202不同检查最新通过。覆盖实际SQLite、跨季、并发回执、旧版本全行/回滚及独立备份恢复。短键current/nst由`player-state-wire-contract.json`、属性payload和PropertyName setter核对；无原生可玩或新EXE结论。[入口](../crisis-information-2026-11-20.md)
+
+2026-11-20 信息/缓存默认消费者证据 `.cache/crisis-20261119/{info-analysis-summary,info-route-binding,info-callee-context}.json`及`rea-info-v2/`/`mcp-info-v1/`：九方法/2,428字节、默认getInfo指针/字面量26573对应、包装回调与赛季一致性、公共关闭及子进程退出0。IsInSeason方法体与前次加载页一致，其他八个未补等价；赛季结束委托、GetCacheData及受保护包装偏移仍未解决。v1 RET启发式拒绝合法转发保留。当前没有活动进程或新Android操作。[报告](../crisis-contract-2026-11-19.md#2026-11-20赛季信息请求和缓存有效性)
+
+2026-11-20 V2路由证据 `.cache/crisis-20261119/{v2-literal-route-candidates,route-scan-after-fix,start-route-binding}.json`：实际冻结扫描111→118候选、七个V2字符串、旧索引未改；M27994默认getter的文件静态指针/编码词对应字面量26569与开战服务码。固定解析来源及指纹在`decoder-source-4741d46/source.json`，源码仅本地。其他候选、活动Hotfix和原生未验证。[依据与边界](../crisis-contract-2026-11-19.md#2026-11-20v2路由漏项与开战服务码对应)
+
+2026-11-20 公开规则检查点证据 `.cache/crisis-20261119/public-checkpoint-a264118-v2/`：`prepared.json`/`published.json`/`readback-verification.json`对应20个发布对象、公开MIT main 1b3cac2、694公开文件与677源码/364提交完整恢复。历史增量SHA-256 ec30cb86e60e6951be9426f113bbedaddd2ce466863e4d1df989d03866fe820e，Git blob 503b36fd3b32a8167c31b427d2717a8a7d7fed19；旧权威索引以previous-*.json保留，全部校验后才更新。v1错误文件数量断言及目录保留，远程写入前修正。`anonymous-public-clone/`和`restored-development/`均在本项目内，Git严格检查通过。[恢复入口](CHECKPOINTS.md)
+
 2026-11-20 危机合约V2：`.cache/crisis-20261119/model-method-evidence.json`及`mcp-models-v1/`保存31方法/10,236字节的真实REA结果、捕获来源、容器指纹及公共关闭/退出0；两次独立代码捕获、原通道失败及八个计分加载等价证据继续保留。`rules-v2.xml`对应38项定向合成检查；`five-maps-compile-v1.json`保留四临时图空默认值被过严拒绝，`five-maps-compile-v2.json`记录修正后五图六组合成投影、源Git blob/SHA及实现指纹。不能推广为真实日历、奖励、路由或原生可玩。[合同与完整边界](../crisis-contract-2026-11-19.md#2026-11-20加载代码节点规则与六维计分实现)
 
 2026-11-20 用户指定目录再次回读位于 `.cache/workspace-move-readback-20261119T2256464147400Z/verification.json`：22原路径不存在、22目标为项目内实际目录，六个Junction目标一致且存在、原链接保留，本地Git包引用有效，归档仍被Git忽略。完整逐文件SHA-256沿用 `.cache/workspace-move-20261119/` 原迁移证据，本次未重跑；未重复移动或操作模拟器/游戏存档。[迁移报告](../workspace-directory-move-2026-11-19.md#2026-11-20按用户目录清单再次核对)

@@ -18,7 +18,8 @@ from terralocal.server.gamedata.conditions import required_stars
 REQUIRED = {"character_table", "item_table", "stage_table", "skill_table", "gamedata_const"}
 ROOTS = {"item_table": "items", "stage_table": "stages", "zone_table": "zones",
          "mission_table": "missions", "skin_table": "charSkins", "uniequip_table": "equipDict",
-         "campaign_table": "campaigns", "roguelike_topic_table": "topics"}
+         "campaign_table": "campaigns", "roguelike_topic_table": "topics",
+         "crisis_v2_table": "seasonInfoDataMap", "crisis_v2_server_table": "seasons"}
 TABLE_NAME = re.compile(r"[a-z][a-z0-9_]{0,95}")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 
@@ -65,7 +66,7 @@ def excel_directory(folder: Path) -> Path:
     raise ValueError("找不到 character_table.json，请提供解码后的 excel 目录")
 
 
-def validate_tables(tables: dict[str, Any]) -> dict[str, int]:
+def validate_tables(tables: dict[str, Any], *, version: str | None = None) -> dict[str, int]:
     missing = REQUIRED - tables.keys()
     if missing:
         raise ValueError(f"缺少必要表: {', '.join(sorted(missing))}")
@@ -186,6 +187,10 @@ def validate_tables(tables: dict[str, Any]) -> dict[str, int]:
         from terralocal.server.gamedata.roguelike import validate_roguelike
 
         validate_roguelike(tables)
+    if "crisis_v2_server_table" in tables:
+        from terralocal.server.gamedata.crisis_v2_catalog import validate_crisis_v2
+
+        validate_crisis_v2(tables, version)
     return counts
 
 
@@ -196,9 +201,9 @@ def import_data(folder: Path, cache: Path, *, source: str = "user-local") -> dic
         if path.stat().st_size > 128 * 1024 * 1024:
             raise ValueError(f"单表超过 128 MiB: {path.name}")
         tables[path.stem] = json.loads(path.read_text(encoding="utf-8-sig"))
-    counts = validate_tables(tables)
     version_file = excel / "data_version.txt"
     version = version_file.read_text("utf-8-sig").strip() if version_file.exists() else "unidentified"
+    counts = validate_tables(tables, version=version)
     hashes = {name: fingerprint(table) for name, table in tables.items()}
     digest = fingerprint({"adapter": "cn-json-v1", "version": version, "tables": hashes})
     manifest = {"schema": 1, "adapter": "cn-json-v1", "hash": digest, "version": version,
@@ -266,7 +271,7 @@ class GameData:
         if actual != manifest["hash"]:
             raise ValueError("GameData 总指纹校验失败")
         try:
-            counts = validate_tables(tables)
+            counts = validate_tables(tables, version=manifest["version"])
         except (KeyError, TypeError, AttributeError, DomainError) as exc:
             raise ValueError("GameData 表结构校验失败") from exc
         if counts != manifest["counts"]:
@@ -280,6 +285,12 @@ class GameData:
         if name not in self._tables:
             self._tables[name] = json.loads((self.directory / f"{name}.json").read_bytes())
         return self._tables[name]
+
+    @cached_property
+    def crisis_v2(self):
+        from terralocal.server.gamedata.crisis_v2_catalog import CrisisV2Catalog
+
+        return CrisisV2Catalog(self)
 
     @cached_property
     def characters(self) -> dict:

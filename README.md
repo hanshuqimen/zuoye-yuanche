@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `a264118`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `48e71eb`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -63,5 +63,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-a264118.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约V2信息与存档检查点
+
+2026-11-20 危机合约V2已接版本绑定的信息源、getInfo事务、0038账号/赛季/地图及current/nst同步。210个不同定向检查最新通过，包含旧行/回滚、认证、损坏缺表写入前拒绝、并发及恢复；独立20表首季五图包9次真实HTTPS、两进程退出0、冷启重试及新目录恢复通过。原配置/旧历史保持；日历为明确本地政策，原生、开战/结算、解锁/商店、其他赛季及新EXE仍未完成。
+
+[实现与实际范围](docs/crisis-information-2026-11-20.md) · [本次验证摘要](validation/crisis-v2-information-20261120.json)。
+
+[本次历史增量](history/source-updates-48e71eb.bundle)只需原始完整包，不需要先应用旧增量；保留全部旧包和历史：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-48e71eb.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

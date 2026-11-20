@@ -228,5 +228,8 @@ def create_game_app(runtime: Runtime) -> FastAPI:
     app.include_router(campaign_claims.router(runtime))
     app.include_router(missions.router(runtime))
     app.include_router(roguelike.router(runtime))
+    from terralocal.server.protocol import crisis_v2
+
+    app.include_router(crisis_v2.router(runtime))
 
     return app

@@ -31,7 +31,7 @@ DATABASE = CACHE / "official-index.sqlite3"
 CODE_REGISTRATION = 0xBAD2390
 ROUTE = re.compile(
     r"^/?(?:account|quest|charBuild|gacha|shop|mail|mission|building|social|story|activity|"
-    r"roguelike|sandbox|tower|campaign|pay|crisis|user|businessCard|medal|recruit)/[\w/.-]{1,160}$"
+    r"roguelike|sandbox|tower|campaign|pay|crisisV2|crisis|user|businessCard|medal|recruit)/[\w/.-]{1,160}$"
 )
 
 

@@ -1,5 +1,13 @@
 # GitHub 回滚检查点
 
+## 2026-11-20 危机合约V2地图规则检查点
+
+自有源码 `a26411815aa3551a399eb143495794c67ba47662` 已公开至MIT main `1b3cac250f7ab0e19cfefeba8666c607e5ba8054`，树`9add222b598162df48ce83e5d3729789e7657434`。包括规则组件、38项定向检查、五张实际配置六组合成投影的范围及空默认节点失败记录；历史GameData、代码页、玩家保存和第三方工具不上传。
+
+20个发布对象的Git ID已逐项核对；项目内新匿名克隆694文件全部SHA-256/Git对象一致，原始完整包加79,216字节增量在新目录恢复677源码文件/364次提交，两目录严格fsck、干净工作区通过。新历史包`history/source-updates-a264118.bundle`的SHA-256为`ec30cb86e60e6951be9426f113bbedaddd2ce466863e4d1df989d03866fe820e`，Git blob为`503b36fd3b32a8167c31b427d2717a8a7d7fed19`，仅需原始d40完整包，不需要先应用旧增量。旧文件与历史包继续保留。
+
+实际回读与恢复证明 `.cache/crisis-20261119/public-checkpoint-a264118-v2/readback-verification.json`；两份权威索引仅在恢复完成后更新，旧字节保存在同目录previous-*.json。第一次准备的676文件断言被实际677文件的Git树否定，远程修改前停止并保留失败，v2采用实际映射。没有新Windows包、原生游玩或全量检查，本段回执晚于包。[公开检查点](https://github.com/hanshuqimen/zuoye-yuanche/commit/1b3cac250f7ab0e19cfefeba8666c607e5ba8054)
+
 2026-11-19 Windows/目录迁移检查点已完成：源码 `f7b08f891be420a9ac283988912a2cc2836aa67d` 对应公开 MIT main `f7972563b31104c7939ab618972b800d68211d18`，树 `5cfd5ad6fe14f75499e9cd5df6ecb13991af3dd0`。在项目子目录匿名下载688个公开文件，逐项SHA-256及Git对象一致；下载的原始包加新增量实际恢复674个源码文件、361次开发提交，工作区干净且两仓严格Git检查通过。新增量50,935字节，SHA-256 `6e75e13943566922309ff40969e01bae77a73dda1b837dbf26d01cbe11f15f76`，Git blob `f396a6073c979fb6a9bc6d6e10fda14c7e918383`，需原始d40aee9完整包。原9ea增量、旧提交和备份全部保留。证据 `.cache/public-checkpoint-f7b08f8-v3-20261119/readback-verification.json`；通过恢复后才轮换两个权威索引。新Windows包源码721a26e已实际验证，原生玩法仍未复验。本段回执晚于包，不倒称包含于f7b08f8。首次两次准备因历史路径映射差异停止，均在远程写入前，脚本和失败目录保留。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/f7972563b31104c7939ab618972b800d68211d18)
 
 用户于 2026-10-12 授权使用其 GitHub 账号新建仓库并定期上传开发修改。

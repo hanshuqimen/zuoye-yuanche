@@ -118,6 +118,9 @@ class StartupInputs:
 
         rogue_preflight(self.data, database_path,
                         require_existing_binding=settings.client_profile == ROGUE_CLIENT_PROFILE)
+        from terralocal.server.domain.crisis_v2 import preflight as crisis_preflight
+
+        crisis_preflight(self.data, database_path)
 
     def require_data(self):
         if not self.data:
@@ -134,6 +137,18 @@ class StartupInputs:
         self.initialize_home(database)
         self.initialize_campaign(database)
         self.initialize_rogue_topics(database)
+        self.initialize_crisis_v2(database)
+
+    def initialize_crisis_v2(self, database):
+        from terralocal.server.domain.crisis_v2 import available, initialize, snapshot
+
+        if available(self.data):
+            with database.transaction() as session:
+                for account in session.scalars(select(m.Account)):
+                    ctx = Context(session, self.data, account.id)
+                    if initialize(ctx):
+                        ctx.profile.revision += 1
+                    snapshot(ctx)
 
     def initialize_rogue_topics(self, database):
         from terralocal.server.domain.rogue_topics import available, initialize, snapshot
@@ -209,6 +224,9 @@ class Runtime(StartupInputs):
             # rollover. Reasserting that view's changes is safe after syncData.
             period_at = last_refreshed_at(ctx) if campaign_available(ctx.data) else ctx.now
             before = SyncDataAssembler(ctx, period_at=period_at).assemble()
+            from terralocal.server.domain.crisis_v2 import initialize as initialize_crisis
+
+            initialize_crisis(ctx)
             ctx.sanity()
             initialize_campaign(ctx)
             advance(ctx)
@@ -234,6 +252,10 @@ class Runtime(StartupInputs):
         with self.maintenance, self.database.transaction() as session:
             account, _ = authenticate_session(session, token, uid)
             ctx = Context(session, self.require_data(), account.id)
+            from terralocal.server.domain.crisis_v2 import initialize as initialize_crisis
+
+            if initialize_crisis(ctx):
+                ctx.profile.revision += 1
             reconcile_before_sync(ctx, self.protocol_profile)
             reconcile_packs(ctx, self.protocol_profile)
             initialize_campaign(ctx)

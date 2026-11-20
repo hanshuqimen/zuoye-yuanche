@@ -22,6 +22,9 @@ from terralocal.server.services.runtime import Runtime
 
 def schema_0032(path):
     with sqlite3.connect(path) as con:
+        from schema_legacy import remove_crisis_v2_tables
+
+        remove_crisis_v2_tables(con)
         con.execute("PRAGMA foreign_keys=OFF")
         sql = con.execute("SELECT sql FROM sqlite_master WHERE name='rlv2_recruit_options'").fetchone()[0]
         sql, count = re.subn(r",\s*CONSTRAINT rlv2_direct_source CHECK \([^)]*\)", "", sql)
@@ -69,7 +72,8 @@ def test_schema32_elite_offer_scope_and_all_old_columns_survive_atomic_migration
     try:
         assert reopened.sync(token)["user"] == expected
         after = rows(runtime.database.path)
-        assert len(before) == 74 and len(after) == 78
+        assert len(before) == 74 and len(after) == 81
+        assert after["crisis_v2_accounts"] == after["crisis_v2_seasons"] == after["crisis_v2_maps"] == []
         assert after["rlv2_bank_visits"] == after["rlv2_bank_wallets"] == []
         assert after["rlv2_battle_loot_plans"] == []
         for name, values in before.items():

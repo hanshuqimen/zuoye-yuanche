@@ -293,6 +293,9 @@ def test_sqlite_copy_accepts_paths_containing_uri_characters(tmp_path):
 
 
 def use_legacy_schema(connection):
+    from schema_legacy import remove_crisis_v2_tables
+
+    remove_crisis_v2_tables(connection)
     connection.execute("DROP TABLE rlv2_battle_loot_plans")
     connection.execute("UPDATE alembic_version SET version_num = ?", (ROGUE_BANK_AWARDS_REVISION,))
     connection.commit()

@@ -14,6 +14,9 @@ from terralocal.server.persistence.models import (
     CampaignMission,
     CampaignStageProgress,
     CampaignWeek,
+    CrisisV2Account,
+    CrisisV2MapProgress,
+    CrisisV2Season,
     HeadHuntingBanner,
     HomePreset,
     HomePresetSlot,
@@ -86,9 +89,10 @@ ROGUE_DIRECT_REVISION = "0033_rogue_direct_supply"
 ROGUE_CLOSURE_REVISION = "0034_rogue_run_closures"
 ROGUE_BANK_REVISION = "0035_rogue_bank_journals"
 ROGUE_BANK_AWARDS_REVISION = "0036_rogue_bank_awards"
-REVISION = "0037_rogue_battle_loot_plans"
+ROGUE_LOOT_REVISION = "0037_rogue_battle_loot_plans"
+REVISION = "0038_crisis_v2_state"
 CURRENT_REVISIONS = (ROGUE_DIRECT_REVISION, ROGUE_CLOSURE_REVISION, ROGUE_BANK_REVISION,
-                     ROGUE_BANK_AWARDS_REVISION, REVISION)
+                     ROGUE_BANK_AWARDS_REVISION, ROGUE_LOOT_REVISION, REVISION)
 SUPPORTED_REVISIONS = {LEGACY_REVISION, SDK_REVISION, VOICE_REVISION, STORY_REVISION,
                        RECRUIT_REVISION, HEADHUNTING_REVISION, NATIVE_BATTLE_REVISION, FURNITURE_REVISION,
                        ACQUISITION_REVISION, BANNER_REVISION, HOME_REVISION, VOUCHER_REVISION,
@@ -98,7 +102,12 @@ SUPPORTED_REVISIONS = {LEGACY_REVISION, SDK_REVISION, VOICE_REVISION, STORY_REVI
                        ROGUE_SETTLEMENT_REVISION, ROGUE_ENDING_REVISION, ROGUE_SCENE_REVISION,
                        ROGUE_SHOP_REVISION, ROGUE_FLOOR_REVISION, ROGUE_TRAINING_REVISION, ROGUE_PAID_REVISION,
                        ROGUE_FREE_REVISION, ROGUE_ELITE_REVISION, ROGUE_DIRECT_REVISION, ROGUE_CLOSURE_REVISION,
-                       ROGUE_BANK_REVISION, ROGUE_BANK_AWARDS_REVISION, REVISION}
+                       ROGUE_BANK_REVISION, ROGUE_BANK_AWARDS_REVISION, ROGUE_LOOT_REVISION, REVISION}
+
+
+def _crisis_v2_tables(connection):
+    for entity in (CrisisV2Account, CrisisV2Season, CrisisV2MapProgress):
+        entity.__table__.create(connection, checkfirst=True)
 
 
 def _direct_recruit_schema(connection, operations):
@@ -306,6 +315,7 @@ def upgrade(engine) -> None:
                     RogueBankWallet.__table__.create(connection, checkfirst=True)
                     RogueBankVisit.__table__.create(connection, checkfirst=True)
                     RogueBattleLootPlan.__table__.create(connection, checkfirst=True)
+                    _crisis_v2_tables(connection)
                     connection.execute(version.update().values(version_num=REVISION))
 
                 version = Table("alembic_version", MetaData(),
@@ -316,6 +326,10 @@ def upgrade(engine) -> None:
                     Base.metadata.create_all(connection)
                     connection.execute(version.insert().values(version_num=REVISION))
                 elif current in SUPPORTED_REVISIONS - {REVISION}:
+                    _crisis_v2_tables(connection)
+                    if current == ROGUE_LOOT_REVISION:
+                        connection.execute(version.update().values(version_num=REVISION))
+                        return
                     if current == ROGUE_BANK_AWARDS_REVISION:
                         RogueBattleLootPlan.__table__.create(connection, checkfirst=True)
                         connection.execute(version.update().values(version_num=REVISION))
