@@ -1364,3 +1364,9 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 
 
 2026-11-21 危机合约读取五页20KiB（4代码+1只读字段偏移），确认m_stats0x30、运行时extraBattleInfoStats0x50及快照输出extraBattleInfo0xd8；已核MethodSpec255759 AddRange参数从前者复制后者，不用运行时字段补零。仅index1、硬件/APK/ELF/资源/f441数据/TLS/离线/每命令8秒核对，已停止、index0列表/宿主保存保持，无玩家/认证/活动Hotfix对象读取。新REA三个默认方法2896字节/全部成功/public关闭及exit0，输入保持。新增选择性char/enemy/extra计数、22条8种评语本地解释及自有日志/职业绑定的只读准备，未知输入不默认成功；ListDict两种已声明接纳格式的实际原生选择尚待核。169不同当前检查通过（44新规则/12新绑定/113关联），预算前置后单独复验、Ruff/空白通过，研究rg误带PS选项已纠正。冻结14457902五图人工请求/计数/日志全部条件可计算且82表不变，非原生物理战斗或最终通关；源/现用保持。导入comments_0_8的110与PRTS玩家记录220差异保留，不覆盖源表、不标官方匹配规则已证明。证据 .cache/crisis-20261119/comment-counter-summary-v1.json 及 clear-counters-frozen-v1/verification.json；下一原子通关、分数/历史、领取和原生闭环，全目标保持。[报告](../crisis-comment-counters-2026-11-21.md)
+
+
+2026-11-21 快照计数/评语源码1e07741已公开至main460070e，27发布对象全部Git SHA匹配、24新blob扫描通过；760公开文件与719源码/380完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT已实际回读，恢复后才轮换两索引，旧包和索引保持。增量246620字节/SHA-256 1b40a9e914b353ccaee4184543928511cd47941d6d85bde343d5fe3bc894e9cb，Git blob1f9950a5b95c06c7440f536747e714389d4e629f，仅需原始d40完整包。首次Node清单读取因闲置内核重置未执行，重新初始化后完成，preparation-events.json保留；最终恢复证明补入该事件，初版回执原样保留。证据 .cache/crisis-20261119/public-checkpoint-1e07741-v1/readback-verification.json。含169当前定向检查、22条8种评语、五图82表不变及20KiB捕获/2896字节REA；原生格式、110/220阈值差异、原子通关、分数/历史、领取/原生路由及成品仍未完成。本段晚于源码包。[检查点](CHECKPOINTS.md)
+
+
+2026-11-21 已接危机合约原子本地通关v1：共享任务投影、轴/单场纪录、评语、终态回执及只读重放；197不同当前检查通过（30新/167关联）。首轮4项QA错误、冻结v1遗漏通用满理智时间戳及失败副本均保留，v2冻结五图三实际进程退出0、82表冷启/新恢复全行一致，源与现用保持。纪录合并为显式本地策略，不称恢复官方后端；无原生路由/新读取/原始回放/领奖/新EXE。证据 .cache/crisis-20261119/clears-progress-summary-v1.json、clears-v1.xml至v4、clears-frozen-v2/verification.json；下一原生响应/路由、领取/解锁/回放，完整目标未完成。[报告](../crisis-atomic-clears-2026-11-21.md)

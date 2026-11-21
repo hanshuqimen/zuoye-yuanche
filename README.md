@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `1e07741`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `adefbe5`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -167,5 +167,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-1e07741.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约原子本地通关
+
+2026-11-21 危机合约已接原子本地通关纪录、共享任务投影、评语、终态回执和只读重放。197个不同当前定向检查最新通过；冻结五图三实际进程退出0，82表冷启/新恢复全行一致，源和现用保持。本批无新模拟器/REA读取。纪录合并为显式本地策略，不冒称恢复官方后端；原生路由/九字段映射、领取/解锁、原始回放、资料差异及成熟成品仍待完成，无新EXE。
+
+[结果、依据及未完成范围](docs/crisis-atomic-clears-2026-11-21.md) · [验证摘要](validation/crisis-v2-atomic-clears-20261121.json)。
+
+[本次历史增量](history/source-updates-adefbe5.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-adefbe5.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

@@ -35,3 +35,8 @@
 证据根 `.cache/crisis-20261119/`：`comment-counter-summary-v1.json`、`counter-source-projection-v1.json`、`counter-runtime-field-offsets-v1.json`、`counter-attributes-v1.json`、`comment-counters-v1/2/3.xml`、`clear-counters-frozen-v1/verification.json`，以及 `loaded-comment-counters-20261121-v1/`、`rea-comment-counters-v1/`、`mcp-comment-counters-v1/`。官方数据、代码页、伪代码、QA 保存和运行材料不入 Git。
 
 下一以这些已绑定输入完成原子通关、规范结果/计数回执、分数纪录与历史保存，再接领取和原生路由。原生字段若仍有语义缺口，保存独立领域结果再依据消费者映射，不靠固定零值拼成功响应；完整交付目标保持。
+
+
+## 公开源码与恢复回读
+
+2026-11-21 快照计数/评语源码1e07741已公开至main460070e，27发布对象全部Git SHA匹配、24新blob扫描通过；760公开文件与719源码/380完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT已实际回读，恢复后才轮换两索引，旧包和索引保持。增量246620字节/SHA-256 1b40a9e914b353ccaee4184543928511cd47941d6d85bde343d5fe3bc894e9cb，Git blob1f9950a5b95c06c7440f536747e714389d4e629f，仅需原始d40完整包。首次Node清单读取因闲置内核重置未执行，重新初始化后完成，preparation-events.json保留；最终恢复证明补入该事件，初版回执原样保留。证据 .cache/crisis-20261119/public-checkpoint-1e07741-v1/readback-verification.json。含169当前定向检查、22条8种评语、五图82表不变及20KiB捕获/2896字节REA；原生格式、110/220阈值差异、原子通关、分数/历史、领取/原生路由及成品仍未完成。本段晚于源码包。

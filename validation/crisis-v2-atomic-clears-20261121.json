@@ -1,0 +1,88 @@
+{
+  "source_scope": "Atomic local Crisis V2 clear receipts, records, comments and objective readiness; native routes and claims pending",
+  "latest_distinct_focused_tests_passed": 197,
+  "new_clear_cases": 30,
+  "affected_cases": 167,
+  "full_suite_rerun": false,
+  "first_checks": {
+    "passed": 25,
+    "failed": 4
+  },
+  "second_checks": {
+    "passed": 93,
+    "failed": 0
+  },
+  "third_checks": {
+    "passed": 103,
+    "failed": 0
+  },
+  "fourth_new_case": {
+    "passed": 1,
+    "failed": 0
+  },
+  "latest_cases_by_file": {
+    "tests.test_crisis_v2_clears": 30,
+    "tests.test_crisis_v2_objective_transactions": 13,
+    "tests.test_crisis_v2_clear_inputs": 12,
+    "tests.test_crisis_v2_exits": 39,
+    "tests.test_crisis_v2_battle_sessions": 37,
+    "tests.test_crisis_v2_finish_binding": 13,
+    "tests.test_crisis_v2_persistence": 10,
+    "tests.test_crisis_v2_information": 14,
+    "tests.test_crisis_v2_counters": 29
+  },
+  "qa_failures": [
+    "Three score assertions omitted the native empty 0/0 bag display bonus",
+    "Recovery helper was passed a directory instead of a new sqlite3 file",
+    "Frozen v1 changed-table expectation omitted generic full-sanity timestamp refresh; amounts were unchanged"
+  ],
+  "initial_frozen_attempt_retained": true,
+  "initial_frozen_first_process_exit": 1,
+  "new_frozen_attempt": "clears-frozen-v2",
+  "gamedata_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "frozen_maps": 5,
+  "saved_tables": 82,
+  "actual_processes": 3,
+  "actual_processes_exited_zero": 3,
+  "cold_and_fresh_restore_all_rows_match": true,
+  "first_changed_tables": [
+    "battle_sessions",
+    "crisis_v2_accounts",
+    "crisis_v2_maps",
+    "player_profiles",
+    "receipts",
+    "sanity_states"
+  ],
+  "sanity_amounts_unchanged": true,
+  "source_and_current_save_unchanged": true,
+  "authored_encrypted_requests_and_counters": true,
+  "versioned_clear_receipts_written": true,
+  "original_replays_archived": false,
+  "ciphertext_and_unused_telemetry_archived": false,
+  "clear_readonly_preflight": true,
+  "local_record_policy_not_official_backend_algorithm": true,
+  "record_policy": "axis-wise maxima; first strict highest-total single run; claimed objectives preserved; monotonic record timestamp",
+  "new_native_methods_or_emulator_reads": 0,
+  "native_packet_observed": false,
+  "native_route_exposed": false,
+  "windows_package_rebuilt": false,
+  "prior_extra_codec_and_comment_threshold_questions_remain": true,
+  "ruff_passed": true,
+  "whitespace_check_passed": true,
+  "all_new_files_under_workspace": true,
+  "research_command_failures": [
+    "rg used Windows wildcard paths; corrected with rg -g against directories",
+    "Read used nonexistent plural native_replays test filename; corrected to native_replay"
+  ],
+  "lint_initial_import_order_error_corrected": true,
+  "dependency_warning": "Existing Starlette TestClient httpx deprecation; checks passed; no dependency change",
+  "pending": [
+    "Native nine-field response business mapping and finish/start routes",
+    "Claim transactions and unlocks",
+    "Original replay archive/history API",
+    "Matching-version threshold and observed extra-counter wire format",
+    "Representative native client, offline and long-play acceptance",
+    "All original delivery requirements"
+  ],
+  "source_commit": "adefbe5cf1d83cc37f4836bad302118ddbd645b8"
+}

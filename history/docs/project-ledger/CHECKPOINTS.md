@@ -365,3 +365,10 @@ First-theme initialization checkpoint evidence: `.cache/github-checkpoints/rogue
 2026-11-19 备份修复源码 9ea5f815abd2e6ef3b43e7a3476013914000ba7f 已在公开 MIT main 7678761f056b491cfa943cf722ee7792797a084d 保存，树 5aaa20f9983289aefb57394ed73bd4b525bdbe92。D:/zy-public-7678761f 匿名下载 679 个文件逐项 SHA-256 一致；原包加 26,473 字节 source-updates-9ea5f81.bundle，在 D:/zy-source-9ea5f81 恢复 356 次提交、668 文件，全部 Git 对象、严格检查与干净工作区通过。增量 SHA-256 bcc552d9123c1cb85b0869c0f10f666db17689aa56fdfe57f02c19a8a847318f，Git blob 8b6cf08644653cbdd7926145e1fa94a55de8fe98；需要原始完整包 source-history-d40aee9.bundle。恢复后才轮换两个权威索引，前索引和所有旧包保留。原 15 项失败已复验通过，211 项不同相关检查通过，无新全量/原生/Windows 验收。本地随后文档回执不倒称已包含于这份源码增量。旧仓库再次实际回读仍为私有且存在，删除待用户页面操作。证据 .cache/backup-domain-validation-20261119/public-restore-verification.json。[公开修复](https://github.com/hanshuqimen/zuoye-yuanche/commit/7678761f056b491cfa943cf722ee7792797a084d)
 
 2026-11-19 用户初次回复「已删除」后，连接器与新 GitHub 页面仍显示旧仓库，未据回复虚报完成。准备最终删除页后，因电脑操作规则要求当次确认，用户明确回复确认现在删除。点击后 GitHub 要求身份验证，用户自行完成并回复已验证。页面随后明确提示 hanshuqimen/TerraLocal 成功删除，原连接器读回404，新公开仓库Public/MIT保持。旧290文件与144完整包的D盘保全保持，未重建旧仓库。证据 .cache/product-backup-release-20261119/old-repository-deleted.json 及 delete-old-repo-success.jpg。
+
+
+## 2026-11-21 危机合约快照计数与评语检查点
+
+2026-11-21 快照计数/评语源码1e07741已公开至main460070e，27发布对象全部Git SHA匹配、24新blob扫描通过；760公开文件与719源码/380完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT已实际回读，恢复后才轮换两索引，旧包和索引保持。增量246620字节/SHA-256 1b40a9e914b353ccaee4184543928511cd47941d6d85bde343d5fe3bc894e9cb，Git blob1f9950a5b95c06c7440f536747e714389d4e629f，仅需原始d40完整包。首次Node清单读取因闲置内核重置未执行，重新初始化后完成，preparation-events.json保留；最终恢复证明补入该事件，初版回执原样保留。证据 .cache/crisis-20261119/public-checkpoint-1e07741-v1/readback-verification.json。含169当前定向检查、22条8种评语、五图82表不变及20KiB捕获/2896字节REA；原生格式、110/220阈值差异、原子通关、分数/历史、领取/原生路由及成品仍未完成。本段晚于源码包。
+
+完整公开提交 `460070eff7150a61b26e698183a7c5c5b66a76ab`，树 `f0f68fb03550786eb0eee58bdf4d57c7da291131`，源码 `1e0774149d59a002d19ee55faf48d15d12543a96`。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/460070eff7150a61b26e698183a7c5c5b66a76ab)。匿名克隆、新恢复和两旧索引分别保存在同一证据目录 anonymous-public-clone/、restored-development/、previous-*-latest.json。

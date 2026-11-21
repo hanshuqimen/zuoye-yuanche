@@ -130,9 +130,12 @@ def validate_record(data, parent, saved):
             or type(saved["start_hash"]) is not str or not SHA256.fullmatch(saved["start_hash"])
             or saved["start_hash"] != _start_hash(parent, saved)):
         raise ValueError("危机合约战斗选择快照或指纹不一致")
-    from terralocal.server.domain.crisis_v2_exits import validate_terminal
+    from terralocal.server.domain import crisis_v2_clears, crisis_v2_exits
 
-    validate_terminal(parent, saved)
+    if isinstance(parent.get("settlement"), dict) and parent["settlement"].get("version") == crisis_v2_clears.VERSION:
+        crisis_v2_clears.validate_terminal(data, parent, saved, evaluation)
+    else:
+        crisis_v2_exits.validate_terminal(parent, saved)
     return evaluation
 
 

@@ -171,3 +171,42 @@ def decode_counters(stats):
         return CounterFacts(characters, enemies, extra, encoding)
     except (ValueError, TypeError, KeyError, DomainError):
         raise invalid() from None
+
+
+def restore_counters(value):
+    """Validate the minimal versioned receipt, without admitting raw telemetry."""
+    try:
+        if (type(value) is not dict or set(value) != {"codec", "characters", "enemies", "extra"}
+                or value["codec"] != CODEC):
+            raise ValueError()
+        for key in ("characters", "enemies", "extra"):
+            if value[key] is not None and (type(value[key]) is not list or len(value[key]) > MAX_COUNTER_ROWS):
+                raise ValueError()
+        stats = {}
+        if value["characters"] is not None:
+            stats["charStats"] = [{"Key": {"charId": char, "counterType": kind}, "Value": count}
+                                  for char, kind, count in value["characters"]]
+        if value["enemies"] is not None:
+            stats["enemyStats"] = [{"Key": {"enemyId": enemy, "counterType": kind, "isInvalidKilled": flag},
+                                     "Value": count} for enemy, kind, flag, count in value["enemies"]]
+        if value["extra"] is not None:
+            rows = []
+            for kind, entity, name, sample, count in value["extra"]:
+                if any(type(v) is not str for v in (kind, entity, name)):
+                    raise ValueError()
+                key = ",".join((kind, entity, name))
+                if kind == "ATTRIBUTE":
+                    if type(sample) is not int:
+                        raise ValueError()
+                    text = f"{sample//1000}.{sample%1000:03d}" if name == "HP_RATIO" else str(sample)
+                    key += "," + text
+                elif sample is not None:
+                    raise ValueError()
+                rows.append({"Key": key, "Value": count})
+            stats["extraBattleInfo"] = rows
+        restored = decode_counters(stats)
+        if restored.canonical() != value:
+            raise ValueError()
+        return restored
+    except (ValueError, TypeError, KeyError, DomainError):
+        raise ValueError("危机合约回执计数不符合绑定格式") from None

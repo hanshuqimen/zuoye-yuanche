@@ -1,5 +1,5 @@
 {
-  "source_commit": "1e0774149d59a002d19ee55faf48d15d12543a96",
+  "source_commit": "adefbe5cf1d83cc37f4836bad302118ddbd645b8",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "45a46f3ce3c442fcc4f8c65bba7f2397cab1350b",
+      "original_git_blob": "478b6f6dd116bae06d5b74414a2eb28116c26b4f",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "0c827c77222731c4443935ae2a0cc1f2cb5077b09b01ad80f7d5e90835ce37a9",
+      "public_sha256": "e5eeedb8639e8a0527fe10955512235297767c70c77fc20043ce27f33c36cce9",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "a77ba34fb6ff318e721e2722376a52c9b9ee14f6102dd7a99c96ce5d569d8250",
+      "public_sha256": "5fcccb932e1375ae216352be523e56f55677644e001b2036c395386ad514c866",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "a1e0b31d801a7f960f19680d62f6d7393b05bd91",
+      "original_git_blob": "779b64fd809ddabd28eddc1a7b56331ec209a079",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "6a702c95dea069e3463b83bbeb7fdc601edf360133447ec015d8515bd57be999",
+      "public_sha256": "ba4aac4d4a97d744f7082c82fef7f65830ac242626d850f2c6105af86e1a04c6",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "5829a811fbefe9443d220d0c42a705a15f413955",
+      "original_git_blob": "836c736bb02e35e5ab2cdfe6de2a58716dce49e8",
       "published_path": "history/STATUS.md",
-      "public_sha256": "6651a6c8e66964a44ae815631abc7c96317a378eb3cfd093d36286932723673b",
+      "public_sha256": "31c001c645240b44afbe18b9227caac59efb87d72f35239ac1cb1c21df3b354c",
       "modified_for_publication": false
     },
     {
@@ -298,6 +298,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/crisis-atomic-clears-2026-11-21.md",
+      "original_git_blob": "3084dea1a5e9ae5363703ca34372f0fa99168fa3",
+      "published_path": "docs/crisis-atomic-clears-2026-11-21.md",
+      "public_sha256": "e790f5997374cd69e17541382ee297625b6949264634d643f558d06307b18b66",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/crisis-battle-contract-2026-11-20.md",
       "original_git_blob": "bbb6d8dd1650b22aa5871ec95b63192634325cf8",
       "published_path": "docs/crisis-battle-contract-2026-11-20.md",
@@ -313,9 +320,9 @@
     },
     {
       "source_path": "docs/crisis-comment-counters-2026-11-21.md",
-      "original_git_blob": "d0fcb89a643902b953e3d1212595bd19162e5860",
+      "original_git_blob": "0f36374a906b353df94d545bb02b97c9e31db732",
       "published_path": "docs/crisis-comment-counters-2026-11-21.md",
-      "public_sha256": "cb158c5c4c5daada4b000b7ef87180c0f53faec66392aaf99c6509c543d68f28",
+      "public_sha256": "51c55e356624b137c671a107780c41bc501f00a31348f1208fb6c06dc23edf91",
       "modified_for_publication": false
     },
     {
@@ -439,9 +446,9 @@
     },
     {
       "source_path": "docs/github-checkpoints.md",
-      "original_git_blob": "00da5125badbf015de6690d376634ba6a3f741d1",
+      "original_git_blob": "9d3a035d31ad7f9f0c73c60293068d4ce1cd991d",
       "published_path": "history/docs/github-checkpoints.md",
-      "public_sha256": "52494e3d018aaf8a4642e041320871e716dd65cafb3a14585fcf3366dac09ecc",
+      "public_sha256": "1052f1d71b60a6e8d1050bee4029a3447a926c255dfe5e4fac63ff8fd23846fa",
       "modified_for_publication": false
     },
     {
@@ -607,30 +614,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "37ad0fb94ae3bb65ef4d76ec0e6b3755bc9e1a1b",
+      "original_git_blob": "96220bc7474480f8efab3a142765ecbe1fea829a",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "54b666a5747456d5ad6f000767dcb6042694d8373738421fae990fcccbe77b34",
+      "public_sha256": "aa937ccd85040d081b6c4b0211e9141a9a18fbb4ce42f4893f0edbf92627e9a3",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "5d6fe1147fb8d16af3eb5740e9bce27612836325",
+      "original_git_blob": "45b1a37d0043eef1351d6ccb4dd91165ccb627a6",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "fe0994238011e221245e7acb45e097097dcf1125fb1fe6cdc0e8dd068803a10f",
+      "public_sha256": "8a1ddfa80596e363807a0eda0422b7a05c5b15d966fdf064c430e51f4bdbe27e",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "730bdca9773e45e2ce441ce9e4130dd2b8bdb5c3",
+      "original_git_blob": "c4fbbfdc98536a969ecf17e85df9bcb8410cce9e",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "cbec5f889b8874b30672215c0b1f983f2dcd2d8bd1f428bde8d4396a3bb3fead",
+      "public_sha256": "669a9e7f405fe6f65b3d0ba907f0f34e3c43dec3e761fbce0bf1ce7d2d4075d0",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "6cf6124c333354e77de224c5e25204e5e576c7a5",
+      "original_git_blob": "5c546de05e05c5632d600f2880de959f4224646d",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "065a58ee6a6ba693656caea44e8024341252734c55ff1cabaf61acfeb1536417",
+      "public_sha256": "9ea2c834fa5ed8f936b31a9de738437094cc932262c9fa16d4dcec899b461647",
       "modified_for_publication": false
     },
     {
@@ -663,9 +670,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "7facbdc2d82a80ce3102fe4bbd01c2b96992ac63",
+      "original_git_blob": "19190adf2a100e956840668d9cf14470bfe5c23f",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "94868cb41726fe6caaf64f00f091cbc08190da3ed7420c38ca188d268804a4cd",
+      "public_sha256": "6ef7341b40f2b9e1ae6f83afa7fce046a4b8ee62e8d9ead29ecf779dfd5066b2",
       "modified_for_publication": false
     },
     {
@@ -806,6 +813,13 @@
       "original_git_blob": "6e703c9eb2df7c6b1bc90e9a9d203953feb7b2da",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-19-before-public-release.md",
       "public_sha256": "da3bd9a61af73be26eb2655a5e0bb36b3f8e68bd1917d035c51d7c88770f6195",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-21-before-atomic-clears.md",
+      "original_git_blob": "aa4a01a41ffae85087bbf524c6a1e4ea51c6bad1",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-21-before-atomic-clears.md",
+      "public_sha256": "c55d1ca661d623400fd9585b056cdf2381cc8fe325a1d0dbd3cb11be48d7e824",
       "modified_for_publication": false
     },
     {
@@ -2098,16 +2112,23 @@
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2_battles.py",
-      "original_git_blob": "e962dd0416ed4323d6cf95f2d6cb235b8c42f908",
+      "original_git_blob": "768f2deb39e8bbf6ef09fe494ba213e237856245",
       "published_path": "terralocal/server/domain/crisis_v2_battles.py",
-      "public_sha256": "f3917415d69de3b849ef7e347daeafe24628c02c7aaf315f9177553389d5140d",
+      "public_sha256": "e4ae47b0156517af75569a5863f2340a7d10616c45192d5bda8642ae12cd53e1",
       "modified_for_publication": false
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2_clear.py",
-      "original_git_blob": "7a5ba12a1190f67d55e39be91b3d68140fa27688",
+      "original_git_blob": "923593accea4bad7c7a7cd2271a6f2674cfffcbc",
       "published_path": "terralocal/server/domain/crisis_v2_clear.py",
-      "public_sha256": "ac4c81e500656da13895165e318a7826274bc48c10441d627f1ced0c27c12d35",
+      "public_sha256": "84be887b60ed3c7434c54762f0859cfb8e9dcfdadb35e0eb82d6877b0af8834b",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "terralocal/server/domain/crisis_v2_clears.py",
+      "original_git_blob": "4204ef85163fc809148b9e1fcababb574964c598",
+      "published_path": "terralocal/server/domain/crisis_v2_clears.py",
+      "public_sha256": "1b6c99a8eb0660048608498894074a8e256f43f6f44f9c8474a7a4724463f87c",
       "modified_for_publication": false
     },
     {
@@ -2119,9 +2140,9 @@
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2_objectives.py",
-      "original_git_blob": "57c8bbc2ad40a5369750d28893e3442c713c0c77",
+      "original_git_blob": "26212d41634b35b5a6ffa851cc5c8ab74cef3bf1",
       "published_path": "terralocal/server/domain/crisis_v2_objectives.py",
-      "public_sha256": "5e7bd310085b74bda8749d30f4df8f6af7f601bfb316da7f6991b8e98a6fbf57",
+      "public_sha256": "d4c4b5d561954658f51f4aa2f9cf080d743f306de5a1f47266a733c5f925ec25",
       "modified_for_publication": false
     },
     {
@@ -3190,9 +3211,9 @@
     },
     {
       "source_path": "terralocal/server/protocol/crisis_v2_counters.py",
-      "original_git_blob": "0ef4c92b2e0cf1580cda185f608175a31609fba9",
+      "original_git_blob": "0cde14e1f824f842ec80754c0aa66a64fa00e79f",
       "published_path": "terralocal/server/protocol/crisis_v2_counters.py",
-      "public_sha256": "e6022e4a2daa74f2400f0708f2a9fd5965f76d2444398e5587d5ac05f6df9f84",
+      "public_sha256": "f685ab2660f26cc778777e1e6840fe04227997872c792fe89f9151cec2043537",
       "modified_for_publication": false
     },
     {
@@ -3669,6 +3690,13 @@
       "original_git_blob": "1ba1349c950ce0598ef84baae7b0ca02ab0a7a00",
       "published_path": "tests/test_crisis_v2_clear_inputs.py",
       "public_sha256": "e77445f5620e3bac473293dab21b6eeeb15bd475e40464cd3160e1ef1545b197",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "tests/test_crisis_v2_clears.py",
+      "original_git_blob": "5c575779fa083673700c40a4a9bb4eb54127caf3",
+      "published_path": "tests/test_crisis_v2_clears.py",
+      "public_sha256": "7d86c02407cb03877e4f90ce7a6abf70c5fd875b70c942af203985e6af5aa751",
       "modified_for_publication": false
     },
     {
@@ -5038,14 +5066,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-1e07741.bundle",
-    "bytes": 246620,
-    "sha256": "1b40a9e914b353ccaee4184543928511cd47941d6d85bde343d5fe3bc894e9cb",
-    "git_blob": "1f9950a5b95c06c7440f536747e714389d4e629f",
-    "source_commit": "1e0774149d59a002d19ee55faf48d15d12543a96",
+    "path": "history/source-updates-adefbe5.bundle",
+    "bytes": 351726,
+    "sha256": "3f2128c18d6b8b2fc815e61832221e36ebf4ffba546642c70614f6f8d7a98e03",
+    "git_blob": "098be85aa61964ecad854a512b1193f1fdada4eb",
+    "source_commit": "adefbe5cf1d83cc37f4836bad302118ddbd645b8",
     "branch": "codex/development",
-    "source_files": 719,
-    "source_history_commits": 380,
+    "source_files": 723,
+    "source_history_commits": 382,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"
