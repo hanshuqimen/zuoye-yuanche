@@ -24,7 +24,7 @@ def map_detail():
         "challenge": {"nodeType": "KEYPOINT", "runeId": None, "slotPackId": None,
                       "mutualExclusionGroup": None, "adjacentNodeList": ["rune"]}},
         "runeDataMap": {"test": {"runeId": "test", "score": 10, "dimension": 0}},
-        "bagDataMap": {}, "exclusionDataMap": {}, "dailyRuneUnlcokDataMap": {},
+        "bagDataMap": {}, "commentDataMap": {}, "exclusionDataMap": {}, "dailyRuneUnlcokDataMap": {},
         "dimensionItemList": [{"maxScore": 100} for _ in range(6)]}
 
 

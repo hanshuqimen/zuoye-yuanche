@@ -263,8 +263,9 @@ def start(ctx, map_id, squad_id, slots, rune_slots, *, assist_friend=None):
     rule = catalog.rules[(season, map_id)]
     try:
         catalog.challenges(season, map_id)  # Reject unknown settlement conditions before insertion.
+        catalog.comments(season, map_id)
     except ValueError as exc:
-        raise DomainError("CRISIS_V2_RULES_UNSUPPORTED", "危机合约挑战条件尚未完成适配", 503) from exc
+        raise DomainError("CRISIS_V2_RULES_UNSUPPORTED", "危机合约挑战或评语条件尚未完成适配", 503) from exc
     try:
         evaluation = rule.evaluate(rune_slots, inputs, permanent=stage["stageType"] == "PERMANENT")
     except (ValueError, TypeError) as exc:

@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `ab461ec`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `1e07741`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -154,5 +154,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-ab461ec.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约快照计数与评语条件
+
+2026-11-21 危机合约快照计数已核对应extraBattleInfo，新增选择性计数、首季22条/8种评语条件及只读通关准备。169个不同当前定向检查通过，冻结五图人工请求可计算资格，82表不变、现用和源数据保持。受控读取4代码页及1只读偏移页共20480字节；三个新REA方法2896字节，公共关闭/退出0。实际原生计数格式未观察；一条评语导入110与社区220差异保留。尚未接原子通关、分数/历史、领取或原生路由，未重建EXE，完整成品仍未完成。
+
+[结果、依据和支持范围](docs/crisis-comment-counters-2026-11-21.md) · [验证摘要](validation/crisis-v2-comment-counters-20261121.json)。
+
+[本次历史增量](history/source-updates-1e07741.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-1e07741.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

@@ -1542,3 +1542,9 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 
 
 2026-11-21 危机合约新增失败/退出版本化回执和只读终态预检；同业务事实不同IV/序号、重启及最新登录返回原答复，改变事实冲突，旧STARTED登录仍不接管。任务参与组件新增STARTED保护，普通模式不消费此回执；无地图/分数/评论/领奖改动，通关候选明确501并保留会话。102不同当前用例最新通过，原38通过/1失败（QA漏参数）、101通过/1失败（QA预期码错）和单项复验保留，Ruff未用导入/iterable警告已修。冻结14457902五图三实际Python进程均退出0、82表冷启/新恢复全行相同，首次仅battle_sessions变，现用/源数据保持。新REA三默认方法3048字节，先前66406超时补获成功；ListDict转换器写对象、两个同型池不可混用，字段和全部评论仍未证明。status/close及exit0/输入保持，未启动模拟器。证据 .cache/crisis-20261119/exit-progress-summary-v1.json、exits-frozen-v1/、mcp-exit-counters-v1/；下一通关计数/纪录/全部评论与领取/原生闭环，完整目标保持。[报告](../crisis-exits-2026-11-21.md)
+
+
+2026-11-21 退出回执源码ab461ec已公开至main c6f1f0a，22发布对象全部Git SHA匹配、19新增文本blob扫描通过；749公开文件与711源码/378完整历史实际匿名下载/新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区一致。Public/MIT回读、恢复后才轮换两索引，旧索引/包保持。增量224233字节/SHA-256 8c6f43938d52f452cae00c3c5db3d53f601b52cfb32b4670a03c42c5e1af56ab。首次Node清单读取因闲置内核重置未执行，尚未写远程；重初始化后成功，preparation-events.json保留原因。证据 .cache/crisis-20261119/public-checkpoint-ab461ec-v1/readback-verification.json。本段晚于源码包；通关、分数/全部评论、领奖、原生及完整成品继续未完成。[检查点](CHECKPOINTS.md)
+
+
+2026-11-21 危机合约读取五页20KiB（4代码+1只读字段偏移），确认m_stats0x30、运行时extraBattleInfoStats0x50及快照输出extraBattleInfo0xd8；已核MethodSpec255759 AddRange参数从前者复制后者，不用运行时字段补零。仅index1、硬件/APK/ELF/资源/f441数据/TLS/离线/每命令8秒核对，已停止、index0列表/宿主保存保持，无玩家/认证/活动Hotfix对象读取。新REA三个默认方法2896字节/全部成功/public关闭及exit0，输入保持。新增选择性char/enemy/extra计数、22条8种评语本地解释及自有日志/职业绑定的只读准备，未知输入不默认成功；ListDict两种已声明接纳格式的实际原生选择尚待核。169不同当前检查通过（44新规则/12新绑定/113关联），预算前置后单独复验、Ruff/空白通过，研究rg误带PS选项已纠正。冻结14457902五图人工请求/计数/日志全部条件可计算且82表不变，非原生物理战斗或最终通关；源/现用保持。导入comments_0_8的110与PRTS玩家记录220差异保留，不覆盖源表、不标官方匹配规则已证明。证据 .cache/crisis-20261119/comment-counter-summary-v1.json 及 clear-counters-frozen-v1/verification.json；下一原子通关、分数/历史、领取和原生闭环，全目标保持。[报告](../crisis-comment-counters-2026-11-21.md)

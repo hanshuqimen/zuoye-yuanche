@@ -128,6 +128,7 @@ class CrisisV2Catalog:
         self._refreshes = MappingProxyType(refreshes)
         self._challenge_rules = {}
         self._objective_rules = {}
+        self._comment_rules = {}
         self.data_hash = data.manifest["hash"]
         self.fingerprint = fingerprint({"policy": POLICY, "data_hash": self.data_hash,
                                         "source": source, "shared": shared})
@@ -174,6 +175,17 @@ class CrisisV2Catalog:
             detail = self.info(season_id)["mapDetailDataMap"][map_id]
             self._objective_rules.setdefault(key, CrisisV2ObjectiveRules(detail, self.rules[key]))
         return self._objective_rules[key]
+
+    def comments(self, season_id, map_id):
+        from terralocal.server.gamedata.crisis_v2_comments import CrisisV2CommentRules
+
+        key = (season_id, map_id)
+        if key not in self.rules:
+            raise ValueError("危机合约评语引用未知地图")
+        if key not in self._comment_rules:
+            detail = self.info(season_id)["mapDetailDataMap"][map_id]
+            self._comment_rules.setdefault(key, CrisisV2CommentRules(detail, self.rules[key]))
+        return self._comment_rules[key]
 
 
 def validate_crisis_v2(tables, version):

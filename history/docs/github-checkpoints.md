@@ -141,3 +141,10 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 2026-11-21 当前公开检查点source `af686f30015ff5aa3317b5b3290455b40ef55aee` → main `8c797dbe2ad66ccb77e77b653b022ded11098c63`，树`e2a291cf7a631d701d515f4c152396f4387214c5`。23发布对象Git SHA匹配、19新增文本blob扫描通过；742公开文件匿名下载全部SHA-256/Git对象一致，原始d40完整包加209,463字节`history/source-updates-af686f3.bundle`在项目内新目录恢复707源码/376完整提交，严格fsck/干净工作区通过。新包SHA-256 `30fab32ce83b7709f8a417a25911791e0254e77fcfb59ce4c4c58a26bc4855e9`，Git blob `1487b0ac9e2268c1221c554e376a46ac05ac1f61`，仅需原始d40包。证据`.cache/crisis-20261119/public-checkpoint-af686f3-v1/readback-verification.json`及同目录restored-development/。Public/MIT回读、恢复后才轮换两索引，旧索引/包保持。含任务事务组件、89不同当前检查、冻结五图人工结果/82表冷启恢复；原生结果、分数/全部评论、领奖/终态回执和EXE尚未完成。本段晚于包。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/8c797dbe2ad66ccb77e77b653b022ded11098c63)
 
 匿名下载与新恢复分别为上述证据同目录的 anonymous-public-clone/ 与 restored-development/；previous-*-latest.json 保留两个旧索引。实现、QA策略及失败范围见[本阶段报告](crisis-objectives-2026-11-21.md)。
+
+
+## 2026-11-21 危机合约失败与退出回执检查点
+
+2026-11-21 当前公开检查点source `ab461ecdca220ed06bf1dc252e0d2f7dfbc138e8` → main `c6f1f0a138bafe254eda501770ab9b0ab2f4cac4`，树`adf696a6fd90e8878741217271b8d5b21e30110c`。22发布对象Git SHA匹配、19新增文本blob扫描通过；749公开文件匿名下载全部SHA-256/Git对象一致，原始d40完整包加224,233字节`history/source-updates-ab461ec.bundle`在项目内新目录恢复711源码/378完整提交，严格fsck/干净工作区通过。新包SHA-256 `8c6f43938d52f452cae00c3c5db3d53f601b52cfb32b4670a03c42c5e1af56ab`，Git blob `843ea3520582919460bf8d5ad33344b5f058bf5c`，仅需原始d40包。Public/MIT回读、恢复后才轮换两索引，旧索引/包保持。证据`.cache/crisis-20261119/public-checkpoint-ab461ec-v1/readback-verification.json`及同目录restored-development/。含版本化退出回执/只读终态保护、102当前检查、五图人工加密请求/三进程/82表恢复；原生通关、分数/全部评论、领奖及EXE仍未完成。本段晚于包。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/c6f1f0a138bafe254eda501770ab9b0ab2f4cac4)
+
+匿名下载和新恢复分别在上述证据同目录 anonymous-public-clone/、restored-development/；previous-*-latest.json 保留旧索引。Node首次读取因闲置内核重置未执行，重初始化后再读取并完成所有上传；未扩大权限、没有强推。规则、原失败和实际支持范围见[本阶段报告](crisis-exits-2026-11-21.md)。
