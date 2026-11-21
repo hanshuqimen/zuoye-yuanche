@@ -194,7 +194,7 @@ class Runtime(StartupInputs):
             raise
 
     def mutate(self, token: str, uid: str | None, key: str, operation: str, payload: dict, action,
-               *, account_scoped: bool = False) -> dict:
+               *, account_scoped: bool = False, preserve_result_ts: bool = False) -> dict:
         if not key or len(key) > 120:
             raise DomainError("IDEMPOTENCY_REQUIRED", "写操作需要有效的幂等键")
         hashed = fingerprint({"operation": operation, "payload": payload})
@@ -231,11 +231,16 @@ class Runtime(StartupInputs):
             initialize_campaign(ctx)
             advance(ctx)
             result = action(ctx)
+            response_ts = ctx.now
+            if preserve_result_ts:
+                response_ts = result.get("ts")
+                if type(response_ts) is not int or not 0 <= response_ts < 2**63:
+                    raise DomainError("INVALID_RESPONSE_TIMESTAMP", "响应时间无效；本次修改已回滚", 503)
             ctx.profile.revision += 1
             session.flush()
             after = SyncDataAssembler(ctx).assemble()
             envelope = {"result": 0, **result, "playerDataDelta": diff(before, after),
-                        "ts": ctx.now, "revision": ctx.profile.revision}
+                        "ts": response_ts, "revision": ctx.profile.revision}
             session.add(m.Receipt(account_id=account.id, key=namespaced_key, request_hash=hashed,
                                   result=envelope, created_at=ctx.now))
             # The enclosing context commits before this response becomes visible to the caller.

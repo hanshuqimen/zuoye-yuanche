@@ -143,8 +143,15 @@ def preflight(connection, data):
     # SQLite is already open read-only, before any migration or WAL setup.
     import sqlite3
 
+    from terralocal.server.domain import crisis_v2_native
+
     connection.row_factory = sqlite3.Row
     try:
+        if connection.execute("""SELECT 1 FROM receipts r LEFT JOIN crisis_v2_battles c
+                ON c.battle_id=substr(r.key,?) AND c.account_id=r.account_id
+                WHERE substr(r.key,1,?)=? AND c.battle_id IS NULL LIMIT 1""",
+                (len(crisis_v2_native.PREFIX) + 1, len(crisis_v2_native.PREFIX), crisis_v2_native.PREFIX)).fetchone():
+            raise ValueError("危机合约原生响应缺少所属战斗")
         if connection.execute("""SELECT 1 FROM battle_sessions b
                 WHERE json_extract(b.native_context,'$.formation_mode')='CRISIS_V2'
                 AND NOT EXISTS (SELECT 1 FROM crisis_v2_battles c WHERE c.battle_id=b.id) LIMIT 1""").fetchone():
@@ -163,7 +170,13 @@ def preflight(connection, data):
             for field in ("squad_snapshot", "native_context", "settlement"):
                 parent[field] = json.loads(parent[field]) if parent[field] is not None else None
             parent["practice"] = {0: False, 1: True}.get(parent["practice"], parent["practice"])
-            validate_record(data, parent, saved)
+            evaluation = validate_record(data, parent, saved)
+            response = connection.execute("SELECT account_id,key,request_hash,result,created_at FROM receipts WHERE account_id=? AND key=?",
+                (parent["account_id"], crisis_v2_native.PREFIX + parent["id"])).fetchone()
+            if response is not None:
+                record = dict(response)
+                record["result"] = json.loads(record["result"])
+                crisis_v2_native.validate(data, parent, saved, evaluation, record)
     except (sqlite3.DatabaseError, ValueError, KeyError, TypeError) as exc:
         raise ValueError("危机合约战斗保存不兼容；请保留原配置和存档") from exc
 

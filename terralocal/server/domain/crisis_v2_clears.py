@@ -160,7 +160,11 @@ def validate_terminal(data, parent, saved, evaluation):
 
 
 def finish(ctx, request):
-    pending, submission = crisis_v2_battles.prepare_finish(ctx, request)
+    return finish_prepared(ctx, *crisis_v2_battles.prepare_finish(ctx, request))
+
+
+def finish_prepared(ctx, pending, submission):
+    """Internal participant after the common owned/versioned admission step."""
     facts = crisis_v2_exits.normalize(submission.facts)
     parent = pending.battle
     if parent.state != "STARTED":

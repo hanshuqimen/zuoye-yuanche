@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `adefbe5`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `ec9f1a6`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -180,5 +180,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-adefbe5.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约原生战斗路由
+
+2026-11-21 危机合约原生开战/结算路由、九字段本地展示及持久首次响应已接。196当前定向检查通过（22新/174关联）；冻结五图40真实HTTPS、三服务退出0，82表冷启/新恢复一致。新增8KiB读取和9方法1980字节REA；真实数据否定packedRune.key，按原版id及147条证据纠正，失败副本保留。原版客户端画面、领取/解锁/商店/原始回放及成熟成品仍待验，无新EXE。
+
+[结果、依据及纠正](docs/crisis-native-battles-2026-11-21.md) · [验证摘要](validation/crisis-v2-native-battles-20261121.json)。
+
+[本次历史增量](history/source-updates-ec9f1a6.bundle)只需原始完整包：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-ec9f1a6.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

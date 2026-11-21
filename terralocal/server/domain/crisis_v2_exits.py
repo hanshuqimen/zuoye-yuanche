@@ -90,7 +90,12 @@ def validate_terminal(parent, saved):
 def finish(ctx, request):
     from terralocal.server.domain import crisis_v2_battles
 
-    bound, submission = crisis_v2_battles.prepare_finish(ctx, request)
+    return finish_prepared(ctx, *crisis_v2_battles.prepare_finish(ctx, request))
+
+
+def finish_prepared(ctx, bound, submission):
+    from terralocal.server.domain import crisis_v2_battles
+
     facts = normalize(submission.facts)
     digest = fingerprint(facts.model_dump())
     parent = bound.battle
