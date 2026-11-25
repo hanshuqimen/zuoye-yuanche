@@ -86,8 +86,9 @@ def validate(data, parent, saved, evaluation, record):
     return receipt.response
 
 
-def finish(ctx, request):
+def finish(ctx, request, *, archive_journal=False):
     pending, submission = crisis_v2_battles.prepare_finish(ctx, request)
+    fresh = pending.battle.state == "STARTED"
     facts = crisis_v2_exits.normalize(submission.facts)
     if crisis_v2_exits.outcome(facts) == "CLEAR_CANDIDATE":
         crisis_v2_clears.finish_prepared(ctx, pending, submission)
@@ -111,5 +112,9 @@ def finish(ctx, request):
         validate(ctx.data, parent, saved, pending.evaluation, record)
     except (ValueError, TypeError, KeyError, AttributeError) as exc:
         raise DomainError("CRISIS_V2_RESPONSE_UNSUPPORTED", "危机合约原生响应或保存尚未完成适配；本次修改已回滚", 503) from exc
+    if archive_journal and fresh and parent["settlement"]["version"] == crisis_v2_clears.VERSION:
+        from terralocal.server.domain import crisis_v2_journals
+
+        crisis_v2_journals.archive(ctx, pending.battle, submission.battle_log)
     ctx.session.add(m.Receipt(**record))
     return response.model_dump()

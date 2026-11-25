@@ -27,7 +27,7 @@ def available(data):
     return data is not None and SERVER_TABLE in data.manifest["tables"]
 
 
-def preflight(data, path):
+def preflight(data, path, *, require_existing_binding=False):
     from terralocal.server.persistence.migrations import CRISIS_V2_REVISION, REVISION
 
     catalog = data.crisis_v2 if available(data) else None
@@ -43,9 +43,18 @@ def preflight(data, path):
         # An older save without this feature can migrate additively. A current
         # or partially damaged save must fail before any writable initialization.
         if ((present and present != expected) or (has_battles and present != expected)
+                or (require_existing_binding and present and "accounts" not in tables)
                 or (not present and any((version,) in revisions for version in (CRISIS_V2_REVISION, REVISION)))
                 or ((REVISION,) in revisions and not has_battles)):
             raise ValueError("危机合约存档表不完整；请保留原存档并从已验证备份恢复")
+        if require_existing_binding and "accounts" in tables:
+            unbound_accounts = (
+                "SELECT 1 FROM accounts a WHERE NOT EXISTS "
+                "(SELECT 1 FROM crisis_v2_accounts c WHERE c.account_id=a.id) LIMIT 1"
+                if present else "SELECT 1 FROM accounts LIMIT 1"
+            )
+            if connection.execute(unbound_accounts).fetchone():
+                raise ValueError("请为危机合约测试使用独立存档，不转换已有账号")
         if not present:
             return
         rows = connection.execute("SELECT gamedata_hash,catalog_hash,policy_version FROM crisis_v2_accounts").fetchall()

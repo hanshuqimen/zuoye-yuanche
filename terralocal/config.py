@@ -18,7 +18,7 @@ def default_data_dir() -> Path:
 class Settings(BaseModel):
     model_config = ConfigDict(extra="forbid")
     data_dir: Path = Field(default_factory=default_data_dir)
-    game_host: str = "127.0.0.1"
+    game_host: str = "0.0.0.0"
     game_port: int = Field(default=8443, ge=1024, le=65535)
     admin_host: str = "127.0.0.1"
     admin_port: int = Field(default=8080, ge=1024, le=65535)
@@ -31,8 +31,9 @@ class Settings(BaseModel):
     admin_password_hash: str | None = None
     request_limit: int = Field(default=8 * 1024 * 1024, ge=1024, le=32 * 1024 * 1024)
     session_ttl: int = Field(default=86400, ge=60, le=7 * 86400)
-    emulator_dir: Path | None = None
+    emulator_dir: Path = Path("D:/leidian/LDPlayer9")
     emulator_index: int | None = None
+    crisis_archive_replays: bool = False
 
     @field_validator("data_dir")
     @classmethod
