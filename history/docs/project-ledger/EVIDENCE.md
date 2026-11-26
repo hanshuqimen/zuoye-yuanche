@@ -1,5 +1,9 @@
 # 验证证据登记
 
+2026-11-25 危机合约证据：`.cache/dot-crisis-final-20261125-121008-633/junit.xml`（382）；`.cache/dot-crisis-shop-legacy-fixed-20261125-121035-056/junit.xml`（36）；`.cache/dot-crisis-extras-https-20261125-120824-548/verification.json`（冻结首季六符文与本地商店）。
+
+2026-11-25 [本地宝藏领奖](../crisis-local-claims-2026-11-25.md)：最终 `.cache/dot-crisis-pack-20261125-120207-139/` 中保留 JUnit 和 HTTPS 验收；冻结数据/测试档不入 Git。
+
 2026-11-20 公开主结算/挑战检查点`.cache/crisis-20261119/public-checkpoint-c06199f-v1/`：prepared.json记录21发布文件及25新增文本blob扫描，published.json回读main21b8a17/treef7dd2f8/Public/MIT；readback-verification.json记录720公开文件、694源码/370提交实际匿名恢复、严格fsck/干净工作区。143,504字节新包SHA-256 6429dc7454c8f8dd40abb4bb73ef99c2d1d5fb1101a4bf2d8b109cb9b57d4ada；恢复后两索引轮换、原字节previous-*.json保持。[摘要](../github-checkpoints.md#2026-11-20-主结算合同及首季挑战组件)
 
 2026-11-20 `.cache/crisis-20261119/challenges-v1.xml`23通过（新9/信息14）、challenges-binding-v2.xml10条件通过；challenges-frozen-v1.json记录14457902/v077首季五图15条件全编译（7评分/8槽位，含两槽选一）、当前日历关闭、源包/设置保持，无数据库/发奖/原生。新增组件仅返回条件满足集合，未知类型/来源篡改拒绝；枚举raw载荷候选未当成已核状态迁移。[当前入口](../crisis-battle-contract-2026-11-20.md#首季15个挑战的匹配数据条件)
@@ -1560,3 +1564,16 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 
 
 2026-11-21 已接危机合约原生开战/结算路由、九字段展示及绑定战斗的持久首次响应；196当前检查通过（22新/174关联）。新增8KiB受控读取/9方法1980字节REA，路由构造MethodSpec250307绑定finish字面量26568，status/close及exit0保持。真实数据否定packedRune.key，按元数据id/+0x10及147条一致证据纠正；首批20合成通过不作版本证明，v1首结算503/待结算/退出0保留。v2五图40真实HTTPS、三服务退出0、82表冷启新恢复全行一致；源/现用/index0保持、index1关闭。174关联句柄失效后核完整通过XML/无匹配进程，不补造退出码，不重跑无关检查。本地展示策略不称官方算法，原生画面/领取/解锁/商店/原始回放/新EXE等完整目标仍未完成。[报告](../crisis-native-battles-2026-11-21.md)
+
+
+2026-11-21 原生战斗路由源码ec9f1a6已公开至main e1157d6；27发布对象Git SHA全部匹配、24新blob扫描通过，774公开文件与727源码/384完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT实际回读，恢复后才轮换两索引，旧包/索引保持。历史增量363795字节/SHA-256 4a801c37f3b8201648a551ac7ef14ccf7dd9213d99b2f0b881fe10e7c93c780b，Git blob8fd30f3ea778b941139857243a9f9f1de286e2ce，仅需原始d40完整包。本次发布会话未发生Node重置或上传错误，不沿用上次发布失败描述。证据 .cache/crisis-20261119/public-checkpoint-ec9f1a6-v1/readback-verification.json。含196当前检查、五图40 HTTPS/三服务82表恢复、8KiB与1980字节REA及packedRune.id纠正；原版画面、领取/解锁/商店/原始回放与成熟成品仍未完成。本段回执晚于源码包。[检查点](CHECKPOINTS.md)
+
+2026-11-26 原版联调：.cache/crisis-20261119/crisis-client-native-v2-20261126/preparation.json、protected-before.json；准备句柄25755实际退出0。旧66375未知句柄、CIM无匹配进程/相关端口无监听；旧v1无completion，旧requests末条普通开战DROP_RULE_MISSING503，不补造正常清理或危机合约原生完成。
+
+2026-11-26 v2/ui-evidence/实际格式终端锁定图、completion.json退出1及recovery-cleanup-v1/verification.json恢复退出0；v3/preparation.json含qa_stage_clear=main_02-10和5条qa_guide_ids。根.cache/crisis-20261119/，0新战斗，QA预置不等于自然进度。
+
+2026-11-26 当前联调证据根.cache/crisis-20261119/：native-client-summary-20261126-v1.json；v2/{preparation,completion}.json、ui-evidence/锁图及recovery-cleanup-v1/verification.json；v3/{preparation,completion,native-errors-v1,native-errors-v2}.json、ui-evidence/001-map-with-guide；两个控制器句柄48454退出1/27637退出0，恢复52739退出0，观察32603/73274退出0。
+
+2026-11-26 解锁修正：unlock-all-tasks-before-20261126/junit.xml为5setup错；before-20261126-v2/junit.xml为5实际业务反例失败；after-20261126-v1/junit.xml为61通过，92351实际退出0。unlock-all-tasks-frozen-20261126-v1/verification.json为30解锁请求/12预期409/18成功200、六旧答复冷重试及源/现用保持，单验证进程退出0，两个服务组正常stop，不称两个独立进程。
+
+2026-11-26 REA及资源：rea-mission-20261126-v1/static-methods.json、mcp-mission-20261126-v1/{rpc-0004,rpc-0005,rpc-0006,completion}.json、native-mission-{declarations,body-probe,binding}-20261126-v1.json、crisis-{manifest,apk}-resource-audit-20261126-v1.json。public close失败保留，随后实际WSL输出pid-absent/runtime-dir-absent，精确目标PID561/rea-ghidra-YUBDgu已不存在；不把该回读改写为close成功。原始伪代码和资源均仅本地。

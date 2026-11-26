@@ -164,6 +164,7 @@ def _configuration_hashes(inputs: StartupInputs) -> dict[str, str | None]:
         "voucher_catalog_hash": inputs.voucher_shop_catalog,
         "cash_catalog_hash": inputs.cash_shop_catalog,
         "gift_pack_catalog_hash": inputs.gift_pack_catalog,
+        "crisis_v2_local_shop_hash": getattr(inputs, "crisis_v2_local_shop", None),
     }
     source = inputs.rogue_content_source
     return {

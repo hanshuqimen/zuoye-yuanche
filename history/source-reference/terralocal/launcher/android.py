@@ -28,7 +28,13 @@ from terralocal.launcher.client_binding import (
     private_directory,
 )
 from terralocal.launcher.client_session import ClientConnectionError
-from terralocal.server.compatibility.profile import CAMPAIGN_DATA_HASH, ROGUE_CLIENT_PROFILE, ROGUE_DATA_HASH
+from terralocal.server.compatibility.profile import (
+    CAMPAIGN_DATA_HASH,
+    CRISIS_CLIENT_PROFILE,
+    CRISIS_DATA_HASH,
+    ROGUE_CLIENT_PROFILE,
+    ROGUE_DATA_HASH,
+)
 from terralocal.server.protocol.bootstrap import Bootstrap
 
 ORIGINAL_APK = "0b79b85383e21a6343283bc6bfd7a9d24eb4134abf901115f757da6a5d50f6db"
@@ -71,7 +77,7 @@ class InstanceLease:
         kernel.ReleaseMutex.argtypes = [wintypes.HANDLE]
         kernel.ReleaseMutex.restype = wintypes.BOOL
         ctypes.set_last_error(0)
-        handle = kernel.CreateMutexW(None, True, r"Local\TerraLocal-LDPlayer-test-device-example")
+        handle = kernel.CreateMutexW(None, True, r"Local\TerraLocal-LDPlayer-0063090c")
         if not handle:
             raise ClientConnectionError("CLIENT_LEASE_FAILED", "无法锁定测试实例连接，请重试")
         if ctypes.get_last_error() == 183:
@@ -139,8 +145,8 @@ class AndroidTransport:
         profile = Bootstrap(self.settings).profile()
         # The extra table has its own explicit QA profile/save admission. Do
         # not accept either hash interchangeably for the older profiles.
-        expected_data = {CAMPAIGN_CLIENT_PROFILE: CAMPAIGN_DATA, ROGUE_CLIENT_PROFILE: ROGUE_DATA_HASH}.get(
-            self.settings.client_profile, FROZEN_DATA)
+        expected_data = {CAMPAIGN_CLIENT_PROFILE: CAMPAIGN_DATA, ROGUE_CLIENT_PROFILE: ROGUE_DATA_HASH,
+                         CRISIS_CLIENT_PROFILE: CRISIS_DATA_HASH}.get(self.settings.client_profile, FROZEN_DATA)
         if (profile.package, profile.channel, profile.client_version, profile.version_code,
                 profile.apk_sha256, profile.resource_version, profile.api_version, profile.gamedata_hash) != (
                 PACKAGE, "official", "2.7.71", 190, ORIGINAL_APK, "26-09-22-07-47-20_6c71fa", "V070", expected_data):

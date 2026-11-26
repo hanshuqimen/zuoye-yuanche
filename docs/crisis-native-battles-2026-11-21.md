@@ -37,3 +37,8 @@ v2冻结147符文/首季五图做40个真实HTTPS POST，验证TLS且全200，�
 证据位于 `.cache/crisis-20261119/native-battles-progress-summary-v1.json`、native-finish-route-binding-v1.json、native-responder-probe-v1.json、loaded-native-route-20261121-v1/、mcp-native-route-v1/、native-battles-v1/v2/v3.xml和native-battles-https-v1/v2/。私有token/原始表、数据库/日志/代码页及REA工具均不发布。
 
 下一补一个原版客户端新代表，核登录/信息缓存/地图/开战/结算消费，再继续任务领取、额外符文解锁、模式商店及原始回放。原生计数实际格式和110/220阈值差异仍待匹配版本证据，完整其他模式、Windows新包、断网/两小时稳定性/HarmonyOS等原始交付目标保持未完成。
+
+
+## 公开源码与恢复回读
+
+2026-11-21 原生战斗路由源码ec9f1a6已公开至main e1157d6；27发布对象Git SHA全部匹配、24新blob扫描通过，774公开文件与727源码/384完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT实际回读，恢复后才轮换两索引，旧包/索引保持。历史增量363795字节/SHA-256 4a801c37f3b8201648a551ac7ef14ccf7dd9213d99b2f0b881fe10e7c93c780b，Git blob8fd30f3ea778b941139857243a9f9f1de286e2ce，仅需原始d40完整包。本次发布会话未发生Node重置或上传错误，不沿用上次发布失败描述。证据 .cache/crisis-20261119/public-checkpoint-ec9f1a6-v1/readback-verification.json。含196当前检查、五图40 HTTPS/三服务82表恢复、8KiB与1980字节REA及packedRune.id纠正；原版画面、领取/解锁/商店/原始回放与成熟成品仍未完成。本段回执晚于源码包。

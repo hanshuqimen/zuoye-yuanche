@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `ec9f1a6`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `8fe508c`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -193,5 +193,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-ec9f1a6.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 危机合约本地功能与原版联调
+
+2026-11-26 危机合约独立配置、本地领奖/符文/显式商店/战报及默认关闭日志归档已整理。原版已到信息/主地图导览，79请求全200但0新战斗；旧赛季entry/atlas在当前清单和APK缺失，未冒充补齐。按原版反例修复符文提前解锁，需关联图全部任务；61相关检查及首季六符文30次HTTPS/冷重试通过。REA1140字节确认confirmMissions，close身份检查失败但后续进程/目录实际已无；旧失败保持。官方领奖/商店、原版战斗与完整成品仍未完成，无新EXE。
+
+[原版联调和修复](docs/crisis-native-client-2026-11-26.md) · [本地功能边界](docs/crisis-local-extras-2026-11-25.md) · [验证摘要](validation/crisis-v2-native-client-20261126.json)。
+
+[本次完整历史增量](history/source-updates-8fe508c.bundle)只需原始d40完整包，旧包和精选回滚分支保留：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-8fe508c.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

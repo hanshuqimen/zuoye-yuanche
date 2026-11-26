@@ -23,7 +23,13 @@ from terralocal.launcher.client_binding import (
     installation_folder,
 )
 from terralocal.launcher.client_session import ClientConnectionError
-from terralocal.server.compatibility.profile import ROGUE_CLIENT_PROFILE, ROGUE_DATA_HASH, native_profile
+from terralocal.server.compatibility.profile import (
+    CRISIS_CLIENT_PROFILE,
+    CRISIS_DATA_HASH,
+    ROGUE_CLIENT_PROFILE,
+    ROGUE_DATA_HASH,
+    native_profile,
+)
 from terralocal.server.services.tls import ensure_certificate
 
 
@@ -107,10 +113,42 @@ def test_rogue_profile_requires_exact_data_and_its_own_sdk3_receipt(transport):
     assert legacy.read_bytes() == original
 
 
+def test_crisis_profile_pins_20_tables_and_separate_prepared_binary_receipt(transport):
+    legacy = transport.settings.data_dir / "client/test-instance/installation.json"
+    original = legacy.read_bytes()
+    transport.settings.client_profile = CRISIS_CLIENT_PROFILE
+    profile = android.Bootstrap(transport.settings).profile()
+    with pytest.raises(ClientConnectionError) as failure:
+        transport.validate_configuration()
+    assert failure.value.code == "UNSUPPORTED_CLIENT_PROFILE"
+    profile.gamedata_hash = transport.settings.gamedata_hash = CRISIS_DATA_HASH
+    with pytest.raises(ClientConnectionError) as failure:
+        transport.validate_configuration()
+    assert failure.value.code == "CLIENT_NOT_PREPARED"
+    folder = installation_folder(CRISIS_CLIENT_PROFILE)
+    assert folder == "test-instance-crisis-qa"
+    assert folder not in {installation_folder(v) for v in (CASH_CLIENT_PROFILE, CAMPAIGN_CLIENT_PROFILE, ROGUE_CLIENT_PROFILE)}
+    receipt = legacy.parent.parent / folder / "installation.json"
+    receipt.parent.mkdir()
+    value = json.loads(original)
+    receipt.write_text(json.dumps(value), "utf8")
+    with pytest.raises(ClientConnectionError) as failure:
+        transport.validate_configuration()
+    assert failure.value.code == "CLIENT_RECEIPT_MISMATCH"
+    value["apk_sha256"] = CASH_PATCHED_APK
+    receipt.write_text(json.dumps(value), "utf8")
+    transport.validate_configuration()
+    assert legacy.read_bytes() == original and expected_apk(CRISIS_CLIENT_PROFILE) == CASH_PATCHED_APK
+    assert native_profile(CRISIS_CLIENT_PROFILE) == "cn-android-2.7.71-display"
+
+
 @pytest.mark.parametrize("profile_id,wrong_data", [
     (ROGUE_CLIENT_PROFILE, android.CAMPAIGN_DATA), (CAMPAIGN_CLIENT_PROFILE, ROGUE_DATA_HASH),
     ("cn-android-2.7.71-display", ROGUE_DATA_HASH), (CASH_CLIENT_PROFILE, ROGUE_DATA_HASH),
     ("unknown-future-profile", ROGUE_DATA_HASH),
+    (CRISIS_CLIENT_PROFILE, ROGUE_DATA_HASH), (CRISIS_CLIENT_PROFILE, android.CAMPAIGN_DATA),
+    (ROGUE_CLIENT_PROFILE, CRISIS_DATA_HASH), (CAMPAIGN_CLIENT_PROFILE, CRISIS_DATA_HASH),
+    ("cn-android-2.7.71-display", CRISIS_DATA_HASH), (CASH_CLIENT_PROFILE, CRISIS_DATA_HASH),
 ])
 def test_rogue_and_campaign_data_are_not_interchangeable(transport, profile_id, wrong_data, monkeypatch):
     transport.settings.client_profile = profile_id
@@ -271,7 +309,7 @@ def test_root_has_atomic_device_guard_and_rejects_quote_escape(transport, monkey
     calls = []
     monkeypatch.setattr(transport, "command", lambda *args, **_kwargs: calls.append(args))
     transport.root("iptables -N TL_OFFLINE")
-    assert calls == [("shell", "su -c '[ \"$(getprop ro.serialno)\" = \"test-device-example\" ] || exit 97; "
+    assert calls == [("shell", "su -c '[ \"$(getprop ro.serialno)\" = \"0063090c\" ] || exit 97; "
                       "iptables -N TL_OFFLINE'")]
     with pytest.raises(ClientConnectionError):
         transport.root("echo 'escape'")

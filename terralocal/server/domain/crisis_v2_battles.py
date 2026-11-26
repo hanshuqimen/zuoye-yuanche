@@ -143,7 +143,7 @@ def preflight(connection, data):
     # SQLite is already open read-only, before any migration or WAL setup.
     import sqlite3
 
-    from terralocal.server.domain import crisis_v2_native
+    from terralocal.server.domain import crisis_v2_journals, crisis_v2_native
 
     connection.row_factory = sqlite3.Row
     try:
@@ -177,6 +177,7 @@ def preflight(connection, data):
                 record = dict(response)
                 record["result"] = json.loads(record["result"])
                 crisis_v2_native.validate(data, parent, saved, evaluation, record)
+        crisis_v2_journals.preflight(connection)
     except (sqlite3.DatabaseError, ValueError, KeyError, TypeError) as exc:
         raise ValueError("危机合约战斗保存不兼容；请保留原配置和存档") from exc
 

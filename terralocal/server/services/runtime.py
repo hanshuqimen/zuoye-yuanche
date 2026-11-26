@@ -9,6 +9,8 @@ from terralocal.config import Settings
 from terralocal.server.compatibility.profile import (
     CAMPAIGN_CLIENT_PROFILE,
     CAMPAIGN_DATA_HASH,
+    CRISIS_CLIENT_PROFILE,
+    CRISIS_DATA_HASH,
     ROGUE_CLIENT_PROFILE,
     ROGUE_DATA_HASH,
     native_profile,
@@ -34,6 +36,8 @@ class StartupInputs:
             raise ValueError("独立剿灭测试配置只接受已冻结的19表GameData，不转换原存档")
         if settings.client_profile == ROGUE_CLIENT_PROFILE and settings.gamedata_hash != ROGUE_DATA_HASH:
             raise ValueError("独立集成战略测试配置只接受已冻结的现代主题19表GameData，不转换原存档")
+        if settings.client_profile == CRISIS_CLIENT_PROFILE and settings.gamedata_hash != CRISIS_DATA_HASH:
+            raise ValueError("独立危机合约测试配置只接受已冻结的20表GameData，不转换原存档")
         self.data = GameData(settings.data_dir / "cache" / settings.gamedata_hash,
                              expected_hash=settings.gamedata_hash) if settings.gamedata_hash else None
         if self.data:
@@ -120,7 +124,14 @@ class StartupInputs:
                         require_existing_binding=settings.client_profile == ROGUE_CLIENT_PROFILE)
         from terralocal.server.domain.crisis_v2 import preflight as crisis_preflight
 
-        crisis_preflight(self.data, database_path)
+        crisis_preflight(self.data, database_path,
+                         require_existing_binding=settings.client_profile == CRISIS_CLIENT_PROFILE)
+        from terralocal.server.domain import crisis_v2_shop
+
+        shop_file = settings.data_dir / "crisis_v2_local_shop.json"
+        self.crisis_v2_local_shop = (crisis_v2_shop.read_catalog(shop_file, self.data)
+                                    if shop_file.exists() or shop_file.is_symlink() else None)
+        crisis_v2_shop.preflight(self.crisis_v2_local_shop, database_path)
 
     def require_data(self):
         if not self.data:

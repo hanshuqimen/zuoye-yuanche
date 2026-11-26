@@ -162,3 +162,10 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 2026-11-21 原子本地通关源码adefbe5已公开至main b5131e1；25发布对象全部Git SHA匹配、22新blob扫描通过，767公开文件和723源码/382完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck及干净工作区通过。Public/MIT实际回读，恢复后才轮换两索引，旧包/索引保持。新历史增量351726字节/SHA-256 3f2128c18d6b8b2fc815e61832221e36ebf4ffba546642c70614f6f8d7a98e03，Git blob098be85aa61964ecad854a512b1193f1fdada4eb，仅需原始d40完整包。首次Node读取因闲置内核重置未执行，重初始化后完成，preparation-events.json及最终证明记录，无强推。证据 .cache/crisis-20261119/public-checkpoint-adefbe5-v1/readback-verification.json。含197不同当前检查、冻结五图三进程82表冷启/新恢复、本地纪录v1和QA失败；原生响应/路由、领取/解锁、原始回放、资料差异与完整成品仍未完成。本段回执晚于源码包。
 
 公开完整提交 `b5131e17e50e95b1d4180249fdf416c722f053e9`，树 `8fe30ce102e6ac605f07c19338a95baa685e3b7d`，源码 `adefbe5cf1d83cc37f4836bad302118ddbd645b8`。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/b5131e17e50e95b1d4180249fdf416c722f053e9)。anonymous-public-clone/、restored-development/和previous-*-latest.json分别保留匿名下载、新恢复及两个旧索引。
+
+
+## 2026-11-21 危机合约原生战斗路由检查点
+
+2026-11-21 原生战斗路由源码ec9f1a6已公开至main e1157d6；27发布对象Git SHA全部匹配、24新blob扫描通过，774公开文件与727源码/384完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT实际回读，恢复后才轮换两索引，旧包/索引保持。历史增量363795字节/SHA-256 4a801c37f3b8201648a551ac7ef14ccf7dd9213d99b2f0b881fe10e7c93c780b，Git blob8fd30f3ea778b941139857243a9f9f1de286e2ce，仅需原始d40完整包。本次发布会话未发生Node重置或上传错误，不沿用上次发布失败描述。证据 .cache/crisis-20261119/public-checkpoint-ec9f1a6-v1/readback-verification.json。含196当前检查、五图40 HTTPS/三服务82表恢复、8KiB与1980字节REA及packedRune.id纠正；原版画面、领取/解锁/商店/原始回放与成熟成品仍未完成。本段回执晚于源码包。
+
+公开提交 `e1157d670c2a6217a6236ec61d69905b065f78b9`，树 `bd4c63466e7113c93a0f64b01d924a76279f4a90`，源码 `ec9f1a69aa670106f3533217da9f4bf2beed31fa`。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/e1157d670c2a6217a6236ec61d69905b065f78b9)。同一证据目录 anonymous-public-clone/、restored-development/、previous-*-latest.json分别保留匿名克隆、新恢复和两旧索引。

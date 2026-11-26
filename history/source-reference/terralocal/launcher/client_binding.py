@@ -9,13 +9,17 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from sqlalchemy import select
 
 from terralocal.launcher.client_session import ClientConnectionError, LocalCredential
-from terralocal.server.compatibility.profile import CAMPAIGN_CLIENT_PROFILE, ROGUE_CLIENT_PROFILE
+from terralocal.server.compatibility.profile import (
+    CAMPAIGN_CLIENT_PROFILE,
+    CRISIS_CLIENT_PROFILE,
+    ROGUE_CLIENT_PROFILE,
+)
 from terralocal.server.persistence import models as m
 
 INSTANCE = 1
 INSTANCE_NAME = "TerraLocal"
-SERIAL = "test-transport-example"
-DEVICE_SERIAL = "test-device-example"
+SERIAL = "emulator-5556"
+DEVICE_SERIAL = "0063090c"
 PACKAGE = "com.hypergryph.arknights"
 PATCHED_APK = "f75a9643d2d3fb487e5da082492cb2336bce399cabdc0725a895efd186df2e01"
 CASH_CLIENT_PROFILE = "cn-android-2.7.71-local-cash"
@@ -26,10 +30,12 @@ def expected_apk(client_profile: str) -> str:
     # Keep the previously accepted adapter/bindings usable. The cash adapter
     # belongs to its own compatibility profile; it never replaces that hash.
     return CASH_PATCHED_APK if client_profile in {
-        CASH_CLIENT_PROFILE, CAMPAIGN_CLIENT_PROFILE, ROGUE_CLIENT_PROFILE} else PATCHED_APK
+        CASH_CLIENT_PROFILE, CAMPAIGN_CLIENT_PROFILE, ROGUE_CLIENT_PROFILE, CRISIS_CLIENT_PROFILE} else PATCHED_APK
 
 
 def installation_folder(client_profile: str) -> str:
+    if client_profile == CRISIS_CLIENT_PROFILE:
+        return "test-instance-crisis-qa"
     if client_profile == ROGUE_CLIENT_PROFILE:
         return "test-instance-rogue-qa"
     if client_profile == CAMPAIGN_CLIENT_PROFILE:
