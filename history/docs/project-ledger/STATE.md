@@ -1,15 +1,15 @@
 # 当前状态与按需入口
 
-2026-11-26 当前目标仍是完整本地服务端和成熟 Windows 交付，尚未完成。原版危机合约本轮进入主地图/节点导览，实际一次 getInfo；v2 17/v3 62 请求均200，0新战斗。页面缺旧赛季 entry/atlas 资源：冻结 V077 清单和APK只有常驻包，未改名冒充。原生战斗、结算、领奖/商店和回放仍未验。[当前联调报告](../crisis-native-client-2026-11-26.md)
+2026-11-26 原版危机合约家具领取代表通过：真实confirmMissions整数type2，一次200，原版“浊燃之旗”×1弹窗后任务1/14/节点已领，库存1、业务回执1，0新战斗。资格为CrisisMission1独立QA预置，不是自然通关。已接真实宝藏批量路由/事务/持久业务回执；符文组0和挑战1已核默认原生构造值，代币领奖仍明确501。[当前报告](../crisis-native-missions-2026-11-26.md)
 
-已按原版反例修复本地符文提前解锁：新授予需关联临时图全部已核任务完成，空任务拒绝；旧授予和首次回执保留。61关联检查通过，冻结14457902首季四临时图各3任务、六符文30次HTTPS（12预期409/18成功200），冷重试原响应相同、两轮服务组有序停止，验证进程退出0。资格仅QA预置，实际首季已关闭。旧5个setup错误、5个业务反例和25日宽松策略保留。
+本批22原版任务+9共享领奖+58备份/准入/结算/商店检查通过，四新文件Ruff通过。冻结14457902已导入仅首季信息：三宝藏18次HTTPS、三个服务组、冷重启与新目录恢复通过；服装/材料包原版弹窗未验。部分通过不代表全模式或零缺陷。
 
-当前无本轮仍需控制的模拟器或REA会话。v2私有收尾失败退出1，受控恢复退出0；v3正常收尾退出0、index1关闭、index0和现用/源指纹保持。REA M162851 1140字节确认真实领奖路由crisisV2/confirmMissions，枚举/批量消费尚未补齐；public close身份检查报错，子进程0/包装器1，随后精确PID/运行目录均不存在。失败和证据保持，未重建EXE。
+当前本批无仍需控制的模拟器/REA会话。原65480恢复时句柄/进程/监听已无且index1停止、无completion；热恢复前置拒绝后保留失败，在同一QA档冷恢复。冷v2句柄13883实际退出0，回调两份恢复、index1关闭、index0及源/现用保持。REA20KiB页读取complete、9伪代码；首timeout/补查地址误写保留，子进程0/包装器1/public close=null，后续本会话进程和目录实查已无。
 
-下一先取得并验证该赛季资源及客户端加载路径，再接confirmMissions和一个原版战斗代表；不重打旧关、不恢复取消的剿灭。固定条件：仅index1/0063090c；APK/资源/数据/TLS/离线及8秒命令门槛保持；所有新增开发资料均限项目内。完整需求/各模式见[REQUIREMENTS](REQUIREMENTS.md)和[能力表](../current-capabilities-2026-11-18.md)。
+下一：先公开本批完整源码历史，实际远程回读并在项目子目录新恢复后轮换检查点索引；然后REA核任务币/商店币字段和余额账本，接符文组/挑战任务。旧季entry/atlas资源缺口保留，随后一个新原版开战/结算代表及其余系统；不重打旧关、不恢复取消的剿灭。所有新增文件仅本项目，固定仅index1/0063090c及APK/资源/数据/TLS/离线/8秒门槛。
 
-源码HEAD接手仍为99e573d，保留21日独立配置及25日本地功能未提交差异；正在整理完整源码检查点。最新完整公开历史仍source ec9f1a6→main e1157d6（774公开/727源码/384历史，项目内恢复已核）；精选回滚分支checkpoint/crisis-v2-20261125的775eea4另含23变更和19恢复测试，不替换完整包索引。[检查点](CHECKPOINTS.md)
+最新已验证完整公开仍为source8fe508c→main493e720（796公开/746源码/386历史，匿名下载/新目录恢复/全SHA/Git/fsck通过）。当前新源码和其后三份研究文档尚未包含在该旧包；以Git及下一回读为准。[检查点](CHECKPOINTS.md)
 
-用户列出的22目录迁入.cache/moved/已完成，80,926文件/2,910,429,928字节原完整SHA核对、6 Junction及本地Git引用修复、20日再次回读保持；不为记录重复移动或重跑未受影响检查。[迁移](../workspace-directory-move-2026-11-19.md)。上一版实际验收发行物仍为源码721a26e，最新业务未打包；[发行物](../windows-backup-release-2026-11-19.md)。
+完整目标、新Windows发行、全部模式、离线Golden Playthrough/长期稳定及设备验收仍未完成；上一实际验收发行物仍为源码721a26e。用户新增协议自主接受授权已记录，不能扩大到官方/浏览器凭据、index0或被阻止页面。[完整需求](REQUIREMENTS.md) · [能力表](../current-capabilities-2026-11-18.md)
 
-本轮前全文已保存于[state-archive/STATE-2026-11-26-before-native-results.md](state-archive/STATE-2026-11-26-before-native-results.md)，更早原文、失败及未完成范围在[INDEX](INDEX.md)、[HISTORY](HISTORY.md)、[EVIDENCE](EVIDENCE.md)，不以本摘要取代实物。
+22目录已迁入.cache/moved/，80926文件/2910429928字节原完整SHA、六Junction及Git引用修复已核，不重复搬动。[迁移](../workspace-directory-move-2026-11-19.md)。本轮前STATE已归档[state-archive/STATE-2026-11-26-before-native-mission-result.md](state-archive/STATE-2026-11-26-before-native-mission-result.md)，详细失败和证据见[HISTORY](HISTORY.md)、[EVIDENCE](EVIDENCE.md)。

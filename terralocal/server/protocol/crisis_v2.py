@@ -14,6 +14,7 @@ from terralocal.server.domain import (
 )
 from terralocal.server.protocol.battles import BattleSquad
 from terralocal.server.protocol.crisis_v2_codec import CrisisFinishRequest
+from terralocal.server.protocol.crisis_v2_missions import ConfirmMissions, handle_confirm_missions
 from terralocal.server.protocol.crisis_v2_state import Key
 
 
@@ -71,6 +72,10 @@ def router(runtime):
                               lambda ctx: crisis_v2_native.finish(
                                   ctx, payload, archive_journal=runtime.settings.crisis_archive_replays),
                               preserve_result_ts=True)
+
+    @api.post("/crisisV2/confirmMissions")
+    def confirm_missions(payload: ConfirmMissions, request: Request):
+        return handle_confirm_missions(runtime, payload, request)
 
     @api.post("/local/v1/crisis-v2/claim-treasure")
     def claim_treasure(payload: ClaimRequest, request: Request):

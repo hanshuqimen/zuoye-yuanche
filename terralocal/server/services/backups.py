@@ -401,15 +401,21 @@ class BackupService:
             try:
                 from terralocal.server.compatibility.profile import (
                     CAMPAIGN_CLIENT_PROFILE,
+                    CRISIS_CLIENT_PROFILE,
                     ROGUE_CLIENT_PROFILE,
                 )
                 from terralocal.server.domain.campaign import preflight as preflight_campaign
+                from terralocal.server.domain.crisis_v2 import preflight as preflight_crisis
+                from terralocal.server.domain.crisis_v2_shop import preflight as preflight_crisis_shop
                 from terralocal.server.domain.rogue_topics import preflight as preflight_rogue
 
                 preflight_campaign(self.runtime.data, candidate.path,
                     require_existing_binding=self.runtime.settings.client_profile == CAMPAIGN_CLIENT_PROFILE)
                 preflight_rogue(self.runtime.data, candidate.path,
                     require_existing_binding=self.runtime.settings.client_profile == ROGUE_CLIENT_PROFILE)
+                preflight_crisis(self.runtime.data, candidate.path,
+                    require_existing_binding=self.runtime.settings.client_profile == CRISIS_CLIENT_PROFILE)
+                preflight_crisis_shop(self.runtime.crisis_v2_local_shop, candidate.path)
                 candidate.initialize()
                 from terralocal.server.gamedata.voucher_shop import admit_catalog, preflight_saved_catalog
 

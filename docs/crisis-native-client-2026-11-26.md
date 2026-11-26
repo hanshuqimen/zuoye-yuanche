@@ -55,3 +55,24 @@ M162851 `_GainReward` 的冻结默认体1,140字节完整线性解码，并实�
 另七个候选默认体仍受保护，未用部分可解码字节冒充完整逆向。REA public status成功，public close返回cleanup_incomplete（命令身份观察为java而非预期完整路径）；子进程实际退出0，包装器因关闭断言退出1。随后只读WSL核对所报PID561及精确运行目录rea-ghidra-YUBDgu均已不存在，未按旧PID杀进程或删除目录，原始失败保留；不能将public close本身写为成功。原始代码页、伪代码及第三方工具仅本地。
 
 当前下一步：取得并核对该赛季缺失的资源与原版加载路径；继续REA/自有离线观察confirmMissions的枚举、批量任务及真实奖励消费。当前主地图只证明信息/节点显示，未验原生战斗/结算/领奖，Windows新包、完整其他模式、断网/长时实机和HarmonyOS仍未完成。
+
+
+## 公开回滚点
+
+2026-11-26 完整源码8fe508c已公开至main493e720，48发布对象Git SHA一致、47新增blob标记检查通过；796公开文件与746源码/386完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。历史增量364616字节，SHA-256 faae6ca40e35945e8fc8747e8db3fe8105b716ce50227b0bb16650634809469a，Git blob d44a71a153d0fd7964601a4c5e062dac35b6674d，仅需原始d40完整包。Public/MIT实际回读、恢复后才轮换两权威索引，完整旧索引/旧包及25日精选分支保持。普通Git因无无交互登录失败，已授权连接器以expected旧head/force=false续main；Node首读一次kernel启动非JSON，发布前只读重试成功，上传48对象均核对。含独立危机配置和25日本地功能、原版信息/主地图导览、全部任务解锁修正及61检查/六符文30HTTPS/冷重试和新REA真实confirmMissions绑定；原版0新战斗、缺旧赛季图集、领奖枚举/批量消费、新EXE和完整交付仍未完成。证据.cache/crisis-20261119/public-checkpoint-8fe508c-20261126-v1/readback-verification.json。本段回执晚于源码包，不据此重复纯文档包。
+
+
+## 后续：常驻资源包内容核对
+
+只读核原始APK完整SHA-256等于冻结0b79b853…50f6db，再读取其中首季常驻包，204,371字节与V077清单大小一致，MD5为199e62e26c439b44f10e1bfb6e7808d8。现有有界LZ4AK解析后只有四条容器路径：常驻图集的主纹理、alpha纹理、atlas描述及long_term_res_holder预制体；7个对象含两MonoBehaviour、两Texture2D、一个AssetBundle/GameObject/RectTransform，没有为取证解析外部预加载资源或写入客户端。
+
+冻结声明将SeasonAtlasResHolder与LongTermResHolder分为两种类，不能仅凭同一季ID把常驻包改名后声称旧赛季资源齐备。目前只核了包目录、类型声明和指纹，尚未解析UIAtlas的所有条目或验证替代加载，不以未见独立Sprite对象推断图集中没有精灵。APK静态签名Lua文本中目标名称检索没有匹配，也不据此断言运行时Hotfix不存在。异常的Entry字段偏移未用于实现。
+
+证据 `.cache/crisis-20261119/longterm-resource-contents-20261126-v1/inspection.json`，只读工具实际退出0。该研究发生在完整公开8fe508c之后，随下一实质源码检查点保存；不冒称已在493e720包内。下一取得匹配的旧赛季资源清单/内容及加载依据，保留新旧资源指纹和失败，不用改名包掩盖缺口。
+
+
+## 后续：较早候选清单的反证
+
+2026-11-26 后续匹配资源研究：参考项目固定fcce42d的25-12-09-11-06-25_6d7e1b样本清单已匿名TLS下载，4,364,536字节、Git blob09687f095c4f71c0692891dfe1eea1608547b972吻合，SHA-256 11e0f76f91248d95f1fd6b328714f7c15e74c43535a09e337dcde2f9b4fea619。连接器读取该blob报Transport closed，保留失败后用固定原始URL回读，没有读取凭据。该样本没有crisisv2seasons条目，候选不能补本轮旧季路径；只证明该文件的范围，未验证官方当年签发或推断所有历史来源无素材，未导入/激活或改任何冻结指纹。证据.cache/crisis-20261119/historical-resource-source-20261126-v1/{hot_update_list,inspection}.json，实际退出0；晚于公开8fe508c，下一实质检查点保存。
+
+[样本固定来源](https://github.com/jiellll1219/OpenDoctoratePy-EX-Public/blob/fcce42d48b8c4ead3aeb3f9628db91d3009f5db7/assets/25-12-09-11-06-25_6d7e1b/hot_update_list.json)。下一继续更早、可核对的资源目录与原版加载依据，不重命名常驻包冒充旧季图集。

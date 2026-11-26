@@ -32,20 +32,22 @@ def _material_pack(data, pack_id):
     return grant
 
 
-def claim(ctx, season_id: str, map_id: str, slot_id: str) -> dict:
-    if not crisis_v2.available(ctx.data):
+def resolve(data, season_id, map_id, slot_id, saved, now):
+    """Resolve an earned treasure without changing inventory or mission state.
+
+    Shared by the explicit local helper and the frozen native batch adapter.
+    Material-pack expansion remains the documented local policy above.
+    """
+    if not crisis_v2.available(data):
         raise DomainError("CRISIS_V2_NOT_CONFIGURED", "尚未导入匹配的危机合约信息源", 503)
-    account = crisis_v2._account(ctx)
-    catalog = ctx.data.crisis_v2
-    if not season_id or catalog.current(ctx.now) != season_id or account.current_season != season_id:
+    catalog = data.crisis_v2
+    if not season_id or catalog.current(now) != season_id:
         raise DomainError("CRISIS_V2_CLAIM_CLOSED", "本地领奖仅支持当前赛季", 409)
     if catalog.permanent.get(season_id) != map_id:
         raise DomainError("CRISIS_V2_CLAIM_MAP", "本地领奖仅支持该赛季的永久地图", 404)
-    progress = ctx.session.get(CrisisV2MapProgress, (ctx.account_id, season_id, map_id))
     try:
-        if progress is None:
+        if saved is None:
             raise ValueError("missing permanent progress")
-        saved = crisis_v2._map(ctx, progress)
         objective = catalog.objectives(season_id, map_id).treasures.get(slot_id)
     except (KeyError, TypeError, ValueError) as exc:
         raise DomainError("CRISIS_V2_CLAIM_INCOMPATIBLE", "任务条件或存档无法验证", 503) from exc
@@ -61,7 +63,7 @@ def claim(ctx, season_id: str, map_id: str, slot_id: str) -> dict:
     info = catalog.info(season_id)
     status = info["mapStageDataMap"][map_id]
     start, end = status["startTime"], status["rewardEndTime"]
-    if (start != -1 and ctx.now < start) or (end != -1 and ctx.now > end):
+    if (start != -1 and now < start) or (end != -1 and now > end):
         raise DomainError("CRISIS_V2_CLAIM_CLOSED", "不在该地图的本地领取窗口内", 409)
 
     detail = info["mapDetailDataMap"][map_id]
@@ -75,12 +77,23 @@ def claim(ctx, season_id: str, map_id: str, slot_id: str) -> dict:
     if reward["type"] not in SUPPORTED_TYPES:
         raise DomainError("CRISIS_V2_CLAIM_UNSUPPORTED", "此奖励类型尚未完成本地适配", 501)
     try:
-        item_type = ctx.data.item(reward["id"])["itemType"]
+        item_type = data.item(reward["id"])["itemType"]
     except (KeyError, DomainError) as exc:
         raise DomainError("CRISIS_V2_CLAIM_INCOMPATIBLE", "奖励物品不在匹配的数据版本", 503) from exc
     if item_type != reward["type"]:
         raise DomainError("CRISIS_V2_CLAIM_INCOMPATIBLE", "奖励类型与物品定义不一致", 503)
-    entries = _material_pack(ctx.data, reward["id"]) if item_type == "ITEM_PACK" else [dict(reward)]
+    return _material_pack(data, reward["id"]) if item_type == "ITEM_PACK" else [dict(reward)]
+
+
+def claim(ctx, season_id: str, map_id: str, slot_id: str) -> dict:
+    if not crisis_v2.available(ctx.data):
+        raise DomainError("CRISIS_V2_NOT_CONFIGURED", "尚未导入匹配的危机合约信息源", 503)
+    account = crisis_v2._account(ctx)
+    if account.current_season != season_id:
+        raise DomainError("CRISIS_V2_CLAIM_CLOSED", "本地领奖仅支持当前赛季", 409)
+    progress = ctx.session.get(CrisisV2MapProgress, (ctx.account_id, season_id, map_id))
+    saved = crisis_v2._map(ctx, progress) if progress is not None else None
+    entries = resolve(ctx.data, season_id, map_id, slot_id, saved, ctx.now)
     granted = ctx.rewards(entries)
-    progress.rewards = {**progress.rewards, slot_id: {"state": 2, "progress": entry.progress}}
+    progress.rewards = {**progress.rewards, slot_id: {"state": 2, "progress": saved.reward[slot_id].progress}}
     return {"seasonId": season_id, "mapId": map_id, "slotId": slot_id, "rewards": granted}

@@ -169,3 +169,8 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 2026-11-21 原生战斗路由源码ec9f1a6已公开至main e1157d6；27发布对象Git SHA全部匹配、24新blob扫描通过，774公开文件与727源码/384完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT实际回读，恢复后才轮换两索引，旧包/索引保持。历史增量363795字节/SHA-256 4a801c37f3b8201648a551ac7ef14ccf7dd9213d99b2f0b881fe10e7c93c780b，Git blob8fd30f3ea778b941139857243a9f9f1de286e2ce，仅需原始d40完整包。本次发布会话未发生Node重置或上传错误，不沿用上次发布失败描述。证据 .cache/crisis-20261119/public-checkpoint-ec9f1a6-v1/readback-verification.json。含196当前检查、五图40 HTTPS/三服务82表恢复、8KiB与1980字节REA及packedRune.id纠正；原版画面、领取/解锁/商店/原始回放与成熟成品仍未完成。本段回执晚于源码包。
 
 公开提交 `e1157d670c2a6217a6236ec61d69905b065f78b9`，树 `bd4c63466e7113c93a0f64b01d924a76279f4a90`，源码 `ec9f1a69aa670106f3533217da9f4bf2beed31fa`。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/e1157d670c2a6217a6236ec61d69905b065f78b9)。同一证据目录 anonymous-public-clone/、restored-development/、previous-*-latest.json分别保留匿名克隆、新恢复和两旧索引。
+
+
+## 2026-11-26 危机合约原版联调和全部任务解锁检查点
+
+2026-11-26 完整源码8fe508c已公开至main493e720，48发布对象Git SHA一致、47新增blob标记检查通过；796公开文件与746源码/386完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。历史增量364616字节，SHA-256 faae6ca40e35945e8fc8747e8db3fe8105b716ce50227b0bb16650634809469a，Git blob d44a71a153d0fd7964601a4c5e062dac35b6674d，仅需原始d40完整包。Public/MIT实际回读、恢复后才轮换两权威索引，完整旧索引/旧包及25日精选分支保持。普通Git因无无交互登录失败，已授权连接器以expected旧head/force=false续main；Node首读一次kernel启动非JSON，发布前只读重试成功，上传48对象均核对。含独立危机配置和25日本地功能、原版信息/主地图导览、全部任务解锁修正及61检查/六符文30HTTPS/冷重试和新REA真实confirmMissions绑定；原版0新战斗、缺旧赛季图集、领奖枚举/批量消费、新EXE和完整交付仍未完成。证据.cache/crisis-20261119/public-checkpoint-8fe508c-20261126-v1/readback-verification.json。本段回执晚于源码包，不据此重复纯文档包。

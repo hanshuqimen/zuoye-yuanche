@@ -1,0 +1,13 @@
+{
+  "path": "history/source-updates-f3fc441.bundle",
+  "bytes": 541429,
+  "sha256": "1db7a7594467ec2320f36e995947941d4986b0f34001220ad83ab191ea6c9219",
+  "git_blob": "59e1be538b786c5479689f8098d3af535585e656",
+  "source_commit": "f3fc441f20d1d7d19e1552a81a8eb9b9e72be596",
+  "branch": "codex/development",
+  "source_files": 754,
+  "source_history_commits": 390,
+  "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
+  "base_bundle": "history/source-history-d40aee9.bundle",
+  "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"
+}

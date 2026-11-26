@@ -47,6 +47,9 @@ def preflight(data, path, *, require_existing_binding=False):
                 or (not present and any((version,) in revisions for version in (CRISIS_V2_REVISION, REVISION)))
                 or ((REVISION,) in revisions and not has_battles)):
             raise ValueError("危机合约存档表不完整；请保留原存档并从已验证备份恢复")
+        from terralocal.server.domain.crisis_v2_missions import preflight as preflight_missions
+
+        preflight_missions(connection, data)
         if require_existing_binding and "accounts" in tables:
             unbound_accounts = (
                 "SELECT 1 FROM accounts a WHERE NOT EXISTS "

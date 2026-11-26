@@ -1405,3 +1405,18 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 2026-11-26 原版“完成所有轮换任务”否定25日仅通关授予；实际首季四临时图各3任务、六关联startTs已核。新本地解锁v2-all-missions需全部1/2，空定义503，旧授予/回执保留。首轮父目录错误5setup保留，第二轮5业务反例失败，修复后61相关通过；冻结HTTPS30次（12预期409/18成功）及另4登录同步、冷重试原答复、两轮ServerGroup有序停机，同一进程退出0，全部资格QA预置、现实首季关闭，源/现用保持。Ruff通过，初次diff提示文档新增CRLF，已规范新增记录并复核。
 
 2026-11-26 新REA M1628511140字节/12288容器d3aca8...fbe76a，文件绑定字面量26571实际crisisV2/confirmMissions（不是按类名猜路由），请求mapId/missions与id/type声明一致，枚举/批量消费未验。七个其他候选保护未冒充成功。public status成功，close cleanup_incomplete观察java路径不匹配，子进程0/包装器96776退出1；随后WSL实际PID561和rea-ghidra-YUBDgu均不存在，不杀旧PID/不删除目录。研究误把catalog.challenges当字典及资源报告列表当字典的失败均已纠正，没有修改输入。完整报告crisis-native-client-2026-11-26.md，所有原始官方/私有/缓存/图片/代码页不提交，全部成熟目标ACTIVE。
+
+
+2026-11-26 完整源码8fe508c已公开至main493e720，48发布对象Git SHA一致、47新增blob标记检查通过；796公开文件与746源码/386完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。历史增量364616字节，SHA-256 faae6ca40e35945e8fc8747e8db3fe8105b716ce50227b0bb16650634809469a，Git blob d44a71a153d0fd7964601a4c5e062dac35b6674d，仅需原始d40完整包。Public/MIT实际回读、恢复后才轮换两权威索引，完整旧索引/旧包及25日精选分支保持。普通Git因无无交互登录失败，已授权连接器以expected旧head/force=false续main；Node首读一次kernel启动非JSON，发布前只读重试成功，上传48对象均核对。含独立危机配置和25日本地功能、原版信息/主地图导览、全部任务解锁修正及61检查/六符文30HTTPS/冷重试和新REA真实confirmMissions绑定；原版0新战斗、缺旧赛季图集、领奖枚举/批量消费、新EXE和完整交付仍未完成。证据.cache/crisis-20261119/public-checkpoint-8fe508c-20261126-v1/readback-verification.json。本段回执晚于源码包，不据此重复纯文档包。
+
+
+2026-11-26 公开后只读常驻资源核对退出0：APK完整冻结SHA、首季204371字节/MD5 199e62e26c439b44f10e1bfb6e7808d8均匹配，四容器/7对象；两种Holder声明不同，未解析atlas全部条目/动态加载，不重命名为旧季包、不改客户端。静态Lua名称无匹配不等于运行时Hotfix无。证据.cache/crisis-20261119/longterm-resource-contents-20261126-v1/inspection.json；晚于8fe508c/493e720，下一实质检查点保存，详原版联调报告后续节。
+
+
+2026-11-26 后续匹配资源研究：参考项目固定fcce42d的25-12-09-11-06-25_6d7e1b样本清单已匿名TLS下载，4,364,536字节、Git blob09687f095c4f71c0692891dfe1eea1608547b972吻合，SHA-256 11e0f76f91248d95f1fd6b328714f7c15e74c43535a09e337dcde2f9b4fea619。连接器读取该blob报Transport closed，保留失败后用固定原始URL回读，没有读取凭据。该样本没有crisisv2seasons条目，候选不能补本轮旧季路径；只证明该文件的范围，未验证官方当年签发或推断所有历史来源无素材，未导入/激活或改任何冻结指纹。证据.cache/crisis-20261119/historical-resource-source-20261126-v1/{hot_update_list,inspection}.json，实际退出0；晚于公开8fe508c，下一实质检查点保存。
+
+
+2026-11-26 原版领奖开始：HEAD3dc3cc0接手干净，CrisisMission1/14457902新QA准备退出0，仅五引导/main_02-10和reward_2家具资格，无发奖/新战斗，源/现用保持。目录.cache/crisis-20261119/crisis-missions-native-v1-20261126/；私有控制器65480受控启动，仅原生confirmMissions有限请求501探测，不写产品占位成功。下补枚举/REA/原子发奖，见crisis-native-missions-2026-11-26.md。
+
+
+2026-11-26 原版宝藏领奖推进：新增confirmMissions严格适配/全部先校验的事务批次/账号和版本绑定首次业务回执；共享本地纯奖励解析，在线恢复补危机合约与商店准入。22+9+58共89检查通过，首31只见完整JUnit/句柄失效不补退出码，58实际退出0；冻结首季三类18HTTPS/三组冷启与恢复通过。Computer Use一次领取“浊燃之旗”×1、任务1/14，独立QA预置资格，0新战斗；冷v2 30请求均200、领取88.27ms不作P95。原controller恢复时已无，热恢复拒绝后同档冷恢复，结束退出0并恢复最初回调/index1关闭/index0及源现用保持。REA五页complete/9伪代码，首timeout、误写补查地址拒绝/包装器1/子0/public close空及实查资源消失保留；编排一次重复const预执行失败及UI一次user-input-detected均未补造动作。原版币任务/图集/战斗等未完成，下一公开实证回滚点后核coin账本。报告crisis-native-missions-2026-11-26.md。用户新增协议自主接受授权已更新REQUIREMENTS及来源全文，完整目标保持。
