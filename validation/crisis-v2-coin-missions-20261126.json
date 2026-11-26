@@ -1,0 +1,136 @@
+{
+  "basis_source_commit": "f3fc441f20d1d7d19e1552a81a8eb9b9e72be596",
+  "game_data_hash": "14457902af1c44338067be0bec6f84272682e6fc9c938e25bf5c2359ebcedecb",
+  "focused_tests_passed": 107,
+  "new_coin_tests_passed": 18,
+  "test_runs": [
+    {
+      "path": ".cache/crisis-20261119/coin-mission-tests-20261126-v2/junit.xml",
+      "tests": 40,
+      "failures": 1,
+      "errors": 0
+    },
+    {
+      "path": ".cache/crisis-20261119/coin-mission-tests-20261126-v3/junit.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "path": ".cache/crisis-20261119/coin-mission-regressions-20261126-v1/junit.xml",
+      "tests": 70,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "corrected_fixture_header_failure": true,
+  "prior_setup_errors": 40,
+  "frozen_https_successes": 162,
+  "frozen_clean_group_stops": 3,
+  "frozen_maps": [
+    "crisis_v2_01-01",
+    "crisis_v2_01-02",
+    "crisis_v2_01-03",
+    "crisis_v2_01-05",
+    "crisis_v2_01-07"
+  ],
+  "frozen_qa_plans": 9,
+  "frozen_seasons": [
+    "crisis_v2_season_1_1"
+  ],
+  "frozen_mission_count_by_plan": [
+    {
+      "map": "crisis_v2_01-01",
+      "window": "open",
+      "missions": 11,
+      "coin": 2400
+    },
+    {
+      "map": "crisis_v2_01-02",
+      "window": "open",
+      "missions": 3,
+      "coin": 300
+    },
+    {
+      "map": "crisis_v2_01-02",
+      "window": "expired",
+      "missions": 3,
+      "coin": 0
+    },
+    {
+      "map": "crisis_v2_01-03",
+      "window": "open",
+      "missions": 3,
+      "coin": 300
+    },
+    {
+      "map": "crisis_v2_01-03",
+      "window": "expired",
+      "missions": 3,
+      "coin": 0
+    },
+    {
+      "map": "crisis_v2_01-05",
+      "window": "open",
+      "missions": 3,
+      "coin": 300
+    },
+    {
+      "map": "crisis_v2_01-05",
+      "window": "expired",
+      "missions": 3,
+      "coin": 0
+    },
+    {
+      "map": "crisis_v2_01-07",
+      "window": "open",
+      "missions": 3,
+      "coin": 300
+    },
+    {
+      "map": "crisis_v2_01-07",
+      "window": "expired",
+      "missions": 3,
+      "coin": 0
+    }
+  ],
+  "frozen_cold_and_backup_restore_passed": true,
+  "legacy_native_furniture_save_readonly_preflight_passed": true,
+  "source_unchanged": true,
+  "new_rea_methods": 4,
+  "new_rea_candidate_bytes": 3016,
+  "new_rea_artifact_sha256": "0e1f7ead5dc1cb9bd8aa6e79932e896e37124c87c13bfb6fd7ecdce9c11b9b35",
+  "new_rea_evidence_ids": [
+    "ev_83beea255ed2a0a8344709c55f7f41060a25f0e839007e87d8ee7a1b89d7c85e",
+    "ev_a86759f5800794a2a16b7039d61c398ea712bbe4ecb4ba0ae5c61e145e6b6e6d",
+    "ev_1d811469707f839f8e32e477f417ba5981cf31ebf11373879b37c0645b63a58b",
+    "ev_4e1a323af20629b51ef9a639b73f8cf219565417f4c445d445bee1a527596c73"
+  ],
+  "prior_rea_methods": 14,
+  "prior_rea_candidate_bytes": 9900,
+  "all_five_rea_public_closes_succeeded": true,
+  "new_rea_wrapper_exit_code_observed": 0,
+  "frozen_verifier_exit_code_observed": 0,
+  "regressions_exit_code_observed": 0,
+  "native_coin_missions_source_implemented": true,
+  "native_mission_types": [
+    0,
+    1,
+    2
+  ],
+  "ordinary_inventory_coin_grants": false,
+  "balance_from_sealed_native_receipts_and_configured_local_shop": true,
+  "legacy_treasure_receipts_preserved": true,
+  "timed_grant_policy": "native-renderer-cutoff-local-backend-v1",
+  "deadline_is_exclusive_for_timed_items": true,
+  "unknown_season_coin_not_modified": true,
+  "season_coin_meaning_proven": false,
+  "native_coin_popup_verified": false,
+  "native_getGoodList_route_proven": true,
+  "native_shop_catalog_implemented": false,
+  "qualifications_seeded_qa": true,
+  "new_native_gameplay_inputs": 0,
+  "new_windows_release_built": false,
+  "full_delivery_complete": false,
+  "source_commit": "89e3dee0ea3e800df640d79de517cd10379b567a"
+}

@@ -44,8 +44,11 @@ def read_catalog(path, data):
         raise ValueError("本地商店设置过大")
     catalog = Shop.model_validate_json(raw)
     rules = data.crisis_v2
-    if (data.manifest["hash"] != catalog.gameDataHash or catalog.seasonId not in rules.permanent
-            or len({offer.id for offer in catalog.offers}) != len(catalog.offers)):
+    if (
+        data.manifest["hash"] != catalog.gameDataHash
+        or catalog.seasonId not in rules.permanent
+        or len({offer.id for offer in catalog.offers}) != len(catalog.offers)
+    ):
         raise ValueError("本地商店的版本、赛季或商品标识不匹配")
     maps = {rules.permanent[catalog.seasonId], *rules.temporary[catalog.seasonId]}
     if not set(catalog.credits) <= maps:
@@ -53,8 +56,11 @@ def read_catalog(path, data):
     try:
         for offer in catalog.offers:
             item = data.item(offer.itemId)
-            if (item["itemType"] != offer.itemType
-                    or offer.itemType == "CHAR_SKIN" and (not item.get("isBuySkin") or offer.stock != 1)):
+            if (
+                item["itemType"] != offer.itemType
+                or offer.itemType == "CHAR_SKIN"
+                and (not item.get("isBuySkin") or offer.stock != 1)
+            ):
                 raise ValueError("本地商店商品类型或库存无效")
             if offer.itemType == "ITEM_PACK":
                 _material_pack(data, offer.itemId)
@@ -70,38 +76,59 @@ def preflight(catalog, database):
     expected = fingerprint(catalog.model_dump()) if catalog else None
     with closing(sqlite3.connect(database.resolve().as_uri() + "?mode=ro", uri=True)) as conn:
         if conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='receipts'").fetchone():
-            if conn.execute("SELECT 1 FROM receipts WHERE key=? AND request_hash IS NOT ? LIMIT 1",
-                            (LEDGER, expected)).fetchone():
+            if conn.execute(
+                "SELECT 1 FROM receipts WHERE key=? AND request_hash IS NOT ? LIMIT 1", (LEDGER, expected)
+            ).fetchone():
                 raise ValueError("存档使用不同的危机合约本地商店配置；请保留配置和存档")
-            if catalog is not None and conn.execute(
-                    "SELECT 1 FROM receipts WHERE key=? LIMIT 1", (LEDGER,)).fetchone():
-                for coin, body in conn.execute("""SELECT a.shop_coin,r.result FROM receipts r
-                        LEFT JOIN crisis_v2_accounts a ON a.account_id=r.account_id WHERE r.key=?""", (LEDGER,)):
+            if (
+                catalog is not None
+                and conn.execute("SELECT 1 FROM receipts WHERE key=? LIMIT 1", (LEDGER,)).fetchone()
+            ):
+                from terralocal.server.domain.crisis_v2_missions import stored_coin_total
+
+                for account_id, coin, body in conn.execute(
+                    """SELECT r.account_id,a.shop_coin,r.result FROM receipts r
+                        LEFT JOIN crisis_v2_accounts a ON a.account_id=r.account_id WHERE r.key=?""",
+                    (LEDGER,),
+                ):
                     try:
                         if coin is None:
                             raise _mismatch()
-                        _validated_state(catalog, coin, json.loads(body))
+                        _validated_state(
+                            catalog, coin - stored_coin_total(conn, account_id), json.loads(body)
+                        )
                     except (DomainError, ValueError, TypeError) as exc:
                         raise ValueError("本地商店余额或库存账本不一致；请保留原存档") from exc
 
 
 def _validated_state(catalog, coin, state):
     offers = {offer.id: offer for offer in catalog.offers}
-    if (type(state) is not dict or set(state) != {"credits", "purchases"}
-            or type(state["credits"]) is not list or type(state["purchases"]) is not dict):
+    if (
+        type(state) is not dict
+        or set(state) != {"credits", "purchases"}
+        or type(state["credits"]) is not list
+        or type(state["purchases"]) is not dict
+    ):
         raise _mismatch()
     credits, purchases = state["credits"], state["purchases"]
-    if (any(type(key) is not str or key not in catalog.credits for key in credits)
-            or len(set(credits)) != len(credits)
-            or any(key not in offers or type(qty) is not int or not 1 <= qty <= offers[key].stock
-                   for key, qty in purchases.items())
-            or sum(catalog.credits[key] for key in credits)
-            - sum(offers[key].price * qty for key, qty in purchases.items()) != coin):
+    if (
+        any(type(key) is not str or key not in catalog.credits for key in credits)
+        or len(set(credits)) != len(credits)
+        or any(
+            key not in offers or type(qty) is not int or not 1 <= qty <= offers[key].stock
+            for key, qty in purchases.items()
+        )
+        or sum(catalog.credits[key] for key in credits)
+        - sum(offers[key].price * qty for key, qty in purchases.items())
+        != coin
+    ):
         raise _mismatch()
     return {"credits": list(credits), "purchases": dict(purchases)}, offers
 
 
 def _state(ctx, catalog):
+    from terralocal.server.domain.crisis_v2_missions import coin_total
+
     if catalog is None:
         raise DomainError("CRISIS_V2_SHOP_NOT_CONFIGURED", "尚未提供自定义危机合约本地商店目录", 503)
     account = crisis_v2._account(ctx)
@@ -110,7 +137,10 @@ def _state(ctx, catalog):
     if row is not None and row.request_hash != digest:
         raise _mismatch()
     state, offers = _validated_state(
-        catalog, account.shop_coin, {"credits": [], "purchases": {}} if row is None else row.result)
+        catalog,
+        account.shop_coin - coin_total(ctx),
+        {"credits": [], "purchases": {}} if row is None else row.result,
+    )
     return account, digest, row, state, offers
 
 
@@ -120,24 +150,32 @@ def _mismatch():
 
 def _save(ctx, digest, row, state):
     if row is None:
-        ctx.session.add(m.Receipt(account_id=ctx.account_id, key=LEDGER, request_hash=digest,
-                                  result=state, created_at=ctx.now))
+        ctx.session.add(
+            m.Receipt(
+                account_id=ctx.account_id, key=LEDGER, request_hash=digest, result=state, created_at=ctx.now
+            )
+        )
     else:
         row.result = state
 
 
 def _open(ctx, catalog, account):
-    if (ctx.data.crisis_v2.current(ctx.now) != catalog.seasonId
-            or account.current_season != catalog.seasonId):
+    if ctx.data.crisis_v2.current(ctx.now) != catalog.seasonId or account.current_season != catalog.seasonId:
         raise DomainError("CRISIS_V2_SHOP_CLOSED", "本地商店仅在配置的赛季内可交易", 409)
 
 
 def view(ctx, catalog):
     account, _, _, state, offers = _state(ctx, catalog)
-    return {"source": "local-config", "seasonId": catalog.seasonId, "coin": account.shop_coin,
-            "claimedMaps": state["credits"],
-            "offers": [offer.model_dump() | {"remaining": offer.stock - state["purchases"].get(offer.id, 0)}
-                       for offer in offers.values()]}
+    return {
+        "source": "local-config",
+        "seasonId": catalog.seasonId,
+        "coin": account.shop_coin,
+        "claimedMaps": state["credits"],
+        "offers": [
+            offer.model_dump() | {"remaining": offer.stock - state["purchases"].get(offer.id, 0)}
+            for offer in offers.values()
+        ],
+    }
 
 
 def claim_credit(ctx, catalog, map_id):
@@ -168,8 +206,11 @@ def buy(ctx, catalog, offer_id):
         raise DomainError("CRISIS_V2_SHOP_SOLD_OUT", "本地库存不足", 409)
     if account.shop_coin < offer.price:
         raise DomainError("CRISIS_V2_SHOP_INSUFFICIENT", "本地商店代币不足", 409)
-    entries = (_material_pack(ctx.data, offer.itemId) if offer.itemType == "ITEM_PACK"
-               else [{"id": offer.itemId, "type": offer.itemType, "count": 1}])
+    entries = (
+        _material_pack(ctx.data, offer.itemId)
+        if offer.itemType == "ITEM_PACK"
+        else [{"id": offer.itemId, "type": offer.itemType, "count": 1}]
+    )
     rewards = ctx.rewards(entries)
     account.shop_coin -= offer.price
     state["purchases"][offer_id] = count + 1

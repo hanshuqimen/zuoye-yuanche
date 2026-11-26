@@ -128,7 +128,8 @@ def test_entire_batch_rolls_back_when_last_mission_cannot_be_claimed(tmp_path, b
         before = rows(runtime.database.path)
         with TestClient(create_game_app(runtime)) as client:
             response = send(client, token, body=BODY | {"missions": [*BODY["missions"], other]})
-            assert response.status_code == {"unknown": 404, "not-ready": 409, "unsupported": 501}[bad_last]
+            # Type 1 is now implemented; a treasure ID is not a challenge ID.
+            assert response.status_code == {"unknown": 404, "not-ready": 409, "unsupported": 404}[bad_last]
         assert rows(runtime.database.path) == before
         assert inventory(runtime) == inventory(runtime, SECOND) == 0
     finally:

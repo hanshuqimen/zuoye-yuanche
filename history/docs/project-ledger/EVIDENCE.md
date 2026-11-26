@@ -1592,3 +1592,24 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 
 
 2026-11-26 原版任务证据：.cache/crisis-20261119/native-missions-summary-20261126-v1.json；loaded-mission-20261126-v1/capture.json（20480字节/同进程guard/源保持）；rea-missions-loaded-20261126-v1/static-methods.json及mcp-missions-loaded-20261126-v1/{rpc-*,completion}.json（5856候选字节、9处结果5720、失败原样）；native-missions-tests-20261126-v1/junit.xml 31通过、regressions目录58通过/实际退出0；native-missions-frozen-20261126-v1/verification.json 18HTTPS/三组/首季3宝藏/冷恢复。crisis-missions-native-v1-20261126/native-mission-request-0001.json为未发奖501的整数2真实请求；warm-resume-20261126-v1前置拒绝未变更；crisis-missions-native-cold-v2-20261126/{completion,prior-owned-callback-observation}.json及ui-evidence/{001-ready,002-reward-popup,003-claimed}.jpg证原版一次FURN/1/14。原31及observer退出码未观察，旧controller无收尾文件不伪造；新冷控制器13883退出0/两回调恢复/index1关闭/index0和源现用保持。所有代码页/图片/日志/DB仅本地，原版币任务等未验。
+
+
+2026-11-26 实证公开回读与新恢复：public-checkpoint-f3fc441-20261126-v1/含prepared/published/remote-readback/readback-verification/upload-progress/preparation-events及两旧索引。main6c262ffe41f1109daf823788f70e02ab1a8605d0/tree8a391e0c745dd133af8e8b4da59a6265cf3569c1，source f3fc441，807公开/754源码/390历史、30上传对象、严格fsck/全SHA/Git/干净、匿名禁系统全局认证且TLS开启，验证进程93355实际退出0。史包SHA 1db7a7594467ec2320f36e995947941d4986b0f34001220ad83ab191ea6c9219，Git blob 59e1be538b786c5479689f8098d3af535585e656。权威heartbeat/local latest均已实际指向本证据。
+
+
+2026-11-26 回读记录归档使用Windows默认换行引入CRLF，diff --check报告后，多命令单元未以非零状态中断，9db238e仍提交；这是模型编排失误。已保留该提交及.cache/crisis-20261119/state-public-readback-crlf-before-fix-20261126.md，归档统一LF后逐字节等于f3fc441的STATE，后续提交命令显式检查退出状态。只改记录格式，未改业务/原版存档，不重跑已通过检查。
+
+
+2026-11-26 原版宝藏公开回读后进入币任务依据。元数据核商店PlayerCrisisShop.coin与赛季coin为不同结构；撤回按M163070名字将float进度getter当金币依据的候选推断，ZoneEntry部分保护offset不使用。四个实际Refresh/Init消费者4088字节离线候选完整线性可解，构造四页REA；83384实际ready/open成功并分析，不启动Android、不发币。证据coin-contract-20261126-v1/{metadata,body-probes}.json、rea-coin-contract-20261126-v1/static-methods.json和mcp-coin-contract-20261126-v1/。一次rg误用外部参数、一次索引补丁上下文不匹配已纠正；失败未改业务。详crisis-native-coins-2026-11-26.md。
+
+
+2026-11-26 币研究四处4088字节REA/close/包装器与子进程实际0，绑定17818→16007→15957证明入口币显示来自crisisV2.shop.coin，未证明赛季coin算法。后续四商店默认体保护，v2准入失败且未启动runner；核已有loaded-mission五页，复用0x412f000前两函数完整832字节，v3会话65946受控启动，后二函数0x4130000仍缺。新证据consumer-bindings/shop-body-source-probes及v2failure/v3rea-mcp目录，0新Android/发币。
+
+
+2026-11-26 商店getGoodList route literal26572/空Req1803/CommonResp1809三字段/MethodSpec289721已绑定，v3两处REA及close/退出0。literal明文保护及旧index正控制缺行拒绝均保留，旧数据不冒充完整；无假成功。首季临时任务同时限时币和不限时GOLD，battle admission原本已不把rewardEndTime当关闭。为回调只采0x4130000一页，35214退出0/两回调与QA、源现用保持/index1关闭/index0保持；新四函数2276字节两页REA15018受控启动，待结果。详crisis-native-coins-2026-11-26.md及其新增证据。
+
+
+2026-11-26 本次22目录实物回读：.cache/workspace-move-readback-20261126T1251386490777Z/verification.json。22名称/原路径消失/实际目标、6Junction当前目标与原对象、本地Git包引用、Git忽略均通过；目录内容未改、未重复移动或完整哈希，未启动模拟器/修改存档。完整哈希仍以.cache/workspace-move-20261119/{before-summary,after-summary,final-verification}.json为准。
+
+
+2026-11-26 币批次依据/检查：.cache/crisis-20261119/coin-missions-summary-20261126-v1.json；测试v2(39过/1QA请求失败)、v3(补过1)、coin-mission-regressions-20261126-v1(70过actual0)，合并107不同通过。coin-missions-frozen-20261126-v1/verification.json：五图9历史钟预置QA/162HTTPS/三组有序停机、冷重试/新恢复、旧家具QA只读准入及源SHA保持，38418 actual0。mcp-coin-reward-render-20261126-v1/{completion,decoded-rpc-0004..0007}.json与rea-coin-reward-render-20261126-v1/static-methods.json：3016字节4方法/4页，62804 actual0/public close成功，artifact0e1f7ead5dc1cb9bd8aa6e79932e896e37124c87c13bfb6fd7ecdce9c11b9b35。14处前批实际completion在.cache/crisis-20261119/mcp-coin-*/，不是rea/子目录；误查与旧handle缺失没有触发重启。所有客户端原始代码/数据/图片/保存仅本地，0新原生与EXE，未知赛季coin不写、商品未实现。

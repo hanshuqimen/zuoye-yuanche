@@ -392,3 +392,14 @@ First-theme initialization checkpoint evidence: `.cache/github-checkpoints/rogue
 2026-11-21 原生战斗路由源码ec9f1a6已公开至main e1157d6；27发布对象Git SHA全部匹配、24新blob扫描通过，774公开文件与727源码/384完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。Public/MIT实际回读，恢复后才轮换两索引，旧包/索引保持。历史增量363795字节/SHA-256 4a801c37f3b8201648a551ac7ef14ccf7dd9213d99b2f0b881fe10e7c93c780b，Git blob8fd30f3ea778b941139857243a9f9f1de286e2ce，仅需原始d40完整包。本次发布会话未发生Node重置或上传错误，不沿用上次发布失败描述。证据 .cache/crisis-20261119/public-checkpoint-ec9f1a6-v1/readback-verification.json。含196当前检查、五图40 HTTPS/三服务82表恢复、8KiB与1980字节REA及packedRune.id纠正；原版画面、领取/解锁/商店/原始回放与成熟成品仍未完成。本段回执晚于源码包。
 
 公开提交 `e1157d670c2a6217a6236ec61d69905b065f78b9`，树 `bd4c63466e7113c93a0f64b01d924a76279f4a90`，源码 `ec9f1a69aa670106f3533217da9f4bf2beed31fa`。[公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/e1157d670c2a6217a6236ec61d69905b065f78b9)。同一证据目录 anonymous-public-clone/、restored-development/、previous-*-latest.json分别保留匿名克隆、新恢复和两旧索引。
+
+
+## 2026-11-26 原版宝藏任务公开检查点
+
+源码`f3fc441f20d1d7d19e1552a81a8eb9b9e72be596`→公开main`6c262ffe41f1109daf823788f70e02ab1a8605d0`，tree`8a391e0c745dd133af8e8b4da59a6265cf3569c1`。完整历史增量`history/source-updates-f3fc441.bundle`，541429字节，SHA-256 `1db7a7594467ec2320f36e995947941d4986b0f34001220ad83ab191ea6c9219`，Git blob `59e1be538b786c5479689f8098d3af535585e656`；仅需原始d40完整包，旧包和精选分支保留。
+
+807个公开文件匿名下载、754个源码/390提交在项目内新目录完整恢复，全SHA-256/Git对象、严格fsck与干净工作区通过。30个上传对象Git SHA一致、35新增blob标记检查通过；实际远程ref及commit/tree也已回读。常规Git仍无无交互登录，连接器以expected父提交/force=false续main，没有读取浏览器凭据或扩大权限。已在验证后保存两旧索引并轮换新索引。
+
+本批89检查/首季三宝藏18HTTPS/冷恢复及一次原版家具弹窗和任务1/14通过，原版资格为独立QA预置、0新战斗。币任务、旧季图集、战斗/商店/回放、其他季、发行物和完整交付未完成。首REA超时/误补查地址/包装器1和旧controller缺失/热恢复拒绝均保留，不因公开删除失败。
+
+证据根`.cache/crisis-20261119/public-checkpoint-f3fc441-20261126-v1/`，`remote-readback.json`、`readback-verification.json`、`anonymous-public-clone/`、`restored-development/`。本段为晚于源码包的回执；下一实质检查点收录，不重复纯文档历史包。

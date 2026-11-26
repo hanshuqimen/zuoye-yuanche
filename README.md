@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `f3fc441`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `89e3dee`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -219,5 +219,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-f3fc441.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 原版危机合约符文组与挑战领奖
+
+2026-11-26 原版危机合约符文组0/挑战1及混合宝藏2批次已接，密封回执核账，旧宝藏回执保持。18新增/107不同当前检查、冻结首季五图9预置QA方案162HTTPS、三次有序服务组/冷启/新目录恢复通过。18处12916字节REA消费者支持真实商店路由、限时物品显示和余额字段依据；到期发奖为已明确的本地策略。原版任务币弹窗、原生商店/购买、未知season.coin、其他赛季、旧季图集、新EXE与完整交付仍未完成。包含目录迁移当前回读及前批公开恢复/换行纠正记录，保留失败和全部旧历史。
+
+[本批实现和依据](docs/crisis-native-coins-2026-11-26.md) · [验证摘要](validation/crisis-v2-coin-missions-20261126.json)。
+
+[本次完整历史增量](history/source-updates-89e3dee.bundle)仅需原始d40完整包，保留所有旧包与分支：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-89e3dee.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

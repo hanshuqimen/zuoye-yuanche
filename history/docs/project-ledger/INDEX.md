@@ -1,5 +1,7 @@
 # 全部项目记录索引
 
+2026-11-26 [危机合约任务币与商店币](../crisis-native-coins-2026-11-26.md)：18处REA及真实getGoodList绑定、0/1/2批次/限时过滤/持久回执和余额、本地商店共存、107不同检查与冻结五图162HTTPS/冷恢复；原版币/商品/赛季coin仍未完。
+
 2026-11-26 [危机合约原版任务领奖](../crisis-native-missions-2026-11-26.md)：隔离家具资格、有限501探测、实际枚举和后续REA/发奖边界。
 
 2026-11-26 [危机合约原版客户端联调](../crisis-native-client-2026-11-26.md)：旧会话失效核对、503 与新手引导边界、新全新 QA 档、匹配版本及原生验证范围。
@@ -24,7 +26,7 @@
 
 2026-11-19 [Windows备份修复发行目录](../windows-backup-release-2026-11-19.md)：721a26e包的真实接口、CLI、窗口、UTF-8管道与独立目录发布。证据 `.cache/product-backup-release-20261119/published-bundle.json`，原始功能结果 `verification.json`；不含新的原生玩法结论。
 
-2026-11-19 [22个外部目录迁入项目](../workspace-directory-move-2026-11-19.md)：完整目录清单、80,926文件哈希、六个Junction修复、五份Git检查、当前路径索引及新位置EXE诊断。本地权威映射 `.cache/moved/path-map.json`，证据 `.cache/workspace-move-20261119/`。用户请求见[sources/directory-move-2026-11-19.md](sources/directory-move-2026-11-19.md)。这些归档长期保留，不作为可清理缓存。
+2026-11-19 [22个外部目录迁入项目](../workspace-directory-move-2026-11-19.md)：完整目录清单、80,926文件哈希、六个Junction修复、五份Git检查、当前路径索引及新位置EXE诊断。本地权威映射 `.cache/moved/path-map.json`，证据 `.cache/workspace-move-20261119/`。2026-11-26本次请求逐项实物回读通过，回执 `.cache/workspace-move-readback-20261126T1251386490777Z/verification.json`，未重复搬动或改写归档。用户请求见[sources/directory-move-2026-11-19.md](sources/directory-move-2026-11-19.md)。这些归档长期保留，不作为可清理缓存。
 
 - [备份 WAL 遗漏及旧迁移夹具修复](../backup-domain-validation-2026-11-19.md)：四项真实恢复故障、十一项旧结构夹具、211 项定向检查及保留的中途失败。
 
@@ -798,3 +800,6 @@
 
 
 2026-11-26 原版宝藏任务收尾：[严格协议/事务/89检查/首季18HTTPS与原版一次领取](../crisis-native-missions-2026-11-26.md)，同报告保存REA超时/误地址、旧控制器失效/热恢复拒绝及新冷恢复证据。下一先保存公开回读和新目录恢复，再REA核任务币与商店币。
+
+
+2026-11-26 下一任务：[币字段/原版消费者/奖励窗口与账本](../crisis-native-coins-2026-11-26.md)，当前仅元数据及有界REA，未发币。

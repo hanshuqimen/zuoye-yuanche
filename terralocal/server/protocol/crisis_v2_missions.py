@@ -1,8 +1,8 @@
 """Frozen confirmMissions request and its reward consumer (ELF 3ece1e7b).
 
 REA VM constructors bind RUNEPACK=0, CHALLENGE=1 and TREASURE=2. A real
-original-client treasure request also confirms integer 2. Only the documented
-treasure grant policy is admitted here; coin missions are still explicit 501.
+original-client treasure request also confirms integer 2. Reward values always
+come from the matching map. Timed grants use the documented local policy.
 """
 
 from typing import Annotated, Literal
@@ -38,7 +38,7 @@ class ConfirmMissions(Command):
 
 class MissionReward(Command):
     id: Key
-    type: Literal["FURN", "CHAR_SKIN", "MATERIAL"]
+    type: Literal["FURN", "CHAR_SKIN", "MATERIAL", "GOLD", "CARD_EXP", "CRS_SHOP_COIN_V2"]
     count: Annotated[int, Field(ge=1, le=2_000_000_000)]
 
 
@@ -60,6 +60,6 @@ def handle_confirm_missions(runtime, payload: ConfirmMissions, request: Request)
         key,
         "native-crisis-v2-missions",
         payload.model_dump(),
-        lambda ctx: crisis_v2_missions.claim(ctx, payload),
+        lambda ctx: crisis_v2_missions.claim(ctx, payload, shop=runtime.crisis_v2_local_shop),
         preserve_result_ts=True,
     )

@@ -174,3 +174,14 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 ## 2026-11-26 危机合约原版联调和全部任务解锁检查点
 
 2026-11-26 完整源码8fe508c已公开至main493e720，48发布对象Git SHA一致、47新增blob标记检查通过；796公开文件与746源码/386完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。历史增量364616字节，SHA-256 faae6ca40e35945e8fc8747e8db3fe8105b716ce50227b0bb16650634809469a，Git blob d44a71a153d0fd7964601a4c5e062dac35b6674d，仅需原始d40完整包。Public/MIT实际回读、恢复后才轮换两权威索引，完整旧索引/旧包及25日精选分支保持。普通Git因无无交互登录失败，已授权连接器以expected旧head/force=false续main；Node首读一次kernel启动非JSON，发布前只读重试成功，上传48对象均核对。含独立危机配置和25日本地功能、原版信息/主地图导览、全部任务解锁修正及61检查/六符文30HTTPS/冷重试和新REA真实confirmMissions绑定；原版0新战斗、缺旧赛季图集、领奖枚举/批量消费、新EXE和完整交付仍未完成。证据.cache/crisis-20261119/public-checkpoint-8fe508c-20261126-v1/readback-verification.json。本段回执晚于源码包，不据此重复纯文档包。
+
+
+## 2026-11-26 原版宝藏任务公开检查点
+
+源码`f3fc441f20d1d7d19e1552a81a8eb9b9e72be596`→公开main`6c262ffe41f1109daf823788f70e02ab1a8605d0`，tree`8a391e0c745dd133af8e8b4da59a6265cf3569c1`。完整历史增量`history/source-updates-f3fc441.bundle`，541429字节，SHA-256 `1db7a7594467ec2320f36e995947941d4986b0f34001220ad83ab191ea6c9219`，Git blob `59e1be538b786c5479689f8098d3af535585e656`；仅需原始d40完整包，旧包和精选分支保留。
+
+807个公开文件匿名下载、754个源码/390提交在项目内新目录完整恢复，全SHA-256/Git对象、严格fsck与干净工作区通过。30个上传对象Git SHA一致、35新增blob标记检查通过；实际远程ref及commit/tree也已回读。常规Git仍无无交互登录，连接器以expected父提交/force=false续main，没有读取浏览器凭据或扩大权限。已在验证后保存两旧索引并轮换新索引。
+
+本批89检查/首季三宝藏18HTTPS/冷恢复及一次原版家具弹窗和任务1/14通过，原版资格为独立QA预置、0新战斗。币任务、旧季图集、战斗/商店/回放、其他季、发行物和完整交付未完成。首REA超时/误补查地址/包装器1和旧controller缺失/热恢复拒绝均保留，不因公开删除失败。
+
+证据根`.cache/crisis-20261119/public-checkpoint-f3fc441-20261126-v1/`，`remote-readback.json`、`readback-verification.json`、`anonymous-public-clone/`、`restored-development/`。本段为晚于源码包的回执；下一实质检查点收录，不重复纯文档历史包。
