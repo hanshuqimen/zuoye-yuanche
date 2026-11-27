@@ -194,3 +194,14 @@ GitHub 将现有内容随仓库公开，访问者可以 fork，已创建的副�
 当前107不同检查、冻结首季五图9预置QA方案162HTTPS、三组有序停机/冷启/新恢复及18处REA依据随包；原版币弹窗、原生商品、未知season.coin、新EXE和完整交付未完成。Node首读重置未执行、首次大回读落盘isError（正文未保留）均登记；实际文件检查后保存小摘要，随后匿名恢复通过，无重复引用更新。本段回执晚于源码包，后续实质包收录。
 
 证据 `.cache/crisis-20261119/public-checkpoint-89e3dee-20261126-v1/{prepared,upload-progress,published,remote-readback,readback-verification,preparation-events}.json`；新下载 `anonymous-public-clone/`、新恢复 `restored-development/`。两权威latest索引在实证后轮换，旧索引保存在该目录previous-*文件。
+
+
+## 2026-11-27 原版商店公开检查点
+
+源码b638093b1f23c253ec2197288982836972ddf524已公开至main602fef3e8d124ca0084face4f1d20a06f1564983，treed6d9c9aafa54021e9771970b20c5852552bbe66c。Public/MIT元数据、32上传对象及实际ref/commit/tree路径Git SHA核对通过；31新增blob标记扫描通过。830公开文件匿名禁Git认证/AskPass/外部Header下载，771源码/395完整Git提交在项目子目录新恢复，全SHA-256/Git对象、双严格fsck及干净工作区通过，54309实际退出0。没有普通源码分支push；已授权连接器以expected c35475b、force=false续main，旧分支/包均保持。
+
+history/source-updates-b638093.bundle为731710字节，SHA-256 7b80880be1f4478368402dd4de602ebeb89a2a93f16e717b7af7f0d8d4426305，只需原始history/source-history-d40aee9.bundle（SHA b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83）。两权威latest索引在恢复通过后轮换，旧字节保存在新检查点目录previous-*文件。首次准备脚本的转义标题匹配失败在任何远程变动前停止；Node闲置重置首读未执行、重新初始化后成功，均登记，无重复引用更新或权限变更。
+
+本批38新/162不同检查（160成组＋2准入补验）及冻结47QA/67永久兑换/742TLS含4预期拒绝、三服务组/冷新恢复的实际范围随包。目录为明确参考重建，不证明官方新账号库存；原版商店UI/币弹窗、首季限时可靠目录、season.coin、新EXE和完整交付均未完成，不因公开标成完成。先前窗口失败和源码/失败历史保留。
+
+证据根.cache/crisis-20261127/public-checkpoint-b638093-20261127-v1/，prepared、upload-progress、published、remote-readback、preparation-events、readback-verification.json及anonymous-public-clone/、restored-development/；当前汇总.cache/crisis-20261127/native-shop-summary-20261127-v1.json。本段为晚于源码包的实际回执，后续实质检查点收录，不重复纯文档包。

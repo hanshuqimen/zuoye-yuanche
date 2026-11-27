@@ -170,7 +170,9 @@ def finish_prepared(ctx, pending, submission):
     if parent.state != "STARTED":
         if parent.settlement.get("version") != VERSION:
             raise DomainError("CRISIS_V2_FINISH_CONFLICT", "此战斗已按其他结果结算", 409)
-        counters = decode_counters(submission.facts.battleData.stats)
+        # The first settlement fixes the codec. Replaying old receipts must not
+        # reinterpret fields that their original decoder deliberately ignored.
+        counters = decode_counters(submission.facts.battleData.stats, codec=parent.settlement["counters"]["codec"])
         if parent.request_hash != request_hash(facts, counters):
             raise DomainError("CRISIS_V2_FINISH_CONFLICT", "危机合约战斗已按不同结果或计数结算", 409)
         return deepcopy(parent.settlement["result"])

@@ -1,0 +1,63 @@
+# 危机合约第四季：独立数据与事件计数（2026-11-27）
+
+恢复时HEAD919efe4、工作区干净；前一目标轮完成商店源码b638093及公开602fef3/830文件匿名下载与395历史恢复，属于实际进展。完整本地服务端/原版客户端/所有模式和成熟Windows交付目标保持，本轮先处理第四季实际供给和现有规则缺口，不以新配置代替原版验收。
+
+## 固定来源和准入反例
+
+读取参考OpenDoctoratePy-EX-Public的实际历史提交1f0792318f43c07e5703126aac4955b2f72552e5，时间2025-08-14T14:37:08Z、树2246d3ce8bce12d27646292b1b5d7ee02095bdcc。商店blob afb194e57cb733ab1c05a8a157e4a19f71ff2a68，982001字节/SHA-256 e6db5dc9e6ca2d36dd3a1496dc43c45c62b842c23aa15f4eb5dec9505524f071。47永久、22第四季和4组六档与上轮较晚参考目录三个区段逐项规范摘要一致；第四季窗口1755158400..1756324799。该证据可给独立参考重建目录一个赛季内的来源时点，仍不证明官方新账号库存。
+
+开放日cc4 blob 4ffb4afc5ad56e0a1306c3cebecd2aad21e098d8（397657字节/SHA ac0a8435）有5张地图摘要，但仅2张详细图；永久图58条runeData，完整后续源有62条。原有准备器因地图集合不完整而拒绝，未放宽校验、复制玩家delta或把缺项当作空地图规则。
+
+后续完整cc4固定blob 00c9437ce842f16c0c719947fc63d26aa51387c1（719938字节/SHA f1bd0e79），从fcce42d48b8c4ead3aeb3f9628db91d3009f5db7取得。只取info对象，合入独立缓存614abf4eac4598de28f7ac425cd17f91c2c116b750c4d1b493ffc1491895bce6：仍为20表，保留首季并添加第四季；19个其他表的规范内容相同，原14457902缓存逐文件SHA保持。准备64991实际退出0，未选为现用数据或转换旧保存。
+
+10图的地图规则均已准入；挑战、任务、评语进一步编译时9图通过，第四季永久图crisis_v2_04-01因新事件评语被拒绝。因此当前尚不能标第四季完整适配。新图仍按实际startTime和奖励期限判定，后续完整信息源的提前可见范围属于需要单独验收的本地供给策略。
+
+## 新事件的依据和待实现项
+
+第四季永久图的新定义为PassWithEventMore/gravity_change/5、PassWithEventMore/ristar_kill_enemy/2，以及PassWithEventLess/cbrush_kill_character/0。旧首季规则仅准入已验证的少数事件，不能仅在白名单中添加名字就将未知日志当作0。
+
+冻结metadata实查找到gravity_change字面量28252，原始token 0xa000dcb9，经0xc611d48和全局0xc1507c0绑定。另两名字不在该字面量池；这不证明游戏未写它们。匹配现有基础表的Kengxxiao/ArknightsGameData固定a550f5e048bb94e7cdefc6eb97a4091f0c4c7add，battle/buff_template_data.json的Git blob a94bbb391fded80e59db38ad7c3ded89e25fd682（27996217字节/SHA b1199173）确实在enemy_ristar_enemy_passive和enemy_cbrush_t_switch_mode的ON_TARGET_KILLED动作中配置LogExtraBattleInfo，SIMPLE、固定key、additionValue1、非黑板取值；首季not_build_at_reed为同类动作的控制。原始数据只在本地，不执行、不导入账号或发布。
+
+已有M66405/66406日志累加REA可复用，未重新运行；M66406须引用后来成功的mcp-exit-counters-v1/rpc-0004，较早mcp-comment-logger-v1的超时保留，不能混淆。GravityButtonTile._SetDirection/M69736冻结体620字节完整可解；通用动作Execute/M94598的3688字节冻结体只有2188字节可解，因此先受控采连续两页8KiB，85883实际退出0。第一批REA48318实际0/public close成功、三方法5036字节，但Execute伪代码明确缺0x94d0f94分支表，不能仅凭isError=false说全部分支恢复。
+
+缺表属于实际证据缺口，故第二次限定同一受控进程的两代码页和一分支表页，总12KiB、上限10次122880字节；9123实际0、回调与保存SHA保持、index1关闭/index0保持，没有API监听/UI/账号请求。GravityButtonTile构造函数冻结304字节完整可解，实查将gravity_change全局0xc1507c0写入字段_infoKey/+0x150；字段与_SetDirection取值相接。新REA68776只排队构造函数和含真实分支表的Execute，不重复已过_SetDirection。当前结果以实际completion为准，不凭旧PID启动第二个会话。
+
+初版selected-counters-v2曾把三新事件限为SIMPLE/空entity/非负整数；这是未经函数分支证明的错误假设，后续原版Entity.id反例已经否定，当前源码撤回空entity限制，见下节。缺结束标记仍为未知；首季v1的历史canonical保持。只增加实际见到的EventMore/gravity、ristar及EventLess/cbrush组合；阈值含等号仍明确为本地后台政策。结算、同战斗重试和只读恢复均使用绑定地图codec。新增独立cn-android-2.7.71-crisis-s4-qa固定614abf4e，旧profile拒收新hash，反向也拒收；同SDK3适配但独立安装目录，在线恢复不转换旧账号。
+
+200项定向检查已通过，38200实际0；包括新事件阈值/缺日志/异常格式、v1规范保持、新回执事务回滚/冲突重试/冷启、原有通关/原版协议及Android守卫相关回归。仍须冻结20表上实际编译、TLS和新目录恢复，不能把合成用例当作原版游玩。
+
+这一阶段当时的下一步是补原版SIMPLE与累加路径、独立配置及冻结TLS；这些后台项的后续结果见下节，原版验收继续未完成。season.coin仍没有增减依据并保留原值。窗口黑图、原版商店/币与危机合约战斗验收、新EXE和完整交付继续未完成。
+
+## 资源与本地证据
+
+冻结V077清单中存在第四季场景scenes/obt/crisis/v2/level_crisis_v2_04-01等；既有检查已表明五季只有crisisv2longterm包，没有请求的crisisv2seasons入口/图集。场景存在不能证明UI资源完整，不改名常驻包冒充赛季图集。
+
+证据根.cache/crisis-20261127/s4-source-contract-20261127-v1，download-receipts.json、marker-literal-probe.json、native-marker-targets.json、native-marker-body-probes.json、buff-marker-definition-proof.json；独立准备在s4-data-preparation-20261127-v1/{dry-run,preparation-proof}.json及cache/614abf4e…/。原始三份参考文件和动作表均保留、本地排除发布。有限计数尚未扩展，现有商店162检查和742TLS是前一阶段，不冒称本轮第四季已通过。
+
+## 原版反例、修正与当前结果
+
+第二批REA68776实际退出0，public close成功、输入SHA保持：构造函数M69749为304字节，Execute M94598为3688字节。真实只读分支表使Execute出现完整switch/case，而不是上一批未解间接跳转。结合首批M69736/66411，本轮4个不同方法5340字节；两次采页均一次即取得限定页，共20480字节，不是玩家或进程快照。
+
+原版构造器把gravity_change绑定到_infoKey/+0x150，_SetDirection成功改变方向后使用同一字段、枚举1和Entity.get_id拼接日志，并加1。通用动作Execute的case1同样用Entity.get_id、固定key和additionValue，SIMPLE=1的选定压缩默认值与该写法及匹配动作表相接。字面量35660确认为三字段格式；不能把SIMPLE误当必定没有实体。初版仅空entity限制被反例否定，已撤回并补多实体累加/异常前缀检查，失败假设及最初200项记录保留，不能把合成测试通过当作原版依据。
+
+当前v2接受带实体的SIMPLE事件，只按实际选定池计数，不把DETAILED再加进去。首季not_build_at_reed同类动作也改为新通关选v2；既有v1回执仍按其保存codec和原算式重放，未升级旧摘要或静默补奖。同战斗重试读取首次回执codec；新S4事件地图拒绝旧codec，旧图允许历史v1读取。新用例实测旧首季回执跨冷启保持、后续新通关消费实体日志；原版battleFinish接口的新评语响应和冷启重试也通过，但请求为自造日志，不是原生游玩。
+
+当前203个不同检查通过，其中33个新事件用例；v2重跑140项受修正影响集合，未重跑未受影响的profile/Android检查，另补1个原版HTTP响应检查。合并结果排除v1已退役的三个参数化名字，初次错误206计数保留在本地v1摘要，最终以s4-summary-20261127-v2.json的203/33为准。实际退出38200、78027和单项均为0；Ruff初次两处导入顺序已修正，最终通过。
+
+旧14457902与新614abf4e严格分开。新profile为cn-android-2.7.71-crisis-s4-qa；安装路径test-instance-crisis-s4-qa，仍要求原SDK3 APK及全部Android/TLS/离线/8秒门槛，启动/在线恢复均要求对应已有存档绑定，不转换旧号。仅后台TLS QA启用该新配置，未准备新的原版安装/引导收据或把它设为现用客户端。
+
+## 第四季实际导入数据与限时交易
+
+匹配新614的20表在当前代码上10/10地图挑战、任务与评语均编译。开放日商店1f0792318f43的三个区段与此前fcce42d参考逐项完全相同，因此复用已经审计的缺省值、枚举名与字段映射，另建独立reconstruction目录，valid_from为1755182228，处于第四季内。目录指纹9fb662cad3c51308b52d6b2d61bbc054cb5e4f10d3389a7cced1eca2dae122d1，文件SHA 0b46e9bb4919fd5e0a468069bc2100a845cd13a3078a046a15e6ade2f419f1ca。它不是官方新账号库存证明，也没有将较晚参考日期直接倒填为开放日。
+
+一次准备失败把参考原字段直接送入严格DTO，253项字段/枚举不匹配使其在API启动前拒绝；v1目录保留。v2仅在三源区段相同及已审计映射的依据下复用规范目录，没有为迁就参考格式放宽产品校验或导入playerDataDelta。
+
+新增tools/verify_crisis_v2_fourth_season.py，只在新.cache目录建立QA。第四季五图9个开放/到期任务批次实际领取、22个独立商品账号逐项购买，计473次真实TLS请求（含1次预期拒绝）、三个服务组有序停止、冷启动和真实备份的新目录恢复；32055实际退出0，源数据与目录SHA保持。资格为明确预置，并非通关成绩；未重复游玩或测试已取消剿灭。过季不显示限时商品、拒绝直接购买，回调服务器时间不补库存。首轮TLS因QA错预期409而在实际404 UNKNOWN_GOOD处停下；产品原有拒绝语义保留，只更正QA预期，失败保存和输出均保留。
+
+## 玩家体验与后续
+
+本轮0新原版界面输入/领奖/战斗；原版SIMPLE写法已由REA核对，自动协议/事务与真实TLS不替代客户端消费。CrisisCoin1未领奖现场保持，窗口恢复后复用；五季入口/图集仍有缺口，存在第四季场景包不等于赛季资源齐全。下一准备新profile的独立本地引导/绑定依据，核真正entry/atlas供给，并在窗口可用后完成一个新币/商店或危机合约战斗代表。未知season.coin、官方库存/动态揭示时间、完整其他模式、成熟Windows新发行、离线Golden Playthrough和两小时等保持未完成。
+
+本轮新增证据：s4-source-contract-20261127-v1/event-writer-rea-proof-v2.json，loaded-s4-event-writer-20261127-v1/v2，rea-s4-event-writer-20261127-v1/v2与mcp-s4-event-writer-20261127-v1/v2；s4-event-regressions-20261127-v1/v2，s4-native-event-response-20261127-v1，s4-open-shop-catalog-20261127-v1/v2及s4-frozen-tls-20261127-v1/v2。所有路径均在.cache/crisis-20261127内；原始资源、伪代码、目录、QA数据库及日志不发布。摘要s4-summary-20261127-v2.json仅保存范围、指纹和实际数量。
+
+记录收尾一次Windows默认CRLF使Git空白检查误将文档整行视为尾空格，提交前将本次改动文档恢复LF，未改历史正文；原始字节保存在.cache/crisis-20261127/s4-docs-before-lf-normalization。未继续执行失败后的staging/commit。

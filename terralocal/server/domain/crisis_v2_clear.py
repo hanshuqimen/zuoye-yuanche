@@ -35,7 +35,7 @@ def admit(data, bound, submission):
         professions = tuple(data.character(row["charId"])["profession"] for row in bound.battle.squad_snapshot)
     except (ValueError, TypeError, KeyError) as exc:
         raise DomainError("CRISIS_V2_COMMENTS_UNSUPPORTED", "危机合约评语定义或编队职业尚未完成适配", 503) from exc
-    counters = decode_counters(submission.facts.battleData.stats)
+    counters = decode_counters(submission.facts.battleData.stats, codec=rules.counter_codec)
     try:
         comments = rules.evaluate(bound.evaluation, counters, professions, cleared=True)
     except (ValueError, TypeError, KeyError) as exc:

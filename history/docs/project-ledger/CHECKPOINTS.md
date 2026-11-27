@@ -1,5 +1,7 @@
 # 既有检查点记录索引
 
+2026-11-27 完整公开source b638093→main602fef3/treed6d9c9a：830公开、771源码395历史，匿名下载/新目录恢复/全部SHA和Git/双fsck/干净，54309实际0；32对象与实际远程路径回读、31新增blob审查通过。两索引实证后轮换，旧件保持。证据.cache/crisis-20261127/public-checkpoint-b638093-20261127-v1/readback-verification.json，[详细回执](../github-checkpoints.md#2026-11-27-原版商店公开检查点)。本段晚于源码包。
+
 2026-11-26 完整源码8fe508c已公开至main493e720，48发布对象Git SHA一致、47新增blob标记检查通过；796公开文件与746源码/386完整历史实际匿名下载及项目内新目录恢复，全文件SHA-256/Git对象、严格fsck和干净工作区通过。历史增量364616字节，SHA-256 faae6ca40e35945e8fc8747e8db3fe8105b716ce50227b0bb16650634809469a，Git blob d44a71a153d0fd7964601a4c5e062dac35b6674d，仅需原始d40完整包。Public/MIT实际回读、恢复后才轮换两权威索引，完整旧索引/旧包及25日精选分支保持。普通Git因无无交互登录失败，已授权连接器以expected旧head/force=false续main；Node首读一次kernel启动非JSON，发布前只读重试成功，上传48对象均核对。含独立危机配置和25日本地功能、原版信息/主地图导览、全部任务解锁修正及61检查/六符文30HTTPS/冷重试和新REA真实confirmMissions绑定；原版0新战斗、缺旧赛季图集、领奖枚举/批量消费、新EXE和完整交付仍未完成。证据.cache/crisis-20261119/public-checkpoint-8fe508c-20261126-v1/readback-verification.json。本段回执晚于源码包，不据此重复纯文档包。
 
 [公开提交](https://github.com/hanshuqimen/zuoye-yuanche/commit/493e72039de4b5dd76d7a963a8ff93b621baac35)，原始恢复见同证据目录restored-development/，匿名克隆anonymous-public-clone/，两旧索引previous-*-latest.json。

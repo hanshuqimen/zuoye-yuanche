@@ -68,3 +68,5 @@ M164047/109642/109643/27980四处956字节REA实际59717退出0/public close成�
 新增本地证据为native-shop-tests-20261127-v1/v2/v3、native-shop-regressions-20261127-v1、frozen-native-shop-catalog-20261127-v1、native-shop-frozen-20261127-v1/verification.json及native-shop-summary-20261127-v1.json，均在.cache/crisis-20261127。原版shop UI/币弹窗、首季限时22件可靠目录、其他赛季、season.coin、旧季资源及新Windows发行仍未完成。下一先保存公开回读/新恢复检查点，再推进这些依据和一个原版代表，不重打旧关。
 
 最终代码审查补齐分档唯一上限的类型检查及服装唯一上限准入，避免不完整数据导致运行时类型错误或重复付费外观。新增2个坏上限（布尔/字符串）检查通过，冻结目录只读重核仍准入、指纹不变，没有重复67次购买；当前合计38新商店＋124关联＝162不同通过检查（160成组＋2准入补验）。新证据native-shop-cap-validation-20261127-v1，当前Ruff和提交前源审查另记。
+
+公开回读已完成：source b638093→main602fef3/treed6d9c9a，830公开文件和771源码395历史匿名下载、新项目目录恢复、全部SHA/Git/双fsck/干净通过，54309实际退出0。32上传对象/远程路径核Git SHA，31新增blob审查；两索引事后轮换、旧件保留。详github-checkpoints.md的同日商店检查点；本段晚于包，未新增游玩、发行物或重跑已过检查。

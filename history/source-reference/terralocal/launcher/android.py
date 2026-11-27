@@ -30,8 +30,7 @@ from terralocal.launcher.client_binding import (
 from terralocal.launcher.client_session import ClientConnectionError
 from terralocal.server.compatibility.profile import (
     CAMPAIGN_DATA_HASH,
-    CRISIS_CLIENT_PROFILE,
-    CRISIS_DATA_HASH,
+    CRISIS_NATIVE_PROFILES,
     ROGUE_CLIENT_PROFILE,
     ROGUE_DATA_HASH,
 )
@@ -146,7 +145,7 @@ class AndroidTransport:
         # The extra table has its own explicit QA profile/save admission. Do
         # not accept either hash interchangeably for the older profiles.
         expected_data = {CAMPAIGN_CLIENT_PROFILE: CAMPAIGN_DATA, ROGUE_CLIENT_PROFILE: ROGUE_DATA_HASH,
-                         CRISIS_CLIENT_PROFILE: CRISIS_DATA_HASH}.get(self.settings.client_profile, FROZEN_DATA)
+                         **CRISIS_NATIVE_PROFILES}.get(self.settings.client_profile, FROZEN_DATA)
         if (profile.package, profile.channel, profile.client_version, profile.version_code,
                 profile.apk_sha256, profile.resource_version, profile.api_version, profile.gamedata_hash) != (
                 PACKAGE, "official", "2.7.71", 190, ORIGINAL_APK, "26-09-22-07-47-20_6c71fa", "V070", expected_data):

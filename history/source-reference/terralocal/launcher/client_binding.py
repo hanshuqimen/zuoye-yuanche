@@ -12,6 +12,8 @@ from terralocal.launcher.client_session import ClientConnectionError, LocalCrede
 from terralocal.server.compatibility.profile import (
     CAMPAIGN_CLIENT_PROFILE,
     CRISIS_CLIENT_PROFILE,
+    CRISIS_NATIVE_PROFILES,
+    CRISIS_S4_CLIENT_PROFILE,
     ROGUE_CLIENT_PROFILE,
 )
 from terralocal.server.persistence import models as m
@@ -30,10 +32,12 @@ def expected_apk(client_profile: str) -> str:
     # Keep the previously accepted adapter/bindings usable. The cash adapter
     # belongs to its own compatibility profile; it never replaces that hash.
     return CASH_PATCHED_APK if client_profile in {
-        CASH_CLIENT_PROFILE, CAMPAIGN_CLIENT_PROFILE, ROGUE_CLIENT_PROFILE, CRISIS_CLIENT_PROFILE} else PATCHED_APK
+        CASH_CLIENT_PROFILE, CAMPAIGN_CLIENT_PROFILE, ROGUE_CLIENT_PROFILE, *CRISIS_NATIVE_PROFILES} else PATCHED_APK
 
 
 def installation_folder(client_profile: str) -> str:
+    if client_profile == CRISIS_S4_CLIENT_PROFILE:
+        return "test-instance-crisis-s4-qa"
     if client_profile == CRISIS_CLIENT_PROFILE:
         return "test-instance-crisis-qa"
     if client_profile == ROGUE_CLIENT_PROFILE:

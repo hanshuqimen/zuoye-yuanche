@@ -402,7 +402,7 @@ class BackupService:
             try:
                 from terralocal.server.compatibility.profile import (
                     CAMPAIGN_CLIENT_PROFILE,
-                    CRISIS_CLIENT_PROFILE,
+                    CRISIS_NATIVE_PROFILES,
                     ROGUE_CLIENT_PROFILE,
                 )
                 from terralocal.server.domain.campaign import preflight as preflight_campaign
@@ -418,7 +418,7 @@ class BackupService:
                 preflight_rogue(self.runtime.data, candidate.path,
                     require_existing_binding=self.runtime.settings.client_profile == ROGUE_CLIENT_PROFILE)
                 preflight_crisis(self.runtime.data, candidate.path,
-                    require_existing_binding=self.runtime.settings.client_profile == CRISIS_CLIENT_PROFILE)
+                    require_existing_binding=self.runtime.settings.client_profile in CRISIS_NATIVE_PROFILES)
                 preflight_crisis_shop(self.runtime.crisis_v2_local_shop, candidate.path)
                 preflight_native_crisis_shop(self.runtime.crisis_v2_native_shop, candidate.path)
                 candidate.initialize()

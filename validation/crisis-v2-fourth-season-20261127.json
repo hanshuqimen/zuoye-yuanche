@@ -1,0 +1,48 @@
+{
+  "focused_tests_passed": 203,
+  "new_event_tests": 33,
+  "groups": {
+    "s4-event-regressions-20261127-v1": 200,
+    "s4-event-regressions-20261127-v2": 140,
+    "s4-native-event-response-20261127-v1": 1
+  },
+  "native_event_codec_source_implemented": true,
+  "legacy_v1_canonical_and_receipts_preserved": true,
+  "simple_entity_fields_admitted_after_native_counterexample": true,
+  "profile": "cn-android-2.7.71-crisis-s4-qa",
+  "game_data_hash": "614abf4eac4598de28f7ac425cd17f91c2c116b750c4d1b493ffc1491895bce6",
+  "frozen_maps_compiled": 10,
+  "fourth_season_maps": 5,
+  "fourth_season_mission_windows": 9,
+  "https_requests": 473,
+  "expected_refusals": 1,
+  "seasonal_purchases": 22,
+  "cold_and_new_restore_match": true,
+  "source_unchanged": true,
+  "new_rea_method_ids": [
+    69736,
+    66411,
+    94598,
+    69749
+  ],
+  "distinct_rea_method_bytes": 5340,
+  "new_capture_bytes": 20480,
+  "rea_public_close_and_actual_exit_zero": true,
+  "index1_stopped_index0_and_saves_unchanged": true,
+  "catalog_mode": "reconstruction",
+  "native_ui_verified": false,
+  "native_gameplay_verified": false,
+  "official_fresh_stock_proven": false,
+  "new_windows_release_built": false,
+  "season_coin_meaning_proven": false,
+  "limitations": [
+    "Initial empty-entity-only new codec assumption withdrawn after native SIMPLE writer counterexample.",
+    "Open-day incomplete map info rejected; imported complete later info does not prove original reveal timing.",
+    "Unconverted reference catalog rejected before API launch; audited field normalization reused only after all three source sections exactly matched.",
+    "First TLS attempt expected 409 for unavailable seasonal good; existing 404 UNKNOWN_GOOD preserved, QA expectation corrected; failed output retained.",
+    "First REA Execute lacked dispatch table; a new bounded capture and query resolved the real switch; original evidence retained.",
+    "Old season entry/atlas resources, original UI/gameplay, season.coin, complete modes and mature release remain incomplete."
+  ],
+  "test_count_basis": "Use the current event test module only from v2 plus the new HTTP check; v1 retains only unaffected profile/Android results. Retired parametrization names are excluded.",
+  "source_commit": "5da18f5c5388170b98a025919cd7b7b31cda1b63"
+}

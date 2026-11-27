@@ -19,8 +19,12 @@ from terralocal.server.protocol.rogue_battle_codec import (
 )
 
 CODEC = "cn-2.7.71-crisis-v2-selected-counters-v1"
+EVENT_CODEC = "cn-2.7.71-crisis-v2-selected-counters-v2"
+CODECS = frozenset({CODEC, EVENT_CODEC})
 ENEMY_KINDS = frozenset({"HP_ZERO", "FALLDOWN", "REACH_EXIT", "ENCOUNTER", "DEADLIKE_REACH_EXIT"})
 EVENTS = frozenset({"COST", "not_build_at_reed"})
+SIMPLE_EVENTS = frozenset({"gravity_change", "ristar_kill_enemy", "cbrush_kill_character"})
+ENTITY_SIMPLE_EVENTS = SIMPLE_EVENTS | {"not_build_at_reed"}
 ATTRIBUTES = frozenset({"COST", "HP_RATIO"})
 IDENTIFIER = re.compile(r"[A-Za-z0-9_-]{1,128}")
 INTEGER = re.compile(r"-?(?:0|[1-9][0-9]*)")
@@ -54,11 +58,12 @@ class CounterFacts:
     enemies: tuple[EnemyCounter, ...] | None
     extra: tuple[ExtraCounter, ...] | None
     extra_encoding: str
+    codec: str = CODEC
 
     def canonical(self):
         # The two admitted ListDict representations have identical business
         # facts. Representation itself is diagnostic, not a second reward key.
-        return {"codec": CODEC,
+        return {"codec": self.codec,
             "characters": None if self.characters is None else [
                 [r.char_id, r.kind, r.value] for r in sorted(self.characters.rows,
                     key=lambda r: (r.char_id, r.kind))],
@@ -100,7 +105,7 @@ def _enemies(stats):
     return tuple(sorted(rows, key=lambda r: (r.enemy, r.kind, r.invalid_kill)))
 
 
-def _extra(stats):
+def _extra(stats, codec):
     value = stats.get("extraBattleInfo")
     if value is None:
         return None, "absent"
@@ -118,6 +123,7 @@ def _extra(stats):
         raise invalid()
     if len(source) > MAX_COUNTER_ROWS:
         raise invalid()
+    events = EVENTS | SIMPLE_EVENTS if codec == EVENT_CODEC else EVENTS
     rows, seen, occurrences = [], set(), 0
     for key, count in source:
         if (type(key) is not str or not 1 <= len(key) <= 512 or "\0" in key
@@ -125,13 +131,17 @@ def _extra(stats):
             raise invalid()
         seen.add(key)
         parts = key.split(",")
-        if len(parts) < 3 or parts[2] not in EVENTS | ATTRIBUTES:
+        if len(parts) < 3 or parts[2] not in events | ATTRIBUTES:
             continue  # Other logs are neither retained nor treated as comments.
         kind, entity, name = parts[:3]
         if (kind not in {"SIMPLE", "DETAILED", "ATTRIBUTE"} or len(entity) > 160
                 or any(ord(c) < 32 for c in entity)):
             raise invalid()
         sample = None
+        # The native SIMPLE action and gravity writer include Entity.id. End
+        # COST uses a separate empty-entity format. V1 receipts stay unchanged.
+        if codec == EVENT_CODEC and name in ENTITY_SIMPLE_EVENTS and kind != "SIMPLE":
+            raise invalid()
         if kind == "ATTRIBUTE":
             if len(parts) != 4 or name not in ATTRIBUTES or not 0 <= count <= MAX_COUNTER_TOTAL:
                 raise invalid()
@@ -148,7 +158,8 @@ def _extra(stats):
                 sample = int(match[1])*1000 + int(match[2])
                 if sample > 1000:
                     raise invalid()
-        elif len(parts) != 3 or name not in EVENTS or kind == "SIMPLE" and entity:
+        elif (len(parts) != 3 or name not in events or kind == "SIMPLE" and entity
+                and not (codec == EVENT_CODEC and name in ENTITY_SIMPLE_EVENTS)):
             raise invalid()
         elif name != "COST" and not 0 <= count <= MAX_COUNTER_TOTAL:
             raise invalid()
@@ -161,14 +172,14 @@ def _extra(stats):
                  r.sample if r.sample is not None else -(2**63)))), encoding
 
 
-def decode_counters(stats):
-    if type(stats) is not dict:
+def decode_counters(stats, *, codec=CODEC):
+    if type(stats) is not dict or type(codec) is not str or codec not in CODECS:
         raise invalid()
     try:
         characters = decode_char_stats(stats)
         enemies = _enemies(stats)
-        extra, encoding = _extra(stats)
-        return CounterFacts(characters, enemies, extra, encoding)
+        extra, encoding = _extra(stats, codec)
+        return CounterFacts(characters, enemies, extra, encoding, codec)
     except (ValueError, TypeError, KeyError, DomainError):
         raise invalid() from None
 
@@ -177,7 +188,7 @@ def restore_counters(value):
     """Validate the minimal versioned receipt, without admitting raw telemetry."""
     try:
         if (type(value) is not dict or set(value) != {"codec", "characters", "enemies", "extra"}
-                or value["codec"] != CODEC):
+                or type(value["codec"]) is not str or value["codec"] not in CODECS):
             raise ValueError()
         for key in ("characters", "enemies", "extra"):
             if value[key] is not None and (type(value[key]) is not list or len(value[key]) > MAX_COUNTER_ROWS):
@@ -204,7 +215,7 @@ def restore_counters(value):
                     raise ValueError()
                 rows.append({"Key": key, "Value": count})
             stats["extraBattleInfo"] = rows
-        restored = decode_counters(stats)
+        restored = decode_counters(stats, codec=value["codec"])
         if restored.canonical() != value:
             raise ValueError()
         return restored

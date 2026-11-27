@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `b638093`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `5da18f5`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -245,5 +245,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-b638093.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 第四季与原版实体事件计数
+
+2026-11-27 第四季独立20表614abf4e与profile、按原版Entity.id的SIMPLE计数和三新事件评语已接；原有v1回执保留，新结算使用明确v2。203不同当前检查（33新事件），10图编译、第四季五图9任务窗口及22限时兑换共473次实际TLS（1次预期拒绝）、冷启和新目录恢复通过。REA4不同方法5340字节，20KiB限定代码/分支页；撤回空实体假设、保留缺分支表和QA失败。原版界面/战斗、entry/atlas、season.coin、官方初始库存、新EXE及完整交付仍未完成；参考目录和所有客户端数据只在本地。
+
+[本批实现和依据](docs/crisis-season-four-2026-11-27.md) · [验证摘要](validation/crisis-v2-fourth-season-20261127.json)。
+
+[本次完整历史增量](history/source-updates-5da18f5.bundle)仅需原始d40完整包，保留所有旧包与分支：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-5da18f5.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

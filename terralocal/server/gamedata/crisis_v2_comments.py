@@ -1,4 +1,4 @@
-"""Imported first-season comment conditions, evaluated without any DB writes.
+"""Imported comment conditions, evaluated without any DB writes.
 
 Rules are a documented local interpretation of the imported definitions and
 client counters; not recovered official backend code. Missing required inputs
@@ -13,7 +13,14 @@ from terralocal.server.gamedata.crisis_v2 import CLIENT_ELF_SHA256
 from terralocal.server.gamedata.crisis_v2 import CONTRACT as MAP_CONTRACT
 from terralocal.server.gamedata.crisis_v2_challenges import natural
 from terralocal.server.gamedata.repository import fingerprint
-from terralocal.server.protocol.crisis_v2_counters import ATTRIBUTES, EVENTS
+from terralocal.server.protocol.crisis_v2_counters import (
+    ATTRIBUTES,
+    CODEC,
+    ENTITY_SIMPLE_EVENTS,
+    EVENT_CODEC,
+    EVENTS,
+    SIMPLE_EVENTS,
+)
 
 CONTRACT = "cn-2.7.71-crisis-v2-comments-v1"
 PROFESSIONS = frozenset({"SNIPER", "CASTER", "WARRIOR", "SUPPORT", "PIONEER", "SPECIAL", "MEDIC", "TANK"})
@@ -69,7 +76,10 @@ class CrisisV2CommentRules:
                 keys = (params[0],)
                 if not 1 <= natural(params[-1]) <= 12:
                     raise ValueError("危机合约职业编队条件无效")
-            elif kind == "PassWithEventLess" and len(params) == 2 and params[0] in EVENTS:
+            elif (kind == "PassWithEventLess" and len(params) == 2
+                    and params[0] in EVENTS | {"cbrush_kill_character"}
+                    or kind == "PassWithEventMore" and len(params) == 2
+                    and params[0] in {"gravity_change", "ristar_kill_enemy"}):
                 keys = (params[0],)
                 natural(params[-1])
             elif kind in {"PassWithAttrExistMore", "PassWithAttrAllLess"} and len(params) == 2:
@@ -88,6 +98,13 @@ class CrisisV2CommentRules:
                 raise ValueError("危机合约评语条件尚未适配")
             conditions[ident] = Condition(kind, keys, threshold, row["sortId"])
         self.conditions = MappingProxyType(conditions)
+        needs_events = any(rule.keys and rule.keys[0] in SIMPLE_EVENTS for rule in conditions.values())
+        native_simple = any(rule.keys and rule.keys[0] in ENTITY_SIMPLE_EVENTS for rule in conditions.values())
+        self.counter_codec = EVENT_CODEC if native_simple else CODEC
+        # Previously sealed first-season receipts retain their original facts
+        # and arithmetic. New clears use the native entity-bearing SIMPLE pool.
+        self.counter_codecs = (frozenset({CODEC, EVENT_CODEC}) if native_simple and not needs_events
+                              else frozenset({self.counter_codec}))
         self.map_fingerprint = map_rules.fingerprint
         self.fingerprint = fingerprint({"contract": CONTRACT, "map_rules": self.map_fingerprint})
 
@@ -99,6 +116,8 @@ class CrisisV2CommentRules:
             raise ValueError("危机合约评语需要有效的开战编队职业")
         if not cleared:
             return CommentResult((), ())
+        if counters.codec not in self.counter_codecs:
+            raise ValueError("危机合约评语计数版本与绑定地图不一致")
         earned, unavailable = [], []
         for ident, rule in sorted(self.conditions.items(), key=lambda p: (p[1].order, p[0])):
             result = self._satisfied(rule, evaluation, counters, professions)
@@ -130,11 +149,13 @@ class CrisisV2CommentRules:
             return sum(r.value for r in counters.enemies if r.enemy == keys[1] and r.kind == "HP_ZERO") >= threshold
         if not counters.has_end_marker:
             return None  # An absent game-over marker is not a known zero event.
-        if kind == "PassWithEventLess":
+        if kind in {"PassWithEventLess", "PassWithEventMore"}:
             if keys[0] == "COST":
                 value = next(r.value for r in counters.extra if r.kind == "SIMPLE" and not r.entity and r.name == "COST")
                 return value <= threshold
-            return sum(r.value for r in counters.extra if r.kind in {"SIMPLE", "DETAILED"} and r.name == keys[0]) <= threshold
+            kinds = {"SIMPLE"} if counters.codec == EVENT_CODEC else {"SIMPLE", "DETAILED"}
+            value = sum(r.value for r in counters.extra if r.kind in kinds and r.name == keys[0])
+            return value <= threshold if kind.endswith("Less") else value >= threshold
         rows = [r for r in counters.extra if r.kind == "ATTRIBUTE" and r.name == keys[0] and r.value > 0]
         scale = 1000 if keys[0] == "HP_RATIO" else 1
         if kind == "PassWithAttrExistMore":

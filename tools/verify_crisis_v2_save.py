@@ -12,19 +12,26 @@ import httpx
 
 from terralocal.config import Settings
 from terralocal.launcher.service import ServerGroup
-from terralocal.server.compatibility.profile import CRISIS_CLIENT_PROFILE, CRISIS_DATA_HASH
+from terralocal.server.compatibility.profile import (
+    CRISIS_CLIENT_PROFILE,
+    CRISIS_DATA_HASH,
+    CRISIS_NATIVE_PROFILES,
+)
 from terralocal.server.domain.accounts import create_account
 from terralocal.server.persistence.models import CrisisV2MapProgress, ServerClockState
 
 
-def settings_for(destination, source):
-    cache = destination / "cache" / CRISIS_DATA_HASH
+def settings_for(destination, source, *, client_profile=CRISIS_CLIENT_PROFILE):
+    data_hash = CRISIS_NATIVE_PROFILES[client_profile]
+    if source.name != data_hash:
+        raise ValueError("The independent QA profile requires its exact pinned data directory")
+    cache = destination / "cache" / data_hash
     shutil.copytree(source, cache, ignore_dangling_symlinks=False)
     with socket.socket() as game, socket.socket() as admin:
         game.bind(("127.0.0.1", 0))
         admin.bind(("127.0.0.1", 0))
         settings = Settings(
-            data_dir=destination, client_profile=CRISIS_CLIENT_PROFILE, gamedata_hash=CRISIS_DATA_HASH,
+            data_dir=destination, client_profile=client_profile, gamedata_hash=data_hash,
             game_host="127.0.0.1", game_port=game.getsockname()[1], admin_port=admin.getsockname()[1],
             advertised_url=f"https://127.0.0.1:{game.getsockname()[1]}", emulator_index=None,
         )
