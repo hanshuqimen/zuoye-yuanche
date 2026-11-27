@@ -82,3 +82,27 @@
 证据native-shop-prefab-inspection-v1/{inspection,shop-scroll-hierarchy,scroll-options}.json及shop-prefab-public-tool-v{1,2}/inspection.json；捕获loaded-shop-scroll-20261127-v1/capture.json，两批REA分别mcp-shop-scroll-20261127-v2、mcp-shop-title-20261127-v1。所有原始资产/类型树和伪代码只在.cache；公开仅自有检查工具与事实说明。读取目录时初版诊断把分档商品的item=None误按普通商品访问而失败，随后限定已知非分档条目核对；这是私有读数脚本错误，不改产品分档合同，也未据源数组下标认定原版格子位置。
 
 下一直接复用已领300的S4保存核运行时布局/输入并完成一笔购买；不重领、不造币、不通过改商品排序绕过未响应列表。季节图集仍缺，season.coin/原版战斗/全模式和成熟发行继续未完成。
+
+## 最新工具公开与触摸入口静态预查
+
+0750ac2检查工具及阶段记录已公开bdf7b82fe1c9e87f2da1470df6cefcf2f9228489，treeabbabd7393360c5c4e0ae4d009fd915d70d0ecda，父93ff9efe。19blob/独立tree一致，11新blob扫描；实际Public/MIT/ref/commit、非强推CAS、匿名852文件及项目内784源码/400历史全SHA/Git/fsck/干净恢复通过，88686实际0。增量952227字节、SHA0457bdc5f2089507a9ec06c6d7761954f7debfcbe3c287b540cacc2fd3c73e85、blobc3a10aebe011e679d1178acdbad7deaafffa85ed，两latest实证后轮换，旧索引/包均保持。首次读取发布清单返回错误，未执行上传；重新读取完整清单和公开许可后才上传，没有把缺失计划当成功。最新回执晚于075包，下次实质修改时收录。
+
+接下来区分输入与运行时布局，不先改服务端或商品顺序。为此只做静态Java类准入：验证当前原DEX SHA dfd9383ec7069b80e26bff4e5880d3632da6511b76761a0f6f30244e1bf6a2eb和SDK3 DEX SHA2250c884381ee9311665ccb0fc2e3352785684bc7ba828a5ac3edf7819eedf33，各仅重新反汇编UnityPlayer一个类，输出SHA均为9c558722829ed32f9133dcaac04cd9dbbb59a7361d73a06e940f74b94e192bdc。三个真实入口签名injectEvent(android.view.InputEvent):boolean、onTouchEvent(android.view.MotionEvent):boolean、onGenericMotionEvent(android.view.MotionEvent):boolean一致；不能把仅字符串存在当完整实现或已采事件。
+
+v1在help打印遇到Jadx-all内JCommander依赖NoSuchMethodError；v2确认类筛选选项后，WSL隐式shell把类描述符分号拆成命令，--output未执行。两失败都发生在静态检查，未启动客户端/Frida，原DEX保持。v2意外生成的项目根空out目录经创建时间、绝对路径、非重解析点和空内容核对，移动至v2/default-smali-output保留，未删除或覆盖旧文件。v3改为wsl --exec直接参数执行，同一两DEX/单类输出核验成功、实际0。原始smali及错误原文仅在.cache/crisis-20261127/unity-touch-dex-preflight-20261127-v{1,2,3}。
+
+项目内已有frida_tools/bridges/java.js，但尚未启动调试服务或装事件观察器。旧通用frida_probe.py的共享ADB/硬编码27043/无单命令8秒和SDK3完整准入不符合当前工作守卫，未直接运行或连接该端口。下一用当前AndroidTransport的设备/进程/SDK3 APK/资源/TLS/离线/8秒准入和可验证的自有通道，只计MotionEvent动作次数，保持原事件转发，不读坐标、按键、玩家或认证数据；实际手势仍仅Computer Use。没有以未核架构的ARM代码地址冒进挂钩。此段是已核静态入口和后续约束，不表示运行时计数已经实现或商店已经购买通过。
+
+## 触摸观察器首次启动失败与受控重试
+
+v3使用同一S4保存和现行AndroidTransport/独占lease/独立ADB，当前实际进程34704与连接已核。宿主frida17.22.2匹配116322840字节x86_64工具，SHA84a73353cdeb2b422b803e8b1cd4037e735d8837152377ea3e65feff32959c8b；guest旧frida-server不存在，未执行未知文件。新独立terralocal-touch-20261127-v3复制后SHA和原生--help通过。此后daemon启动遇到EMULATOR_TIMEOUT，未取得server PID/forward/attach或任何事件计数，不把失败说成商店原因。
+
+停止后completion明确清理空错、两回调恢复/index1关闭/index0与源保持，实际Windows控制器进程消失；上下文截断丢失外层工具句柄，不能补退出码。touch-cleanup的server_pid为空只说明未取得独立身份，不能冒称单独kill已核；最终实例关闭已确认。保留原失败文件和guest二进制，不继续向这个失败会话发输入。
+
+v4准备在全新输出目录启动，工具会话21432；新的helper在实际help确认选项后，加标准流重定向和disable-preload、逐阶段记录，Android命令仍8秒。该改动是否解决启动须以后续输出为准。观察器只针对已核单一游戏PID/启动ticks/bootid和Java injectEvent，计MotionEvent动作类型并原样调用原方法一次；不读取坐标、按键、认证或玩家字段，不按ARM地址挂钩、不生成输入。cleanup按身份回读自有server/forward/session，不杀未知进程。商店滚动/购买、完整资源与全交付仍未完成。
+
+v4实际服务启动/attach和Java ready通过，安装时PID4130、x64、动作全零。此后读取旧目标的两次snapshot均ClientConnectionError，独立有限日志摘要观察游戏已换PID7271，故这两次失败不是有效“点击无事件”证据。随后原版黑屏/没有新登录请求，未继续挂钩新进程，未取得列表手势结论。调试接入与进程变化有时间关系，未证明底层崩溃原因。
+
+停止21432实际退出1：原script已销毁导致remove-hook/unload InvalidOperationError，另remove_remote_device误传device.id而非加入时地址产生InvalidArgumentError。这些是私有观察器清理缺陷，不能冒称成功。独立forward移除/server身份回读后kill未列错误；原版两回调恢复/源保持。总completion因touch错误使index1_stop_confirmed=false，随后新的cleanup-current-readback.json以8秒限定ldconsole实际确认index1停/index0七字段与初始相同，不能据旧总flag重启或声称仍运行。observer-source-used.py保留该次实际helper，不更改失败文件。
+
+下一实际会话48236为全新v5输出目录，只复用已验v2的无Frida/无挂钩控制器和300币存档，不重新领奖/改商品排序或重复关卡。先验原版可见商品，再分别处理滚动/资源；调试观察兼容问题保留，不无限重复同一接入。

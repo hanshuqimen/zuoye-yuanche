@@ -76,15 +76,43 @@ def inspect(path: Path, names: list[str], type_indices: tuple[int, ...] = (), *,
     selected = set(type_indices)
     if any(type(index) is not int or not 0 <= index < type_size // 88 for index in selected):
         raise ValueError("Selected metadata type index is out of bounds")
-    rows = []
-    for type_index, position in enumerate(range(type_start, type_start + type_size, 88)):
-        data = blob[position:position + 88]
-        row = struct.unpack("<16I8H2I", data)
+    definitions = []
+    byval_types = {}
+    for position in range(type_start, type_start + type_size, 88):
+        row = struct.unpack_from("<16I8H2I", blob, position)
         if row[25] & 0xFF000000 != 0x02000000:
             raise ValueError("Decoded type-definition token differs")
+        byval_types.setdefault(row[2], []).append(len(definitions))
+        definitions.append(row)
+
+    qualified_names = {}
+
+    def qualified_name(index, ancestry=()):
+        if index in qualified_names:
+            return qualified_names[index]
+        if index in ancestry or len(ancestry) >= 64:
+            raise ValueError("Metadata declaring-type cycle or excessive nesting")
+        row = definitions[index]
         name = string(row[0])
-        if name not in wanted and type_index not in selected:
+        if row[3] != 0xFFFFFFFF:
+            parents = byval_types.get(row[3], ())
+            if len(parents) != 1:
+                raise ValueError("Metadata declaring type is missing or ambiguous")
+            name = qualified_name(parents[0], (*ancestry, index)) + "+" + name
+        else:
+            namespace = string(row[1])
+            name = (namespace + "." if namespace else "") + name
+        qualified_names[index] = name
+        return name
+
+    rows, matched = [], set()
+    for type_index, row in enumerate(definitions):
+        name = string(row[0])
+        full_name = qualified_name(type_index)
+        matching = wanted.intersection((name, full_name))
+        if not matching and type_index not in selected:
             continue
+        matched.update(matching)
         start, count = row[8], row[18]
         if count and start + count > field_size // 12:
             raise ValueError("Metadata field range out of bounds")
@@ -112,7 +140,7 @@ def inspect(path: Path, names: list[str], type_indices: tuple[int, ...] = (), *,
                             # invented enum value or invalidate known declarations.
                             field["enum_default_raw_decode_error"] = str(exc)
             fields.append(field)
-        definition = {"name": name, "namespace": string(row[1]), "type_index": type_index,
+        definition = {"name": name, "namespace": string(row[1]), "full_name": full_name, "type_index": type_index,
                       "enum": bool(row[24] & 2), "fields": fields}
         if methods:
             start, count = row[9], row[16]
@@ -129,13 +157,15 @@ def inspect(path: Path, names: list[str], type_indices: tuple[int, ...] = (), *,
                                                "parameter_count": method[9]})
         rows.append(definition)
     return {"metadata_sha256": digest, "metadata_page_view": page_report, "types": rows,
+            "matched_type_filters": sorted(matched), "unmatched_type_filters": sorted(wanted - matched),
             "default_value_payloads_verified": False}
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--path", type=Path, default=Path("data/research/cached-global-metadata.dat"))
-    parser.add_argument("--type", action="append", default=[])
+    parser.add_argument("--type", action="append", default=[],
+                        help="Short or namespace-qualified type name; nested names use +")
     parser.add_argument("--type-index", action="append", type=int, default=[])
     parser.add_argument("--methods", action="store_true")
     args = parser.parse_args()

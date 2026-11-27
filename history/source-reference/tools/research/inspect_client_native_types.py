@@ -125,7 +125,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--elf", type=Path, default=Path(".cache/client-metadata/libil2cpp.so"))
     parser.add_argument("--metadata", type=Path, default=Path("data/research/cached-global-metadata.dat"))
-    parser.add_argument("--type", action="append", default=[])
+    parser.add_argument("--type", action="append", default=[],
+                        help="Short or namespace-qualified type name; nested names use +")
     parser.add_argument("--type-index", type=int, action="append", default=[])
     args = parser.parse_args()
     native = NativeTypes(args.elf, args.metadata)

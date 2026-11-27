@@ -1644,3 +1644,15 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 .cache/crisis-20261127/loaded-shop-scroll-20261127-v1/capture.json为4314实际0、两页两组稳定和完整清理/源保持；rea-shop-scroll-20261127-v2/static-methods.json为八体1976字节/24576容器SHA b530a199b47022289f9c3a021940e183b7ab514e537349937a4b304e588dd8a2，mcp-shop-scroll-20261127-v2当前61063实际活跃/open、查询在flight，尚未标完成。
 
 2026-11-27 列表11方法2520字节：mcp-shop-scroll-20261127-v2/{analysis-summary,resolved-calls,completion}.json和mcp-shop-title-20261127-v1对应文件；61063/83979实际0、public close/输入保持。native-shop-prefab-inspection-v1/的shop-scroll-hierarchy.json、scroll-options.json与shop-prefab-public-tool-v2/inspection.json锁定原UI同一ScrollRect，原始清单SHA与既有receipt相同。工具tools/research/inspect_crisis_shop_prefab.py实际新包核验/Ruff0；静态配置和标题默认回退不证明运行时滚动或购买。原生/捕获0新战斗，QA保持300。
+
+2026-11-27 public-checkpoint-0750ac2-20261127-v1/{prepared,upload-progress,expected-tree,published,remote-readback,readback-verification}.json及anonymous-public-clone、restored-development：88686实际0，19上传/11新blob/852公开/784源码400历史，全SHA/Git/fsck/干净，952227/SHA0457bdc5f2089507a9ec06c6d7761954f7debfcbe3c287b540cacc2fd3c73e85。两latest轮换前原bytes保持。
+
+2026-11-27 unity-touch-dex-preflight-20261127-v1/help-failure.json、v2/original-stderr.txt与default-smali-output空目录、v3/verification.json：原dfd9383e/SDK3 2250c884均核，单UnityPlayer有限反汇编输出SHA9c558722相同，3方法签名存在，直接--exec后实际0，0模拟器/Frida/输入/认证读取。不是运行时事件已采或完整Java SDK逆向。
+
+2026-11-27 .cache/crisis-20261127/crisis-s4-native-controller-v3/{touch-transport-metadata,touch-server-help,touch-observer-start-error,touch-cleanup,completion}.json保留8秒服务启动失败及正常停机；没有计数/购买成功。v4实际会话21432/新目录crisis-s4-native-controller-v4，须核真实结束而非旧live文件。独立私有helper owned_touch_observer_20261127.py不调用ADB输入或原生地址。
+
+2026-11-27 crisis-s4-native-controller-v4/{touch-phase,touch-observer-started,touch-agent-admission,touch-owned-server,touch-snapshot-0001,touch-snapshot-0002,diagnostic-summary,touch-cleanup,completion,cleanup-current-readback}.json及observer-source-used.py保留ready→失效目标/黑屏与实际1；v5沿用v2无挂钩，实际会话48236。
+
+2026-11-28 .cache/crisis-20261128/native-shop-resume-audit-v1/verification.json为实际8秒实例/QA只读/78请求回读；.cache/crisis-20261127/stable-unity-touch-observer-v2/{pre-attach,baseline,current,touch-cleanup,completion}.json记录ready后无手势失效/96724实际1、独立清理空错。32733/42446实际1为准入失败，23808实际0驱动能力；目录无采样不能据固定标志称部署。当前v6会话44919须核真实句柄。
+
+2026-11-28 .cache/crisis-20261128/crisis-s4-native-controller-v6/roster-input-control.json为无注入普通列表对照；mcp-scroll-input-20261128-v1/analysis-summary.json四方法1212/实际59395退出0。metadata-qualified-name-regression-v1/junit.xml为13过/实际0，metadata-qualified-name-frozen-v1/verification.json为四个真正冻结类型/原生注册/旧字段保持/两CLI实际0。原始空查询scroll-field-types.json保留，字段链接v2证明不当作原版滚动通过。

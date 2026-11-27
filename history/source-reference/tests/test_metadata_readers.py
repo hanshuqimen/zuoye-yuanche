@@ -74,6 +74,55 @@ def test_name_query_returns_duplicates_at_distinct_string_indices(synthetic_meta
     report = inspect_client_metadata.inspect(path, ["CrossPage"])
     assert [(row["name"], row["namespace"]) for row in report["types"]] == [
         ("CrossPage", "A.Namespace"), ("CrossPage", "B.Namespace")]
+    qualified = inspect_client_metadata.inspect(path, ["B.Namespace.CrossPage", "Missing.Type"])
+    definition, = qualified["types"]
+    assert definition["full_name"] == "B.Namespace.CrossPage"
+    assert qualified["matched_type_filters"] == ["B.Namespace.CrossPage"]
+    assert qualified["unmatched_type_filters"] == ["Missing.Type"]
+
+
+@pytest.fixture
+def nested_metadata(synthetic_metadata, monkeypatch):
+    path, strings, old_header = synthetic_metadata
+    header, body = list(old_header), bytearray(path.read_bytes())
+    extra = b"Nested\0"
+    position = header[6] + len(strings)
+    body[position:position + len(extra)] = extra
+    header[7] += len(extra)
+    header[41] = 176
+    row = [0] * 26
+    row[0], row[2], row[3], row[25] = len(strings), 1, 0, 0x02000002
+    second = struct.pack("<16I8H2I", *row)
+    body[header[40] + 88:header[40] + 176] = bytes(value ^ 0x66 for value in second)
+    header[42:44] = [4320, 40]
+    image = bytearray(40)
+    struct.pack_into("<I", image, 28, 1)
+    body[4320:4360] = bytes(value ^ 0x66 for value in image)
+    body[:256] = bytes(value ^ 0x66 for value in struct.pack("<64I", *header))
+    path.write_bytes(body)
+    monkeypatch.setattr(pages, "METADATA_HASH", hashlib.sha256(body).hexdigest())
+    return path, tuple(header)
+
+
+def test_nested_qualified_filter_uses_declaring_type_instead_of_namespace_only(nested_metadata):
+    path, _ = nested_metadata
+    report = inspect_client_metadata.inspect(path, ["A.Namespace.CrossPage+Nested"])
+    definition, = report["types"]
+    assert definition["name"] == "Nested" and definition["full_name"] == "A.Namespace.CrossPage+Nested"
+    assert report["unmatched_type_filters"] == []
+    assert inspect_client_metadata.inspect(path, ["Nested"])["types"] == report["types"]
+
+
+@pytest.mark.parametrize(("parent", "message"), [(1, "cycle"), (999, "missing or ambiguous")])
+def test_invalid_declaring_links_do_not_invent_a_qualified_name(nested_metadata, monkeypatch, parent, message):
+    path, header = nested_metadata
+    body = bytearray(path.read_bytes())
+    offset = header[40] + 88 + 3 * 4
+    body[offset:offset + 4] = bytes(value ^ 0x66 for value in struct.pack("<I", parent))
+    path.write_bytes(body)
+    monkeypatch.setattr(pages, "METADATA_HASH", hashlib.sha256(body).hexdigest())
+    with pytest.raises(ValueError, match=message):
+        inspect_client_metadata.inspect(path, ["Nested"])
 
 
 def test_native_constructor_loads_the_shared_view_once_and_long_names_are_plain(synthetic_metadata, tmp_path, monkeypatch):

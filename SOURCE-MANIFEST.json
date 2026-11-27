@@ -1,5 +1,5 @@
 {
-  "source_commit": "0750ac230f9ddb97af24193ba40638cea23fb80d",
+  "source_commit": "2e71f59087988ad1bd2b3624571edbb549b02e41",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "a5d2a769009e74811df132bec82b7342470c38a7",
+      "original_git_blob": "7d6aa81ad80ef89ffd6e4416ccc590565d39832f",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "9da41aca71b2d62e7a8d919f7f9881ce4f0fdad1e8deb4e8d87c178f9f9b0f74",
+      "public_sha256": "c4cea7a5704c6b28376930c0fe66e06ada974458682dd68fdea2711813644084",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "bf41b4db121ccc28082f1dad2573af403ce36b8db4df263d6699fd4a644fc880",
+      "public_sha256": "c09e0e2da4ee28b009ab18ea34c250801654d3eecf93271da37ad9b9ff6a1c9c",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "67e7c1a8c0be3fb988f99ef5c1a3b3bbdee039a6",
+      "original_git_blob": "62ee42151027590b07744185efe6fbeb24314da0",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "9cc7bcb3d1aa4a98cc5fb622d007ef55a96a98ef7679038495988bd2e03b03c4",
+      "public_sha256": "b249c9fe910bc04a07788668d8d8d8e8c25c3a0a783b963a45abbfd2fc285420",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "3f5c701c090ba178ea8b29844eb81d1fc40d6209",
+      "original_git_blob": "78cf8a6491df4bc3cb1eb6de6e8e596eb3242614",
       "published_path": "history/STATUS.md",
-      "public_sha256": "1c47c27f25929d5e123b0958eeecbbec23ac2c130bc24ced2db6879ea2147d66",
+      "public_sha256": "520fb6631819b756762de9d8ad2636723297deb68fe82a2311155bc2af9c58b7",
       "modified_for_publication": false
     },
     {
@@ -354,6 +354,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/crisis-input-2026-11-28.md",
+      "original_git_blob": "e87731f1986b01eb604e5f87ac62b5d03aa44b4f",
+      "published_path": "docs/crisis-input-2026-11-28.md",
+      "public_sha256": "8fdc0b2af0c856f175478e92c62c75ebb2d2826cc17265977686ac5ab49451f3",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/crisis-local-claims-2026-11-25.md",
       "original_git_blob": "c6525a2baa3fcaf702d8e296f0874dbf708aefda",
       "published_path": "docs/crisis-local-claims-2026-11-25.md",
@@ -418,9 +425,9 @@
     },
     {
       "source_path": "docs/crisis-season-resources-2026-11-27.md",
-      "original_git_blob": "b8d92e56e4e23c444bf721545bf997b3926d43c7",
+      "original_git_blob": "5abc07b46af0a81b06984fd8cb69d638285852ee",
       "published_path": "docs/crisis-season-resources-2026-11-27.md",
-      "public_sha256": "0410bc133431f34dfd1fffe29fb16eeb2fd6aa16f5fdf1b5c5f98f33a091af39",
+      "public_sha256": "fb1d1697558d25506f48d43bcdea242b0b4d009f778feed7dd63cb6bd4baa33c",
       "modified_for_publication": false
     },
     {
@@ -509,9 +516,9 @@
     },
     {
       "source_path": "docs/github-checkpoints.md",
-      "original_git_blob": "8cc22f422339873b1fda1e49a1f4b67c3c395bc7",
+      "original_git_blob": "ea15e8071bbaaec176fb7fc3a8046128f5128f6c",
       "published_path": "history/docs/github-checkpoints.md",
-      "public_sha256": "f5d70ed6bb790659b048cfa072f344f46cb831691224d41b1a3fe935d03d2603",
+      "public_sha256": "c471c6c29301ab67d71f92b02df506470b51dc65aca6336e29cef49cfe4fa499",
       "modified_for_publication": false
     },
     {
@@ -677,30 +684,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "5d7025fb937db80e6668e9a233a15b94b343fc39",
+      "original_git_blob": "f5aa41140d979b4b2b7aed62d2565c98fc27dbea",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "abe138a9b9ef1a20e11955fe8a708ad9307e0d5f741e55d83f6dad20c3234304",
+      "public_sha256": "84300c6e8c68aa09b69e77067cf8dd4c1b29a444e46c463789fbab211ed84ade",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "15acbd2b0a5ef872cbb3f49c9de87ee56fa3b3db",
+      "original_git_blob": "ea860d0b5699b36c8e19d3254e14c11e8958b7bb",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "25202b0708a12cc42f813e0bee23228bc5377eddcd6742e5b9ac50424620c88a",
+      "public_sha256": "5bd2d9805f0b99e24624812a9797a685ee5434f68ffaec2bb87fc452ec31ed80",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "ac7f1f660423440b32ea56cc54c29db6ef25f7cf",
+      "original_git_blob": "e3751bf8337ec8ef8ec58442dc221fd306a407d6",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "a840f87c48173f6b7343d335ed4bb02430b2f409c173a03264170df5abbb116e",
+      "public_sha256": "be76fde18382993d560ba1acb9d08b263b76612c36995fd4bc64f34f79e3be75",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "c2c175e8537d7a09d0b7ee26c212fbb1d6bf6447",
+      "original_git_blob": "f0025e53dd95027411898973fdc00c2d947d9c36",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "10b351cba5d60fab5f425f659906efdd2549af2796c9375f769bbc34722821e8",
+      "public_sha256": "90b655cd9d20781ff4f99207584b3446be36aeda40615297736657a403e5186a",
       "modified_for_publication": false
     },
     {
@@ -733,9 +740,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "e72a7ea4387b92cfb102401bb27bd23b2cc396c4",
+      "original_git_blob": "ee79ea8105ea0fa88887ba16c45c44a3814f25e1",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "d03e6d95f1f5116a20ca1a003bbab0f5f05bc30d9a3bad159e0228fc291f35ef",
+      "public_sha256": "ecc99724b480df43fd847a2fea570f2d946b60e95ad62852c1ef2af96a147d75",
       "modified_for_publication": false
     },
     {
@@ -984,6 +991,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-27-before-0750ac2-public-recovery.md",
+      "original_git_blob": "e72a7ea4387b92cfb102401bb27bd23b2cc396c4",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-27-before-0750ac2-public-recovery.md",
+      "public_sha256": "d03e6d95f1f5116a20ca1a003bbab0f5f05bc30d9a3bad159e0228fc291f35ef",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/project-ledger/state-archive/STATE-2026-11-27-before-fourth-season-public-readback.md",
       "original_git_blob": "4c1bcfd3489639b515e10475e92d48151a63d9eb",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-27-before-fourth-season-public-readback.md",
@@ -1044,6 +1058,20 @@
       "original_git_blob": "3801b4ecebae3bb24c14423ff5185d55b9f70c3e",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-27-before-resource-client-resume.md",
       "public_sha256": "e568a79c5fe3a14f91e488985d1309455ab403fe9bbb1a918d07c9c129ddbec0",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-27-before-touch-observer-v3.md",
+      "original_git_blob": "028564e9f61f18fcf317969222b1b1a0b460daa7",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-27-before-touch-observer-v3.md",
+      "public_sha256": "3838bdf26823146dfba0b88eefd826d5afc4f9b1ce89e993a7ffb8964e7a8ff0",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-28-before-native-input-control.md",
+      "original_git_blob": "bbfe63e4fd37eb081491a156b2eab0a6d0931321",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-28-before-native-input-control.md",
+      "public_sha256": "59c3fc695eb19acd085e6269f051ed52cf6df34a01fed51a4c339e3745264822",
       "modified_for_publication": false
     },
     {
@@ -4303,9 +4331,9 @@
     },
     {
       "source_path": "tests/test_metadata_readers.py",
-      "original_git_blob": "df681d8d560a450c7da8e42fd3709bb53903fffb",
+      "original_git_blob": "de181f4447fc917475ffc4a9bd23c115b854a5be",
       "published_path": "history/source-reference/tests/test_metadata_readers.py",
-      "public_sha256": "356585ce1fea6e58d1d5611334ee3f5dee60e3a1a46b1ca48494d2a3eb58515f",
+      "public_sha256": "0ade4a878c05e3b91f032533fb4d4db377a33ae06f5a8a0b64547e846c6ee288",
       "modified_for_publication": false
     },
     {
@@ -5388,16 +5416,16 @@
     },
     {
       "source_path": "tools/research/inspect_client_metadata.py",
-      "original_git_blob": "da08c752a0638f27774a5b3918e0d093459d3924",
+      "original_git_blob": "8efaf9e2b6a0a23ad9162bf6ad2d4f5ed0ac9f67",
       "published_path": "history/source-reference/tools/research/inspect_client_metadata.py",
-      "public_sha256": "1a9780561ba4e132a17737dd593d44f916799d3eb57e6f9801903b994ae2e114",
+      "public_sha256": "3b50aa790a50cc4d0166bf8528806112a90ecb247b37a874e0583d9214572d29",
       "modified_for_publication": false
     },
     {
       "source_path": "tools/research/inspect_client_native_types.py",
-      "original_git_blob": "f7490c50bc20870db0fae9a4c30223a65d39e529",
+      "original_git_blob": "1112e04dbcf8d1ac3c9d9491d13881e790439550",
       "published_path": "history/source-reference/tools/research/inspect_client_native_types.py",
-      "public_sha256": "dc307657f97b089bec53c82127dfd3cad31b8d40b14497080fb6608ad49daa89",
+      "public_sha256": "4426d9dd86cd8bc59b3b87efcb012330459699c178d16e35779e76406c5f9898",
       "modified_for_publication": false
     },
     {
@@ -5493,14 +5521,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-0750ac2.bundle",
-    "bytes": 952227,
-    "sha256": "0457bdc5f2089507a9ec06c6d7761954f7debfcbe3c287b540cacc2fd3c73e85",
-    "git_blob": "c3a10aebe011e679d1178acdbad7deaafffa85ed",
-    "source_commit": "0750ac230f9ddb97af24193ba40638cea23fb80d",
+    "path": "history/source-updates-2e71f59.bundle",
+    "bytes": 812627,
+    "sha256": "23a5ac5dd43e5ce62753cc21722f4f4558acfbde083ddc73744956c33c135423",
+    "git_blob": "edccfac036508f5a6f78968a4eed89acf46940c6",
+    "source_commit": "2e71f59087988ad1bd2b3624571edbb549b02e41",
     "branch": "codex/development",
-    "source_files": 784,
-    "source_history_commits": 400,
+    "source_files": 788,
+    "source_history_commits": 402,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"

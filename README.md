@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `0750ac2`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `2e71f59`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -276,3 +276,11 @@ git -C restored-history merge --ff-only FETCH_HEAD
 [本批依据和保留失败](docs/crisis-season-resources-2026-11-27.md) · [验证摘要](validation/crisis-shop-inspector-20261127.json)。
 
 [本次完整历史增量](history/source-updates-0750ac2.bundle)仅需原始d40完整包，全部旧包与回滚点保持。
+
+## 类型检索修正与原版输入对照
+
+2026-11-28 修正冻结元数据研究工具完整/嵌套名称静默空结果，新增明确未匹配列表和声明父链接守卫；13当前reader检查/Ruff、四个真正冻结类型对原生注册和两CLI实际0通过，旧字段及枚举负载未验证边界保持。新4基础滚动方法1212字节REA、主体/方法核验/公用关闭和实际0通过。无注入S4仍300币/0购买/0战斗，普通干员长列表拖动也无可见位移；手动对照未答，未认定输入或后台根因。调试失败/旧保存与资源缺口保留，完整模式、真实购买、新成熟EXE和全部交付继续未完成。
+
+[本批依据和保留失败](docs/crisis-input-2026-11-28.md) · [验证摘要](validation/crisis-input-metadata-20261128.json)。
+
+[本次完整历史增量](history/source-updates-2e71f59.bundle)仅需原始d40完整包，全部旧包与回滚点保持。
