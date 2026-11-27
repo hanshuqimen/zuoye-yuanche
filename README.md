@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `5da18f5`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `216e8b4`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -260,3 +260,11 @@ git -C restored-history merge --ff-only FETCH_HEAD
 git -C restored-history fetch ../history/source-updates-5da18f5.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```
+
+## 原版危机合约独立QA与启动配置
+
+2026-11-27 新增独立原版危机合约QA准备工具，精确20表/profile、复用SDK3、六项无奖励指南和可领奖/首次指南冲突准入；遗漏SDK商品清单导致真实503，补六文档指纹/建库前验证后原版清单、登录与同步200。两项真实冻结输入故障注入拒绝无输出，Ruff通过。Coin1真实领取300但首次指南返回未过；S4主页/商店、season.coin、entry/atlas、完整模式及新EXE在本源码检查点仍未完成。6个不同指南方法6808字节REA，专门Tutorial间接分支缺表未冒称完整链；清理超时失败和冷恢复实证保留。
+
+[本批实际范围和失败](docs/crisis-season-resources-2026-11-27.md) · [验证摘要](validation/crisis-native-qa-20261127.json)。
+
+[本次完整历史增量](history/source-updates-216e8b4.bundle)仅需原始d40完整包，保留旧检查点及全部历史。

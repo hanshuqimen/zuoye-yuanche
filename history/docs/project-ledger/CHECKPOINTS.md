@@ -414,3 +414,9 @@ First-theme initialization checkpoint evidence: `.cache/github-checkpoints/rogue
 当前107不同检查、冻结首季五图9预置QA方案162HTTPS、三组有序停机/冷启/新恢复及18处REA依据随包；原版币弹窗、原生商品、未知season.coin、新EXE和完整交付未完成。Node首读重置未执行、首次大回读落盘isError（正文未保留）均登记；实际文件检查后保存小摘要，随后匿名恢复通过，无重复引用更新。本段回执晚于源码包，后续实质包收录。
 
 证据 `.cache/crisis-20261119/public-checkpoint-89e3dee-20261126-v1/{prepared,upload-progress,published,remote-readback,readback-verification,preparation-events}.json`；新下载 `anonymous-public-clone/`、新恢复 `restored-development/`。两权威latest索引在实证后轮换，旧索引保存在该目录previous-*文件。
+
+## 2026-11-27 第四季与实体计数公开检查点
+
+2026-11-27 第四季/实体计数源码5da18f5c5388170b98a025919cd7b7b31cda1b63已公开至main0c748d318bb573044550eb54f0d9aee463e83d04，tree6735928ac41c6c4592c2cdea4ebd406564786511。34上传blob逐个Git SHA相同，新tree另由项目内独立Git索引重建摘要后比对；非强推CAS从602fef3推进，Public/MIT实际回读。839公开文件匿名完整下载，777源码/397开发提交在项目内新目录恢复；全SHA-256/Git对象、两库严格fsck及干净工作区通过，94098实际退出0。32新blob凭据格式扫描通过；官方数据/代码页/保存及日志未发布。增量history/source-updates-5da18f5.bundle为759195字节，SHA-256 8fd2d219914a47870214e225462e1f7fe6c0ac53272a710828ac2afe30ef4c49，Git blob03e0c35a371b5324f15dc1169c661c9d35177fc3，仅需原始d40完整包（SHA b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83）。两latest索引在恢复通过后轮换，旧bytes保存在新检查点目录previous-*.json，所有旧包保留。
+
+本地证据.cache/crisis-20261127/public-checkpoint-5da18f5-20261127-v1/{prepared,upload-progress,expected-tree,created-commit,published,remote-readback,readback-verification}.json，anonymous-public-clone和restored-development。203当前检查/33新事件及473TLS/22限时兑换使用既有结果，不为记录重跑；原版UI/战斗、entry/atlas、season.coin、官方库存、新EXE及完整交付未完成。本段晚于源码包，下次实质源码检查点收录。

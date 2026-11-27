@@ -819,3 +819,9 @@
 2026-11-27 [第四季独立数据与事件计数](../crisis-season-four-2026-11-27.md)：历史商店时点、部分地图反例、614abf4e独立准备、9/10条件编译、新事件原始动作表及待完成REA；不冒称新赛季可用或UI资源完整。
 
 第四季独立兼容/新计数/限时目录：[报告](../crisis-season-four-2026-11-27.md)，当前摘要.cache/crisis-20261127/s4-summary-20261127-v2.json。复验仅受影响新范围；TLS使用tools/verify_crisis_v2_fourth_season.py及新输出目录，独立614缓存和s4-open-shop-catalog-v2输入均本地；下一原版独立绑定/entry-atlas资源及一个新代表，旧Coin1未领奖QA保留。
+
+第四季公开回滚点：source5da18f5→main0c748d3；[回读/恢复记录](CHECKPOINTS.md)，证据.cache/crisis-20261127/public-checkpoint-5da18f5-20261127-v1/。当前下一原版独立profile/entry-atlas及新代表；本段晚于该包。
+
+原版资源/独立配置与Coin1恢复：[当前报告](../crisis-season-resources-2026-11-27.md)，新控制器.cache/crisis-20261127/crisis-coins-native-controller-20261127-v2；先核实际会话再操作。
+
+2026-11-27 原版CC独立QA、300币/指南冲突、SDK清单503修复、清理失败和冷恢复：[报告](../crisis-season-resources-2026-11-27.md)；自有准备工具[prepare_crisis_v2_native_qa.py](../../tools/prepare_crisis_v2_native_qa.py)。本地证据见EVIDENCE末条，旧失败和原生/发行未完成范围保留。

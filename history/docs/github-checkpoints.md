@@ -205,3 +205,9 @@ history/source-updates-b638093.bundle为731710字节，SHA-256 7b80880be1f447836
 本批38新/162不同检查（160成组＋2准入补验）及冻结47QA/67永久兑换/742TLS含4预期拒绝、三服务组/冷新恢复的实际范围随包。目录为明确参考重建，不证明官方新账号库存；原版商店UI/币弹窗、首季限时可靠目录、season.coin、新EXE和完整交付均未完成，不因公开标成完成。先前窗口失败和源码/失败历史保留。
 
 证据根.cache/crisis-20261127/public-checkpoint-b638093-20261127-v1/，prepared、upload-progress、published、remote-readback、preparation-events、readback-verification.json及anonymous-public-clone/、restored-development/；当前汇总.cache/crisis-20261127/native-shop-summary-20261127-v1.json。本段为晚于源码包的实际回执，后续实质检查点收录，不重复纯文档包。
+
+## 2026-11-27 第四季与实体计数公开检查点
+
+2026-11-27 第四季/实体计数源码5da18f5c5388170b98a025919cd7b7b31cda1b63已公开至main0c748d318bb573044550eb54f0d9aee463e83d04，tree6735928ac41c6c4592c2cdea4ebd406564786511。34上传blob逐个Git SHA相同，新tree另由项目内独立Git索引重建摘要后比对；非强推CAS从602fef3推进，Public/MIT实际回读。839公开文件匿名完整下载，777源码/397开发提交在项目内新目录恢复；全SHA-256/Git对象、两库严格fsck及干净工作区通过，94098实际退出0。32新blob凭据格式扫描通过；官方数据/代码页/保存及日志未发布。增量history/source-updates-5da18f5.bundle为759195字节，SHA-256 8fd2d219914a47870214e225462e1f7fe6c0ac53272a710828ac2afe30ef4c49，Git blob03e0c35a371b5324f15dc1169c661c9d35177fc3，仅需原始d40完整包（SHA b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83）。两latest索引在恢复通过后轮换，旧bytes保存在新检查点目录previous-*.json，所有旧包保留。
+
+本地证据.cache/crisis-20261127/public-checkpoint-5da18f5-20261127-v1/{prepared,upload-progress,expected-tree,created-commit,published,remote-readback,readback-verification}.json，anonymous-public-clone和restored-development。203当前检查/33新事件及473TLS/22限时兑换使用既有结果，不为记录重跑；原版UI/战斗、entry/atlas、season.coin、官方库存、新EXE及完整交付未完成。本段晚于源码包，下次实质源码检查点收录。

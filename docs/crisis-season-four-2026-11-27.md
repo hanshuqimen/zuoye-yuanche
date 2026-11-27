@@ -61,3 +61,9 @@
 本轮新增证据：s4-source-contract-20261127-v1/event-writer-rea-proof-v2.json，loaded-s4-event-writer-20261127-v1/v2，rea-s4-event-writer-20261127-v1/v2与mcp-s4-event-writer-20261127-v1/v2；s4-event-regressions-20261127-v1/v2，s4-native-event-response-20261127-v1，s4-open-shop-catalog-20261127-v1/v2及s4-frozen-tls-20261127-v1/v2。所有路径均在.cache/crisis-20261127内；原始资源、伪代码、目录、QA数据库及日志不发布。摘要s4-summary-20261127-v2.json仅保存范围、指纹和实际数量。
 
 记录收尾一次Windows默认CRLF使Git空白检查误将文档整行视为尾空格，提交前将本次改动文档恢复LF，未改历史正文；原始字节保存在.cache/crisis-20261127/s4-docs-before-lf-normalization。未继续执行失败后的staging/commit。
+
+## 公开回滚点
+
+2026-11-27 第四季/实体计数源码5da18f5c5388170b98a025919cd7b7b31cda1b63已公开至main0c748d318bb573044550eb54f0d9aee463e83d04，tree6735928ac41c6c4592c2cdea4ebd406564786511。34上传blob逐个Git SHA相同，新tree另由项目内独立Git索引重建摘要后比对；非强推CAS从602fef3推进，Public/MIT实际回读。839公开文件匿名完整下载，777源码/397开发提交在项目内新目录恢复；全SHA-256/Git对象、两库严格fsck及干净工作区通过，94098实际退出0。32新blob凭据格式扫描通过；官方数据/代码页/保存及日志未发布。增量history/source-updates-5da18f5.bundle为759195字节，SHA-256 8fd2d219914a47870214e225462e1f7fe6c0ac53272a710828ac2afe30ef4c49，Git blob03e0c35a371b5324f15dc1169c661c9d35177fc3，仅需原始d40完整包（SHA b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83）。两latest索引在恢复通过后轮换，旧bytes保存在新检查点目录previous-*.json，所有旧包保留。
+
+证据根.cache/crisis-20261127/public-checkpoint-5da18f5-20261127-v1/。本节晚于该源码包，后续实质检查点收录；不把最新回执冒称已在旧包内，也不为记录重跑测试。下一原版独立配置/资源与新代表，完整目标保持。

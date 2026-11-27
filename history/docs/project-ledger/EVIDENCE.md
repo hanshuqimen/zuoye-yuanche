@@ -1630,3 +1630,9 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 2026-11-27 .cache/crisis-20261127/s4-source-contract-20261127-v1/含三参考blob完整Git/SHA、字面量/方法体探针和buff-marker-definition-proof.json；s4-data-preparation-20261127-v1/{dry-run,preparation-proof}.json记录开放日部分源拒绝、完整源614abf4e、19表/旧原缓存保持和9/10条件编译，64991实际0。85883限定采页仍运行，需读实际结束和收尾结果，不从标志重启。
 
 2026-11-27 第四季阶段：docs/crisis-season-four-2026-11-27.md；.cache/crisis-20261127/s4-summary-20261127-v2.json（203/33/473/22），s4-frozen-tls-20261127-v2/verification.json，s4-event-regressions-20261127-v2/junit.xml、s4-native-event-response-20261127-v1/junit.xml；mcp-s4-event-writer-20261127-v2/completion.json（68776实际0）及event-writer-rea-proof-v2.json，loaded-s4-event-writer-20261127-v2/capture.json（9123实际0）；旧失败与v1证据保留，当前无旧会话在运行。
+
+2026-11-27 公开5da18f5回读及新恢复：.cache/crisis-20261127/public-checkpoint-5da18f5-20261127-v1/readback-verification.json，94098实际0；839/777/397、两索引和旧回执保留，详见CHECKPOINTS。
+
+2026-11-27 原版币/引导现场：.cache/crisis-20261127/crisis-coins-native-controller-20261127-v2/claim-observation.json、completion.json；79855实际0，余额300/领取态2/回执1/战斗0，popup退出未验。native-guide-source-20261127-v1/source.json与guide-mismatch-observation.json为固定来源和推断边界。
+
+2026-11-27 原版配置与失败：.cache/crisis-20261127/crisis-s4-native-controller-v1/{sdk-products-correction,completion}.json及crisis-s4-native-v1/data/logs/requests.jsonl保留真实503→清单200/登录同步200和清理实际1。native-qa-bootstrap-admission-v1/verification.json记录两拒绝无输出；crisis-s4-native-cleanup-{audit,tcp}-v1失败、crisis-s4-native-cold-cleanup-v1/recovery.json成功及crisis-s4-native-cleanup-readback-v1/verification.json当前停机/源SHA。rea-native-guide-input-20261127-v1与mcp-native-guide-input-20261127-v1为5/2860字节58179实际0；rea-native-tutorial-body-20261127-v1与mcp-native-tutorial-body-20261127-v1为3948字节/16384容器、公用close/child0、跳转缺表；wrapper86963末次退出码未回收。新控制器4846只在实际句柄仍live时续接。
