@@ -165,6 +165,7 @@ def _configuration_hashes(inputs: StartupInputs) -> dict[str, str | None]:
         "cash_catalog_hash": inputs.cash_shop_catalog,
         "gift_pack_catalog_hash": inputs.gift_pack_catalog,
         "crisis_v2_local_shop_hash": getattr(inputs, "crisis_v2_local_shop", None),
+        "crisis_v2_native_shop_hash": getattr(inputs, "crisis_v2_native_shop", None),
     }
     source = inputs.rogue_content_source
     return {
@@ -406,6 +407,9 @@ class BackupService:
                 )
                 from terralocal.server.domain.campaign import preflight as preflight_campaign
                 from terralocal.server.domain.crisis_v2 import preflight as preflight_crisis
+                from terralocal.server.domain.crisis_v2_native_shop import (
+                    preflight as preflight_native_crisis_shop,
+                )
                 from terralocal.server.domain.crisis_v2_shop import preflight as preflight_crisis_shop
                 from terralocal.server.domain.rogue_topics import preflight as preflight_rogue
 
@@ -416,6 +420,7 @@ class BackupService:
                 preflight_crisis(self.runtime.data, candidate.path,
                     require_existing_binding=self.runtime.settings.client_profile == CRISIS_CLIENT_PROFILE)
                 preflight_crisis_shop(self.runtime.crisis_v2_local_shop, candidate.path)
+                preflight_native_crisis_shop(self.runtime.crisis_v2_native_shop, candidate.path)
                 candidate.initialize()
                 from terralocal.server.gamedata.voucher_shop import admit_catalog, preflight_saved_catalog
 

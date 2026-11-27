@@ -403,3 +403,12 @@ First-theme initialization checkpoint evidence: `.cache/github-checkpoints/rogue
 本批89检查/首季三宝藏18HTTPS/冷恢复及一次原版家具弹窗和任务1/14通过，原版资格为独立QA预置、0新战斗。币任务、旧季图集、战斗/商店/回放、其他季、发行物和完整交付未完成。首REA超时/误补查地址/包装器1和旧controller缺失/热恢复拒绝均保留，不因公开删除失败。
 
 证据根`.cache/crisis-20261119/public-checkpoint-f3fc441-20261126-v1/`，`remote-readback.json`、`readback-verification.json`、`anonymous-public-clone/`、`restored-development/`。本段为晚于源码包的回执；下一实质检查点收录，不重复纯文档历史包。
+
+
+## 2026-11-26 原版任务币公开检查点
+
+源码 `89e3dee0ea3e800df640d79de517cd10379b567a` →公开 main `c35475b7a14c513909afa5b2e692a26fe0314008`，tree `35fdea3b0144be1faeddf359398e3540e4bd567d`。Public/MIT实际回读、28上传对象Git SHA核对、27新增blob扫描通过；817公开文件匿名下载与761源码/393完整历史在项目内新目录恢复，全SHA-256/Git对象、严格fsck、干净检出通过，86332实际退出0。新增 `history/source-updates-89e3dee.bundle` 576090字节，SHA-256 `4231687a782b6ecfbdd91af6658476e07aa65ed51b6c69dabf2a3bd31821af2c`，Git blob `ca217d8f11de87bd34b0113678210d62fee422f9`；仅需原始d40完整包，旧包/分支保持。已授权连接器expected旧head6c262ff/force=false续main，没有普通Git源码分支push或权限变更。
+
+当前107不同检查、冻结首季五图9预置QA方案162HTTPS、三组有序停机/冷启/新恢复及18处REA依据随包；原版币弹窗、原生商品、未知season.coin、新EXE和完整交付未完成。Node首读重置未执行、首次大回读落盘isError（正文未保留）均登记；实际文件检查后保存小摘要，随后匿名恢复通过，无重复引用更新。本段回执晚于源码包，后续实质包收录。
+
+证据 `.cache/crisis-20261119/public-checkpoint-89e3dee-20261126-v1/{prepared,upload-progress,published,remote-readback,readback-verification,preparation-events}.json`；新下载 `anonymous-public-clone/`、新恢复 `restored-development/`。两权威latest索引在实证后轮换，旧索引保存在该目录previous-*文件。

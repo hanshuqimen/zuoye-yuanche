@@ -132,6 +132,17 @@ class StartupInputs:
         self.crisis_v2_local_shop = (crisis_v2_shop.read_catalog(shop_file, self.data)
                                     if shop_file.exists() or shop_file.is_symlink() else None)
         crisis_v2_shop.preflight(self.crisis_v2_local_shop, database_path)
+        from terralocal.server.domain.crisis_v2_native_shop import preflight as native_shop_preflight
+        from terralocal.server.gamedata.crisis_v2_shop import read_catalog as read_native_shop
+
+        shop_file = settings.data_dir / "crisis_v2_native_shop.json"
+        self.crisis_v2_native_shop = (
+            read_native_shop(shop_file, self.require_data(), settings.client_profile)
+            if shop_file.exists() or shop_file.is_symlink() else None
+        )
+        native_shop_preflight(self.crisis_v2_native_shop, database_path)
+        if self.data:
+            self.data.crisis_v2_native_shop = self.crisis_v2_native_shop
 
     def require_data(self):
         if not self.data:

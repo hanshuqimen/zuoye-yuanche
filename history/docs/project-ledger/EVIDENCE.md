@@ -1613,3 +1613,14 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 
 
 2026-11-26 币批次依据/检查：.cache/crisis-20261119/coin-missions-summary-20261126-v1.json；测试v2(39过/1QA请求失败)、v3(补过1)、coin-mission-regressions-20261126-v1(70过actual0)，合并107不同通过。coin-missions-frozen-20261126-v1/verification.json：五图9历史钟预置QA/162HTTPS/三组有序停机、冷重试/新恢复、旧家具QA只读准入及源SHA保持，38418 actual0。mcp-coin-reward-render-20261126-v1/{completion,decoded-rpc-0004..0007}.json与rea-coin-reward-render-20261126-v1/static-methods.json：3016字节4方法/4页，62804 actual0/public close成功，artifact0e1f7ead5dc1cb9bd8aa6e79932e896e37124c87c13bfb6fd7ecdce9c11b9b35。14处前批实际completion在.cache/crisis-20261119/mcp-coin-*/，不是rea/子目录；误查与旧handle缺失没有触发重启。所有客户端原始代码/数据/图片/保存仅本地，0新原生与EXE，未知赛季coin不写、商品未实现。
+
+
+2026-11-26 公开币任务完整回读：.cache/crisis-20261119/public-checkpoint-89e3dee-20261126-v1/readback-verification.json，source89e3dee/mainc35475b/tree35fdea3、817公开/761源码/393历史，全SHA/Git/fsck/匿名/干净通过，86332 actual0。两最新索引源89e3dee，previous-*旧索引保留。preparation-events.json保留两次编排错误；没有失败重推或权限变更。原版单项准备证据crisis-coins-native-v1-20261126/{preparation,protected-before}.json，CrisisCoin1/20表/keypoint_1准备，0预发币/原生输入/新战斗。
+
+
+2026-11-27 商店研究 .cache/crisis-20261127/shop-contract-v1/{shop-metadata,shop-consumer-targets,purchase-body-probes,buy-route-bindings,shop-wire-attributes,shop-saved-state-fields,shop-purchase-count-fields,reference-shop-download,reference-catalog-admission-probe,cleanup-resource-audit-v1}.json。mcp-shop-buy-20261127-v1/completion.json：5伪代码成功、public close false/child0/wrapper1，报告Linux496和rea-ghidra-h7VhKf已实查不存在。mcp-shop-progress-20261127-v1/：4方法288字节/actual0/public close成功，order默认1。loaded-shop-detail-20261127-v1/capture.json：只补一页4KiB、336字节候选完整、95583 actual0/源存档和index0保持/index1关闭。旧窗口失败证据.cache/crisis-20261119/crisis-coins-native-controller-v1-20261126/attempt-verification.json已更正原因未定，旧措辞另存。所有原始代码/数据/GPL参考仅本地。
+
+
+2026-11-27 原版商店（根.cache/crisis-20261127/）：shop-contract-v1/{buy-route-bindings,enum-defaults-confirmed,cleanup-resource-audit-v1}.json；loaded-shop-{detail,unique,progress-render}-20261127-v1/capture.json；mcp-shop-{buy,progress,detail,progress-gauge}-20261127-v1及mcp-shop-progress-render-20261127-v2。首buy89721close失败/包装1，实际Linux资源后已无；其余20156/59717/63749/37536 close及实际0；三采95583/9734/42147实际0，源/保存/index0守卫保持。native-shop-tests-20261127-v1(32夹具失败/1过)、v2(31过/2夹具失败)、v3(33过)；native-shop-regressions-20261127-v1/junit.xml与output.txt(160过/21776实际0)。frozen-native-shop-catalog-20261127-v1/admission.json为明确参考重建准入，不证明官方库存；native-shop-frozen-20261127-v1/verification.json（47QA、67次永久兑换、742TLS含4拒绝、三组/冷启/新目录恢复、11647实际0、原源SHA保持），native-shop-summary-20261127-v1.json为可公开汇总，不含原始数据/收据/客户端代码。原生UI/限时真实供给/新EXE未验。
+
+2026-11-27 提交前补验：.cache/crisis-20261127/native-shop-cap-validation-20261127-v1/{junit.xml,output.txt}，2过/36未选择/实际0；f8c59c92冻结目录只读准入通过，未重复交易。汇总native-shop-summary-20261127-v1.json更新为162不同（38新/124关联，160成组/2补验）。

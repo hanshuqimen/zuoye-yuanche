@@ -66,3 +66,19 @@ v3两处832字节分析及public close成功，65946实际退出0。SendGetInfo�
 本地证据：`coin-mission-tests-20261126-v1/v2/v3/`、`coin-mission-regressions-20261126-v1/`、`coin-missions-frozen-20261126-v1/verification.json`及`coin-missions-summary-20261126-v1.json`，均位于 `.cache/crisis-20261119/`。可重复入口为 `tools/verify_crisis_v2_coin_missions.py <冻结缓存> <新的项目内输出> --legacy-save <只读旧QA数据库>`。
 
 下一先保存新公开回滚点，再做一个新的原版币领取代表；随后继续season.coin、匹配原生商品目录/购买、旧季资源与原版战斗结算。其余赛季、原版币弹窗、新Windows发行、完整离线和长期稳定仍未完成。
+
+## 公开回读完成与原版代表准备
+
+源码89e3dee已公开至main c35475b，tree35fdea3；28上传对象逐个Git SHA核对，27新增blob标记扫描通过。817公开文件匿名下载及761源码/393完整提交在新的项目内目录恢复，全SHA-256/Git对象、严格fsck与干净工作区通过，86332实际退出0。两个权威索引核对后轮换，旧索引/包保持；增量576090字节、SHA-256 `4231687a782b6ecfbdd91af6658476e07aa65ed51b6c69dabf2a3bd31821af2c`，仍仅需原始d40完整包。详[公开检查点](github-checkpoints.md#2026-11-26-原版任务币公开检查点)。首次Node闲置重置未执行；一次较大回读落盘isError且错误正文未保留，实物确认文件不存在后保存小摘要，再实际匿名恢复通过；未重更新远程引用或改权限。
+
+随后CrisisCoin1独立QA准备退出0，只预置永久图keypoint_1状态1/通关，定义明确为不限时300币，未预发任何币。五条已验引导和main_02-10仍仅QA跳过，八人编队保持，未重打普通/剿灭。冻结20表与原18表、源/现用指纹保持；准备完成时尚未启动控制器或进行原版输入。目录 `.cache/crisis-20261119/crisis-coins-native-v1-20261126/`。本节晚于源码包，不冒称已在89e3dee内。
+
+## 原版币代表：窗口操作失败，尚未领取
+
+新控制器42172实际启动并报告connected/CrisisCoin1，但这不是原版界面已就绪的证明。Computer Use从实际返回的唯一dnplayer/TerraLocal窗口捕获到黑图；激活报 `failed to activate captured window`，重新list_windows/get_window后仅再试一次，仍同错，随后停止全部界面输入。没有发送坐标点击、勾选、登录文字或领奖；没有改Windows/浏览器/应用权限，也未换用ADB触摸或其他UI通道。黑画面及激活错误不能确定游戏或服务端的原因，因此不将其写为客户端通过或服务端故障已排除。
+
+发出所属stop.request后42172实际退出0，cleanup_errors为空、两份自有回调恢复并校验、index1停止、index0比较保持，源/现用及旧家具QA数据库/设置的保护SHA全部保持。只读核账为shop.coin=0、keypoint_1仍状态1、原版任务业务回执0、battle_sessions0；当前日志无confirmMissions请求。原版币弹窗与领取仍未验。证据 `.cache/crisis-20261119/crisis-coins-native-controller-v1-20261126/{completion,attempt-verification}.json`，无仍需控制的本批会话。缓存摘要曾写过会过度排除游戏原因的字段，原件已另存并更正为原因未定。
+
+下一继续商品DTO/匹配目录和season.coin依据，窗口操作可用后在这份未领奖QA上恢复一次代表，不新建重复资格、不重打关卡。当前功能源码/107检查/162HTTPS及公开回读结论保持，无新业务改动或EXE。
+
+2026-11-27 后续已接原版商店源码，余额核账增加原版商品消费项并保留本报告89e3dee回执兼容。36新商店检查与124关联回归共160通过；冻结47预置QA/67永久兑换及742TLS/冷恢复通过。此为新一批进度，不倒写原版币弹窗或本报告旧公开包已覆盖；原版QA仍未领奖。见[原版商店报告](crisis-native-shop-2026-11-27.md)。

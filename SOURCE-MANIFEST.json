@@ -1,5 +1,5 @@
 {
-  "source_commit": "89e3dee0ea3e800df640d79de517cd10379b567a",
+  "source_commit": "b638093b1f23c253ec2197288982836972ddf524",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "03e24f6c9066486426fc5ae7e8ffd8387675cca7",
+      "original_git_blob": "40b9d18c8bbe129be7a0ded61a3f6a05f08f13a6",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "c982bbd25e9984f1f03e01440d4605e521b1f976f16f085496d9df0c1ca0ae8e",
+      "public_sha256": "cd9428c4d04e200c83ecbad3f6427813aabd7f9bc7e4853f67943216986cd67f",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "391832116e1a7e9acf8c6d4d62a387de84d1bb8b288d95b786567c607398bd48",
+      "public_sha256": "3e2ed28df9d3a083c19439f38cd38f61e6a490121cda1ebc0fba067ce74514ab",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "50d030b6fa955af6802b193832602903bfd95a5a",
+      "original_git_blob": "53cff34bb14a72624a6d4443e32466815e392175",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "aee3dfb6a3eb32120f2fb58063166affff86cab4965956516f1b7f96cfb48f86",
+      "public_sha256": "4fe899e5dff8fb658cccd58218b45346c75a7d7d1dc7ab757802a304975de1af",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "cbbce82f48d0c0977b03bc76b3621ac6b2708fe4",
+      "original_git_blob": "f61045c7d3917b5e0126faf5dd305c7f651bcd27",
       "published_path": "history/STATUS.md",
-      "public_sha256": "a8ec5efb276f27150beb9dfb4b9c7fe744ca8857ee1de4cd307eea1c183aa9e7",
+      "public_sha256": "33d53745b45ec69828401fadcb28ef97bf022d1763884dbe101d9388bafa6778",
       "modified_for_publication": false
     },
     {
@@ -383,9 +383,9 @@
     },
     {
       "source_path": "docs/crisis-native-coins-2026-11-26.md",
-      "original_git_blob": "d7fc58277d47792af236e3c333752401495d2e32",
+      "original_git_blob": "40a76f12b99f5c56651b836ccaf36f4d7ee3cfab",
       "published_path": "docs/crisis-native-coins-2026-11-26.md",
-      "public_sha256": "c59bc4e5dabe1c808cc65c8c7e16763d5e3330f82543f47672d8656e30359406",
+      "public_sha256": "aab9ce026c14cbdb6c095cc7586fb4b2eb9841d61d4cd6f286c51109d48a4aa8",
       "modified_for_publication": false
     },
     {
@@ -393,6 +393,13 @@
       "original_git_blob": "29998160345fb20f0d1637d819c91eaa0516c41d",
       "published_path": "docs/crisis-native-missions-2026-11-26.md",
       "public_sha256": "288305f66189949aac5a0b843ee43d4bd5b5ce04e6aea362d319db0a50da34b8",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/crisis-native-shop-2026-11-27.md",
+      "original_git_blob": "1e52f120d920467987354a53fbf184a05cd1841a",
+      "published_path": "docs/crisis-native-shop-2026-11-27.md",
+      "public_sha256": "2255846fdd411bc6721f720303996530cff1d4e27e68807750e904b05d67e94b",
       "modified_for_publication": false
     },
     {
@@ -488,9 +495,9 @@
     },
     {
       "source_path": "docs/github-checkpoints.md",
-      "original_git_blob": "ed62022df4d3e7098d4830770a450877515741c5",
+      "original_git_blob": "476e282f926934ad8ce900a71f0ecea2be485e29",
       "published_path": "history/docs/github-checkpoints.md",
-      "public_sha256": "1e540e98bd800541d5c4b982fdbc1a42541740ef5be3a7facb763667764a0669",
+      "public_sha256": "95939eceabeb2f73df97c2126581f66e296020f5ee7b95f4dafb988cb3af0fdd",
       "modified_for_publication": false
     },
     {
@@ -656,30 +663,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "9a710d92f1ee7c433fe50613fb9ce2cd881a1912",
+      "original_git_blob": "19b668347a7f06d2aae0bfd6945516e981749341",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "3c74626478ed096a58cffc1284c9f0d20e4c1ee192abcecafe04eacfeed8202b",
+      "public_sha256": "eaf70b29e2c192c0a628eacaaf4d1431ff919cfeff5e6d3b65814bfe650341c6",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "18026de34edf063daf23b94fe1e9e8f6ebb383ea",
+      "original_git_blob": "1643af505b75f60ead3797887b59332c4707210b",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "88a21460e201893f15bce230c3bef6f071e6bc46bb3566e50a14bb60c1d23c76",
+      "public_sha256": "b06ce260c61a9134122ac775c97d7d7d4f5f353922174c25e0b79e148a157f08",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "98c618c3a93614b213f1e17d9cc8aa9d28eb227d",
+      "original_git_blob": "d809a93d5b2cd9a173771cbd5556e80b6f603d55",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "487534e53c03fe765a56e7d1d17e2fa298c9481c7400d25b61d840584196470b",
+      "public_sha256": "60a296ecd3112cf5111a821c45d36ab3253cb6fb366ccfa1d9c80329d19b49f2",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "f229ae125515bffed4ccfcf5e33f3a617ce19da5",
+      "original_git_blob": "eb45516ffc9f9c2a40209ffbb6ff5cd11b9bf710",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "6bc5474385dd498686f613ff3bdd04589f01b673d0dfe87bc904ab794a7c848d",
+      "public_sha256": "0e4fd8c0b8e67efa8c1f6c4115c63c5a763af03bdee1e5c46c091e38c99c32c3",
       "modified_for_publication": false
     },
     {
@@ -712,9 +719,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "88085e4281ecf2ce6d416f0f345fb2c4d8294daf",
+      "original_git_blob": "f7a2c140590b8ace06118ca2a8d9a168f498237e",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "c426d29926261cd28cd38dcb868a141676e43acc6d7627fde3ebd0fb451553e4",
+      "public_sha256": "ab0025ff0bc329645f04a7e95aa81e53ea69cea616c3c663add2bc30b38a3918",
       "modified_for_publication": false
     },
     {
@@ -900,6 +907,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-26-before-coin-public-readback.md",
+      "original_git_blob": "88085e4281ecf2ce6d416f0f345fb2c4d8294daf",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-26-before-coin-public-readback.md",
+      "public_sha256": "c426d29926261cd28cd38dcb868a141676e43acc6d7627fde3ebd0fb451553e4",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/project-ledger/state-archive/STATE-2026-11-26-before-crisis-native-v2.md",
       "original_git_blob": "81d94691a9fa59f073598706506bc98cd502126a",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-26-before-crisis-native-v2.md",
@@ -928,6 +942,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-26-before-native-coin-window-attempt.md",
+      "original_git_blob": "5b2a12fe00116fe147f807404296653710c66b25",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-26-before-native-coin-window-attempt.md",
+      "public_sha256": "a0c257ae43dfe13a28a12b9666be5c0b0311c49c755cb7dbe66f6757d817035b",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "docs/project-ledger/state-archive/STATE-2026-11-26-before-native-mission-result.md",
       "original_git_blob": "66479b446855076a87f3d0bb600d610ac18f61b4",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-26-before-native-mission-result.md",
@@ -946,6 +967,20 @@
       "original_git_blob": "2e7f530ddc8eb9fa6ff9d603a63e458270989113",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-26-before-native-results.md",
       "public_sha256": "38502299dbdf3ef56013d99a4731056e1c4d178012c4bea8b177fedf7f954801",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-27-before-native-shop-implementation.md",
+      "original_git_blob": "c1242f854beb1935783d1fcd8797be4b44525259",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-27-before-native-shop-implementation.md",
+      "public_sha256": "9de212163a23aa1a81915a758f67abacc04432e649a3be4ceac3a2c41852ee24",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-27-before-native-shop-research.md",
+      "original_git_blob": "ab7e3f1b2726f687fb39e96ab69d144a902ceb78",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-27-before-native-shop-research.md",
+      "public_sha256": "d610d499afb99de7d714e2ace5d5146cefd4cd15eb054eed45b2f1f66940f2a3",
       "modified_for_publication": false
     },
     {
@@ -2280,9 +2315,9 @@
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2_missions.py",
-      "original_git_blob": "aeca13f5aa83f19b36b285386f3e98672b169dea",
+      "original_git_blob": "e787e9608cbf604f6125ee8276ff3d281d24e185",
       "published_path": "terralocal/server/domain/crisis_v2_missions.py",
-      "public_sha256": "ec1264d0f3fc2e5042b148002f9a2624870050b58fbd522b204b53785f91dd77",
+      "public_sha256": "390567dd0468e7ce6c28d3d0eb5ca7c567ee5dd9ec58b529112ced9910dec753",
       "modified_for_publication": false
     },
     {
@@ -2290,6 +2325,13 @@
       "original_git_blob": "ea795d6e7835f275aff075d1ca695a027ecf60ab",
       "published_path": "terralocal/server/domain/crisis_v2_native.py",
       "public_sha256": "343940daa23459063475d84f2dc9f48f766aac0a05417a95e9c61d91526b031d",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "terralocal/server/domain/crisis_v2_native_shop.py",
+      "original_git_blob": "f94217fbbc7942ec23c2fdfc897d1ab1cc6070b2",
+      "published_path": "terralocal/server/domain/crisis_v2_native_shop.py",
+      "public_sha256": "1f124f555935320b3d9f532401968815e7be026eb5f2f88aabbe62ddb2b5e2e5",
       "modified_for_publication": false
     },
     {
@@ -2301,9 +2343,9 @@
     },
     {
       "source_path": "terralocal/server/domain/crisis_v2_shop.py",
-      "original_git_blob": "125e758464ffd8b39c5d5cbe0fbfbac07e407443",
+      "original_git_blob": "4686c3dcdf2c500122d4af8d977cab15a7d08f1b",
       "published_path": "terralocal/server/domain/crisis_v2_shop.py",
-      "public_sha256": "2b83ab98c260b3f278fb2ff0b08167057bb7f7552d25f6788ed1f8474c6b9d62",
+      "public_sha256": "83d95f271b2afcc904674741c3c52237fdfa5dc290fc080527e1d0f72d3ac126",
       "modified_for_publication": false
     },
     {
@@ -2829,6 +2871,13 @@
       "original_git_blob": "91374df3f782ce4d63c0370cfb81172ecb665b1c",
       "published_path": "terralocal/server/gamedata/crisis_v2_objectives.py",
       "public_sha256": "13bb1caf7d7753b336b8ea049b717ac4bc34b6ea913153b28e8a840b6a10442e",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "terralocal/server/gamedata/crisis_v2_shop.py",
+      "original_git_blob": "662705d8f35f9172dbf512383204e971d0910869",
+      "published_path": "terralocal/server/gamedata/crisis_v2_shop.py",
+      "public_sha256": "639a222ae96780467c1b584d3b06b6fedbafdac2dad01a2a604a23412fdb812f",
       "modified_for_publication": false
     },
     {
@@ -3358,9 +3407,9 @@
     },
     {
       "source_path": "terralocal/server/protocol/crisis_v2.py",
-      "original_git_blob": "3eb9a4ca47912accc2e28bff0d9dd35324e4c7a2",
+      "original_git_blob": "29508818fd4e424ba386f7fc2c5b3453e10de767",
       "published_path": "terralocal/server/protocol/crisis_v2.py",
-      "public_sha256": "479742fe00bcee230402ceb6e0e0ab834b82dd54e269cb189365e1fcaf0162d6",
+      "public_sha256": "d18e2d510ec8b382d6aef99e57a1ae36132e563bcc38904f0aaddc799cad9923",
       "modified_for_publication": false
     },
     {
@@ -3389,6 +3438,13 @@
       "original_git_blob": "3efdeaf468978320497827a1cf507d933e2d887a",
       "published_path": "terralocal/server/protocol/crisis_v2_missions.py",
       "public_sha256": "70ec287395297eb998bcd17f1632e4c74fdc74f8ed62842ad7216345e2cff255",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "terralocal/server/protocol/crisis_v2_shop.py",
+      "original_git_blob": "0f91634a6832875e4dd2a9787b5646a389e768af",
+      "published_path": "terralocal/server/protocol/crisis_v2_shop.py",
+      "public_sha256": "87b4f84be652f525c3757e322bbebe27b36c5301e88976dcb39623485ef4e62c",
       "modified_for_publication": false
     },
     {
@@ -3582,9 +3638,9 @@
     },
     {
       "source_path": "terralocal/server/services/backups.py",
-      "original_git_blob": "43d2782963b122b0de2f3931cc66c6b3c56c033a",
+      "original_git_blob": "16321ddcca01f27cf185648f07e4471970eafc8c",
       "published_path": "terralocal/server/services/backups.py",
-      "public_sha256": "f8743099c62f97c5e0a12f213eedff4494519bf71b1b2eb7657be74af587cd72",
+      "public_sha256": "4dd58bd906288387f8c023bd3244efb17c9d6a943981855dac4284b45e71f1b1",
       "modified_for_publication": false
     },
     {
@@ -3610,9 +3666,9 @@
     },
     {
       "source_path": "terralocal/server/services/runtime.py",
-      "original_git_blob": "fbe728a57ec881b2a3fb3b93730705fa491949e0",
+      "original_git_blob": "f30a0978272c5872c0c118171ef4f1eb2f280450",
       "published_path": "terralocal/server/services/runtime.py",
-      "public_sha256": "fe5c3be15458b8539c89e2a58be92c0ace76b0b73c0e5f8f3ec0a55fe6cab2c1",
+      "public_sha256": "fb7bcc72d57da5d8d4e5b24e133bfc3716e426be4fb5a8f9e00d18f463db2318",
       "modified_for_publication": false
     },
     {
@@ -3963,6 +4019,13 @@
       "original_git_blob": "e726d8dac1e9843000ab05d0c918bc90711be710",
       "published_path": "tests/test_crisis_v2_native_missions.py",
       "public_sha256": "0fec9e6b2a41fed906cfba762b683fcc35aedb4216a1a6bb1e73c29413e26daa",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "tests/test_crisis_v2_native_shop.py",
+      "original_git_blob": "07304b8063850591afef057d00b61a3f8c9e64f6",
+      "published_path": "tests/test_crisis_v2_native_shop.py",
+      "public_sha256": "a66343e3ce27103ba1973a29207392b8e7e2c50fc7bd5210f3953164476ce566",
       "modified_for_publication": false
     },
     {
@@ -5317,6 +5380,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "tools/verify_crisis_v2_native_shop.py",
+      "original_git_blob": "9730de398b1405e854d1e02aca3b75a98ef1048a",
+      "published_path": "tools/verify_crisis_v2_native_shop.py",
+      "public_sha256": "5e0445712ba3297f204c625cf84b30083c22f970f9de9380fafabd746e04255d",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "tools/verify_crisis_v2_save.py",
       "original_git_blob": "ce46423c15cbb6bd8297b4ae7a04693cdd877f5e",
       "published_path": "tools/verify_crisis_v2_save.py",
@@ -5332,14 +5402,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-89e3dee.bundle",
-    "bytes": 576090,
-    "sha256": "4231687a782b6ecfbdd91af6658476e07aa65ed51b6c69dabf2a3bd31821af2c",
-    "git_blob": "ca217d8f11de87bd34b0113678210d62fee422f9",
-    "source_commit": "89e3dee0ea3e800df640d79de517cd10379b567a",
+    "path": "history/source-updates-b638093.bundle",
+    "bytes": 731710,
+    "sha256": "7b80880be1f4478368402dd4de602ebeb89a2a93f16e717b7af7f0d8d4426305",
+    "git_blob": "0d3c577be911dff55ddb7dc492d0b1d334cc76f3",
+    "source_commit": "b638093b1f23c253ec2197288982836972ddf524",
     "branch": "codex/development",
-    "source_files": 761,
-    "source_history_commits": 393,
+    "source_files": 771,
+    "source_history_commits": 395,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"

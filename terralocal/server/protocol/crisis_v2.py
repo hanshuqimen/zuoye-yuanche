@@ -9,12 +9,14 @@ from terralocal.server.domain import (
     crisis_v2_history,
     crisis_v2_journals,
     crisis_v2_native,
+    crisis_v2_native_shop,
     crisis_v2_shop,
     crisis_v2_unlocks,
 )
 from terralocal.server.protocol.battles import BattleSquad
 from terralocal.server.protocol.crisis_v2_codec import CrisisFinishRequest
 from terralocal.server.protocol.crisis_v2_missions import ConfirmMissions, handle_confirm_missions
+from terralocal.server.protocol.crisis_v2_shop import BuyGood, GetGoodList
 from terralocal.server.protocol.crisis_v2_state import Key
 
 
@@ -76,6 +78,25 @@ def router(runtime):
     @api.post("/crisisV2/confirmMissions")
     def confirm_missions(payload: ConfirmMissions, request: Request):
         return handle_confirm_missions(runtime, payload, request)
+
+    @api.post("/crisisV2/getGoodList")
+    def native_shop_view(payload: GetGoodList, request: Request):
+        from terralocal.server.main import credentials
+
+        key = request.headers.get("idempotency-key") or request.headers.get("seqnum", "")
+        return runtime.mutate(*credentials(request), key, "native-crisis-v2-shop-list", payload.model_dump(),
+                              lambda ctx: crisis_v2_native_shop.view(
+                                  ctx, runtime.crisis_v2_native_shop, local_shop=runtime.crisis_v2_local_shop))
+
+    @api.post("/crisisV2/buyGood")
+    def native_shop_buy(payload: BuyGood, request: Request):
+        from terralocal.server.main import credentials
+
+        key = request.headers.get("idempotency-key") or request.headers.get("seqnum", "")
+        return runtime.mutate(*credentials(request), key, "native-crisis-v2-shop-buy", payload.model_dump(),
+                              lambda ctx: crisis_v2_native_shop.buy(
+                                  ctx, runtime.crisis_v2_native_shop, payload,
+                                  local_shop=runtime.crisis_v2_local_shop))
 
     @api.post("/local/v1/crisis-v2/claim-treasure")
     def claim_treasure(payload: ClaimRequest, request: Request):

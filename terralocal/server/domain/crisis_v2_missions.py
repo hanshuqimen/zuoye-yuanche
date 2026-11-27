@@ -154,6 +154,8 @@ def stored_coin_total(connection, account_id):
 
 
 def _preflight_coins(connection):
+    from terralocal.server.domain.crisis_v2_native_shop import stored_spent_total
+
     if not connection.execute(
         "SELECT 1 FROM sqlite_master WHERE type='table' AND name='crisis_v2_accounts'"
     ).fetchone():
@@ -162,7 +164,9 @@ def _preflight_coins(connection):
         local = connection.execute(
             "SELECT 1 FROM receipts WHERE account_id=? AND key=?", (account_id, LOCAL_LEDGER)
         ).fetchone()
-        if not local and coin != stored_coin_total(connection, account_id):
+        if not local and coin + stored_spent_total(connection, account_id) != stored_coin_total(
+            connection, account_id
+        ):
             raise ValueError("任务代币余额与已验证领取回执不一致")
 
 
@@ -200,10 +204,13 @@ def claim(ctx, request, *, shop=None):
                 from terralocal.server.domain.crisis_v2_shop import _state
 
                 _state(ctx, shop)
-            elif ctx.session.get(
-                m.Receipt, (ctx.account_id, LOCAL_LEDGER)
-            ) is not None or account.shop_coin != coin_total(ctx):
-                raise ValueError("任务代币缺少匹配的余额账本")
+            else:
+                from terralocal.server.domain.crisis_v2_native_shop import spent_total
+
+                if ctx.session.get(m.Receipt, (ctx.account_id, LOCAL_LEDGER)) is not None or (
+                    account.shop_coin + spent_total(ctx) != coin_total(ctx)
+                ):
+                    raise ValueError("任务代币缺少匹配的余额账本")
             if account.shop_coin + earned > 2_000_000_000:
                 raise DomainError("INVENTORY_LIMIT", "危机合约代币数量超出范围", 409)
         items = [

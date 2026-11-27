@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `89e3dee`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `b638093`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -232,5 +232,18 @@ git -C restored-history merge --ff-only FETCH_HEAD
 
 ```powershell
 git -C restored-history fetch ../history/source-updates-89e3dee.bundle codex/development
+git -C restored-history merge --ff-only FETCH_HEAD
+```
+
+## 原版危机合约商品交易
+
+2026-11-27 原版危机合约getGoodList/buyGood、严格来源目录、剩余/唯一库存、正常/无限和显式有限分档、charGet及购买流水已接。余额在任务信用及本地/原版消费间共同核对，启动和在线/离线恢复拒绝目录或保存漂移。38新/162不同当前检查（160成组＋2准入补验），冻结14457902参考重建47QA/67永久兑换、742TLS含4预期拒绝、冷启和新目录恢复通过。15新REA方法4288字节及三页12KiB受控读取，失败和旧历史保留；原版UI、首季限时可靠目录、season.coin、新EXE及完整交付仍未完成。目录为本地参考重建，未证明官方新账号库存，未发布第三方或官方数据。
+
+[本批实现和依据](docs/crisis-native-shop-2026-11-27.md) · [验证摘要](validation/crisis-v2-native-shop-20261127.json)。
+
+[本次完整历史增量](history/source-updates-b638093.bundle)仅需原始d40完整包，保留所有旧包与分支：
+
+```powershell
+git -C restored-history fetch ../history/source-updates-b638093.bundle codex/development
 git -C restored-history merge --ff-only FETCH_HEAD
 ```

@@ -1441,3 +1441,14 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 
 
 2026-11-26 原版币任务推进：前四批14处9900字节REA实物completion关闭/0/输入保持；新增4处3016字节62804 public close和actual exit0。原版限时渲染到期隐藏已核，progressGoodList是按order的商品明细，未当里程碑；season.coin未知不写。已接0/1及混合2批次、逐项限时过滤、shop.coin专用入账、跨seq/登录回执、余额与本地配置商店共存及启动/恢复核账，旧宝藏摘要保持。18新币用例与关联回归107不同当前通过；首轮父目录错误40setup保留，次轮39过/1QA漏本地幂等键失败，修测试后单项过，随后70关联actual exit0。冻结14457902首季五图9预置QA方案162HTTPS/三组有序停机/冷启/新恢复通过，38418 actual exit0、旧家具QA只读准入和源/该数据库SHA保持。0新增Android/原生输入/战斗/EXE；原版币弹窗、真实商品目录/购买、未知赛季coin、其他赛季及完整交付仍未完。证据coin-missions-summary-20261126-v1.json和coin-missions-frozen-20261126-v1/verification.json，详crisis-native-coins-2026-11-26.md。
+
+
+2026-11-26 币任务源码89e3dee已公开至main c35475b/tree35fdea3；28对象Git SHA、27新增blob扫描通过，817公开与761源码/393完整历史实际匿名下载及项目内新恢复，全SHA/Git/fsck/干净通过，86332 actual0。增量576090字节/SHA256 4231687a782b6ecfbdd91af6658476e07aa65ed51b6c69dabf2a3bd31821af2c，仅需原d40完整包；两索引核验后轮换，旧索引/包保持。Node首读重置/首次较大回读落盘isError保留，不伪称原因，实际小摘要和匿名下载证明通过。随后CrisisCoin1仅keypoint_1资格/300币定义未发，新20表QA准备0，源/现用保持、旧家具QA数据库/设置加入保护；未启动新控制器或原版游玩。详crisis-native-coins-2026-11-26.md及github-checkpoints.md；本段晚于包。
+
+
+2026-11-27 接续已公开89e3dee/current8f848a0：补记上轮原版CrisisCoin1窗口黑图/两次激活错，42172 stop正常0、回调/index1/index0/源现用和旧QA保持，5启动200无任务请求，余额0/资格1/业务回执0/战斗0，不排除游戏原因。当前新商店9类属性无alias，5处1796字节REA实证真实crisisV2/buyGood而非按类名推路由；89721 close cleanup_incomplete/child0/wrapper1，随后Linux496和唯一rea目录实际无，不杀旧PID/删目录。再4处288字节20156 public close/actual0、orderCtor1。固定GPL参考shop.json1116645字节Git38bfdeb8/SHA2f909d...03a1，47永久/22第四季/4x6分档、89bundle引用匹配当前数据，尚不接纳为首季或官方新号库存。源码历史未找到首季限时目录、搜索空不等于不存在。保护336字节显示函数只采0x4170000/4096，95583 actual0/完整候选、无API/UI/账号交易、index1关闭/index0源现用旧QA保持。原生商品未实现，旧107/162不重复；详crisis-native-shop-2026-11-27.md。
+
+
+2026-11-27 原版商店源码与定向收尾：15新REA/4288字节，三页12KiB限定采页；首close失败后实际资源已无，另四批close/实际0；两次准备失败未启动REA并保留。新增严格getGoodList/buyGood、目录/剩余库存/唯一库存/正常无限及显式有限分档/charGet、购买流水和原版信用+本地信用−两类消费核账，启动/两种恢复拒绝目录和库存漂移。36新+124关联共160通过（21776实际0）；冻结14457902参考重建47QA/67永久兑换/742TLS含4预期409、三组/冷启新恢复通过（11647实际0）。首两测试夹具失败保留，原版UI、首季限时可靠目录、season.coin和新EXE未验。准备新公开检查点，当前远程仍89e3dee，完整目标保持。详crisis-native-shop-2026-11-27.md。STATE旧文已归档STATE-2026-11-27-before-native-shop-implementation.md。
+
+2026-11-27 提交前审查补分档/普通唯一上限及服装唯一性准入；2个非法上限新检查实际退出0，冻结目录只读准入仍过、f8c59c92保持，未重复已验购买。当前38新＋124关联共162不同检查，160成组/2补验分别留证。

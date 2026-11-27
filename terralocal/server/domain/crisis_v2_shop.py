@@ -85,6 +85,7 @@ def preflight(catalog, database):
                 and conn.execute("SELECT 1 FROM receipts WHERE key=? LIMIT 1", (LEDGER,)).fetchone()
             ):
                 from terralocal.server.domain.crisis_v2_missions import stored_coin_total
+                from terralocal.server.domain.crisis_v2_native_shop import stored_spent_total
 
                 for account_id, coin, body in conn.execute(
                     """SELECT r.account_id,a.shop_coin,r.result FROM receipts r
@@ -95,7 +96,9 @@ def preflight(catalog, database):
                         if coin is None:
                             raise _mismatch()
                         _validated_state(
-                            catalog, coin - stored_coin_total(conn, account_id), json.loads(body)
+                            catalog,
+                            coin - stored_coin_total(conn, account_id) + stored_spent_total(conn, account_id),
+                            json.loads(body),
                         )
                     except (DomainError, ValueError, TypeError) as exc:
                         raise ValueError("本地商店余额或库存账本不一致；请保留原存档") from exc
@@ -128,6 +131,7 @@ def _validated_state(catalog, coin, state):
 
 def _state(ctx, catalog):
     from terralocal.server.domain.crisis_v2_missions import coin_total
+    from terralocal.server.domain.crisis_v2_native_shop import spent_total
 
     if catalog is None:
         raise DomainError("CRISIS_V2_SHOP_NOT_CONFIGURED", "尚未提供自定义危机合约本地商店目录", 503)
@@ -138,7 +142,7 @@ def _state(ctx, catalog):
         raise _mismatch()
     state, offers = _validated_state(
         catalog,
-        account.shop_coin - coin_total(ctx),
+        account.shop_coin - coin_total(ctx) + spent_total(ctx),
         {"credits": [], "purchases": {}} if row is None else row.result,
     )
     return account, digest, row, state, offers
