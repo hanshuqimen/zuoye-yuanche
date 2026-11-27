@@ -825,3 +825,7 @@
 原版资源/独立配置与Coin1恢复：[当前报告](../crisis-season-resources-2026-11-27.md)，新控制器.cache/crisis-20261127/crisis-coins-native-controller-20261127-v2；先核实际会话再操作。
 
 2026-11-27 原版CC独立QA、300币/指南冲突、SDK清单503修复、清理失败和冷恢复：[报告](../crisis-season-resources-2026-11-27.md)；自有准备工具[prepare_crisis_v2_native_qa.py](../../tools/prepare_crisis_v2_native_qa.py)。本地证据见EVIDENCE末条，旧失败和原生/发行未完成范围保留。
+
+2026-11-27 S4新原版300币/弹窗退出/1-14/商品列表，滚动未证与两页REA准备，及216e8b4完整公开新恢复，统一见[原版资源与QA报告](../crisis-season-resources-2026-11-27.md#新冷启动原版代表和仍未通过的购买)；证据见EVIDENCE本日末条，当前STATE只留实际唯一4314。
+
+2026-11-27 原版商店静态组件复查：[inspect_crisis_shop_prefab.py](../../tools/research/inspect_crisis_shop_prefab.py)，只读原冻结包并产新项目内报告；[11函数、标题回退和静态组件依据](../crisis-season-resources-2026-11-27.md#列表源码标题回退和原始预制体)。运行时滚动/购买仍待核，不重放已验任务。

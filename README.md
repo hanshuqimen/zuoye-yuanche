@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `216e8b4`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `0750ac2`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -268,3 +268,11 @@ git -C restored-history merge --ff-only FETCH_HEAD
 [本批实际范围和失败](docs/crisis-season-resources-2026-11-27.md) · [验证摘要](validation/crisis-native-qa-20261127.json)。
 
 [本次完整历史增量](history/source-updates-216e8b4.bundle)仅需原始d40完整包，保留旧检查点及全部历史。
+
+## 原版任务返回与商店静态核验
+
+2026-11-27 新增锁原APK/资源/完整清单hash的原版商店预制体只读工具，真实冻结包与Ruff通过；主视图和常设列表引用同一启用的纵向滚动组件。11新函数2520字节REA/两页稳定捕获及正常关闭完成，标题缺失有空数据回退，未以推断改后台。新S4冷启动主页、300币发放/弹窗退出/任务1-14与商品列表/余额实际通过，91新HTTP200、0战斗。滚轮/两拖无可见滚动，buyGood请求0，运行时滚动/实际购买仍未过；旧Coin1失败、其他模式、季节素材、season.coin和成熟新EXE范围保持未完成。
+
+[本批依据和保留失败](docs/crisis-season-resources-2026-11-27.md) · [验证摘要](validation/crisis-shop-inspector-20261127.json)。
+
+[本次完整历史增量](history/source-updates-0750ac2.bundle)仅需原始d40完整包，全部旧包与回滚点保持。
