@@ -1,0 +1,49 @@
+{
+  "passive_counter_parser_checks_passed": 22,
+  "parser_checks_are_synthetic_not_native": true,
+  "ruff_passed": true,
+  "device_timeout_calibrated_status": 142,
+  "bounded_counter_seconds": 5,
+  "counter_kill_grace_seconds": 1,
+  "android_command_limit_seconds": 8,
+  "native_successful_ui_click_opened_operator_roster": true,
+  "click_start_offset_in_counter_seconds": 0.732262,
+  "click_end_offset_in_counter_seconds": 0.837262,
+  "same_native_game_process_during_sample": true,
+  "counter_sample_seconds": 5.109,
+  "kernel_event2_all_counts_zero": true,
+  "positive_counter_control_passed": false,
+  "kernel_counter_validated_for_ui_input": false,
+  "zero_counts_used_to_infer_game_or_tool_fault": false,
+  "drag_sample_sent_after_failed_control": false,
+  "native_sessions_normal_exit_observed": [
+    50295,
+    71188,
+    73324
+  ],
+  "native_callbacks_and_protected_source_preserved": true,
+  "index0_preserved_index1_stopped": true,
+  "rea_new_distinct_season_methods": 4,
+  "rea_method_bytes": 2572,
+  "rea_container_bytes": [
+    20480,
+    12288
+  ],
+  "rea_named_subjects_and_entries_verified": true,
+  "rea_public_status_and_close_passed": true,
+  "rea_tool_actual_exits": [
+    0,
+    0
+  ],
+  "rea_frozen_default_bodies_only": true,
+  "unreadable_constructor_refused": true,
+  "season_coin_meaning_or_mutation_proven": false,
+  "next_delegated_consumer_method": 162601,
+  "new_game_business_changes": false,
+  "native_purchase_verified": false,
+  "native_scroll_runtime_verified": false,
+  "manual_input_comparison_received": false,
+  "new_windows_release_built": false,
+  "full_game_delivered": false,
+  "source_commit": "072032b7cf67d44a84b6856f9608f9fa335f7151"
+}

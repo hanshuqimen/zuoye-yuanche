@@ -1656,3 +1656,15 @@ native-save-audit-v1/31223实际exit0：38完整用户78表真备份恢复/冷�
 2026-11-28 .cache/crisis-20261128/native-shop-resume-audit-v1/verification.json为实际8秒实例/QA只读/78请求回读；.cache/crisis-20261127/stable-unity-touch-observer-v2/{pre-attach,baseline,current,touch-cleanup,completion}.json记录ready后无手势失效/96724实际1、独立清理空错。32733/42446实际1为准入失败，23808实际0驱动能力；目录无采样不能据固定标志称部署。当前v6会话44919须核真实句柄。
 
 2026-11-28 .cache/crisis-20261128/crisis-s4-native-controller-v6/roster-input-control.json为无注入普通列表对照；mcp-scroll-input-20261128-v1/analysis-summary.json四方法1212/实际59395退出0。metadata-qualified-name-regression-v1/junit.xml为13过/实际0，metadata-qualified-name-frozen-v1/verification.json为四个真正冻结类型/原生注册/旧字段保持/两CLI实际0。原始空查询scroll-field-types.json保留，字段链接v2证明不当作原版滚动通过。
+
+2026-11-28 新公开回滚点证据根.cache/crisis-20261128/public-checkpoint-2e71f59-20261128-v1/，readback-verification.json为匿名859/788源码/402历史全SHA/Git/双fsck恢复，5013实际0；独立tree870fce67、24blob、23新源码blob扫描及两previous索引保持。CHECKPOINTS有完整SHA/路径，原版购买仍未验。
+
+2026-11-28 v6观察时限后正常收停，44919实际退出0；两回调由带SHA回读的deliver恢复、源/现用保存保持。独立8秒ldconsole与只读QA回读确认index1停/index0保持、币300/库存模组令牌4/429干员/购买0/危机战斗0。新172HTTP均200（158为syncPush），不能作拖动或完整玩法通过；手动对照未答。当前无该控制器进程/57084监听，下一继续未完成输入/真实购买，完整目标ACTIVE。 证据.cache/crisis-20261128/native-shop-end-audit-v1/verification.json及crisis-s4-native-controller-v6/completion.json。
+
+2026-11-28 .cache/crisis-20261128/aosp-input-contract-v1/source.json为AOSP9固定源182959字节/SHA28b2c4c78f44d2ed391121163307c7b35ab78ede74ab154c623f350676c716cc，不是当前设备版本证明。passive-input-probe-tests-v1/junit.xml为17过/实际0，组件android_input_probe.py尚待原版正对照。v7工具50295按真实句柄跟进，不据旧live文件造结论。
+
+2026-11-28 当前报告android-input-probe-2026-11-28.md；native-timeout-contract-v1/verification.json为false1/142-1.062及进程借用守卫元数据，timeout-help.json为-k支持。v7/source-used和失败/清理保持，50295实际0；v8/input-probe-ready.json为实际校准142/1.094及部署SHA，不是采样结果。passive-input-probe-tests-v2/junit.xml为22过/实际0；当前71188按实际句柄继续。
+
+2026-11-28 被动触摸研究：[报告](../android-input-probe-2026-11-28.md)。.cache/crisis-20261128/passive-input-probe-tests-v2/junit.xml为22当前解析检查/Ruff；crisis-s4-native-controller-v8/{expired-ui-window,input-sample-0001,completion,cleanup-current-readback}.json记录无输入过期样本与实际71188退出0；v9/{input-sample-0001-started,input-action-0001,input-sample-0001,click-control-verdict,completion,cleanup-current-readback}.json记录有效点击时间窗但计数正对照失败、73324实际0/源与index0保持。未继续拖动或把零值作为游戏根因。
+
+2026-11-28 [赛季coin消费者](../crisis-season-coin-2026-11-28.md)：.cache/crisis-20261128/season-coin-contract-v1/{metadata,preparation-failure-v1,body-probes,consumer-bindings}.json；rea-season-coin-20261128-v1/static-methods.json与mcp-season-coin-20261128-v1/analysis-summary.json记录3体1656字节和92253实际0；rea-season-common-20261128-v2/static-methods.json与mcp-season-common-20261128-v2/analysis-summary.json记录新916字节/78257实际0。两个公开close/主体入口均核，四体2572字节不证明season.coin语义，下一M162601。

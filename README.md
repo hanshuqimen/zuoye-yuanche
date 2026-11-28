@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `2e71f59`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `072032b`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -284,3 +284,11 @@ git -C restored-history merge --ff-only FETCH_HEAD
 [本批依据和保留失败](docs/crisis-input-2026-11-28.md) · [验证摘要](validation/crisis-input-metadata-20261128.json)。
 
 [本次完整历史增量](history/source-updates-2e71f59.bundle)仅需原始d40完整包，全部旧包与回滚点保持。
+
+## 被动输入反例与赛季字段消费者
+
+2026-11-28 新增复用已准入transport的被动触摸计数研究工具及22项解析检查；设备timeout实测142，显式校准并设5+1秒上限。原版成功点击打开干员列表，但同时间窗event2全零，故输入正对照失败，未据此判游戏或工具故障、未继续拖动或改变币和排序；过期拒绝、三次正常收停/回调与源保持均保留。新4赛季消费者2572字节REA/主体与入口、公用status/close和两个实际0通过；season.coin语义及总分委托仍未证。原版滚动/购买、新成熟EXE、全部模式和完整交付均未完成。
+
+[被动计数及反例](docs/android-input-probe-2026-11-28.md) · [赛季消费者](docs/crisis-season-coin-2026-11-28.md) · [验证摘要](validation/passive-input-season-20261128.json)。
+
+[本次完整历史增量](history/source-updates-072032b.bundle)仅需原始d40完整包；所有旧检查点保持。

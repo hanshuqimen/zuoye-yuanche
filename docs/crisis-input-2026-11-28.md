@@ -37,3 +37,17 @@ inspect_client_metadata现在同时匹配短名、命名空间完整名及父类
 13项当前reader检查通过，含同短名不同命名空间的精确消歧、嵌套匹配、父链接损坏/环、旧字段和未验证枚举负载保持；Ruff通过。实际冻结文件四个完整名（含两个嵌套类型）均与原生注册NativeTypes.class_name一致，先前短名取出的字段逐项保持；两CLI真实调用实际0，未知过滤名明确列出，默认枚举负载仍标未验证。工具验证不启动Android或业务API，不是游戏滚动已修复。未重复203/473等未受影响的业务检查。
 
 新增证据：crisis-s4-native-controller-v6/roster-input-control.json，scroll-event-static-preflight-v1/{candidate-methods,scroll-field-types,scroll-field-types-v2,metadata-name-linkage-admission,input-field-offsets,pointer-field-offsets}.json；mcp-scroll-input-20261128-v1/{analysis-summary,completion}.json，metadata-qualified-name-regression-v1/{junit.xml,output.txt}及metadata-qualified-name-frozen-v1/verification.json，均在.cache/crisis-20261128。原生手动对照、真实滚动和购买继续未完成；准备保存本批源码/记录检查点。
+
+## 本批公开回滚点
+
+2026-11-28 源码2e71f59087988ad1bd2b3624571edbb549b02e41已公开至main eb710a085b0828feaa22564a236670b90aced13d（父bdf7b82f），tree870fce6784b1512f936ceb7ac2c40e2fd2343eb7。24上传blob逐个Git SHA验证，另在项目内独立Git索引重建tree一致；23新源码blob凭据格式扫描通过，非强推CAS与实际Public/MIT/ref/commit回读通过。匿名859公开文件全SHA/Git核对，788源码/402完整开发提交在项目内新目录恢复、全SHA/Git/双库严格fsck及干净通过，5013实际退出0。
+
+增量history/source-updates-2e71f59.bundle为812627字节、SHA256 23a5ac5dd43e5ce62753cc21722f4f4558acfbde083ddc73744956c33c135423、Git blob edccfac036508f5a6f78968a4eed89acf46940c6，仅需原始d40完整包（SHA b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83）。两latest在实际恢复后轮换，旧字节保存在新OUT/previous-*.json，所有旧包/发行物/保存保留。
+
+准备时Node闲置重置没有执行代码，随后nodeRepl.write对象格式不是JSON导致外层解析失败；两次都在远程变更前，改显式JSON字符串后才上传，preparation-events.json保持。完整证据.cache/crisis-20261128/public-checkpoint-2e71f59-20261128-v1/{prepared,upload-progress,expected-tree,created-commit-readback,published,remote-readback,readback-verification}.json及anonymous-public-clone/、restored-development/。本最新回执晚于2e71源码包，下一实质检查点纳入，不为纯回执递归上传。原版滚动/购买、全模式和成熟发行继续未完成。
+
+## 本轮原版收尾
+
+2026-11-28 v6观察时限后正常收停，44919实际退出0；两回调由带SHA回读的deliver恢复、源/现用保存保持。独立8秒ldconsole与只读QA回读确认index1停/index0保持、币300/库存模组令牌4/429干员/购买0/危机战斗0。新172HTTP均200（158为syncPush），不能作拖动或完整玩法通过；手动对照未答。当前无该控制器进程/57084监听，下一继续未完成输入/真实购买，完整目标ACTIVE。
+
+172请求多数是闲置推送轮询，没有新的商店或危机合约战斗请求。未加载注入器、未改变原版资源或手工币数；没有因已公开源码而把实际购买或成熟交付标为完成。后续若收到手动结果，先核当前真实实例/窗口，不能凭旧30200或live文件继续发输入。

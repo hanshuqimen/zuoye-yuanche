@@ -1,5 +1,5 @@
 {
-  "source_commit": "2e71f59087988ad1bd2b3624571edbb549b02e41",
+  "source_commit": "072032b7cf67d44a84b6856f9608f9fa335f7151",
   "baseline_source_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
   "license": "MIT",
   "files": [
@@ -33,9 +33,9 @@
     },
     {
       "source_path": "CHANGELOG.md",
-      "original_git_blob": "7d6aa81ad80ef89ffd6e4416ccc590565d39832f",
+      "original_git_blob": "3c629398b7f863eb0a32f1600f2b5bceb6dd6fe5",
       "published_path": "history/CHANGELOG.md",
-      "public_sha256": "c4cea7a5704c6b28376930c0fe66e06ada974458682dd68fdea2711813644084",
+      "public_sha256": "d72dd2cede7b5b8d8fe0aab91955fefbb86d4377c6f9ec9f3c0bf120262c11a6",
       "modified_for_publication": false
     },
     {
@@ -56,21 +56,21 @@
       "source_path": "README.md",
       "original_git_blob": "9dcc74838c30c257828f19ad81908b6bfb88e834",
       "published_path": "README.md",
-      "public_sha256": "c09e0e2da4ee28b009ab18ea34c250801654d3eecf93271da37ad9b9ff6a1c9c",
+      "public_sha256": "44db7bb4c4f576216c2e95798c26608f0010cad5fae792ae7382dbc892a243c5",
       "modified_for_publication": true
     },
     {
       "source_path": "ROADMAP.md",
-      "original_git_blob": "62ee42151027590b07744185efe6fbeb24314da0",
+      "original_git_blob": "0b137536afc7ec43cb22f2ecd2138af1d80b55bc",
       "published_path": "history/ROADMAP.md",
-      "public_sha256": "b249c9fe910bc04a07788668d8d8d8e8c25c3a0a783b963a45abbfd2fc285420",
+      "public_sha256": "b185c762d0691871fc8a9be62dd477a8f858a42fd34180c03ad60ca10339bf83",
       "modified_for_publication": false
     },
     {
       "source_path": "STATUS.md",
-      "original_git_blob": "78cf8a6491df4bc3cb1eb6de6e8e596eb3242614",
+      "original_git_blob": "601edfe50893dcb846aa70e97c07367d2c6093a7",
       "published_path": "history/STATUS.md",
-      "public_sha256": "520fb6631819b756762de9d8ad2636723297deb68fe82a2311155bc2af9c58b7",
+      "public_sha256": "aa9116a972328bbcf9b1923e9ad9761635a0e1b4dd37c049b034db25fcc95a4c",
       "modified_for_publication": false
     },
     {
@@ -79,6 +79,13 @@
       "published_path": "history/docs/adb-isolation-2026-10-19.md",
       "public_sha256": "31d4e7788876879d40975c107f57ca0fd085bdb23222d0281df716aa84b50884",
       "modified_for_publication": true
+    },
+    {
+      "source_path": "docs/android-input-probe-2026-11-28.md",
+      "original_git_blob": "7e7da2d89c7e21e4e50482f733098d14fefbf17a",
+      "published_path": "docs/android-input-probe-2026-11-28.md",
+      "public_sha256": "6ecf0ea493a1f7b77d74adf608e83da1a353ae031c54ec8a96df1acea2d58295",
+      "modified_for_publication": false
     },
     {
       "source_path": "docs/api-performance-2026-10-12.md",
@@ -355,9 +362,9 @@
     },
     {
       "source_path": "docs/crisis-input-2026-11-28.md",
-      "original_git_blob": "e87731f1986b01eb604e5f87ac62b5d03aa44b4f",
+      "original_git_blob": "94e4ce55e58b63dfad2bbc219d6c3c081c77af68",
       "published_path": "docs/crisis-input-2026-11-28.md",
-      "public_sha256": "8fdc0b2af0c856f175478e92c62c75ebb2d2826cc17265977686ac5ab49451f3",
+      "public_sha256": "c9026b4e4e7363574ddd08373a4f2ae6b0377ee42abfd17ada85e7a52d2c1bb8",
       "modified_for_publication": false
     },
     {
@@ -414,6 +421,13 @@
       "original_git_blob": "da25f1439ca1d595854c0fcf6cfe0dcac19ddb3d",
       "published_path": "docs/crisis-objectives-2026-11-21.md",
       "public_sha256": "70a492b51ba824936ce873cfd1ee914c63bc1f30859592464bb7aed1bd70942f",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/crisis-season-coin-2026-11-28.md",
+      "original_git_blob": "757c91538170f6c8765e16a0791293110ea66921",
+      "published_path": "docs/crisis-season-coin-2026-11-28.md",
+      "public_sha256": "ad34695f2f06036975c262f19feb85c57e5ae824dfa3b7a0489ba8d4ee03c328",
       "modified_for_publication": false
     },
     {
@@ -684,30 +698,30 @@
     },
     {
       "source_path": "docs/project-ledger/CHECKPOINTS.md",
-      "original_git_blob": "f5aa41140d979b4b2b7aed62d2565c98fc27dbea",
+      "original_git_blob": "f218dcc7f3d2f68f78b4b3721eab3e6acf247727",
       "published_path": "history/docs/project-ledger/CHECKPOINTS.md",
-      "public_sha256": "84300c6e8c68aa09b69e77067cf8dd4c1b29a444e46c463789fbab211ed84ade",
+      "public_sha256": "a3ba8659896da4df71f43c7884c5e70c91251667d79b1ed9a6ebcea0f520becd",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/EVIDENCE.md",
-      "original_git_blob": "ea860d0b5699b36c8e19d3254e14c11e8958b7bb",
+      "original_git_blob": "57bf54c032eaa0f59b6bc24a45685b9174993a6b",
       "published_path": "history/docs/project-ledger/EVIDENCE.md",
-      "public_sha256": "5bd2d9805f0b99e24624812a9797a685ee5434f68ffaec2bb87fc452ec31ed80",
+      "public_sha256": "6efacdb324b82ec21ff3e90ec006a600c4cbac9b22f4eeeb0e61cbe5dac38eff",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/HISTORY.md",
-      "original_git_blob": "e3751bf8337ec8ef8ec58442dc221fd306a407d6",
+      "original_git_blob": "781aae8ec6f2ee9e9bf66ce5550bbc8acc5af5e8",
       "published_path": "history/docs/project-ledger/HISTORY.md",
-      "public_sha256": "be76fde18382993d560ba1acb9d08b263b76612c36995fd4bc64f34f79e3be75",
+      "public_sha256": "8bc257449ace9b88051235f270cdb31be0f2dcabc1bbceaca355da6e735a9b1b",
       "modified_for_publication": false
     },
     {
       "source_path": "docs/project-ledger/INDEX.md",
-      "original_git_blob": "f0025e53dd95027411898973fdc00c2d947d9c36",
+      "original_git_blob": "64888cd9f7e5b329d890b99a34a0354742cb9ddd",
       "published_path": "history/docs/project-ledger/INDEX.md",
-      "public_sha256": "90b655cd9d20781ff4f99207584b3446be36aeda40615297736657a403e5186a",
+      "public_sha256": "ac5914ebf8837f7fefaf1929bcebcfbeb05e7004f23fb88d0735630abc13c69c",
       "modified_for_publication": false
     },
     {
@@ -740,9 +754,9 @@
     },
     {
       "source_path": "docs/project-ledger/STATE.md",
-      "original_git_blob": "ee79ea8105ea0fa88887ba16c45c44a3814f25e1",
+      "original_git_blob": "33bf215caaa82634bb40308119ee4b2e355de6eb",
       "published_path": "history/docs/project-ledger/STATE.md",
-      "public_sha256": "ecc99724b480df43fd847a2fea570f2d946b60e95ad62852c1ef2af96a147d75",
+      "public_sha256": "053eda72e5741af74a2f4f69dc2f2e138c685a39f2ae868df887d92e440f410c",
       "modified_for_publication": false
     },
     {
@@ -1072,6 +1086,13 @@
       "original_git_blob": "bbfe63e4fd37eb081491a156b2eab0a6d0931321",
       "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-28-before-native-input-control.md",
       "public_sha256": "59c3fc695eb19acd085e6269f051ed52cf6df34a01fed51a4c339e3745264822",
+      "modified_for_publication": false
+    },
+    {
+      "source_path": "docs/project-ledger/state-archive/STATE-2026-11-28-before-passive-touch-probe.md",
+      "original_git_blob": "08282fac2a99c025b288bff2f96f184080743ff2",
+      "published_path": "history/docs/project-ledger/state-archive/STATE-2026-11-28-before-passive-touch-probe.md",
+      "public_sha256": "5df0f1304bcc11fdfcdeb695468ff9e7a2cf36de076fff8f3d4c69563adfc514",
       "modified_for_publication": false
     },
     {
@@ -3819,6 +3840,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "tests/test_android_input_probe.py",
+      "original_git_blob": "5fb6736c675d09f422c186e775d551b2d7e11863",
+      "published_path": "tests/test_android_input_probe.py",
+      "public_sha256": "900ef947edce1b0bb201f35d2eadae19f1b445950bff0bf46465ee84eafff207",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "tests/test_any_stage_missions.py",
       "original_git_blob": "f1ef98ae698021d28e44a752722a9bf2235778a1",
       "published_path": "tests/test_any_stage_missions.py",
@@ -5338,6 +5366,13 @@
       "modified_for_publication": false
     },
     {
+      "source_path": "tools/research/android_input_probe.py",
+      "original_git_blob": "beba495350c39a14f92085e435f42373e9b4939c",
+      "published_path": "tools/research/android_input_probe.py",
+      "public_sha256": "2e50f4e9213ef5b1400a488e705d0ea7e7874ee63deedfafdc04f157aed18a65",
+      "modified_for_publication": false
+    },
+    {
       "source_path": "tools/research/audit_full_roster.py",
       "original_git_blob": "439a4cfccc33bdfd78232ff0c9895d4291b6b62e",
       "published_path": "history/source-reference/tools/research/audit_full_roster.py",
@@ -5521,14 +5556,14 @@
     }
   ],
   "latest_history_bundle": {
-    "path": "history/source-updates-2e71f59.bundle",
-    "bytes": 812627,
-    "sha256": "23a5ac5dd43e5ce62753cc21722f4f4558acfbde083ddc73744956c33c135423",
-    "git_blob": "edccfac036508f5a6f78968a4eed89acf46940c6",
-    "source_commit": "2e71f59087988ad1bd2b3624571edbb549b02e41",
+    "path": "history/source-updates-072032b.bundle",
+    "bytes": 1087563,
+    "sha256": "2c1dc5da6ab8b740e9c9698639edff275e95d34dfce2295461f0ce1b10caca6e",
+    "git_blob": "a3d969636a4a7da3dd1851c61cfbc27a64804976",
+    "source_commit": "072032b7cf67d44a84b6856f9608f9fa335f7151",
     "branch": "codex/development",
-    "source_files": 788,
-    "source_history_commits": 402,
+    "source_files": 793,
+    "source_history_commits": 404,
     "requires_commit": "d40aee9aa816db5c447bf908da4335d5a7731648",
     "base_bundle": "history/source-history-d40aee9.bundle",
     "base_bundle_sha256": "b4888ed42cd987b5e7531c8d49a5123b1ecb835f04526bf1d483c35d34784f83"
