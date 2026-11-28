@@ -1,10 +1,10 @@
 """Atomic Crisis V2 clear records, separate from the native response adapter.
 
-Record policy v1 retains each axis maximum and the first highest-total single
-run, merges earned comments and preserves claimed objectives. These are explicit
-local persistence rules, not a claim to have recovered the official backend's
-record algorithm. The receipt contains selected counters and a journal digest;
-it never archives the encrypted payload, unused telemetry or an original replay.
+Record policy v2 establishes the first clear even at zero points and advances
+the cache token on every record change, including a repeated or rewound clock.
+Old v1 receipts retain their original projection. Both are explicit local
+persistence rules, not recovered official backend algorithms. Receipts retain
+selected counters and a journal digest, never ciphertext or unused telemetry.
 """
 
 from copy import deepcopy
@@ -34,7 +34,13 @@ from terralocal.server.protocol.crisis_v2_state import (
     Timestamp,
 )
 
-VERSION = "cn-2.7.71-crisis-v2-local-clear-receipt-v1"
+LEGACY_VERSION = "cn-2.7.71-crisis-v2-local-clear-receipt-v1"
+VERSION = "cn-2.7.71-crisis-v2-local-clear-receipt-v2"
+SUPPORTED_VERSIONS = frozenset((LEGACY_VERSION, VERSION))
+
+
+def is_clear_version(value):
+    return type(value) is str and value in SUPPORTED_VERSIONS
 
 
 class ClearResult(Command):
@@ -57,7 +63,7 @@ class ClearResult(Command):
 
 
 class Receipt(Command):
-    version: Literal[VERSION]
+    version: Literal[LEGACY_VERSION, VERSION]
     start_hash: crisis_v2_exits.Digest
     comments_hash: crisis_v2_exits.Digest
     objectives_hash: crisis_v2_exits.Digest
@@ -100,8 +106,10 @@ def _completed(value):
     return len({k for field in ("rune", "exRunes") for k, state in value.get(field, {}).items() if state == 3})
 
 
-def project(data, saved, parent, evaluation, facts, counters, before, record_ts, at):
+def project(data, saved, parent, evaluation, facts, counters, before, record_ts, at, *, policy_version=VERSION):
     """Pure replay of the versioned policy, also used by readonly preflight."""
+    if not is_clear_version(policy_version):
+        raise ValueError("危机合约通关回执策略版本不受支持")
     if crisis_v2_exits.outcome(facts) != "CLEAR_CANDIDATE":
         raise ValueError("危机合约通关回执不能保存失败或退出结果")
     key = (saved["season_id"], saved["map_id"])
@@ -121,7 +129,9 @@ def project(data, saved, parent, evaluation, facts, counters, before, record_ts,
         raise ValueError("危机合约负分纪录尚未适配保存合同")
     after["scoreTotal"] = [max(old, new) for old, new in zip(before["scoreTotal"], current, strict=True)]
     permanent = "scoreSingle" in before
-    better = permanent and sum(current) > sum(before["scoreSingle"])
+    first_clear = not before["state"]
+    legacy = policy_version == LEGACY_VERSION
+    better = permanent and ((first_clear and not legacy) or sum(current) > sum(before["scoreSingle"]))
     new_comments = [ident for ident in comments.earned if ident not in before.get("comment", [])]
     if permanent:
         if better:
@@ -130,8 +140,10 @@ def project(data, saved, parent, evaluation, facts, counters, before, record_ts,
     elif comments.earned:
         raise ValueError("临时地图评语尚未适配保存合同")
     after = _map_image(catalog, key, after)
-    updated = better or after["scoreTotal"] != before["scoreTotal"]
-    record_at = max(record_ts, at) if updated else record_ts
+    updated = better or after["scoreTotal"] != before["scoreTotal"] or (first_clear and not legacy)
+    record_at = max(record_ts if legacy else record_ts + 1, at) if updated else record_ts
+    if record_at > 2**63 - 1:
+        raise ValueError("危机合约纪录更新标记已超过客户端整数范围")
     result = ClearResult(battleId=parent["id"], outcome="CLEARED", mapId=key[1], finishedAt=at,
         scoreCurrent=current, axisRecordsBefore=before["scoreTotal"], axisRecordsAfter=after["scoreTotal"],
         singleRecordBefore=before.get("scoreSingle"), singleRecordAfter=after.get("scoreSingle"),
@@ -148,7 +160,7 @@ def validate_terminal(data, parent, saved, evaluation):
     counters = restore_counters(receipt.counters)
     key = (saved["season_id"], saved["map_id"])
     after, record_at, result = project(data, saved, parent, evaluation, facts, counters,
-        receipt.map_before, receipt.record_ts_before, parent["finished_at"])
+        receipt.map_before, receipt.record_ts_before, parent["finished_at"], policy_version=receipt.version)
     if (parent["state"] != "FINISHED" or receipt.start_hash != saved["start_hash"]
             or facts.battleId != parent["id"] or facts.stageId != parent["stage_id"]
             or receipt.comments_hash != data.crisis_v2.comments(*key).fingerprint
@@ -168,7 +180,7 @@ def finish_prepared(ctx, pending, submission):
     facts = crisis_v2_exits.normalize(submission.facts)
     parent = pending.battle
     if parent.state != "STARTED":
-        if parent.settlement.get("version") != VERSION:
+        if not is_clear_version(parent.settlement.get("version")):
             raise DomainError("CRISIS_V2_FINISH_CONFLICT", "此战斗已按其他结果结算", 409)
         # The first settlement fixes the codec. Replaying old receipts must not
         # reinterpret fields that their original decoder deliberately ignored.

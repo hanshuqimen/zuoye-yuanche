@@ -29,3 +29,9 @@ PlayerSeason构造M29077冻结248字节、线性解码0字节，拒绝当作已�
 证据在`.cache/crisis-20261128/season-coin-contract-v1/{metadata,preparation-failure-v1,body-probes,consumer-bindings}.json`、`rea-season-coin-20261128-v1/static-methods.json`、`mcp-season-coin-20261128-v1/{rpc-0004,rpc-0005,rpc-0006,completion,analysis-summary}.json`。原始客户端代码与工具结果只在本地，公开仅有自有结论、范围和依据索引。原版滚动/购买、season.coin完整增减合同、其他模式和成熟发行仍未完成。
 
 共同方法另见`rea-season-common-20261128-v2/static-methods.json`及`mcp-season-common-20261128-v2/{rpc-0004,completion,analysis-summary}.json`。两个REA会话均已实际收尾，不按旧live/PID继续输入；没有新模拟器、玩家或认证读取，也未为记录重跑203/473等未受影响的后台检查。
+
+## 总分委托已核及后续
+
+新M162601/M162600共704字节已完成REA，48046实际退出0/public status与close、主体/入口/输入保持已核。总分读取永久图state及scoreTotal，未通关为-1，通关后为六维记录之和；这条明确路径没有读取season.coin。评级逆序遍历阈值列表，取第一个<=输入分数的条目，不擅自给未核枚举0补语义。
+
+这一区分揭示首个0分纪录被当成无变化的后台缺陷，现以明确v2策略修正并保留v1投影，[验证及范围](crisis-zero-records-2026-11-28.md)。season.coin整体用途仍未知，不因六个选定函数未读它而删字段或跟shop.coin增减。接着取得原版[getSnapshot绑定与消费者](crisis-native-snapshots-2026-11-28.md)，接口尚未实现；未知货币字段不阻碍继续补齐已确定的成绩展示合同。

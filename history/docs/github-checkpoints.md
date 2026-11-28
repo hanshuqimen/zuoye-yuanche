@@ -215,3 +215,13 @@ history/source-updates-b638093.bundle为731710字节，SHA-256 7b80880be1f447836
 2026-11-27 216e8b4cf700d63eadf35b7c43b2a7ba1041ea53→public93ff9efe4cca94931e35deb3af14f12ef68ec79e，treef0f6579a96725bc2ca385afd125181e5723e6c04；22上传摘要和独立tree一致、20新blob扫描，非强推CAS/Public/MIT实读。847公开匿名完整下载、782源码/399历史新项目目录恢复、全SHA/Git/两库严格fsck/干净通过，40432实际0。增量history/source-updates-216e8b4.bundle，781705字节，SHA27489615c3422080f2dfa2bcd60742a728f749fd701b1d53ba1f68e7cbb87295，blobdd40f5545baaa6b64a5d1dee1b75b1f7ad93a313；仅需原始d40完整包，全部旧包/旧索引原bytes保持。证明.cache/crisis-20261127/public-checkpoint-216e8b4-20261127-v1/readback-verification.json；两latest已实证后轮换。工具QA准备/SDK清单真实503修复和引导失败在包内，本次后续S4冷启动/300返回结果晚于包，不倒写已发布。
 
 2026-11-27 source0750ac230f9ddb97af24193ba40638cea23fb80d已公开mainbdf7b82fe1c9e87f2da1470df6cefcf2f9228489，父93ff9efe/treeabbabd7393360c5c4e0ae4d009fd915d70d0ecda。19上传blob与独立Git tree一致、11新blob凭据格式扫描，非强推CAS/Public/MIT与ref/commit实读；852公开文件匿名完整下载，784源码/400历史在项目内新目录完整恢复，全部SHA/Git/严格fsck/干净通过，88686实际0。history/source-updates-0750ac2.bundle为952227字节，SHA0457bdc5f2089507a9ec06c6d7761954f7debfcbe3c287b540cacc2fd3c73e85，blobc3a10aebe011e679d1178acdbad7deaafffa85ed，仅需原始d40完整包；两latest实证后轮换、原索引bytes在本目录previous-*.json，全部旧包/发行/失败保持。证明.cache/crisis-20261127/public-checkpoint-0750ac2-20261127-v1/readback-verification.json，源码含此前216实际回读、原版S4 300币返回/1-14/列表、11REA与静态资源检查边界；本次最新回执和后续触摸预查晚于包，下一实质检查点纳入。
+
+## 2026-11-28 被动输入反例与赛季消费者
+
+源码`072032b7cf67d44a84b6856f9608f9fa335f7151`已发布至[main a610ee8](https://github.com/hanshuqimen/zuoye-yuanche/commit/a610ee80845d76ed2b151c8bf2fd1daa4cc9ab52)，父提交eb710a08、树`7dfc9b07174e0ed3fab9f1754d9c332d68d3fd90`。21上传Blob逐项等于独立Git SHA，目录树由新项目内bare索引独立重建一致；19新增源码Blob凭据格式检查通过。通过已授权GitHub连接器、force=false并核expected旧头更新main，实际回读Public/MIT/ref/commit；没有普通源码分支推送或权限修改。
+
+匿名克隆867公开文件逐项SHA-256与Git对象一致，用下载的原d40完整包和新增量在全新项目子目录恢复793源码、404开发提交；全部原始源码SHA/Git一致，两份严格fsck及干净工作区通过，51125实际退出0。新history/source-updates-072032b.bundle为1,087,563字节，SHA-256 `2c1dc5da6ab8b740e9c9698639edff275e95d34dfce2295461f0ce1b10caca6e`，Git Blob `a3d969636a4a7da3dd1851c61cfbc27a64804976`；只依赖原d40包，不依赖历次中间增量。所有旧备份、失败和Windows发行保持。
+
+包含被动计数研究工具/22人工解析检查与已知失败正对照、三个原版输入会话正常收尾、四个赛季消费者2,572字节REA及未证明语义；不把有效producer当有效原版输入，也不把阴性选定方法当全客户端无使用。真实滚动/购买、season.coin合同、全部模式/新成熟EXE和完整交付仍未完成。首次Node闲置重置明确未执行代码、未上传，事件保留；不为记录重跑未受影响游戏检查。
+
+证据`.cache/crisis-20261128/public-checkpoint-072032b-20261128-v1/`保存全部准备/对象/目录树/提交/实际回读、readback-verification.json及anonymous-public-clone、restored-development。两latest只在恢复成功后轮换，previous-*-latest.json保留原字节。本节晚于072源码包，下一实质检查点收录，不重复纯回执包。

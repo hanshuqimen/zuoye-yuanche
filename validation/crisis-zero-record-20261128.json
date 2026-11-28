@@ -1,0 +1,43 @@
+{
+  "current_distinct_checks_passed": 190,
+  "new_distinct_checks": 11,
+  "ruff_passed": true,
+  "prechange_regression_failures_reproduced": 2,
+  "prior_regression_fixture_correction_verified": true,
+  "clear_receipt_current_version": "cn-2.7.71-crisis-v2-local-clear-receipt-v2",
+  "clear_receipt_legacy_v1_preserved": true,
+  "first_zero_clear_creates_record": true,
+  "record_token_monotonic_for_same_second_and_clock_rewind": true,
+  "record_token_overflow_rolls_back": true,
+  "unknown_versions_refused_without_writes": true,
+  "genuine_prechange_v1_cold_recovery_copies": 2,
+  "original_prechange_files_sha_preserved": 57,
+  "legacy_first_native_response_and_receipts_unchanged": true,
+  "frozen_data_hash": "614abf4eac4598de28f7ac425cd17f91c2c116b750c4d1b493ffc1491895bce6",
+  "frozen_data_tables": 20,
+  "frozen_scope_season": "crisis_v2_season_4_1",
+  "frozen_fixed_qa_time": 1755182228,
+  "frozen_zero_score_open_maps": [
+    "crisis_v2_01-03_b",
+    "crisis_v2_04-01"
+  ],
+  "rea_new_distinct_methods": 8,
+  "rea_new_method_bytes": 4232,
+  "rea_named_subjects_and_entries_verified": true,
+  "rea_public_close_passed": true,
+  "rea_actual_wrapper_exits": [
+    0,
+    0
+  ],
+  "native_snapshot_default_route_and_generic_binding_verified": true,
+  "native_snapshot_wire_aliases_verified": 7,
+  "known_alias_positive_controls": 2,
+  "native_snapshot_route_implemented": false,
+  "season_coin_semantics_proven": false,
+  "new_original_client_gameplay_performed": false,
+  "native_runtime_scroll_verified": false,
+  "native_purchase_verified": false,
+  "new_windows_release_built": false,
+  "full_game_delivered": false,
+  "source_commit": "428f99108d1a878e793b5b0f7ed37cd41b75162c"
+}

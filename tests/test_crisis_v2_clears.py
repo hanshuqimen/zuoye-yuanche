@@ -125,6 +125,9 @@ def test_axis_records_best_single_ties_claims_and_retries_preserve_independent_h
         ctx = Context(session, runtime.data, 1)
         crisis_v2.initialize(ctx)
         row = session.get(m.CrisisV2MapProgress, (1, "season_a", "season_a_p"))
+        # The native total-score reader treats state=false as no record,
+        # regardless of the arrays. This case starts with a completed record.
+        row.cleared = True
         row.score_total, row.score_single = [32, 0, 0, 0, 0, 0], [32, 0, 0, 0, 0, 0]
         row.comments, row.runes = ["few"], {"rune": 3}
         row.challenges, row.rune_packs = {"challenge": 2}, {"bag": 2}
@@ -140,7 +143,7 @@ def test_axis_records_best_single_ties_claims_and_retries_preserve_independent_h
     value = map_row(runtime)
     assert value["challenges"]["challenge"] == value["rune_packs"]["bag"] == value["rewards"]["treasure"]["state"] == 2
     with runtime.database.transaction(write=False) as session:
-        assert session.get(m.CrisisV2Account, 1).new_record_ts == 2000
+        assert session.get(m.CrisisV2Account, 1).new_record_ts == 2001
     original = pending(runtime, token, ident).battle.settlement
     payload["rune_slots"] = ["second"]
     later = begin(runtime, token, payload, "later-battle")["battleId"]

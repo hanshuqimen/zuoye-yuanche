@@ -132,7 +132,7 @@ def validate_record(data, parent, saved):
         raise ValueError("危机合约战斗选择快照或指纹不一致")
     from terralocal.server.domain import crisis_v2_clears, crisis_v2_exits
 
-    if isinstance(parent.get("settlement"), dict) and parent["settlement"].get("version") == crisis_v2_clears.VERSION:
+    if isinstance(parent.get("settlement"), dict) and crisis_v2_clears.is_clear_version(parent["settlement"].get("version")):
         crisis_v2_clears.validate_terminal(data, parent, saved, evaluation)
     else:
         crisis_v2_exits.validate_terminal(parent, saved)

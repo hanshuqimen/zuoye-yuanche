@@ -839,3 +839,11 @@
 2026-11-28 [被动触摸研究及点击反例](../android-input-probe-2026-11-28.md)：复用已准入transport、实际timeout142校准、22解析检查；无输入过期样本和成功UI点击却event2全零的反例，三会话实际退出0/回调与源保持。不支持原版输入诊断或滚动已修结论。
 
 2026-11-28 [赛季coin的冻结消费者](../crisis-season-coin-2026-11-28.md)：四方法2572字节REA/两个实际0及公开关闭；同名coin不同拥有者，委托总分M162601仍待核，未改发币。构造冻结拒绝和准备常量失败保持。
+
+2026-11-28 [被动输入及赛季研究公开检查点](../github-checkpoints.md#2026-11-28-被动输入反例与赛季消费者)：source072032b/maina610ee8，867公开/793源码404历史匿名新恢复，51125实际0；旧包保持，本回执晚于源码包。
+
+2026-11-28 [总分及评级消费者续查](../crisis-season-coin-2026-11-28.md)，前版STATE原文[state-archive/STATE-2026-11-28-before-score-consumers.md](state-archive/STATE-2026-11-28-before-score-consumers.md)；当前冻结准备.cache/crisis-20261128/season-score-contract-v1/body-probes.json，REA48046尚未结论。
+
+2026-11-28 [零分首通与缓存更新](../crisis-zero-records-2026-11-28.md)：通关v2/旧v1保持、190不同检查11新、真实旧保存新目录恢复及当前S4两具体开放地图。原生游玩/全部模式未完成。
+
+2026-11-28 [原版成绩快照合同](../crisis-native-snapshots-2026-11-28.md)：M162590真实getSnapshot/MsgBundle/SendRequest泛型/回调绑定、七JsonProperty别名及六方法3528字节REA/20961实际0。当前未接路由；后续按四具体消费者和历史状态捕获实现。

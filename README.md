@@ -1,6 +1,6 @@
 # 昨夜圆车
 
-本地服务源码、存档工具与开发进度。当前源码检查点为 `072032b`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
+本地服务源码、存档工具与开发进度。当前源码检查点为 `428f991`（原始历史基线 `d40aee9`），项目的入口命令保留为 `terralocal`。
 
 ## 运行
 
@@ -292,3 +292,11 @@ git -C restored-history merge --ff-only FETCH_HEAD
 [被动计数及反例](docs/android-input-probe-2026-11-28.md) · [赛季消费者](docs/crisis-season-coin-2026-11-28.md) · [验证摘要](validation/passive-input-season-20261128.json)。
 
 [本次完整历史增量](history/source-updates-072032b.bundle)仅需原始d40完整包；所有旧检查点保持。
+
+## 零分纪录修复与原版快照合同
+
+2026-11-28 修复危机合约首个零分未建立纪录及同秒/回拨时钟未使缓存失效：新通关回执v2单调更新标记，原v1投影/首次原版响应/日志保持，未知版本与溢出明确拒绝。190不同检查（11新）最新通过/Ruff；修改前两真实合成v1保存新目录冷启/重试200、原57文件保持，匹配614实际20表当前开放永久04-01及临时01-03_b均核无指标0分。8新方法4232字节REA及getSnapshot真实路由/泛型、七别名/两控制已核，原版快照路由仍未接通。所有失败、旧档和发行保持；原版滚动/购买/危机战斗、全部模式、新成熟EXE和完整交付仍未完成。
+
+[零分纪录修复](docs/crisis-zero-records-2026-11-28.md) · [原版快照合同](docs/crisis-native-snapshots-2026-11-28.md) · [验证摘要](validation/crisis-zero-record-20261128.json)。
+
+[本次完整历史增量](history/source-updates-428f991.bundle)仅需原始d40完整包；所有旧检查点保持。

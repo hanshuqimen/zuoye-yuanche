@@ -16,7 +16,8 @@ MAX_PER_ACCOUNT = 20
 
 
 def _validate(settlement, state, key, battle_id, digest, body):
-    if (state != "FINISHED" or type(settlement) is not dict or settlement.get("version") != crisis_v2_clears.VERSION
+    if (state != "FINISHED" or type(settlement) is not dict
+            or not crisis_v2_clears.is_clear_version(settlement.get("version"))
             or key != PREFIX + battle_id or type(body) is not dict or set(body) != {"version", "battleLog"}
             or digest != settlement.get("journal_hash") or body["version"] != VERSION):
         raise ValueError("危机合约战斗原始日志缺少同一场通关回执")

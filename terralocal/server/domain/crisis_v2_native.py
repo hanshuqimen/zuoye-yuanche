@@ -54,12 +54,14 @@ def project(data, parent, saved, evaluation, source_map):
     settlement = parent["settlement"]
     if parent["state"] == "STARTED" or settlement is None:
         raise ValueError("待结算战斗不能生成原生结算回执")
-    if settlement["version"] == crisis_v2_clears.VERSION:
+    if crisis_v2_clears.is_clear_version(settlement["version"]):
         if source_map is not None:
             raise ValueError("通关响应应使用固定的通关纪录")
         result = crisis_v2_clears.ClearResult.model_validate(settlement["result"])
         before, current = result.axisRecordsBefore, result.scoreCurrent
-        improved = result.newSingleRecord or result.axisRecordsAfter != before
+        first_record = (settlement["version"] != crisis_v2_clears.LEGACY_VERSION
+                        and not settlement["map_before"]["state"])
+        improved = first_record or result.newSingleRecord or result.axisRecordsAfter != before
         comments_new, comments_old = result.newComments, result.previouslyEarnedComments
         counts = [result.completedRuneCountBefore, result.completedRuneCountAfter]
     elif settlement["version"] == crisis_v2_exits.VERSION:
@@ -112,7 +114,7 @@ def finish(ctx, request, *, archive_journal=False):
         validate(ctx.data, parent, saved, pending.evaluation, record)
     except (ValueError, TypeError, KeyError, AttributeError) as exc:
         raise DomainError("CRISIS_V2_RESPONSE_UNSUPPORTED", "危机合约原生响应或保存尚未完成适配；本次修改已回滚", 503) from exc
-    if archive_journal and fresh and parent["settlement"]["version"] == crisis_v2_clears.VERSION:
+    if archive_journal and fresh and crisis_v2_clears.is_clear_version(parent["settlement"]["version"]):
         from terralocal.server.domain import crisis_v2_journals
 
         crisis_v2_journals.archive(ctx, pending.battle, submission.battle_log)

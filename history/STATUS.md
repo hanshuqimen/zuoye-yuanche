@@ -1,5 +1,9 @@
 # 实际状态
 
+2026-11-28 修复危机合约首次零分不建立纪录及同秒/回拨更新不失效：新增通关v2并保留v1原样重放，190不同检查11新/Ruff、真实旧档新目录恢复、614实际开放两图0分核对通过；未进行新原版游玩。getSnapshot真实合同已取得但路由/完整快照仍未实现。[修复](docs/crisis-zero-records-2026-11-28.md) · [合同](docs/crisis-native-snapshots-2026-11-28.md)
+
+2026-11-28 source072032b完整公开至main a610ee80845d76ed2b151c8bf2fd1daa4cc9ab52/tree7dfc9b07174e0ed3fab9f1754d9c332d68d3fd90；21对象与独立tree、19新blob凭据格式扫描、Public/MIT/ref/commit及force=false/expected旧头核对通过。867公开文件、793源码/404历史实际匿名下载及项目内新恢复，全部SHA/Git/双fsck/干净，51125实际0。1087563字节增量SHA2c1dc5da6ab8b740e9c9698639edff275e95d34dfce2295461f0ce1b10caca6e，只需原d40完整包；两latest实证后轮换，旧索引/旧包/失败/发行保持。本回执晚于072源码包，下一实质检查点收录，不造纯回执递归包。
+
 2026-11-28 新4赛季消费者2572字节REA/两批主体与入口核对、公用status/close和实际退出0；共同总分方法仍委托其他函数，season.coin语义继续未证，不改币或泛化阴性结果。[范围](docs/crisis-season-coin-2026-11-28.md)
 
 2026-11-28 新被动计数研究组件22解析检查/Ruff过；实测成功点击打开干员列表但同时间窗驱动记录零，正对照失败，未据此判输入或滚动原因。三会话均正常收停、回调/源/index0保持，购买和完整交付仍未通过。[反例及范围](docs/android-input-probe-2026-11-28.md)
